@@ -24,7 +24,7 @@ copyright = "2024, Dean Lab, UT Southwestern Medical Center"
 author = "Dean Lab, UT Southwestern Medical Center"
 
 # The full version, including alpha/beta/rc tags
-release = __version__
+# release = __version__
 
 # -- General configuration ---------------------------------------------------
 

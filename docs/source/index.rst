@@ -5,8 +5,14 @@
 **navigate-hardware**
 #####################
 
+Biologists are increasingly transitioning
+towards more complex assays that require volumetric imaging with high spatiotemporal
+resolution. Whether it is a developing embryo, the formation of a cell-cell
+immunological synapse, breast cancer organoids migrating through a 3D collagen
+matrix, or cytoskeletal rearrangements in a polarized epithelial monolayer, these
+biological processes can only be understood when noninvasively and quantitatively
+evaluated in their entirety through time.
 
-**navigate-hardware** is an open-source ...
 
 **Project Philosophy**
 =========================
@@ -31,10 +37,13 @@
 
 
 .. toctree::
-   :caption: Getting Started
+   :caption: Introduction
    :maxdepth: 2
 
-   quick_start
+   introduction/background
+   introduction/principles
+   introduction/nanospim
+   introduction/aslm
 
 .. toctree::
    :caption: User Guide

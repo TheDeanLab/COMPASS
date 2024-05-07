@@ -3,3 +3,4 @@
 *.iml
 *.idea/*
 *.DS_Store
+docs/build/*
