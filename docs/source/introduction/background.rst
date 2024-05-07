@@ -18,7 +18,8 @@ image acquisition duration that a region of the specimen productively contribute
 image formation), which necessarily requires a compensatory increase in laser power.
 In contrast, depending on their design, LSFMs largely restrict illumination to a 2D
 focal plane of interest within a specimen, and owing to high quantum efficiency and
-massively parallel scientific cameras (e.g., 4x106), the laser power can be reduced
+massively parallel scientific cameras (e.g., 4x10\ :sup:`6`), the laser power can be
+reduced
 without compromising the imaging speed or signal to noise ratio. To illustrate, a
 common voxel dwell time for a laser scanning confocal microscope is
 1µs, and thus it takes ~4.16s to capture a 2048x2048 voxel image. For a LSFM, an
@@ -32,7 +33,8 @@ Challenges with 3D Imaging.
 To gain insight into cell biological events at subcellular scales, volumetric imaging
 technologies must be combined with molecularly specific labels, biosensors and opto- and
 chemogenetic tools, as well as computer vision analyses that translate non-human
-interpretable 5D (x, y, z, lambda, t) datasets into biological insight. This requires
+interpretable 5D (x, y, z, :math:`\lambda`, t) datasets into biological insight. This
+requires
 that several key criteria be met:
 
 -   To gain quantitative insight, the event of interest must be Nyquist

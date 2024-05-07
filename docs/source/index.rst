@@ -10,7 +10,7 @@ towards more complex assays that require volumetric imaging with high spatiotemp
 resolution. Whether it is a developing embryo, the formation of a cell-cell
 immunological synapse, breast cancer organoids migrating through a 3D collagen
 matrix, or cytoskeletal rearrangements in a polarized epithelial monolayer, these
-biological processes can only be understood when noninvasively and quantitatively
+biological processes can only be understood when non-invasively and quantitatively
 evaluated in their entirety through time.
 
 
