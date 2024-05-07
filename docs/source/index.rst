@@ -17,8 +17,10 @@ evaluated in their entirety through time.
 **Project Philosophy**
 =========================
 
-* Amazing microscopes.
-* Streamlined operation with navigate software.
+* Simple to assemble, high-performance, light-sheet microscopes.
+* Highly optimized operation with **navigate** software.
+* Simplified optomechanical design for ease of use and maintenance.
+* Streamlined optoelectronics and control for robust and reliable operation.
 
 
 .. note::
@@ -38,18 +40,20 @@ evaluated in their entirety through time.
 
 .. toctree::
    :caption: Introduction
-   :maxdepth: 2
+   :maxdepth: 1
 
    introduction/background
    introduction/principles
    introduction/nanospim
    introduction/aslm
+   introduction/opm
 
 .. toctree::
-   :caption: User Guide
-   :maxdepth: 2
+   :caption: Design Principles
+   :maxdepth: 5
 
-   user_guide/hardware_overview
+   design_principles/required_software
+   design_principles/
 
 .. toctree::
    :caption: Development

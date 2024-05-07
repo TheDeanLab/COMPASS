@@ -2,7 +2,7 @@
 .. _nanospim-home:
 
 ############
-**NanoSPIM**
+NanoSPIM
 ############
 
 Background

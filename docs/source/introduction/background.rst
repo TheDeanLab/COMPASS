@@ -2,7 +2,7 @@
 .. _background-home:
 
 ###############################
-**Why Light-Sheet Microscopy?**
+Why Light-Sheet Microscopy?
 ###############################
 
 

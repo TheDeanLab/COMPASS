@@ -2,7 +2,7 @@
 .. _background-home:
 
 ########################################
-**ASLM**
+ASLM
 ########################################
 
 Two light-sheet microscopy techniques successfully decouple the trade-off between

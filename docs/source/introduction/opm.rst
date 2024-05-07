@@ -2,7 +2,7 @@
 .. _opm-home:
 
 ############
-**OPM**
+OPM
 ############
 
 Background
