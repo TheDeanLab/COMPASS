@@ -36,6 +36,10 @@ do this by considering every pair of lenses (i.e. Lens 1 & 2, Lens 2 & 3, ...) a
 where the resulting image size of the pairs is determined by the ratio of their focal lengths as follows:
 (MAKE 2 FIGURES: 1. 4F SYSTEM 2. QUICK DIAGRAM OF TOTAL BEAM PATH)
 
+.. image:: user_guide/Images/4FSystem.png
+    :align: center
+    :alt: 4F System Diagram
+
 Dnew = Dold*f2/f1
 
 Essentially, we can cascade these calculations through our lenses and make sure that our choices in their focal
@@ -93,5 +97,18 @@ ______________________________
 
 Within Zemax, there are numerous analysis tools available to investigate different characteristics of optical systems.
 Our analysis will primarily be guided by the Geometric Image Analysis, Huygen's PSF, and Through Focus Spot tools.
-Zemax innately uses geometric ray tracing, which is a ; however, as our output light sheet size approaches the
-diffraction limit, we need to consider the effects of diffraction in our analysis. The Huygen's PSF analysis tool is how we 
+Zemax innately uses geometric ray tracing in most all of its operations like beam optimization.
+This is generally-acceptable for most optical systems; however, as our output light sheet size approaches the
+diffraction limit (lambda/2NA), we need to also consider the effects of diffraction in our analysis.
+
+The Huygen's PSF analysis tool is how we incorporate effects of diffraction into our analysis; where we anticipate results from this analysis to be more
+in-line with what would be seen on the physical system. Based on the cross section of our Huygen's PSF analysis, we can
+see that our expected Full-Width Half-Max (FWHM) of the light sheet is expected to lie somewhere around 0.382 microns.
+
+Through Focus Spot analysis allows us to essentially see the evolution of the light sheet through the point of focus,
+where we can then estimate a sort of range where we expect the width of the light sheet to be thin enough for our
+imaging purposes, where the maximum usable light sheet width is the FWHM at the focus multiplied by sqrt(2).
+
+
+
+
