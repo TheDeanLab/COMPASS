@@ -75,39 +75,38 @@ placed in the system. This is described in more detail below.
 
 For our particular system, our generalized process went as follows:
 
-    * Create a new file that will be used as our lens assembly file
-    * Set aperture size in Zemax to match our laser spot size (2.4 mm).
-    * Open the Zemax file associated with Lens 1, then copy and paste the surfaces into our assembly file.
-    * Use the optimzation wizard
-      to set a focusing optimization with the distance after L1 (f1) as the variable to find the correct position of
-      L1's focus.
+    1. Create a new file that will be used as our lens assembly file
+    2. Set aperture size in Zemax to match our laser spot size (2.4 mm).
+    3. Open the Zemax file associated with Lens 1, then copy and paste the surfaces into our assembly file.
+    4. Use the optimzation wizard to set a focusing optimization with the distance after L1 (f1) as the variable to find
+       the correct position of L1's focus.
     .. image:: docs/source/design_principles/Images/Spotwizard.png
         :align: center
         :alt: Optimization Wizard for Spot Size
 
-    * Run the optimization, then remove the variable for f1.
-    * Open the Zemax file associated with Lens 2, then copy and paste the surfaces into our assembly after Lens 1
-    * Use the Optimization Wizard to set an angular (collimation) optimization, with the distance between L1's focus
-      and L2 (d1) as the variable.
+    5. Run the optimization, then remove the variable for f1.
+    6. Open the Zemax file associated with Lens 2, then copy and paste the surfaces into our assembly after Lens 1
+    7. Use the Optimization Wizard to set an angular (collimation) optimization, with the distance between L1's focus
+       and L2 (d1) as the variable.
     .. image:: docs/source/design_principles/Images/Anglewizard.png
         :align: center
         :alt: Optimization Wizard for Collimation
 
-    * Optimize, then remove the variable for d1.
-    * Open the Zemax file associated with Lens 3, then copy and paste the surfaces into our assembly after Lens 2.
-    * Use the optimization wizard to set an *X*-focusing optimization with the distance after L3 (f3) as the variable.
-    * Optimize, then remove the variable for f3.
-    * Place in resonant galvo and 45 degree mirror surfaces at the location of f3.
-    * Open the Zemax file associated with Lens 4, then copy and paste the surfaces into our assembly after the 45 degree
-      mirror.
-    * Use the optimization wizard to set an *X*-collimation optimization with the distance between the 45 degree mirror
-      and L4 (d3) as the variable.
-    * Optimize, then remove the variable for d3.
-    * Open the Zemax file associated with our Illumination Objective, then copy and paste the surfaces into our assembly
-      after L4.
-    * Use the Optimization Wizard to set an *X*-focusing Optimization with the distance between L4 and the objective (d4)
-      as the variable.
-    * Optimize
+    8. Optimize, then remove the variable for d1.
+    9. Open the Zemax file associated with Lens 3, then copy and paste the surfaces into our assembly after Lens 2.
+    10. Use the optimization wizard to set an *X*-focusing optimization with the distance after L3 (f3) as the variable.
+    11. Optimize, then remove the variable for f3.
+    12. Place in resonant galvo and 45 degree mirror surfaces at the location of f3.
+    13. Open the Zemax file associated with Lens 4, then copy and paste the surfaces into our assembly after the 45 degree
+        mirror.
+    14. Use the optimization wizard to set an *X*-collimation optimization with the distance between the 45 degree mirror
+        and L4 (d3) as the variable.
+    15. Optimize, then remove the variable for d3.
+    16. Open the Zemax file associated with our Illumination Objective, then copy and paste the surfaces into our assembly
+        after L4.
+    17. Use the Optimization Wizard to set an *X*-focusing Optimization with the distance between L4 and the objective (d4)
+        as the variable.
+    18. Optimize
 
 Zemax Simulation Analysis
 ______________________________
@@ -136,13 +135,25 @@ effectively suspended in midair.
 
 For mounting our elements, we utilize the `Polaris <https://www.thorlabs.com/navigation.cfm?guide_id=2368>`_ line from
 Thorlabs, which are designed with long-term stability and alignment in mind. Each component is characterized in part by
-two dowell pin alignment holes to ensure subsequent mounted elements are aligned along a specific axis.
+two dowell pin alignment holes to ensure subsequent mounted elements are aligned along a specific axis. In the baseplate
+design, we are essentially deciding on the location for the mounting holes of the Polaris posts we're using, which is
+not the same as the locations of the elements themselves from Zemax.
 
 While we are able to use most of our element mounts from the Polaris line, for the cylindrical lens L3 we needed a mount
 capable of rotating the lens, which at this time is not something available from Thorlabs. In our case we designed an
 additional mounting element that allows the use of a basic Thorlabs
 `RSP1 rotation mount <https://www.thorlabs.com/thorproduct.cfm?partnumber=RSP1>`_, but still ensures alignment with the
 other Polaris elements. The CAD file for this mount is available for download here (INSERT DOWNLOAD LINK FOR ELEMENT?)
+
+With the method in which each of the elements needs to be mounted decided upon, we then went over the product schematics
+for each mount to understand the z-displacement that they impart upon the element mounted within them relative to where
+the Polaris post central mounting hole would need to be. This idea is depicted below, where when considering how to
+space two lenses from each other there is essentially three components to take into account:
+    1. The distance between the lenses decided from simulation
+    2. The thickness of the lenses themselves
+    3. The distance between the center of the Polaris post and the start of the lens in the mount
+
+(INSERT POSTSPACING CONSDIERATIONS FIGURE)
 
 
 
