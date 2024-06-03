@@ -115,32 +115,91 @@ Within Zemax, there are numerous analysis tools available to investigate differe
 Our analysis will primarily be guided by the Geometric Image Analysis, Huygen's PSF, and Through Focus Spot tools.
 Zemax innately uses geometric ray tracing in most all of its operations like beam optimization.
 This is generally-acceptable for most optical systems; however, as our output light sheet size approaches the
-diffraction limit ( 0xCE /(2NA)), we need to also consider the effects of diffraction in our analysis.
+diffraction limit ( :math:`\lambda` /(2NA)), we need to make sure to also consider the effects of diffraction in our analysis.
 
 The Huygen's PSF analysis tool is how we incorporate effects of diffraction into our analysis; where we anticipate results from this analysis to be more
 in-line with what would be seen on the physical system. Based on the cross section of our Huygen's PSF analysis, we can
-see that our expected Full-Width Half-Max (FWHM) of the light sheet is expected to lie somewhere around 0.382 μm.
+see that our expected Full-Width Half-Max (FWHM) of the light sheet is expected to lie somewhere around 0.376 :math:`\mu m`.
+
+We compare the results of these two analyses for our optimized illumination path below, where we show the full XY profile
+as well as cross-sections through the center row of both beam profiles. In this case, the FWHM of both analyses ends up
+being quite similar at ~0.38 :math:`\mu m`.
+
+.. image:: docs/source/design_principles/Images/HuygensvsGeo.png
+    :align: center
+    :alt: Comparison of Geometric Image Analysis and Huygen's PSF analysis for our optimized system
 
 Through Focus Spot analysis allows us to essentially see the evolution of the light sheet through the point of focus,
 where we can then estimate a sort of range where we expect the width of the light sheet to be thin enough for our
-imaging purposes, where the maximum usable light sheet width is the FWHM at the focus multiplied by sqrt(2).
+imaging purposes, where the maximum usable light sheet width is the FWHM at the focus multiplied by :math:`\sqrt{2}`.
 
 Zemax Tolerancing Analysis
 -----------------
 
 When considering building physical systems using Zemax, an additional analysis tool known as tolerancing becomes
-increasingly important. Tolerancing is essentially the process of understanding how sensitive different elements in a
+increasingly important. No physical system is perfect, and tolerancing is essentially the process of understanding how sensitive different elements in a
 system are to various perturbations. This can be along the lines of how sensitive the collimation or magnification of a
 4F system is to small physical displacements of the two lenses that comprise it. Similarly to Zemax's optimization
 process, tolerancing also utilizes a merit function. This merit function is fully customizable, and serves to define
 how well a particular system is performing. In the case of our system, we chose our merit function to factor in both the
-size and displacement of the output light sheet relative to the perfectly optimized instance.
+size and displacement of the output light sheet relative to the perfectly optimized instance. Our merit function used in
+Zemax is also shown below, where there are 4 operands that track the size and position of the beam in both x and y.
 
 .. image:: docs/source/design_principles/Images/ToleranceMF.png
     :align: center
     :alt: Tolerance Merit Function
 
+With a merit function criteria set, the next step is to designate which elements of the system will change and by how much.
+In our case, we wanted to associate our tolerance analysis with the machining tolerances given by fabrication companies.
+In general, looking across different companies, the standard machining tolerance is around +-0.005" and the finer machining tolerance
+is around +-0.002". For our analysis, we wanted to understand how angular deviations in elements due to
+machining tolerances in the alignment dowel pins would affect overall system performance. This is depicted below, where
+in the worst case scenario of one pin being offset +0.005" and the other -0.005" the resulting angular offset would be
+around 1.45 degrees.
 
+.. image:: docs/source/design_principles/Images/AlignmentHole.png
+    :align: center
+    :alt: Angular offset of elements imparted by machining tolerances of dowel pin holes
+
+In addition to perturbations to a system, in tolerancing analysis a compensator can also be defined as a sort of designated
+element that can be changed in ways to try to mitigate effects of other elements in the system being tweaked. In our case,
+we define the xy position of our illumination objective as a compensator with a range of +-0.25mm, which matches the xy
+translation adjustment associated with our `objective mount used <https://www.thorlabs.com/thorproduct.cfm?partnumber=POLARIS-1XY>`_.
+
+The basic way in which this analysis works is that Zemax performs a designated number of Monte Carlo simulations, each
+with a different perturbation made to the system, and evaluates the merit function for each of those systems. Based on
+the change to the merit function for each of these instances, tolerancing outputs a report that describes the sensitivity
+of the merit function to each of the different elements in the system. In some cases, tolerancing analysis gives information
+as to how much . An example of this is for a lens designer tolerancing the radii or material properties of a lens to ensure
+it's focal length stays above or below a certain value. For our system though, even with our designated merit function, it is difficult
+to directly ascribe a sort of cutoff value of the merit function as acceptable, and so we primarily use tolerancing analysis
+as a way to guide us as to general trends of sensitivity in the elements of our system.
+
+This is shown below, where in this instance we can see that in the case of our system, the element corresponding to the 24th surface
+(the galvo mirror) causes the most change to the merit function as it becomes perturbed. In all cases, the largest
+perturbations in the system (i.e. when the angular offset of an element is maximum at +-1.45 degrees) results in the
+largest changes to the merit function.
+
+We also set our tolerance analysis to output the best and worst instances from the Monte Carlo simulations as individual
+files, and the corresponding geometric image analysis windows are shown for each as well as the nominal optimized case
+for comparison. It's clear that in the worst case scenario, it looks like the resulting light sheet is shorter in span
+than that of the nominal and best cases.
+
+.. image:: docs/source/design_principles/Images/Tolerance_Coarse.png
+    :align: center
+    :alt: Results of tolerancing analysis when the offset corresponded to +-0.005"
+
+To understand how tighter tolerances might affect system performance, we set our angular offset to correspond to tighter
+machining tolerances offered online at +-0.002". Typically, tighter machining tolerances correspond to an increase in price,
+so understanding if higher tolerances would benefit a system is beneficial. We can the same tolerance analysis as before,
+but this time with an angular offset of +-0.581 degrees, and show the results below. In this analysis, once again the element
+that affects the system most adversely is the galvo mirror element. The deviations in the resulting merit functions from this
+element are about a tenth of that of the larger machining tolerance case. Visually, in the worst case example, one can see
+that the resulting light sheet looks much closer to the nominal case than before as well.
+
+.. image:: docs/source/design_principles/Images/Tolerance_Fine.png
+    :align: center
+    :alt: Results of tolerancing analysis when the offset corresponded to +-0.002"
 
 Baseplate Design
 -----------------
@@ -210,9 +269,10 @@ With the baseplate designed, our final assembly for our illumination path looks 
 Note on Difference in Simulated and Physical Coordinate Definitions
 ______________________________
 
-It should be noted briefly that when discussing our physical microscope systems, the definitions for the coordinate axes
-is different than that of our simulations. This is due to a difference in standardized definitions for the axes in our
-previous systems and how Zemax defines these same axes. This difference is depicted in the picture below:
+It should be noted briefly that when discussing our physical microscope systems using Navigate software, the definitions
+for the coordinate axes is different than that of our simulations. This is due to a difference in standardized
+definitions for the axes in our previous systems and how Zemax defines these same axes. This difference is depicted in
+the picture below:
 
 .. image:: docs/source/design_principles/Images/CoordinateSchemeChange.png
     :align: center
