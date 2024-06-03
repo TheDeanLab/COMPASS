@@ -115,7 +115,7 @@ Within Zemax, there are numerous analysis tools available to investigate differe
 Our analysis will primarily be guided by the Geometric Image Analysis, Huygen's PSF, and Through Focus Spot tools.
 Zemax innately uses geometric ray tracing in most all of its operations like beam optimization.
 This is generally-acceptable for most optical systems; however, as our output light sheet size approaches the
-diffraction limit ( :math:`\lambda` /(2NA)), we need to make sure to also consider the effects of diffraction in our analysis.
+diffraction limit ( :math:`\frac{\lambda}{2NA}` ), we need to make sure to also consider the effects of diffraction in our analysis.
 
 The Huygen's PSF analysis tool is how we incorporate effects of diffraction into our analysis; where we anticipate results from this analysis to be more
 in-line with what would be seen on the physical system. Based on the cross section of our Huygen's PSF analysis, we can
