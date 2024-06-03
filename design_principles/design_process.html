@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>General Design Process &mdash; navigate-hardware  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            navigate-hardware
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/background.html">Why Light-Sheet Microscopy?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/principles.html">Light-Sheet Microscopy Optical Principles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/nanospim.html">NanoSPIM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/aslm.html">ASLM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/opm.html">OPM</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Design Principles</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="required_software.html">Required Software and Packages</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">navigate-hardware</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">General Design Process</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/design_principles/design_process.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="general-design-process">
+<span id="process-home"></span><h1>General Design Process<a class="headerlink" href="#general-design-process" title="Permalink to this heading"></a></h1>
+<section id="initial-lens-selection">
+<h2>Initial Lens Selection<a class="headerlink" href="#initial-lens-selection" title="Permalink to this heading"></a></h2>
+<p>Prior to starting optical simulations in Zemax, it’s convenient to start with straightforward
+calculations to determine which lenses to use in the optical train to achieve the desired field of view (FoV) for your
+detection path.</p>
+<p>In our case, our detection path consisted of a 400 mm tube lens and a Nikon 25x/1.1 numerical aperture (NA) immersion detection objective.
+To determine the target FoV, start with determining the final magnification (M) of the system using the ratio of the focal
+lengths of the tube lens (<em>f</em><sub>TL</sub>) and the detection objective (<em>f</em><sub>DO</sub>):</p>
+<p>M = <em>f</em><sub>TL</sub>/<em>f</em><sub>DO</sub></p>
+<p>From there, determine the resulting FoV of the detection path by dividing the total camera sensor size (in mm) by the magnification, and then converting into microns:</p>
+<p>FoV (in microns) = (W <sub>Sensor</sub> /M)*1000</p>
+<p>For our system, this resulted in a FoV of ~266 <span class="math notranslate nohighlight">\(\mu m\)</span>, meaning that we want to select lenses in our illumination path
+to produce a light sheet as close to 266 <span class="math notranslate nohighlight">\(\mu m\)</span> in length as we can achieve.</p>
+<p>The overarching goal of a standard optical system is to both mold light into a particular shape and direct it to a
+particular location. In our case, our optical system works to convert an input gaussian beam into a thin light sheet that illuminates our sample.
+There are a few sets of criteria that help guide our potential lens selection:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>As mentioned, we want our final light sheet size to ideally cover the full FoV of our detection path (~266 μm)</p></li>
+<li><p>At the focus of our cylindrical lens, we want the beam spot size to stay under the size of our resonant galvo (12 mm diameter)</p></li>
+<li><p>We need the focal distance between the cylindrical lens and the galvo mirror system to be greater than ~55 mm due to
+mechanical considerations of the mirror mount used</p></li>
+<li><p>We want to overfill our objective, (Reasoning behind overfilling objective) , resulting in a thinner light sheet width</p></li>
+</ul>
+</div></blockquote>
+<p>With these criteria in mind, we can calculate a theoretic estimate of what our beam size is after each of our lenses. We
+do this by considering every pair of lenses (i.e. Lens 1 &amp; 2, Lens 2 &amp; 3, …) as a sort of 4F magnification system,
+where the resulting image size of the pairs is determined by the ratio of their focal lengths (<em>f</em><sub>n</sub>) as follows:</p>
+<img alt="4F System Diagram" class="align-center" src="design_principles/docs/source/design_principles/Images/4FSystem.png" />
+<p>Essentially, we can cascade these calculations through our lenses and make sure that our choices in their focal
+lengths produce our desired beam characteristics as light propagates through the system. In our case,
+our chosen system featured 4 lenses from Thorlabs:
+<a class="reference external" href="https://www.thorlabs.com/thorproduct.cfm?partnumber=AC254-030-A">L1 = 30 mm</a>,
+<a class="reference external" href="https://www.thorlabs.com/thorproduct.cfm?partnumber=AC254-080-A">L2 = 80 mm</a>,
+<a class="reference external" href="https://www.thorlabs.com/thorproduct.cfm?partnumber=ACY254-075-A">L3 (Cylindrical) = 75 mm</a>, and
+<a class="reference external" href="https://www.thorlabs.com/thorproduct.cfm?partnumber=AC254-250-A">L4 = 250 mm</a>.</p>
+<p>We can then take these lens choices and load them into Zemax Opticstudio to verify the characterisitcs of our system.</p>
+<img alt="Optical System Diagram" class="align-center" src="design_principles/docs/source/design_principles/Images/MonolithV1p1_CylindricalLensSchematic_V2.png" />
+<section id="zemax-simulation-setup-process">
+<h3>Zemax Simulation Setup Process<a class="headerlink" href="#zemax-simulation-setup-process" title="Permalink to this heading"></a></h3>
+<p>With our chosen lens in mind, we can download Zemax files associated with each lens directly from Thorlabs website
+and set up our simulation.</p>
+<img alt="Thorlabs Zemax Download" class="align-center" src="design_principles/docs/source/design_principles/Images/ThorlabsExample.png" />
+<p>Here, we use Zemax as a tool to find the optimal placement of all the lenses of our system
+based on whether or not the input beam should be focusing or collimated after each lens.
+As a general rule of thumb, one should build optical systems in Zemax in an element-by-element
+manner instead of adding all the optical elements and trying to then optimize aspects of it.
+Our general flow involves adding a lens to the system and then optimizing for either
+either a focused or collimated beam, and then adding in the next lens and doing the same process until all lenses are
+placed in the system. This is described in more detail below.</p>
+<p>For our particular system, our generalized process went as follows:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Create a new file that will be used as our lens assembly file</p></li>
+<li><p>Set aperture size in Zemax to match our laser spot size (2.4 mm).</p></li>
+<li><p>Open the Zemax file associated with Lens 1, then copy and paste the surfaces into our assembly file.</p></li>
+<li><p>Use the optimzation wizard to set a focusing optimization with the distance after L1 (f1) as the variable to find
+the correct position of L1’s focus.</p></li>
+</ol>
+<img alt="Optimization Wizard for Spot Size" class="align-center" src="design_principles/docs/source/design_principles/Images/Spotwizard.png" />
+<ol class="arabic simple" start="5">
+<li><p>Run the optimization, then remove the variable for f1.</p></li>
+<li><p>Open the Zemax file associated with Lens 2, then copy and paste the surfaces into our assembly after Lens 1</p></li>
+<li><p>Use the Optimization Wizard to set an angular (collimation) optimization, with the distance between L1’s focus
+and L2 (d1) as the variable.</p></li>
+</ol>
+<img alt="Optimization Wizard for Collimation" class="align-center" src="design_principles/docs/source/design_principles/Images/Anglewizard.png" />
+<ol class="arabic simple" start="8">
+<li><p>Optimize, then remove the variable for d1.</p></li>
+<li><p>Open the Zemax file associated with Lens 3, then copy and paste the surfaces into our assembly after Lens 2.</p></li>
+<li><p>Use the optimization wizard to set an <em>X</em>-focusing optimization with the distance after L3 (f3) as the variable.</p></li>
+<li><p>Optimize, then remove the variable for f3.</p></li>
+<li><p>Place in resonant galvo and 45 degree mirror surfaces at the location of f3.</p></li>
+<li><p>Open the Zemax file associated with Lens 4, then copy and paste the surfaces into our assembly after the 45 degree
+mirror.</p></li>
+<li><p>Use the optimization wizard to set an <em>X</em>-collimation optimization with the distance between the 45 degree mirror
+and L4 (d3) as the variable.</p></li>
+<li><p>Optimize, then remove the variable for d3.</p></li>
+<li><p>Open the Zemax file associated with our Illumination Objective, then copy and paste the surfaces into our assembly
+after L4.</p></li>
+<li><p>Use the Optimization Wizard to set an <em>X</em>-focusing Optimization with the distance between L4 and the objective (d4)
+as the variable.</p></li>
+<li><p>Optimize</p></li>
+</ol>
+</div></blockquote>
+</section>
+<section id="zemax-simulation-analysis">
+<h3>Zemax Simulation Analysis<a class="headerlink" href="#zemax-simulation-analysis" title="Permalink to this heading"></a></h3>
+<p>Within Zemax, there are numerous analysis tools available to investigate different characteristics of optical systems.
+Our analysis will primarily be guided by the Geometric Image Analysis, Huygen’s PSF, and Through Focus Spot tools.
+Zemax innately uses geometric ray tracing in most all of its operations like beam optimization.
+This is generally-acceptable for most optical systems; however, as our output light sheet size approaches the
+diffraction limit ( 0xCE /(2NA)), we need to also consider the effects of diffraction in our analysis.</p>
+<p>The Huygen’s PSF analysis tool is how we incorporate effects of diffraction into our analysis; where we anticipate results from this analysis to be more
+in-line with what would be seen on the physical system. Based on the cross section of our Huygen’s PSF analysis, we can
+see that our expected Full-Width Half-Max (FWHM) of the light sheet is expected to lie somewhere around 0.382 μm.</p>
+<p>Through Focus Spot analysis allows us to essentially see the evolution of the light sheet through the point of focus,
+where we can then estimate a sort of range where we expect the width of the light sheet to be thin enough for our
+imaging purposes, where the maximum usable light sheet width is the FWHM at the focus multiplied by sqrt(2).</p>
+</section>
+</section>
+<section id="zemax-tolerancing-analysis">
+<h2>Zemax Tolerancing Analysis<a class="headerlink" href="#zemax-tolerancing-analysis" title="Permalink to this heading"></a></h2>
+<p>When considering building physical systems using Zemax, an additional analysis tool known as tolerancing becomes
+increasingly important. Tolerancing is essentially the process of understanding how sensitive different elements in a
+system are to various perturbations. This can be along the lines of how sensitive the collimation or magnification of a
+4F system is to small physical displacements of the two lenses that comprise it. Similarly to Zemax’s optimization
+process, tolerancing also utilizes a merit function. This merit function is fully customizable, and serves to define
+how well a particular system is performing. In the case of our system, we chose our merit function to factor in both the
+size and displacement of the output light sheet relative to the perfectly optimized instance.</p>
+<img alt="Tolerance Merit Function" class="align-center" src="design_principles/docs/source/design_principles/Images/ToleranceMF.png" />
+</section>
+<section id="baseplate-design">
+<h2>Baseplate Design<a class="headerlink" href="#baseplate-design" title="Permalink to this heading"></a></h2>
+<p>When satisfied with the results of simulations, the optimized values in Zemax can then be used to design
+our baseplate. This process involves taking the optimized distances between our various optical elements
+and then considering how each of those elements are mounted in a physical system, as in Zemax all of the elements are
+effectively suspended in midair like below:</p>
+<img alt="Zemax Elements Floating" class="align-center" src="design_principles/docs/source/design_principles/Images/CylindricalDesign6_30_90_75_250flip4.png" />
+<p>For mounting our elements, we utilize the <a class="reference external" href="https://www.thorlabs.com/navigation.cfm?guide_id=2368">Polaris</a> line from
+Thorlabs, which are designed with long-term stability and alignment in mind. Each component is characterized in part by
+two dowell pin alignment holes to ensure subsequent mounted elements are aligned along a specific axis. In the baseplate
+design, we are essentially deciding on the location for the mounting holes of the Polaris posts we’re using, which is
+not the same as the locations of the elements themselves from Zemax.</p>
+<img alt="Polaris Scheme" class="align-center" src="design_principles/docs/source/design_principles/Images/PolarisScheme.png" />
+<p>While we are able to use most of our element mounts from the Polaris line, for the cylindrical lens L3 we needed a mount
+capable of rotating the lens, which at this time is not something available from Thorlabs. In our case we designed an
+additional mounting element that allows the use of a basic Thorlabs
+<a class="reference external" href="https://www.thorlabs.com/thorproduct.cfm?partnumber=RSP1">RSP1 rotation mount</a>, but still ensures alignment with the
+other Polaris elements. The CAD file for this mount is available for download here (INSERT DOWNLOAD LINK FOR ELEMENT?)</p>
+<img alt="Rotation Mount Adapter" class="align-center" src="design_principles/docs/source/design_principles/Images/RotationMount.png" />
+<p>With the method in which each of the elements needs to be mounted decided upon, we then went over the product schematics
+for each mount to understand the z-displacement that they impart upon the element mounted within them relative to where
+the Polaris post central mounting hole would need to be. This idea is depicted below, where when considering how to
+space two lenses from each other there is essentially three components to take into account:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>The distance between the lenses decided from simulation</p></li>
+<li><p>The thickness of the lenses themselves</p></li>
+<li><p>The distance between the center of the Polaris post and the start of the lens in the mount</p></li>
+</ol>
+</div></blockquote>
+<img alt="Post Spacing Considerations" class="align-center" src="design_principles/docs/source/design_principles/Images/PostSpacingConsiderations.png" />
+<p>Once the locations of the mounting holes were determined, we used Autodesk Inventor to design the full baseplate. The
+baseplate is essentially just a mounting hole and the two dowel pin holes for every element, as well as four mounting
+holes for the baseplate itself. These four baseplate mounting holes were spaced in increments of inches such that the
+baseplate can either be screwed directly into an optical breadboard table or into additional posts that can keep the
+assembly at a desired height.</p>
+<img alt="Baseplate" class="align-center" src="design_principles/docs/source/design_principles/Images/Baseplate.png" />
+<p>With the baseplate designed, our final assembly for our illumination path looks as follows:</p>
+<img alt="Baseplate Assembly Iso" class="align-center" src="design_principles/docs/source/design_principles/Images/BaseplateAssembly_Iso.png" />
+<img alt="Baseplate Assembly Top" class="align-center" src="design_principles/docs/source/design_principles/Images/BaseplateAssembly_Top.png" />
+<section id="note-on-difference-in-simulated-and-physical-coordinate-definitions">
+<h3>Note on Difference in Simulated and Physical Coordinate Definitions<a class="headerlink" href="#note-on-difference-in-simulated-and-physical-coordinate-definitions" title="Permalink to this heading"></a></h3>
+<p>It should be noted briefly that when discussing our physical microscope systems, the definitions for the coordinate axes
+is different than that of our simulations. This is due to a difference in standardized definitions for the axes in our
+previous systems and how Zemax defines these same axes. This difference is depicted in the picture below:</p>
+<img alt="Difference in coordinate axes for simulation and physical setup" class="align-center" src="design_principles/docs/source/design_principles/Images/CoordinateSchemeChange.png" />
+</section>
+</section>
+<section id="physical-assembly-process">
+<h2>Physical Assembly Process<a class="headerlink" href="#physical-assembly-process" title="Permalink to this heading"></a></h2>
+<p>Our baseplate design was made with ease of assembly in mind. The basic process involves aligning Polaris posts with
+dowell pins and screwing them using 1/4”-20 Screws in at the predetermined hole locations on the breadboard.
+This general process is depicted below:</p>
+<img alt="General process to place posts on baseplate" class="align-center" src="design_principles/docs/source/design_principles/Images/BaseplateAssembly.png" />
+<p>We used various different Polaris post sizes in our assembly based on what element was being mounted on them.
+Also worth noting is that three elements are designed to be placed on 0.5” posts and as such require 0.5” post holders at
+their designated locations: the L1 focus iris, the rectangular aperture after L2, and the ND filter after the 45 degree mirror.
+The overal breakdown of which size posts went with each hole location is listed below:</p>
+<img alt="Schematic of which holes use which post heights" class="align-center" src="design_principles/docs/source/design_principles/Images/PostHeightBreakdown.png" />
+<p>To either mount the baseplate onto an optical table or onto separate posts, the process is similar in that
+just requires screwing 1/4”-20 screws into either an optical breadboard or onto separate posts at the four corner holes.</p>
+<img alt="General process to place posts on baseplate corners" class="align-center" src="design_principles/docs/source/design_principles/Images/BaseplateAssembly_Corners.png" />
+</section>
+<section id="finding-the-focus">
+<h2>Finding the Focus<a class="headerlink" href="#finding-the-focus" title="Permalink to this heading"></a></h2>
+</section>
+<section id="minimizing-spherical-aberrations">
+<h2>Minimizing Spherical Aberrations<a class="headerlink" href="#minimizing-spherical-aberrations" title="Permalink to this heading"></a></h2>
+<p>Once the system has been assembled to the point of being able to take image stacks, the process of
+minimizing the effects of spherical aberrations can begin. Spherical aberrations are typically
+introduced into optical systems due to the surface curvature of different lens elements. This
+type of aberration typically presents itself visually as a sort of stretching or bending of the focus
+of light in the system. Certain microscope objectives, such as the Nikon 25x/1.1 NA that we employ in this setup,
+have a built-in collar that can be adjusted to minimize spherical aberration (PICTURE).</p>
+<p>In our system, we expect the effects of spherical aberrations to be along the axis of our detection path (defined
+as z in our imaging scheme). In order to visualize these effects and adjust the correction collar of our objective
+to mitigate them, we employ a process of taking a z-stack of fluorescent beads suspended in agarose
+and using ImageJ to quickly process those images.</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Take a z-stack within Navigate of your sample</p></li>
+<li><p>Open up the z-stack within ImageJ</p></li>
+<li><p>Reslice the z-stack (Image -&gt; Stacks -&gt; Reslice)</p></li>
+<li><p>Do a maximum intensity project of the resliced stack (Image -&gt; Stacks -&gt; Z-Projection)</p></li>
+<li><p>Take note if spherical aberration is present in the projected image.</p></li>
+<li><p>If spherical aberration is still present, make slight adjustments to the objective
+correction collar and repeat Steps 1-5.</p></li>
+</ol>
+</div></blockquote>
+<p>As a note, observing the camera live-feed via Navigate’s “Continuous Scan” mode while adjusting the correction collar
+can help to get in the general vicinity of the correct placement of the correction collar. An example of how change in
+the correction collar affect live images are shown below for fluorescent beads. Aiming to get to get the beads near the
+expected light sheet position to be as in-focus as possible is a general guide for what direction to move the collar;
+however, true correction needs to be done with the z-projection method mentioned above.</p>
+<img alt="Correction collar effects" class="align-center" src="design_principles/docs/source/design_principles/Images/ChangingCorrectionCollar.png" />
+<p>As a quick example of what an image of a z-projection could look like before and after trying to correct for spherical aberration is shown
+below. Here, one can see in the top panel that the bead features are essentially smoothed out and fuzzy due to
+aberrations, while in the bottom panel with adjustments made to the correction collar the beads appear much cleaner and
+focused.</p>
+<img alt="Before and after of adjusting in Z-projections after adjusting the correction collar" class="align-center" src="design_principles/docs/source/design_principles/Images/SphericalExample.png" />
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Dean Lab, UT Southwestern Medical Center.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASLM &mdash; navigate-hardware  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="OPM" href="opm.html" />
+    <link rel="prev" title="NanoSPIM" href="nanospim.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            navigate-hardware
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="background.html">Why Light-Sheet Microscopy?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="principles.html">Light-Sheet Microscopy Optical Principles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nanospim.html">NanoSPIM</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">ASLM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="opm.html">OPM</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Design Principles</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../design_principles/required_software.html">Required Software and Packages</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">navigate-hardware</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">ASLM</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/introduction/aslm.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="aslm">
+<span id="background-home"></span><h1>ASLM<a class="headerlink" href="#aslm" title="Permalink to this heading"></a></h1>
+<p>Two light-sheet microscopy techniques successfully decouple the trade-off between
+axial resolution and field of view: multiview deconvolution and ASLM. In the former,
+the sample is imaged from multiple directions (via sample rotation or by reversing
+the illumination and detection paths) and the complementary views computationally
+fused to create a high-resolution, large field of view image. However, this increases
+the illumination burden on the specimen, increases the data overhead, and requires
+deconvolution which is incompatible with biosensor-based imaging. In contrast, ASLM,
+a technology invented by Dean and Fiolka in 2015, uses aberration-free remote focusing
+to sweep a tightly focused Gaussian beam through the sample in its propagation
+direction synchronously with the rolling shutter of a CMOS camera. Here, the axial
+position of the illumination beam is deterministically controlled by translating the
+position of a piezo or voice coil mounted mirror that is optically conjugate to the
+specimen at the focal plane of a remote focusing objective. More recently, to
+accelerate the image acquisition rate of ASLM to 200 frames per second, we developed
+a novel method that converted a lateral galvanometer sweep into an aberration-free
+scan of the illumination beam. Importantly, ASLM does not require any computational
+post-processing, and delivers a large field of view (100 x 100 x 100µm) and the
+highest axial resolution (~400 nm) in LSFM in the absence of deconvolution or
+super-resolution techniques (e.g., structured illumination, stimulated emission, or
+localization). Because ASLM has isotropic resolution, it is routinely combined with
+advanced computer vision software, and has already provided tremendous insight into
+diverse biological phenomena. For example, when combined with the software package
+u-shape3D, ASLM was able to evaluate how Kras and PIP2 influence cell morphology and
+motion in 3D collagen environments. Importantly, because it uses refractive rather
+than diffractive optics, ASLM is entirely compatible with multiplexed excitation and
+detection of multiple biosensors and/or optogenetic probes. As such, ASLM is ideally
+suited to evaluate the molecular mechanisms underlying cell-cell interactions and
+metastatic dissemination in 3D extracellular matrix environments.</p>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="nanospim.html" class="btn btn-neutral float-left" title="NanoSPIM" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="opm.html" class="btn btn-neutral float-right" title="OPM" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Dean Lab, UT Southwestern Medical Center.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
