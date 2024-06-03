@@ -199,7 +199,7 @@ see that our expected Full-Width Half-Max (FWHM) of the light sheet is expected 
 <p>We compare the results of these two analyses for our optimized illumination path below, where we show the full XY profile
 as well as cross-sections through the center row of both beam profiles. In this case, the FWHM of both analyses ends up
 being quite similar at ~0.38 <span class="math notranslate nohighlight">\(\mu m\)</span>.</p>
-<img alt="Comparison of Geometric Image Analysis and Huygen's PSF analysis for our optimized system" class="align-center" src="design_principles/docs/source/design_principles/Images/HuygensvsGeo.png" />
+<img alt="Comparison of Geometric Image Analysis and Huygen's PSF analysis for our optimized system" class="align-center" src="../_images/HuygensvsGeo.png" />
 <p>Through Focus Spot analysis allows us to essentially see the evolution of the light sheet through the point of focus,
 where we can then estimate a sort of range where we expect the width of the light sheet to be thin enough for our
 imaging purposes, where the maximum usable light sheet width is the FWHM at the focus multiplied by <span class="math notranslate nohighlight">\(\sqrt{2}\)</span>.</p>
@@ -223,7 +223,7 @@ is around +-0.002”. For our analysis, we wanted to understand how angular devi
 machining tolerances in the alignment dowel pins would affect overall system performance. This is depicted below, where
 in the worst case scenario of one pin being offset +0.005” and the other -0.005” the resulting angular offset would be
 around 1.45 degrees.</p>
-<img alt="Angular offset of elements imparted by machining tolerances of dowel pin holes" class="align-center" src="design_principles/docs/source/design_principles/Images/AlignmentHole.png" />
+<img alt="Angular offset of elements imparted by machining tolerances of dowel pin holes" class="align-center" src="../_images/AlignmentHole.png" />
 <p>In addition to perturbations to a system, in tolerancing analysis a compensator can also be defined as a sort of designated
 element that can be changed in ways to try to mitigate effects of other elements in the system being tweaked. In our case,
 we define the xy position of our illumination objective as a compensator with a range of +-0.25mm, which matches the xy
@@ -244,7 +244,7 @@ largest changes to the merit function.</p>
 files, and the corresponding geometric image analysis windows are shown for each as well as the nominal optimized case
 for comparison. It’s clear that in the worst case scenario, it looks like the resulting light sheet is shorter in span
 than that of the nominal and best cases.</p>
-<img alt="Results of tolerancing analysis when the offset corresponded to +-0.005&quot;" class="align-center" src="design_principles/docs/source/design_principles/Images/Tolerance_Coarse.png" />
+<img alt="Results of tolerancing analysis when the offset corresponded to +-0.005&quot;" class="align-center" src="../_images/Tolerance_Coarse.png" />
 <p>To understand how tighter tolerances might affect system performance, we set our angular offset to correspond to tighter
 machining tolerances offered online at +-0.002”. Typically, tighter machining tolerances correspond to an increase in price,
 so understanding if higher tolerances would benefit a system is beneficial. We can the same tolerance analysis as before,
@@ -252,7 +252,7 @@ but this time with an angular offset of +-0.581 degrees, and show the results be
 that affects the system most adversely is the galvo mirror element. The deviations in the resulting merit functions from this
 element are about a tenth of that of the larger machining tolerance case. Visually, in the worst case example, one can see
 that the resulting light sheet looks much closer to the nominal case than before as well.</p>
-<img alt="Results of tolerancing analysis when the offset corresponded to +-0.002&quot;" class="align-center" src="design_principles/docs/source/design_principles/Images/Tolerance_Fine.png" />
+<img alt="Results of tolerancing analysis when the offset corresponded to +-0.002&quot;" class="align-center" src="../_images/Tolerance_Fine.png" />
 </section>
 <section id="baseplate-design">
 <h2>Baseplate Design<a class="headerlink" href="#baseplate-design" title="Permalink to this heading"></a></h2>

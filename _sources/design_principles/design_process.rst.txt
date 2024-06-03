@@ -125,7 +125,7 @@ We compare the results of these two analyses for our optimized illumination path
 as well as cross-sections through the center row of both beam profiles. In this case, the FWHM of both analyses ends up
 being quite similar at ~0.38 :math:`\mu m`.
 
-.. image:: docs/source/design_principles/Images/HuygensvsGeo.png
+.. image:: Images/HuygensvsGeo.png
     :align: center
     :alt: Comparison of Geometric Image Analysis and Huygen's PSF analysis for our optimized system
 
@@ -157,7 +157,7 @@ machining tolerances in the alignment dowel pins would affect overall system per
 in the worst case scenario of one pin being offset +0.005" and the other -0.005" the resulting angular offset would be
 around 1.45 degrees.
 
-.. image:: docs/source/design_principles/Images/AlignmentHole.png
+.. image:: Images/AlignmentHole.png
     :align: center
     :alt: Angular offset of elements imparted by machining tolerances of dowel pin holes
 
@@ -185,7 +185,7 @@ files, and the corresponding geometric image analysis windows are shown for each
 for comparison. It's clear that in the worst case scenario, it looks like the resulting light sheet is shorter in span
 than that of the nominal and best cases.
 
-.. image:: docs/source/design_principles/Images/Tolerance_Coarse.png
+.. image:: Images/Tolerance_Coarse.png
     :align: center
     :alt: Results of tolerancing analysis when the offset corresponded to +-0.005"
 
@@ -197,7 +197,7 @@ that affects the system most adversely is the galvo mirror element. The deviatio
 element are about a tenth of that of the larger machining tolerance case. Visually, in the worst case example, one can see
 that the resulting light sheet looks much closer to the nominal case than before as well.
 
-.. image:: docs/source/design_principles/Images/Tolerance_Fine.png
+.. image:: Images/Tolerance_Fine.png
     :align: center
     :alt: Results of tolerancing analysis when the offset corresponded to +-0.002"
 
