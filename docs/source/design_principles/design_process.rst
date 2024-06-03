@@ -37,7 +37,7 @@ do this by considering every pair of lenses (i.e. Lens 1 & 2, Lens 2 & 3, ...) a
 where the resulting image size of the pairs is determined by the ratio of their focal lengths (*f*:subscript:`n`) as follows:
 
 
-.. image:: docs/source/design_principles/Images/4FSystem.png
+.. image:: Images/4FSystem.png
     :align: center
     :alt: 4F System Diagram
 
@@ -51,7 +51,7 @@ our chosen system featured 4 lenses from Thorlabs:
 
 We can then take these lens choices and load them into Zemax Opticstudio to verify the characterisitcs of our system.
 
-.. image:: docs/source/design_principles/Images/MonolithV1p1_CylindricalLensSchematic_V2.png
+.. image:: Images/MonolithV1p1_CylindricalLensSchematic_V2.png
     :align: center
     :alt: Optical System Diagram
 
@@ -61,7 +61,7 @@ ______________________________
 With our chosen lens in mind, we can download Zemax files associated with each lens directly from Thorlabs website
 and set up our simulation.
 
-.. image:: docs/source/design_principles/Images/ThorlabsExample.png
+.. image:: Images/ThorlabsExample.png
     :align: center
     :alt: Thorlabs Zemax Download
 
@@ -80,7 +80,7 @@ For our particular system, our generalized process went as follows:
     3. Open the Zemax file associated with Lens 1, then copy and paste the surfaces into our assembly file.
     4. Use the optimzation wizard to set a focusing optimization with the distance after L1 (f1) as the variable to find
        the correct position of L1's focus.
-    .. image:: docs/source/design_principles/Images/Spotwizard.png
+    .. image:: Images/Spotwizard.png
         :align: center
         :alt: Optimization Wizard for Spot Size
 
@@ -88,7 +88,7 @@ For our particular system, our generalized process went as follows:
     6. Open the Zemax file associated with Lens 2, then copy and paste the surfaces into our assembly after Lens 1
     7. Use the Optimization Wizard to set an angular (collimation) optimization, with the distance between L1's focus
        and L2 (d1) as the variable.
-    .. image:: docs/source/design_principles/Images/Anglewizard.png
+    .. image:: Images/Anglewizard.png
         :align: center
         :alt: Optimization Wizard for Collimation
 
@@ -136,7 +136,7 @@ process, tolerancing also utilizes a merit function. This merit function is full
 how well a particular system is performing. In the case of our system, we chose our merit function to factor in both the
 size and displacement of the output light sheet relative to the perfectly optimized instance.
 
-.. image:: docs/source/design_principles/Images/ToleranceMF.png
+.. image:: Images/ToleranceMF.png
     :align: center
     :alt: Tolerance Merit Function
 
@@ -150,7 +150,7 @@ our baseplate. This process involves taking the optimized distances between our 
 and then considering how each of those elements are mounted in a physical system, as in Zemax all of the elements are
 effectively suspended in midair like below:
 
-.. image:: docs/source/design_principles/Images/CylindricalDesign6_30_90_75_250flip4.png
+.. image:: Images/CylindricalDesign6_30_90_75_250flip4.png
     :align: center
     :alt: Zemax Elements Floating
 
@@ -160,7 +160,7 @@ two dowell pin alignment holes to ensure subsequent mounted elements are aligned
 design, we are essentially deciding on the location for the mounting holes of the Polaris posts we're using, which is
 not the same as the locations of the elements themselves from Zemax.
 
-.. image:: docs/source/design_principles/Images/PolarisScheme.png
+.. image:: Images/PolarisScheme.png
     :align: center
     :alt: Polaris Scheme
 
@@ -170,7 +170,7 @@ additional mounting element that allows the use of a basic Thorlabs
 `RSP1 rotation mount <https://www.thorlabs.com/thorproduct.cfm?partnumber=RSP1>`_, but still ensures alignment with the
 other Polaris elements. The CAD file for this mount is available for download here (INSERT DOWNLOAD LINK FOR ELEMENT?)
 
-.. image:: docs/source/design_principles/Images/RotationMount.png
+.. image:: Images/RotationMount.png
     :align: center
     :alt: Rotation Mount Adapter
 
@@ -182,7 +182,7 @@ space two lenses from each other there is essentially three components to take i
     2. The thickness of the lenses themselves
     3. The distance between the center of the Polaris post and the start of the lens in the mount
 
-.. image:: docs/source/design_principles/Images/PostSpacingConsiderations.png
+.. image:: Images/PostSpacingConsiderations.png
     :align: center
     :alt: Post Spacing Considerations
 
@@ -193,17 +193,17 @@ holes for the baseplate itself. These four baseplate mounting holes were spaced 
 baseplate can either be screwed directly into an optical breadboard table or into additional posts that can keep the
 assembly at a desired height.
 
-.. image:: docs/source/design_principles/Images/Baseplate.png
+.. image:: Images/Baseplate.png
     :align: center
     :alt: Baseplate
 
 With the baseplate designed, our final assembly for our illumination path looks as follows:
 
-.. image:: docs/source/design_principles/Images/BaseplateAssembly_Iso.png
+.. image:: Images/BaseplateAssembly_Iso.png
     :align: center
     :alt: Baseplate Assembly Iso
 
-.. image:: docs/source/design_principles/Images/BaseplateAssembly_Top.png
+.. image:: Images/BaseplateAssembly_Top.png
     :align: center
     :alt: Baseplate Assembly Top
 
@@ -214,7 +214,7 @@ It should be noted briefly that when discussing our physical microscope systems,
 is different than that of our simulations. This is due to a difference in standardized definitions for the axes in our
 previous systems and how Zemax defines these same axes. This difference is depicted in the picture below:
 
-.. image:: docs/source/design_principles/Images/CoordinateSchemeChange.png
+.. image:: Images/CoordinateSchemeChange.png
     :align: center
     :alt: Difference in coordinate axes for simulation and physical setup
 
@@ -225,7 +225,7 @@ Our baseplate design was made with ease of assembly in mind. The basic process i
 dowell pins and screwing them using 1/4"-20 Screws in at the predetermined hole locations on the breadboard.
 This general process is depicted below:
 
-.. image:: docs/source/design_principles/Images/BaseplateAssembly.png
+.. image:: Images/BaseplateAssembly.png
     :align: center
     :alt: General process to place posts on baseplate
 
@@ -234,14 +234,14 @@ Also worth noting is that three elements are designed to be placed on 0.5" posts
 their designated locations: the L1 focus iris, the rectangular aperture after L2, and the ND filter after the 45 degree mirror.
 The overal breakdown of which size posts went with each hole location is listed below:
 
-.. image:: docs/source/design_principles/Images/PostHeightBreakdown.png
+.. image:: Images/PostHeightBreakdown.png
     :align: center
     :alt: Schematic of which holes use which post heights
 
 To either mount the baseplate onto an optical table or onto separate posts, the process is similar in that
 just requires screwing 1/4"-20 screws into either an optical breadboard or onto separate posts at the four corner holes.
 
-.. image:: docs/source/design_principles/Images/BaseplateAssembly_Corners.png
+.. image:: Images/BaseplateAssembly_Corners.png
     :align: center
     :alt: General process to place posts on baseplate corners
 
@@ -278,7 +278,7 @@ the correction collar affect live images are shown below for fluorescent beads. 
 expected light sheet position to be as in-focus as possible is a general guide for what direction to move the collar;
 however, true correction needs to be done with the z-projection method mentioned above.
 
-.. image:: docs/source/design_principles/Images/ChangingCorrectionCollar.png
+.. image:: Images/ChangingCorrectionCollar.png
     :align: center
     :alt: Correction collar effects
 
@@ -287,7 +287,7 @@ below. Here, one can see in the top panel that the bead features are essentially
 aberrations, while in the bottom panel with adjustments made to the correction collar the beads appear much cleaner and
 focused.
 
-.. image:: docs/source/design_principles/Images/SphericalExample.png
+.. image:: Images/SphericalExample.png
     :align: center
     :alt: Before and after of adjusting in Z-projections after adjusting the correction collar
 
