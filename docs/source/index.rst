@@ -53,7 +53,7 @@ evaluated in their entirety through time.
    :maxdepth: 5
 
    design_principles/required_software
-   design_principles/
+   design_principles/design_process
 
 .. toctree::
    :caption: Development
