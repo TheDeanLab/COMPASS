@@ -123,7 +123,7 @@ see that our expected Full-Width Half-Max (FWHM) of the light sheet is expected 
 
 We compare the results of these two analyses for our optimized illumination path below, where we show the full XY profile
 as well as cross-sections through the center row of both beam profiles. In this case, the FWHM of both analyses ends up
-being quite similar at ~0.38 :math:`\mu m`.
+being quite similar at ~0.37 :math:`\mu m`.
 
 .. image:: Images/HuygensvsGeo.png
     :align: center
