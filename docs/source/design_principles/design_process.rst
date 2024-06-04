@@ -10,6 +10,10 @@ Prior to starting optical simulations in Zemax, it's convenient to start with st
 calculations to determine which lenses to use in the optical train to achieve the desired field of view (FoV) for your
 detection path.
 
+.. image:: Images/DetectionPath.png
+    :align: center
+    :alt: Detection Path of our System
+
 In our case, our detection path consisted of a 400 mm tube lens and a Nikon 25x/1.1 numerical aperture (NA) immersion detection objective.
 To determine the target FoV, start with determining the final magnification (M) of the system using the ratio of the focal
 lengths of the tube lens (*f*:subscript:`TL`) and the detection objective (*f*:subscript:`DO`):
@@ -22,6 +26,8 @@ FoV (in microns) = (W :subscript:`Sensor` /M)*1000
 
 For our system, this resulted in a FoV of ~266 :math:`\mu m`, meaning that we want to select lenses in our illumination path
 to produce a light sheet as close to 266 :math:`\mu m` in length as we can achieve.
+
+
 
 The overarching goal of a standard optical system is to both mold light into a particular shape and direct it to a
 particular location. In our case, our optical system works to convert an input gaussian beam into a thin light sheet that illuminates our sample.
