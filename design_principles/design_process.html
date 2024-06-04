@@ -363,6 +363,7 @@ focused.</p>
 <p>On the PCI Board, connect the positive and negative wires  to the corresponding analog output (AO) you want, in our case
 we used AO 0, so we connected the positive wire to pin 10 and the ground to pin 11, then plug the BNC cable connected to
 those wires into the EXT IN input on the Tiger controller panel corresponding to the piezo.</p>
+<img alt="How to find the Device Pinout panel" class="align-center" src="../_images/DevicePinouts.png" />
 <p>Plug the piezo cable into the PIEZO input on the Tiger controller panel corresponding to the piezo.</p>
 <p>Verify the range of the piezo in the tiger controller software with the command “5 cca x?”</p>
 <blockquote>
@@ -402,11 +403,35 @@ With that verified, now confirm that the voltage output from the PCI Board is wo
 <blockquote>
 <div><ol class="arabic simple">
 <li><p>Put the BNC cable input currently in EXT IN on the Tiger control panel into the input of the oscilloscope instead.</p></li>
-<li><p>Go to the test panels for the PCI board in NI MAX.</p></li>
+</ol>
+<p>2. Go to the test panels for the PCI board in NI MAX.
+.. image:: Images/TestPanels.png</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">align<span class="colon">:</span></dt>
+<dd class="field-odd"><p>center</p>
+</dd>
+<dt class="field-even">alt<span class="colon">:</span></dt>
+<dd class="field-even"><p>How to find the Test Panels panel</p>
+</dd>
+</dl>
+</div></blockquote>
+<ol class="arabic simple" start="3">
 <li><p>Set the voltage mode to sinewave generation.</p></li>
 <li><p>Set the voltage range to be between 0 to 10 V.</p></li>
-<li><p>Set the frequency to a desired value (we ended up setting it pretty high at 10000 Hz for ease of viewing on the oscilloscope).</p></li>
 </ol>
+<p>5. Set the frequency to a desired value (we ended up setting it pretty high at 10000 Hz for ease of viewing on the oscilloscope).
+.. image:: Images/TestPanelConfiguration.png</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">align<span class="colon">:</span></dt>
+<dd class="field-odd"><p>center</p>
+</dd>
+<dt class="field-even">alt<span class="colon">:</span></dt>
+<dd class="field-even"><p>How to find the Test Panels panel</p>
+</dd>
+</dl>
+</div></blockquote>
 </div></blockquote>
 <p>With the voltage output of the PCI board verified, plug the PCI Board voltage cable output back into the EXT IN slot and
 verify that the position output of the Piezo reads similarly on the oscilloscope:</p>
@@ -422,7 +447,7 @@ the piezo is set in <a class="reference external" href="https://asiimaging.com/d
 <blockquote>
 <div><ol class="arabic simple">
 <li><dl class="simple">
-<dt>Use the <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">PM</kbd> <kbd class="kbd docutils literal notranslate">Q?</kbd></kbd> (Our piezo corresponds to Q) command:</dt><dd><ul class="simple">
+<dt>Use the “PM Q?” (Our piezo corresponds to Q) command:</dt><dd><ul class="simple">
 <li><p>the output was “Q = 0” originally, telling us that it’s in Controller Input mode</p></li>
 </ul>
 </dd>
