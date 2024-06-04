@@ -355,5 +355,57 @@ focused.
     :align: center
     :alt: Before and after of adjusting in Z-projections after adjusting the correction collar
 
+Piezo Setup & Troubleshooting
+-----------------
+On the PCI Board, connect the positive and negative wires  to the corresponding analog output (AO) you want, in our case
+we used AO 0, so we connected the positive wire to pin 10 and the ground to pin 11, then plug the BNC cable connected to
+those wires into the EXT IN input on the Tiger controller panel corresponding to the piezo.
 
+Plug the piezo cable into the PIEZO input on the Tiger controller panel corresponding to the piezo.
+
+Verify the range of the piezo in the tiger controller software with the command "5 cca x?"
+
+    At first, ours output the following:
+        | :A  Q:P1
+        | 23 P 1 100um RANGE
+        | 24 P 2 200um RANGE
+        | 35 P S 150um RANGE
+        | 36 P 3 300um RANGE
+        | 37 P 5 500um RANGE
+        | 34 P f 50um RANGE
+        | 25 P 4 350um RANGE:N-4
+
+This tells us that our Piezo (Panel 5/Q) corresponded to P1 or a 100 um range, but our piezo needed to have a 50 um range instead.
+To change this, we used the command "5 cca x = 34" and power cycled the controller.
+
+    Then our output became:
+       | :A  Q:Pf
+       | 23 P 1 100um RANGE
+       | 24 P 2 200um RANGE
+       | 35 P S 150um RANGE
+       | 36 P 3 300um RANGE
+       | 37 P 5 500um RANGE
+       | 34 P f 50um RANGE
+       | 25 P 4 350um RANGE:N-4
+
+Now we can see that the piezo is set to the correct range (Pf).
+With that verified, now confirm that the voltage output from the PCI Board is working:
+    1. Put the BNC cable input currently in EXT IN on the Tiger control panel into the input of the oscilloscope instead.
+    2. Go to the test panels for the PCI board in NI MAX.
+    3. Set the voltage mode to sinewave generation.
+    4. Set the voltage range to be between 0 to 10 V.
+    5. Set the frequency to a desired value (we ended up setting it pretty high at 10000 Hz for ease of viewing on the oscilloscope).
+
+With the voltage output of the PCI board verified, plug the PCI Board voltage cable output back into the EXT IN slot and
+verify that the position output of the Piezo reads similarly on the oscilloscope:
+    1. Plug a BNC Cable into the SENSOR OUT connection on the tiger controller panel.
+    2. Plug the other end of that cable into the oscilloscope.
+    3. Verify that a sinewave output is seen on the oscilloscope.
+
+If the PCI Board voltage is working as intended but the piezo position output doesn't seem to work, try ensuring that
+the piezo is set in `External Input mode, and not Controller Input mode <https://asiimaging.com/docs/commands/pm>`_:
+    1. Use the :kbd:`PM Q?` (Our piezo corresponds to Q) command:
+        - the output was "Q = 0" originally, telling us that it's in Controller Input mode
+    2. Use the "PM Q = 1" command to set the piezo into External Input mode:
+        - now the output of "PM Q?" is "Q = 1"
 
