@@ -396,15 +396,15 @@ Now we can see that the piezo is set to the correct range (Pf).
 With that verified, now confirm that the voltage output from the PCI Board is working:
     1. Put the BNC cable input currently in EXT IN on the Tiger control panel into the input of the oscilloscope instead.
     2. Go to the test panels for the PCI board in NI MAX.
-    .. image:: Images/TestPanels.png
-        :align: center
-        :alt: How to find the Test Panels panel
+.. image:: Images/TestPanels.png
+    :align: center
+    :alt: How to find the Test Panels panel
     3. Set the voltage mode to sinewave generation.
     4. Set the voltage range to be between 0 to 10 V.
     5. Set the frequency to a desired value (we ended up setting it pretty high at 10000 Hz for ease of viewing on the oscilloscope).
-    .. image:: Images/TestPanelConfiguration.png
-        :align: center
-        :alt: How to find the Test Panels panel
+.. image:: Images/TestPanelConfiguration.png
+    :align: center
+    :alt: How to find the Test Panels panel
 
 With the voltage output of the PCI board verified, plug the PCI Board voltage cable output back into the EXT IN slot and
 verify that the position output of the Piezo reads similarly on the oscilloscope:
