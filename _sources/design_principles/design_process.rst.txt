@@ -426,6 +426,7 @@ the piezo is set in `External Input mode, and not Controller Input mode <https:/
 Another important step is to ensure that the configuration file associated with Navigate is appropriately set up for your piezo.
 This involves setting the correct axis and voltage-to-distance mapping for the piezo. As an example our configuration file
 for Navigate looks like the following for setting up our piezo:
+
 .. image:: Images/Piezo_Config.png
     :align: center
     :alt: How to find the Test Panels panel
