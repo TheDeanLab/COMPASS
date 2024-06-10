@@ -438,6 +438,6 @@ In our system we essentially have 5 different translation stages at work: the st
 stage along the z axis to control the focus of the detection path (f), and and axis associated with the piezo positioned
 60.5 degrees away from the y axis.
 
-.. image:: Images/Piezo_Config.png
+.. image:: Images/PhysicalAxesMaps.png
     :align: center
-    :alt: How to find the Test Panels panel
+    :alt: Layout of how the axis of the system are mapped
