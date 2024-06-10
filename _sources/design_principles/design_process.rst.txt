@@ -379,8 +379,9 @@ Verify the range of the piezo in the tiger controller software with the command 
         | 34 P f 50um RANGE
         | 25 P 4 350um RANGE:N-4
 
-This tells us that our Piezo (Panel 5/Q) corresponded to P1 or a 100 um range, but our piezo needed to have a 50 um range instead.
-To change this, we used the command "5 cca x = 34" and power cycled the controller.
+This tells us that our Piezo (Panel 5/Q) corresponded to P1 or a 100 um range, but ASI requires the piezo needed to be
+set to  a 50 um range to be able to be intitialized instead. To change this, we used the command "5 cca x = 34" and
+power cycled the controller.
 
     Then our output became:
        | :A  Q:Pf
@@ -422,3 +423,20 @@ the piezo is set in `External Input mode, and not Controller Input mode <https:/
     2. Use the "PM Q = 1" command to set the piezo into External Input mode:
         - now the output of "PM Q?" is "Q = 1"
 
+Another important step is to ensure that the configuration file associated with Navigate is appropriately set up for your piezo.
+This involves setting the correct axis and voltage-to-distance mapping for the piezo. As an example our configuration file
+for Navigate looks like the following for setting up our piezo:
+.. image:: Images/Piezo_Config.png
+    :align: center
+    :alt: How to find the Test Panels panel
+
+Visualization of Axes Mapping
+-----------------
+
+In our system we essentially have 5 different translation stages at work: the standard x,y, and z axes, an additional
+stage along the z axis to control the focus of the detection path (f), and and axis associated with the piezo positioned
+60.5 degrees away from the y axis.
+
+.. image:: Images/Piezo_Config.png
+    :align: center
+    :alt: How to find the Test Panels panel

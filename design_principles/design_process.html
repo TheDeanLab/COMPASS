@@ -71,6 +71,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#finding-the-focus">Finding the Focus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#minimizing-spherical-aberrations">Minimizing Spherical Aberrations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#piezo-setup-troubleshooting">Piezo Setup &amp; Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#visualization-of-axes-mapping">Visualization of Axes Mapping</a></li>
 </ul>
 </li>
 </ul>
@@ -381,8 +382,9 @@ those wires into the EXT IN input on the Tiger controller panel corresponding to
 </dd>
 </dl>
 </div></blockquote>
-<p>This tells us that our Piezo (Panel 5/Q) corresponded to P1 or a 100 um range, but our piezo needed to have a 50 um range instead.
-To change this, we used the command “5 cca x = 34” and power cycled the controller.</p>
+<p>This tells us that our Piezo (Panel 5/Q) corresponded to P1 or a 100 um range, but ASI requires the piezo needed to be
+set to  a 50 um range to be able to be intitialized instead. To change this, we used the command “5 cca x = 34” and
+power cycled the controller.</p>
 <blockquote>
 <div><dl>
 <dt>Then our output became:</dt><dd><div class="line-block">
@@ -440,6 +442,27 @@ the piezo is set in <a class="reference external" href="https://asiimaging.com/d
 </li>
 </ol>
 </div></blockquote>
+<p>Another important step is to ensure that the configuration file associated with Navigate is appropriately set up for your piezo.
+This involves setting the correct axis and voltage-to-distance mapping for the piezo. As an example our configuration file
+for Navigate looks like the following for setting up our piezo:
+.. image:: Images/Piezo_Config.png</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">align<span class="colon">:</span></dt>
+<dd class="field-odd"><p>center</p>
+</dd>
+<dt class="field-even">alt<span class="colon">:</span></dt>
+<dd class="field-even"><p>How to find the Test Panels panel</p>
+</dd>
+</dl>
+</div></blockquote>
+</section>
+<section id="visualization-of-axes-mapping">
+<h2>Visualization of Axes Mapping<a class="headerlink" href="#visualization-of-axes-mapping" title="Permalink to this heading"></a></h2>
+<p>In our system we essentially have 5 different translation stages at work: the standard x,y, and z axes, an additional
+stage along the z axis to control the focus of the detection path (f), and and axis associated with the piezo positioned
+60.5 degrees away from the y axis.</p>
+<img alt="How to find the Test Panels panel" class="align-center" src="../_images/Piezo_Config.png" />
 </section>
 </section>
 
