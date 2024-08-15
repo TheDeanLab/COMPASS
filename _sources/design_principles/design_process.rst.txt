@@ -436,8 +436,51 @@ Visualization of Axes Mapping
 
 In our system we essentially have 5 different translation stages at work: the standard x,y, and z axes, an additional
 stage along the z axis to control the focus of the detection path (f), and and axis associated with the piezo positioned
-60.5 degrees away from the y axis.
+such that its normal is 60.5 degrees away from the y-axis.
 
 .. image:: Images/PhysicalAxesMaps.png
     :align: center
     :alt: Layout of how the axis of the system are mapped
+
+How to Mount a Lens in a Polaris Holder
+-------------------
+
+Installing the Piezo Angle Mount
+-----------------
+
+Processing Images - Deskewing
+-------------------------
+
+With an image stack acquired, some post processing is still required in order to remove the effects of shearing in our
+images. The root of this shearing is due to the angled method in which our sample is mounted and similarly, the angled path that
+the sample moves as the piezo is scanned. A basic visual idea of how deskewing affects the resulting image is shown
+below for 100 nm fluorescent beads. Here before deskewing for the same image plane (yz), the beads appear to be
+stacked in a straight line but oriented along an angle, which is not the most accurate representation of our system.
+On the deskewed image on the right, one can see that the beads are now properly angled correspond to our piezo angle
+mount, and that the PSFs of the beads is now correctly aligned along the z axis.
+
+.. image:: Images/Bead Deskew Example.png
+    :align: center
+    :alt: Difference between an image set of 100 nm bead before deskewing (left) and after (right)
+
+To do this deskew processing, we utilize custom-built python code via Jupyter notebooks (HAVE LINK TO NOTEBOOK
+DOWNLOAD?). The user needs to provide the correct file path to the .tif image stack collected via navigate, as well
+as the parameters of the imaging system like z-step size, xy pixel size, and the angle that the images should be
+deskewed over. In our case, our deskew angle is equivalent to 90-60.5 degrees, where 60.5 degrees corresponds to the
+difference between the normal of our angle mount and the y-axis. If this value is unknown, one can use different
+values for the deskew angle until the bead PSFs are correctly aligned along the z-axis and not angled.
+
+Processing Images - Rescaling
+-------------------------
+
+With a properly deskewed image set, the next step is to work to rescale the image set dimensions to properly
+represent the image pixel sizes in every dimension. The first step to doing this involves going to the properties tab
+of the image stack (Image-> Properties) and adjusting each dimension such that the x and y values correspond to the
+xy pixel size based on the system magnification and camera sensor size, and the z value corresponding to the z step
+size. While using our angled piezo configuration, the z step size :math:`\delta _z` doesn't directly correspond to
+the step size chosen for the piezo via navigate. Depicted graphically below, the actual z step size is related to
+both the angle for the piezo and the piezo step size :math:`\delta _p` .
+
+.. image:: Images/CalculatingZstep.png
+    :align: center
+    :alt: Depiction of how :math:`\delta _z` is derived
