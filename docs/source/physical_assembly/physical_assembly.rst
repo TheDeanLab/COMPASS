@@ -44,7 +44,7 @@ just requires screwing 1/4"-20 screws into either an optical breadboard or onto 
     :align: center
     :alt: General process to place posts on baseplate corners
 
-Physical Assembly - Visualization of Axes Mapping
+Visualization of Axes Mapping
 ______________________________
 
 
@@ -56,11 +56,11 @@ such that its normal is 60.5 degrees away from the y-axis.
     :align: center
     :alt: Layout of how the axis of the system are mapped
 
-Physical Assembly - How to Mount a Lens in a Polaris Holder
+How to Mount a Lens in a Polaris Holder
 ______________________________
 
 
-Physical Assembly - Installing the Piezo Angle Mount
+Installing the Piezo Angle Mount
 ______________________________
 
 ###############################

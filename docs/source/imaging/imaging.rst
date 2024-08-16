@@ -134,3 +134,30 @@ value.
 
 Reslicing
 ______________________________
+
+Reslicing in ImageJ is a process that allows one to be able to reconstruct different planes of a 3D image set. In
+other words, it allows one to view the XY, XZ, and YZ projections of the same image set. In our system, our default
+viewing plane is the XY plane, and so we reslice to observe the XZ and YZ planes. The reslicing process within ImageJ
+is done after deskewing and rescaling, and involves opening up the Reslicing panel (Image-> Stacks-> Reslice).
+Within this panel, one just needs to select the direction of the reslice (typically just top or left). For our
+system, top slicing provides us with the YZ plane view where one can observe the angled orientation of our sample
+setup after projection (Image-> Stacks-> Z Project). This is shown below for the same 100 nm bead samples used in the
+Deskewing and Rescaling portions of this page.
+
+.. image:: Images/ResliceTop.png
+    :align: center
+    :alt: Reslicing Panel for top reslicing
+
+.. image:: Images/ResliceTopProjection.png
+    :align: center
+    :alt: The YZ projection of our bead images after reslicing.
+
+The same process can then be done to obtain the XZ plane view of our sample by reslicing left instead:
+
+.. image:: Images/ResliceLeft.png
+    :align: center
+    :alt: Reslicing Panel for left reslicing
+
+.. image:: Images/ResliceLeftProjection.png
+    :align: center
+    :alt: The XZ projection of our bead images after reslicing.
