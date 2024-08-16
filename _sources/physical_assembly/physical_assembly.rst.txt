@@ -1,12 +1,9 @@
 .. _process-home:
 
 ###############################
-Hardware and Physical Assembly
+Hardware
 ###############################
 
-Hardware
-______________________________
-______________________________
 Piezo Setup & Troubleshooting
 ______________________________
 
@@ -85,9 +82,10 @@ for Navigate looks like the following for setting up our piezo:
     :alt: How to find the Test Panels panel
 
 
+###############################
 Physical Assembly
-______________________________
-______________________________
+###############################
+
 Note on Difference in Simulated and Physical Coordinate Definitions
 ______________________________
 

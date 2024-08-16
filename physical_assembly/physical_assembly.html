@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hardware and Physical Assembly &mdash; navigate-hardware  documentation</title>
+  <title>Hardware &mdash; navigate-hardware  documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
 
@@ -60,15 +60,12 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Hardware and Physical Assembly</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Hardware and Physical Assembly</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#hardware">Hardware</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#piezo-setup-troubleshooting">Piezo Setup &amp; Troubleshooting</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Hardware</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#piezo-setup-troubleshooting">Piezo Setup &amp; Troubleshooting</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#physical-assembly">Physical Assembly</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#note-on-difference-in-simulated-and-physical-coordinate-definitions">Note on Difference in Simulated and Physical Coordinate Definitions</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="#physical-assembly">Physical Assembly</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#note-on-difference-in-simulated-and-physical-coordinate-definitions">Note on Difference in Simulated and Physical Coordinate Definitions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#baseplate-assembly-process">Baseplate Assembly Process</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#physical-assembly-visualization-of-axes-mapping">Physical Assembly - Visualization of Axes Mapping</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#physical-assembly-how-to-mount-a-lens-in-a-polaris-holder">Physical Assembly - How to Mount a Lens in a Polaris Holder</a></li>
@@ -95,7 +92,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Hardware and Physical Assembly</li>
+      <li class="breadcrumb-item active">Hardware</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/physical_assembly/physical_assembly.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -105,12 +102,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="hardware-and-physical-assembly">
-<span id="process-home"></span><h1>Hardware and Physical Assembly<a class="headerlink" href="#hardware-and-physical-assembly" title="Permalink to this heading"></a></h1>
-<section id="hardware">
-<h2>Hardware<a class="headerlink" href="#hardware" title="Permalink to this heading"></a></h2>
+  <section id="hardware">
+<span id="process-home"></span><h1>Hardware<a class="headerlink" href="#hardware" title="Permalink to this heading"></a></h1>
 <section id="piezo-setup-troubleshooting">
-<h3>Piezo Setup &amp; Troubleshooting<a class="headerlink" href="#piezo-setup-troubleshooting" title="Permalink to this heading"></a></h3>
+<h2>Piezo Setup &amp; Troubleshooting<a class="headerlink" href="#piezo-setup-troubleshooting" title="Permalink to this heading"></a></h2>
 <p>On the PCI Board, connect the positive and negative wires  to the corresponding analog output (AO) you want, in our case
 we used AO 0, so we connected the positive wire to pin 10 and the ground to pin 11, then plug the BNC cable connected to
 those wires into the EXT IN input on the Tiger controller panel corresponding to the piezo.</p>
@@ -199,15 +194,14 @@ for Navigate looks like the following for setting up our piezo:</p>
 </section>
 </section>
 <section id="physical-assembly">
-<h2>Physical Assembly<a class="headerlink" href="#physical-assembly" title="Permalink to this heading"></a></h2>
+<h1>Physical Assembly<a class="headerlink" href="#physical-assembly" title="Permalink to this heading"></a></h1>
 <section id="note-on-difference-in-simulated-and-physical-coordinate-definitions">
-<h3>Note on Difference in Simulated and Physical Coordinate Definitions<a class="headerlink" href="#note-on-difference-in-simulated-and-physical-coordinate-definitions" title="Permalink to this heading"></a></h3>
+<h2>Note on Difference in Simulated and Physical Coordinate Definitions<a class="headerlink" href="#note-on-difference-in-simulated-and-physical-coordinate-definitions" title="Permalink to this heading"></a></h2>
 <p>It should be noted briefly that when discussing our physical microscope systems using Navigate software, the definitions
 for the coordinate axes is different than that of our simulations. This is due to a difference in standardized
 definitions for the axes in our previous systems and how Zemax defines these same axes. This difference is depicted in
 the picture below:</p>
 <img alt="Difference in coordinate axes for simulation and physical setup" class="align-center" src="../_images/CoordinateSchemeChange1.png" />
-</section>
 </section>
 <section id="baseplate-assembly-process">
 <h2>Baseplate Assembly Process<a class="headerlink" href="#baseplate-assembly-process" title="Permalink to this heading"></a></h2>
