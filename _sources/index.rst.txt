@@ -63,13 +63,13 @@ evaluated in their entirety through time.
    :caption: Hardware and Physical Assembly
    :maxdepth: 5
 
-    physical_assembly/physical_assembly
+   physical_assembly/physical_assembly
 
 .. toctree::
    :caption: Imaging with the System
    :maxdepth: 5
 
-    imaging/imaging
+   imaging/imaging
 
    contributing/software_architecture
 
