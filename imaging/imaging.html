@@ -24,7 +24,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="System Characterization" href="../system_characterization/system_characterization.html" />
-    <link rel="prev" title="Hardware" href="../physical_assembly/physical_assembly.html" /> 
+    <link rel="prev" title="Physical Assembly" href="../physical_assembly/physical_assembly.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -59,10 +59,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../design_principles/required_software.html">Required Software and Packages</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../design_principles/design_process.html">General Design Process</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Hardware and Physical Assembly</span></p>
+<p class="caption" role="heading"><span class="caption-text">Physical Assembly and Hardware</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../physical_assembly/physical_assembly.html">Hardware</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../physical_assembly/physical_assembly.html#physical-assembly">Physical Assembly</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_assembly/physical_assembly.html">Physical Assembly</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_assembly/physical_assembly.html#hardware">Hardware</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Imaging with the System</span></p>
 <ul class="current">
@@ -72,9 +72,10 @@
 <li class="toctree-l2"><a class="reference internal" href="#minimizing-spherical-aberrations">Minimizing Spherical Aberrations</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="#image-post-processing">Image Post-Processing</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="#image-stack-processing">Image Stack Processing</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#deskewing">Deskewing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#rescaling">Rescaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reslicing">Reslicing</a></li>
 </ul>
 </li>
 </ul>
@@ -155,8 +156,8 @@ focused.</p>
 <img alt="Before and after of adjusting in Z-projections after adjusting the correction collar" class="align-center" src="../_images/SphericalExample1.png" />
 </section>
 </section>
-<section id="image-post-processing">
-<h1>Image Post-Processing<a class="headerlink" href="#image-post-processing" title="Permalink to this heading"></a></h1>
+<section id="image-stack-processing">
+<h1>Image Stack Processing<a class="headerlink" href="#image-stack-processing" title="Permalink to this heading"></a></h1>
 <section id="deskewing">
 <h2>Deskewing<a class="headerlink" href="#deskewing" title="Permalink to this heading"></a></h2>
 <p>With an image stack acquired, some post processing is still required in order to remove the effects of shearing in our
@@ -180,13 +181,28 @@ values for the deskew angle until the bead PSFs are correctly aligned along the 
 represent the physical pixel sizes in every dimension. The first step to doing this involves going to the
 properties tab of the image stack (Image-&gt; Properties) and adjusting each dimension such that the x and y values
 correspond to the xy pixel size based on the system magnification and camera sensor size, and the z value
-corresponding to the z step size. While using our angled piezo configuration, the z step size <span class="math notranslate nohighlight">\(\delta _z\)</span>
-doesn’t directly correspond to the step size chosen for the piezo via navigate. Depicted graphically below, the
-actual z step size is related to both the angle for the piezo and the piezo step size <span class="math notranslate nohighlight">\(\delta _p\)</span> .</p>
+corresponding to the z step size as an effective z pixel size. While using our angled piezo configuration, the z step
+size <span class="math notranslate nohighlight">\(\delta_z\)</span> doesn’t directly correspond to the step size chosen for the piezo via navigate. Depicted
+graphically below, the actual z step size is related to both the angle for the piezo and the piezo step size
+<span class="math notranslate nohighlight">\(\delta _p\)</span> .</p>
 <img alt="Depiction of how :math:`\delta _z` is derived" class="align-center" src="../_images/CalculatingZstep1.png" />
 <p>An example of what these values can be is shown below, where for our camera and system magnification our xy pixel
-size is the same at 130 nm, while we used a piezo step size of 200 nm. Using the relationship shown above to find
-<span class="math notranslate nohighlight">\(\delta _z\)</span>, we find our actual z-step size is roughly 98.5 nm.</p>
+size is the same at 130 nm, while we used a piezo step size of 200 nm in Navigate. Using the relationship shown above
+to find <span class="math notranslate nohighlight">\(\delta _z\)</span>, we find our actual z-step size is roughly 98.5 nm. Then we can adjust the image stack
+properties panel as follows:</p>
+<img alt="Properties Panel for our system" class="align-center" src="../_images/PropertiesPanel.png" />
+<p>With the properties panel adjusted, the next step is to open the rescaling panel in ImageJ (Image-&gt; Scale). In this
+panel, the relative ratios of each of the pixel sizes to each other needs to be established. As an example for our
+system, our x and y pixel sizes are the same at 130 nm and our z-step size <span class="math notranslate nohighlight">\(\delta _z\)</span> is 98.5 nm. The ratio
+between these values is roughly 0.757, so our rescaling panel looks like the following:</p>
+<img alt="Rescaling Panel for our system" class="align-center" src="../_images/RescalePanel.png" />
+<p>After selecting OK, ImageJ will then rescale the dimensions of the image stack relative to the values entered in the
+rescaling panel. In our case, there would be no adjustments to x or y, but z would be rescaled from it’s original
+value.</p>
+<img alt="Difference in z-stack size after rescaling" class="align-center" src="../_images/HighlightofRescale.png" />
+</section>
+<section id="reslicing">
+<h2>Reslicing<a class="headerlink" href="#reslicing" title="Permalink to this heading"></a></h2>
 </section>
 </section>
 
@@ -194,7 +210,7 @@ size is the same at 130 nm, while we used a piezo step size of 200 nm. Using the
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../physical_assembly/physical_assembly.html" class="btn btn-neutral float-left" title="Hardware" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../physical_assembly/physical_assembly.html" class="btn btn-neutral float-left" title="Physical Assembly" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="../system_characterization/system_characterization.html" class="btn btn-neutral float-right" title="System Characterization" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

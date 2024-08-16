@@ -60,7 +60,7 @@ evaluated in their entirety through time.
    :maxdepth: 2
 
 .. toctree::
-   :caption: Hardware and Physical Assembly
+   :caption: Physical Assembly and Hardware
    :maxdepth: 5
 
    physical_assembly/physical_assembly
