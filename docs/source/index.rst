@@ -59,6 +59,18 @@ evaluated in their entirety through time.
    :caption: Development
    :maxdepth: 2
 
+.. toctree::
+   :caption: Hardware and Physical Assembly
+   :maxdepth: 5
+
+    physical_assembly/physical_assembly
+
+.. toctree::
+   :caption: Imaging with the System
+   :maxdepth: 5
+
+    imaging/imaging
+
    contributing/software_architecture
 
 
