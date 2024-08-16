@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hardware and Physical Assembly &mdash; navigate-hardware  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            navigate-hardware
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/background.html">Why Light-Sheet Microscopy?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/principles.html">Light-Sheet Microscopy Optical Principles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/nanospim.html">NanoSPIM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/aslm.html">ASLM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/opm.html">OPM</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Design Principles</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../design_principles/required_software.html">Required Software and Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../design_principles/design_process.html">General Design Process</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">navigate-hardware</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Hardware and Physical Assembly</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/physical_assembly/physical_assembly.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="hardware-and-physical-assembly">
+<span id="process-home"></span><h1>Hardware and Physical Assembly<a class="headerlink" href="#hardware-and-physical-assembly" title="Permalink to this heading"></a></h1>
+<section id="note-on-difference-in-simulated-and-physical-coordinate-definitions">
+<h2>Note on Difference in Simulated and Physical Coordinate Definitions<a class="headerlink" href="#note-on-difference-in-simulated-and-physical-coordinate-definitions" title="Permalink to this heading"></a></h2>
+<p>It should be noted briefly that when discussing our physical microscope systems using Navigate software, the definitions
+for the coordinate axes is different than that of our simulations. This is due to a difference in standardized
+definitions for the axes in our previous systems and how Zemax defines these same axes. This difference is depicted in
+the picture below:</p>
+<img alt="Difference in coordinate axes for simulation and physical setup" class="align-center" src="../_images/CoordinateSchemeChange1.png" />
+<section id="baseplate-assembly-process">
+<h3>Baseplate Assembly Process<a class="headerlink" href="#baseplate-assembly-process" title="Permalink to this heading"></a></h3>
+<p>Our baseplate design was made with ease of assembly in mind. The basic process involves aligning Polaris posts with
+dowell pins and screwing them using 1/4”-20 Screws in at the predetermined hole locations on the breadboard.
+This general process is depicted below:</p>
+<img alt="General process to place posts on baseplate" class="align-center" src="../_images/BaseplateAssembly1.png" />
+<p>We used various different Polaris post sizes in our assembly based on what element was being mounted on them.
+Also worth noting is that three elements are designed to be placed on 0.5” posts and as such require 0.5” post holders at
+their designated locations: the L1 focus iris, the rectangular aperture after L2, and the ND filter after the 45 degree mirror.
+The overal breakdown of which size posts went with each hole location is listed below:</p>
+<img alt="Schematic of which holes use which post heights" class="align-center" src="../_images/PostHeightBreakdown1.png" />
+<p>To either mount the baseplate onto an optical table or onto separate posts, the process is similar in that
+just requires screwing 1/4”-20 screws into either an optical breadboard or onto separate posts at the four corner holes.</p>
+<img alt="General process to place posts on baseplate corners" class="align-center" src="../_images/BaseplateAssembly_Corners1.png" />
+</section>
+<section id="piezo-setup-troubleshooting">
+<h3>Piezo Setup &amp; Troubleshooting<a class="headerlink" href="#piezo-setup-troubleshooting" title="Permalink to this heading"></a></h3>
+<p>On the PCI Board, connect the positive and negative wires  to the corresponding analog output (AO) you want, in our case
+we used AO 0, so we connected the positive wire to pin 10 and the ground to pin 11, then plug the BNC cable connected to
+those wires into the EXT IN input on the Tiger controller panel corresponding to the piezo.</p>
+<img alt="How to find the Device Pinout panel" class="align-center" src="../_images/DevicePinouts1.png" />
+<p>Plug the piezo cable into the PIEZO input on the Tiger controller panel corresponding to the piezo.</p>
+<p>Verify the range of the piezo in the tiger controller software with the command “5 cca x?”</p>
+<blockquote>
+<div><dl>
+<dt>At first, ours output the following:</dt><dd><div class="line-block">
+<div class="line">:A  Q:P1</div>
+<div class="line">23 P 1 100um RANGE</div>
+<div class="line">24 P 2 200um RANGE</div>
+<div class="line">35 P S 150um RANGE</div>
+<div class="line">36 P 3 300um RANGE</div>
+<div class="line">37 P 5 500um RANGE</div>
+<div class="line">34 P f 50um RANGE</div>
+<div class="line">25 P 4 350um RANGE:N-4</div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+<p>This tells us that our Piezo (Panel 5/Q) corresponded to P1 or a 100 um range, but ASI requires the piezo needed to be
+set to  a 50 um range to be able to be intitialized instead. To change this, we used the command “5 cca x = 34” and
+power cycled the controller.</p>
+<blockquote>
+<div><dl>
+<dt>Then our output became:</dt><dd><div class="line-block">
+<div class="line">:A  Q:Pf</div>
+<div class="line">23 P 1 100um RANGE</div>
+<div class="line">24 P 2 200um RANGE</div>
+<div class="line">35 P S 150um RANGE</div>
+<div class="line">36 P 3 300um RANGE</div>
+<div class="line">37 P 5 500um RANGE</div>
+<div class="line">34 P f 50um RANGE</div>
+<div class="line">25 P 4 350um RANGE:N-4</div>
+</div>
+</dd>
+</dl>
+</div></blockquote>
+<p>Now we can see that the piezo is set to the correct range (Pf).
+With that verified, now confirm that the voltage output from the PCI Board is working:</p>
+<div class="line-block">
+<div class="line">1. Put the BNC cable input currently in EXT IN on the Tiger control panel into the input of the oscilloscope instead.</div>
+<div class="line">2. Go to the test panels for the PCI board in NI MAX.</div>
+</div>
+<img alt="How to find the Test Panels panel" class="align-center" src="../_images/TestPanels1.png" />
+<div class="line-block">
+<div class="line">3. Set the voltage mode to sinewave generation.</div>
+<div class="line">4. Set the voltage range to be between 0 to 10 V.</div>
+<div class="line">5. Set the frequency to a desired value (we ended up setting it pretty high at 10000 Hz for ease of viewing on the oscilloscope).</div>
+</div>
+<img alt="How to find the Test Panels panel" class="align-center" src="../_images/TestPanelConfiguration1.png" />
+<p>With the voltage output of the PCI board verified, plug the PCI Board voltage cable output back into the EXT IN slot and
+verify that the position output of the Piezo reads similarly on the oscilloscope:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Plug a BNC Cable into the SENSOR OUT connection on the tiger controller panel.</p></li>
+<li><p>Plug the other end of that cable into the oscilloscope.</p></li>
+<li><p>Verify that a sinewave output is seen on the oscilloscope.</p></li>
+</ol>
+</div></blockquote>
+<p>If the PCI Board voltage is working as intended but the piezo position output doesn’t seem to work, try ensuring that
+the piezo is set in <a class="reference external" href="https://asiimaging.com/docs/commands/pm">External Input mode, and not Controller Input mode</a>:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><dl class="simple">
+<dt>Use the “PM Q?” (Our piezo corresponds to Q) command:</dt><dd><ul class="simple">
+<li><p>the output was “Q = 0” originally, telling us that it’s in Controller Input mode</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Use the “PM Q = 1” command to set the piezo into External Input mode:</dt><dd><ul class="simple">
+<li><p>now the output of “PM Q?” is “Q = 1”</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ol>
+</div></blockquote>
+<p>Another important step is to ensure that the configuration file associated with Navigate is appropriately set up for your piezo.
+This involves setting the correct axis and voltage-to-distance mapping for the piezo. As an example our configuration file
+for Navigate looks like the following for setting up our piezo:</p>
+<img alt="How to find the Test Panels panel" class="align-center" src="../_images/Piezo_Config1.png" />
+</section>
+<section id="physical-assembly-visualization-of-axes-mapping">
+<h3>Physical Assembly - Visualization of Axes Mapping<a class="headerlink" href="#physical-assembly-visualization-of-axes-mapping" title="Permalink to this heading"></a></h3>
+<p>In our system we essentially have 5 different translation stages at work: the standard x,y, and z axes, an additional
+stage along the z axis to control the focus of the detection path (f), and and axis associated with the piezo positioned
+such that its normal is 60.5 degrees away from the y-axis.</p>
+<img alt="Layout of how the axis of the system are mapped" class="align-center" src="../_images/PhysicalAxesMaps2.png" />
+</section>
+<section id="physical-assembly-how-to-mount-a-lens-in-a-polaris-holder">
+<h3>Physical Assembly - How to Mount a Lens in a Polaris Holder<a class="headerlink" href="#physical-assembly-how-to-mount-a-lens-in-a-polaris-holder" title="Permalink to this heading"></a></h3>
+</section>
+<section id="physical-assembly-installing-the-piezo-angle-mount">
+<h3>Physical Assembly - Installing the Piezo Angle Mount<a class="headerlink" href="#physical-assembly-installing-the-piezo-angle-mount" title="Permalink to this heading"></a></h3>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Dean Lab, UT Southwestern Medical Center.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

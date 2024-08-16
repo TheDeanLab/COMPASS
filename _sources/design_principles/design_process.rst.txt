@@ -270,7 +270,7 @@ With the baseplate designed, our final assembly for our illumination path looks 
     :align: center
     :alt: Baseplate Assembly Top
 
-Note on Difference in Simulated and Physical Coordinate Definitions
+Design/Physical Assembly - Note on Difference in Simulated and Physical Coordinate Definitions
 ______________________________
 
 It should be noted briefly that when discussing our physical microscope systems using Navigate software, the definitions
@@ -282,7 +282,7 @@ the picture below:
     :align: center
     :alt: Difference in coordinate axes for simulation and physical setup
 
-Physical Assembly Process
+Physical Assembly - Baseplate Assembly Process
 -----------------
 
 Our baseplate design was made with ease of assembly in mind. The basic process involves aligning Polaris posts with
@@ -310,7 +310,7 @@ just requires screwing 1/4"-20 screws into either an optical breadboard or onto 
     :alt: General process to place posts on baseplate corners
 
 
-Finding the Focus
+Imaging - Finding the Focus
 -----------------
 
 Minimizing Spherical Aberrations
@@ -355,7 +355,7 @@ focused.
     :align: center
     :alt: Before and after of adjusting in Z-projections after adjusting the correction collar
 
-Piezo Setup & Troubleshooting
+Physical Assembly - Piezo Setup & Troubleshooting
 -----------------
 On the PCI Board, connect the positive and negative wires  to the corresponding analog output (AO) you want, in our case
 we used AO 0, so we connected the positive wire to pin 10 and the ground to pin 11, then plug the BNC cable connected to
@@ -431,7 +431,7 @@ for Navigate looks like the following for setting up our piezo:
     :align: center
     :alt: How to find the Test Panels panel
 
-Visualization of Axes Mapping
+Physical Assembly - Visualization of Axes Mapping
 -----------------
 
 In our system we essentially have 5 different translation stages at work: the standard x,y, and z axes, an additional
@@ -442,10 +442,10 @@ such that its normal is 60.5 degrees away from the y-axis.
     :align: center
     :alt: Layout of how the axis of the system are mapped
 
-How to Mount a Lens in a Polaris Holder
+Physical Assembly - How to Mount a Lens in a Polaris Holder
 -------------------
 
-Installing the Piezo Angle Mount
+Physical Assembly - Installing the Piezo Angle Mount
 -----------------
 
 Processing Images - Deskewing
@@ -459,7 +459,7 @@ stacked in a straight line but oriented along an angle, which is not the most ac
 On the deskewed image on the right, one can see that the beads are now properly angled correspond to our piezo angle
 mount, and that the PSFs of the beads is now correctly aligned along the z axis.
 
-.. image:: Images/Bead Deskew Example.png
+.. image:: Images/BeadDeskewExample.png
     :align: center
     :alt: Difference between an image set of 100 nm bead before deskewing (left) and after (right)
 
@@ -474,13 +474,17 @@ Processing Images - Rescaling
 -------------------------
 
 With a properly deskewed image set, the next step is to work to rescale the image set dimensions to properly
-represent the image pixel sizes in every dimension. The first step to doing this involves going to the properties tab
-of the image stack (Image-> Properties) and adjusting each dimension such that the x and y values correspond to the
-xy pixel size based on the system magnification and camera sensor size, and the z value corresponding to the z step
-size. While using our angled piezo configuration, the z step size :math:`\delta _z` doesn't directly correspond to
-the step size chosen for the piezo via navigate. Depicted graphically below, the actual z step size is related to
-both the angle for the piezo and the piezo step size :math:`\delta _p` .
+represent the physical pixel sizes in every dimension. The first step to doing this involves going to the
+properties tab of the image stack (Image-> Properties) and adjusting each dimension such that the x and y values
+correspond to the xy pixel size based on the system magnification and camera sensor size, and the z value
+corresponding to the z step size. While using our angled piezo configuration, the z step size :math:`\delta _z`
+doesn't directly correspond to the step size chosen for the piezo via navigate. Depicted graphically below, the
+actual z step size is related to both the angle for the piezo and the piezo step size :math:`\delta _p` .
 
 .. image:: Images/CalculatingZstep.png
     :align: center
     :alt: Depiction of how :math:`\delta _z` is derived
+
+An example of what these values can be is shown below, where for our camera and system magnification our xy pixel
+size is the same at 130 nm, while we used a piezo step size of 200 nm. Using the relationship shown above to find
+:math:`\delta _z`, we find our actual z-step size is roughly 98.5 nm.

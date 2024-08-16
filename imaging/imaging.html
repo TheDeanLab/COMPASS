@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Imaging with the System &mdash; navigate-hardware  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            navigate-hardware
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/background.html">Why Light-Sheet Microscopy?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/principles.html">Light-Sheet Microscopy Optical Principles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/nanospim.html">NanoSPIM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/aslm.html">ASLM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/opm.html">OPM</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Design Principles</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../design_principles/required_software.html">Required Software and Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../design_principles/design_process.html">General Design Process</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">navigate-hardware</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Imaging with the System</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/imaging/imaging.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="imaging-with-the-system">
+<span id="process-home"></span><h1>Imaging with the System<a class="headerlink" href="#imaging-with-the-system" title="Permalink to this heading"></a></h1>
+<section id="visualization-of-axes-mapping">
+<h2>Visualization of Axes Mapping<a class="headerlink" href="#visualization-of-axes-mapping" title="Permalink to this heading"></a></h2>
+<p>In our system we essentially have 5 different translation stages at work: the standard x,y, and z axes, an additional
+stage along the z axis to control the focus of the detection path (f), and and axis associated with the piezo positioned
+such that its normal is 60.5 degrees away from the y-axis.</p>
+<img alt="Layout of how the axis of the system are mapped" class="align-center" src="../_images/PhysicalAxesMaps1.png" />
+</section>
+<section id="finding-the-focus">
+<h2>Finding the Focus<a class="headerlink" href="#finding-the-focus" title="Permalink to this heading"></a></h2>
+</section>
+<section id="minimizing-spherical-aberrations">
+<h2>Minimizing Spherical Aberrations<a class="headerlink" href="#minimizing-spherical-aberrations" title="Permalink to this heading"></a></h2>
+<p>Once the system has been assembled to the point of being able to take image stacks, the process of
+minimizing the effects of spherical aberrations can begin. Spherical aberrations are typically
+introduced into optical systems due to the surface curvature of different lens elements. This
+type of aberration typically presents itself visually as a sort of stretching or bending of the focus
+of light in the system. Certain microscope objectives, such as the Nikon 25x/1.1 NA that we employ in this setup,
+have a built-in collar that can be adjusted to minimize spherical aberration (PICTURE).</p>
+<p>In our system, we expect the effects of spherical aberrations to be along the axis of our detection path (defined
+as z in our imaging scheme). In order to visualize these effects and adjust the correction collar of our objective
+to mitigate them, we employ a process of taking a z-stack of fluorescent beads suspended in agarose
+and using ImageJ to quickly process those images.</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Take a z-stack within Navigate of your sample</p></li>
+<li><p>Open up the z-stack within ImageJ</p></li>
+<li><p>Reslice the z-stack (Image -&gt; Stacks -&gt; Reslice)</p></li>
+<li><p>Do a maximum intensity project of the resliced stack (Image -&gt; Stacks -&gt; Z-Projection)</p></li>
+<li><p>Take note if spherical aberration is present in the projected image.</p></li>
+<li><p>If spherical aberration is still present, make slight adjustments to the objective
+correction collar and repeat Steps 1-5.</p></li>
+</ol>
+</div></blockquote>
+<p>As a note, observing the camera live-feed via Navigate’s “Continuous Scan” mode while adjusting the correction collar
+can help to get in the general vicinity of the correct placement of the correction collar. An example of how change in
+the correction collar affect live images are shown below for fluorescent beads. Aiming to get to get the beads near the
+expected light sheet position to be as in-focus as possible is a general guide for what direction to move the collar;
+however, true correction needs to be done with the z-projection method mentioned above.</p>
+<img alt="Correction collar effects" class="align-center" src="../_images/ChangingCorrectionCollar1.png" />
+<p>As a quick example of what an image of a z-projection could look like before and after trying to correct for spherical aberration is shown
+below. Here, one can see in the top panel that the bead features are essentially smoothed out and fuzzy due to
+aberrations, while in the bottom panel with adjustments made to the correction collar the beads appear much cleaner and
+focused.</p>
+<img alt="Before and after of adjusting in Z-projections after adjusting the correction collar" class="align-center" src="../_images/SphericalExample1.png" />
+</section>
+<section id="processing-images-deskewing">
+<h2>Processing Images - Deskewing<a class="headerlink" href="#processing-images-deskewing" title="Permalink to this heading"></a></h2>
+<p>With an image stack acquired, some post processing is still required in order to remove the effects of shearing in our
+images. The root of this shearing is due to the angled method in which our sample is mounted and similarly, the angled path that
+the sample moves as the piezo is scanned. A basic visual idea of how deskewing affects the resulting image is shown
+below for 100 nm fluorescent beads. Here before deskewing for the same image plane (yz), the beads appear to be
+stacked in a straight line but oriented along an angle, which is not the most accurate representation of our system.
+On the deskewed image on the right, one can see that the beads are now properly angled correspond to our piezo angle
+mount, and that the PSFs of the beads is now correctly aligned along the z axis.</p>
+<img alt="Difference between an image set of 100 nm bead before deskewing (left) and after (right)" class="align-center" src="../_images/BeadDeskewExample1.png" />
+<p>To do this deskew processing, we utilize custom-built python code via Jupyter notebooks (HAVE LINK TO NOTEBOOK
+DOWNLOAD?). The user needs to provide the correct file path to the .tif image stack collected via navigate, as well
+as the parameters of the imaging system like z-step size, xy pixel size, and the angle that the images should be
+deskewed over. In our case, our deskew angle is equivalent to 90-60.5 degrees, where 60.5 degrees corresponds to the
+difference between the normal of our angle mount and the y-axis. If this value is unknown, one can use different
+values for the deskew angle until the bead PSFs are correctly aligned along the z-axis and not angled.</p>
+</section>
+<section id="processing-images-rescaling">
+<h2>Processing Images - Rescaling<a class="headerlink" href="#processing-images-rescaling" title="Permalink to this heading"></a></h2>
+<p>With a properly deskewed image set, the next step is to work to rescale the image set dimensions to properly
+represent the physical pixel sizes in every dimension. The first step to doing this involves going to the
+properties tab of the image stack (Image-&gt; Properties) and adjusting each dimension such that the x and y values
+correspond to the xy pixel size based on the system magnification and camera sensor size, and the z value
+corresponding to the z step size. While using our angled piezo configuration, the z step size <span class="math notranslate nohighlight">\(\delta _z\)</span>
+doesn’t directly correspond to the step size chosen for the piezo via navigate. Depicted graphically below, the
+actual z step size is related to both the angle for the piezo and the piezo step size <span class="math notranslate nohighlight">\(\delta _p\)</span> .</p>
+<img alt="Depiction of how :math:`\delta _z` is derived" class="align-center" src="../_images/CalculatingZstep1.png" />
+<p>An example of what these values can be is shown below, where for our camera and system magnification our xy pixel
+size is the same at 130 nm, while we used a piezo step size of 200 nm. Using the relationship shown above to find
+<span class="math notranslate nohighlight">\(\delta _z\)</span>, we find our actual z-step size is roughly 98.5 nm.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Dean Lab, UT Southwestern Medical Center.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
