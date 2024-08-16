@@ -115,7 +115,7 @@
 <p>In our system we essentially have 5 different translation stages at work: the standard x,y, and z axes, an additional
 stage along the z axis to control the focus of the detection path (f), and and axis associated with the piezo positioned
 such that its normal is 60.5 degrees away from the y-axis.</p>
-<img alt="Layout of how the axis of the system are mapped" class="align-center" src="../_images/PhysicalAxesMaps1.png" />
+<img alt="Layout of how the axis of the system are mapped" class="align-center" src="../_images/PhysicalAxesMaps.png" />
 </section>
 <section id="finding-the-focus">
 <h2>Finding the Focus<a class="headerlink" href="#finding-the-focus" title="Permalink to this heading"></a></h2>
@@ -148,12 +148,12 @@ can help to get in the general vicinity of the correct placement of the correcti
 the correction collar affect live images are shown below for fluorescent beads. Aiming to get to get the beads near the
 expected light sheet position to be as in-focus as possible is a general guide for what direction to move the collar;
 however, true correction needs to be done with the z-projection method mentioned above.</p>
-<img alt="Correction collar effects" class="align-center" src="../_images/ChangingCorrectionCollar1.png" />
+<img alt="Correction collar effects" class="align-center" src="../_images/ChangingCorrectionCollar.png" />
 <p>As a quick example of what an image of a z-projection could look like before and after trying to correct for spherical aberration is shown
 below. Here, one can see in the top panel that the bead features are essentially smoothed out and fuzzy due to
 aberrations, while in the bottom panel with adjustments made to the correction collar the beads appear much cleaner and
 focused.</p>
-<img alt="Before and after of adjusting in Z-projections after adjusting the correction collar" class="align-center" src="../_images/SphericalExample1.png" />
+<img alt="Before and after of adjusting in Z-projections after adjusting the correction collar" class="align-center" src="../_images/SphericalExample.png" />
 </section>
 </section>
 <section id="image-stack-processing">
@@ -167,7 +167,7 @@ below for 100 nm fluorescent beads. Here before deskewing for the same image pla
 stacked in a straight line but oriented along an angle, which is not the most accurate representation of our system.
 On the deskewed image on the right, one can see that the beads are now properly angled correspond to our piezo angle
 mount, and that the PSFs of the beads is now correctly aligned along the z axis.</p>
-<img alt="Difference between an image set of 100 nm bead before deskewing (left) and after (right)" class="align-center" src="../_images/BeadDeskewExample1.png" />
+<img alt="Difference between an image set of 100 nm bead before deskewing (left) and after (right)" class="align-center" src="../_images/BeadDeskewExample.png" />
 <p>To do this deskew processing, we utilize custom-built python code via Jupyter notebooks (HAVE LINK TO NOTEBOOK
 DOWNLOAD?). The user needs to provide the correct file path to the .tif image stack collected via navigate, as well
 as the parameters of the imaging system like z-step size, xy pixel size, and the angle that the images should be
@@ -185,7 +185,7 @@ corresponding to the z step size as an effective z pixel size. While using our a
 size <span class="math notranslate nohighlight">\(\delta_z\)</span> doesn’t directly correspond to the step size chosen for the piezo via navigate. Depicted
 graphically below, the actual z step size is related to both the angle for the piezo and the piezo step size
 <span class="math notranslate nohighlight">\(\delta _p\)</span> .</p>
-<img alt="Depiction of how :math:`\delta _z` is derived" class="align-center" src="../_images/CalculatingZstep1.png" />
+<img alt="Depiction of how :math:`\delta _z` is derived" class="align-center" src="../_images/CalculatingZstep.png" />
 <p>An example of what these values can be is shown below, where for our camera and system magnification our xy pixel
 size is the same at 130 nm, while we used a piezo step size of 200 nm in Navigate. Using the relationship shown above
 to find <span class="math notranslate nohighlight">\(\delta _z\)</span>, we find our actual z-step size is roughly 98.5 nm. Then we can adjust the image stack
@@ -203,6 +203,19 @@ value.</p>
 </section>
 <section id="reslicing">
 <h2>Reslicing<a class="headerlink" href="#reslicing" title="Permalink to this heading"></a></h2>
+<p>Reslicing in ImageJ is a process that allows one to be able to reconstruct different planes of a 3D image set. In
+other words, it allows one to view the XY, XZ, and YZ projections of the same image set. In our system, our default
+viewing plane is the XY plane, and so we reslice to observe the XZ and YZ planes. The reslicing process within ImageJ
+is done after deskewing and rescaling, and involves opening up the Reslicing panel (Image-&gt; Stacks-&gt; Reslice).
+Within this panel, one just needs to select the direction of the reslice (typically just top or left). For our
+system, top slicing provides us with the YZ plane view where one can observe the angled orientation of our sample
+setup after projection (Image-&gt; Stacks-&gt; Z Project). This is shown below for the same 100 nm bead samples used in the
+Deskewing and Rescaling portions of this page.</p>
+<img alt="Reslicing Panel for top reslicing" class="align-center" src="../_images/ResliceTop.png" />
+<img alt="The YZ projection of our bead images after reslicing." class="align-center" src="../_images/ResliceTopProjection.png" />
+<p>The same process can then be done to obtain the XZ plane view of our sample by reslicing left instead:</p>
+<img alt="Reslicing Panel for left reslicing" class="align-center" src="../_images/ResliceLeft.png" />
+<img alt="The XZ projection of our bead images after reslicing." class="align-center" src="../_images/ResliceLeftProjection.png" />
 </section>
 </section>
 
