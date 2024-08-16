@@ -38,13 +38,25 @@ ______________________________
 
 
 
-Installing the Piezo Angle Mount
+The Piezo Angle Mount
 ______________________________
+
+We designed a custom angled mount for a piezo in order to be able to scan our sample easily between our two
+objectives by translating a single motorized unit (in this case the piezo), instead of having to calculate and
+program the movement of two translation stages in tandem for both the y and z directions. The anatomy of our angled
+mount is broken down in the figure below, where there are four translation stage mounting holes to attach the unit to
+an ASI translation stage, nine Piezo mounting holes (LINK TO PIEZO UNIT?) that correspond to the mounting scheme of
+our piezo unit, as well as four through-holes and a window for ease of access for the mounting process. We provide
+the CAD files for this mount HERE (LINK TO DOWNLOAD FOR MOUNT), and have had success in using both 3D printed and
+aluminum machined versions of the unit.
+
+.. image:: Images/AnglemountAnatomy.png
+    :align: center
+    :alt: Breakdown of our custom angle piezo angle mount
 
 The installation of our custom angled piezo mount is designed to be directly compatible with ASI translation stages.
 ASI translation stages feature M6 hole pairs that are spaced along the length of the translation stage at intervals
-dependent on the specific stage one is using. The base of our angle mount has 4 holes designed to be used to mount to
-the stage. The mounting process involves aligning these 4 holes with 4 of the M6 holes on the translation stage and
+dependent on the specific stage one is using. The mounting process involves aligning these 4 holes with 4 of the M6 holes on the translation stage and
 screwing them in. For ease of screwing in the base, there are four holes on the angled face of the mount shown in B
 that a screwdriver is able to pass directly through to screw as shown in C. An alternative method of mounting is
 shown in D, where the window on the back of the angle mount is able to be screwed through as well.
