@@ -4,6 +4,8 @@
 Hardware and Physical Assembly
 ###############################
 
+______________________________
+
 Note on Difference in Simulated and Physical Coordinate Definitions
 ______________________________
 
@@ -15,6 +17,8 @@ the picture below:
 .. image:: Images/CoordinateSchemeChange.png
     :align: center
     :alt: Difference in coordinate axes for simulation and physical setup
+
+______________________________
 
 Baseplate Assembly Process
 ______________________________
@@ -43,6 +47,8 @@ just requires screwing 1/4"-20 screws into either an optical breadboard or onto 
 .. image:: Images/BaseplateAssembly_Corners.png
     :align: center
     :alt: General process to place posts on baseplate corners
+
+______________________________
 
 Piezo Setup & Troubleshooting
 ______________________________
@@ -120,6 +126,8 @@ for Navigate looks like the following for setting up our piezo:
 .. image:: Images/Piezo_Config.png
     :align: center
     :alt: How to find the Test Panels panel
+
+______________________________
 
 Physical Assembly - Visualization of Axes Mapping
 ______________________________
