@@ -4,18 +4,6 @@
 Physical Assembly
 ###############################
 
-Note on Difference in Simulated and Physical Coordinate Definitions
-______________________________
-
-It should be noted briefly that when discussing our physical microscope systems using Navigate software, the definitions
-for the coordinate axes is different than that of our simulations. This is due to a difference in standardized
-definitions for the axes in our previous systems and how Zemax defines these same axes. This difference is depicted in
-the picture below:
-
-.. image:: Images/CoordinateSchemeChange.png
-    :align: center
-    :alt: Difference in coordinate axes for simulation and physical setup
-
 Baseplate Assembly Process
 ______________________________
 
@@ -44,9 +32,46 @@ just requires screwing 1/4"-20 screws into either an optical breadboard or onto 
     :align: center
     :alt: General process to place posts on baseplate corners
 
-Visualization of Axes Mapping
+Mounting a Lens in a Polaris Holder
 ______________________________
 
+
+
+
+Installing the Piezo Angle Mount
+______________________________
+
+The installation of our custom angled piezo mount is designed to be directly compatible with ASI translation stages.
+ASI translation stages feature M6 hole pairs that are spaced along the length of the translation stage at intervals
+dependent on the specific stage one is using. The base of our angle mount has 4 holes designed to be used to mount to
+the stage. The mounting process involves aligning these 4 holes with 4 of the M6 holes on the translation stage and
+screwing them in. For ease of screwing in the base, there are four holes on the angled face of the mount shown in B
+that a screwdriver is able to pass directly through to screw as shown in C. An alternative method of mounting is
+shown in D, where the window on the back of the angle mount is able to be screwed through as well.
+
+.. image:: Images/Anglemount.png
+    :align: center
+    :alt: General process for mounting our piezo angle mount onto an ASI translation stage
+
+
+###############################
+Hardware
+###############################
+
+Note on Difference in Simulated and Physical Coordinate Definitions
+______________________________
+
+It should be noted briefly that when discussing our physical microscope systems using Navigate software, the definitions
+for the coordinate axes is different than that of our simulations. This is due to a difference in standardized
+definitions for the axes in our previous systems and how Zemax defines these same axes. This difference is depicted in
+the picture below:
+
+.. image:: Images/CoordinateSchemeChange.png
+    :align: center
+    :alt: Difference in coordinate axes for simulation and physical setup
+
+Visualization of Axes Mapping
+______________________________
 
 In our system we essentially have 5 different translation stages at work: the standard x,y, and z axes, an additional
 stage along the z axis to control the focus of the detection path (f), and and axis associated with the piezo positioned
@@ -55,17 +80,6 @@ such that its normal is 60.5 degrees away from the y-axis.
 .. image:: Images/PhysicalAxesMaps.png
     :align: center
     :alt: Layout of how the axis of the system are mapped
-
-How to Mount a Lens in a Polaris Holder
-______________________________
-
-
-Installing the Piezo Angle Mount
-______________________________
-
-###############################
-Hardware
-###############################
 
 Piezo Setup & Troubleshooting
 ______________________________
@@ -143,3 +157,10 @@ for Navigate looks like the following for setting up our piezo:
 .. image:: Images/Piezo_Config.png
     :align: center
     :alt: How to find the Test Panels panel
+
+
+###############################
+Parts List
+###############################
+
+Provide a breakdown of general components/provide additional links to 3D designed parts here?
