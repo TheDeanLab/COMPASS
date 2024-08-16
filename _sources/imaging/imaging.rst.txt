@@ -5,7 +5,8 @@ Imaging with the System
 ###############################
 
 Visualization of Axes Mapping
------------------
+______________________________
+
 
 In our system we essentially have 5 different translation stages at work: the standard x,y, and z axes, an additional
 stage along the z axis to control the focus of the detection path (f), and and axis associated with the piezo positioned
@@ -16,10 +17,12 @@ such that its normal is 60.5 degrees away from the y-axis.
     :alt: Layout of how the axis of the system are mapped
 
 Finding the Focus
------------------
+______________________________
+
 
 Minimizing Spherical Aberrations
------------------
+______________________________
+
 
 Once the system has been assembled to the point of being able to take image stacks, the process of
 minimizing the effects of spherical aberrations can begin. Spherical aberrations are typically
@@ -61,7 +64,8 @@ focused.
     :alt: Before and after of adjusting in Z-projections after adjusting the correction collar
 
 Processing Images - Deskewing
--------------------------
+______________________________
+
 
 With an image stack acquired, some post processing is still required in order to remove the effects of shearing in our
 images. The root of this shearing is due to the angled method in which our sample is mounted and similarly, the angled path that
@@ -83,7 +87,8 @@ difference between the normal of our angle mount and the y-axis. If this value i
 values for the deskew angle until the bead PSFs are correctly aligned along the z-axis and not angled.
 
 Processing Images - Rescaling
--------------------------
+______________________________
+
 
 With a properly deskewed image set, the next step is to work to rescale the image set dimensions to properly
 represent the physical pixel sizes in every dimension. The first step to doing this involves going to the
