@@ -71,6 +71,12 @@ evaluated in their entirety through time.
 
    imaging/imaging
 
+.. toctree::
+   :caption: System Characterization
+   :maxdepth: 5
+
+   system_characterization/system_characterization
+
    contributing/software_architecture
 
 
