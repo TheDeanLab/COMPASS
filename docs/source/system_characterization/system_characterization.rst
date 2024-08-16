@@ -4,6 +4,14 @@
 System Characterization
 ###############################
 
+Beam Characterization
+______________________________
+
+.. image:: Images/BeamProperties.png
+    :align: center
+    :alt: Comparison of the expected light sheet beam from simulation to the experimentally imaged light sheet
+
+
 Bead PSF Analysis
 ______________________________
 
@@ -14,5 +22,4 @@ ______________________________
 Sample Biological Images
 ______________________________
 
-Beam Characterization
-______________________________
+
