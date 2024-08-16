@@ -17,7 +17,8 @@ the picture below:
     :alt: Difference in coordinate axes for simulation and physical setup
 
 Baseplate Assembly Process
------------------
+______________________________
+
 
 Our baseplate design was made with ease of assembly in mind. The basic process involves aligning Polaris posts with
 dowell pins and screwing them using 1/4"-20 Screws in at the predetermined hole locations on the breadboard.
@@ -44,7 +45,8 @@ just requires screwing 1/4"-20 screws into either an optical breadboard or onto 
     :alt: General process to place posts on baseplate corners
 
 Piezo Setup & Troubleshooting
------------------
+______________________________
+
 On the PCI Board, connect the positive and negative wires  to the corresponding analog output (AO) you want, in our case
 we used AO 0, so we connected the positive wire to pin 10 and the ground to pin 11, then plug the BNC cable connected to
 those wires into the EXT IN input on the Tiger controller panel corresponding to the piezo.
@@ -120,7 +122,8 @@ for Navigate looks like the following for setting up our piezo:
     :alt: How to find the Test Panels panel
 
 Physical Assembly - Visualization of Axes Mapping
------------------
+______________________________
+
 
 In our system we essentially have 5 different translation stages at work: the standard x,y, and z axes, an additional
 stage along the z axis to control the focus of the detection path (f), and and axis associated with the piezo positioned
@@ -131,7 +134,9 @@ such that its normal is 60.5 degrees away from the y-axis.
     :alt: Layout of how the axis of the system are mapped
 
 Physical Assembly - How to Mount a Lens in a Polaris Holder
--------------------
+______________________________
+
 
 Physical Assembly - Installing the Piezo Angle Mount
------------------
+______________________________
+
