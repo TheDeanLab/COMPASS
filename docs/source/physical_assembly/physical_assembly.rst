@@ -1,6 +1,69 @@
 .. _process-home:
 
 ###############################
+Physical Assembly
+###############################
+
+Note on Difference in Simulated and Physical Coordinate Definitions
+______________________________
+
+It should be noted briefly that when discussing our physical microscope systems using Navigate software, the definitions
+for the coordinate axes is different than that of our simulations. This is due to a difference in standardized
+definitions for the axes in our previous systems and how Zemax defines these same axes. This difference is depicted in
+the picture below:
+
+.. image:: Images/CoordinateSchemeChange.png
+    :align: center
+    :alt: Difference in coordinate axes for simulation and physical setup
+
+Baseplate Assembly Process
+______________________________
+
+
+Our baseplate design was made with ease of assembly in mind. The basic process involves aligning Polaris posts with
+dowell pins and screwing them using 1/4"-20 Screws in at the predetermined hole locations on the breadboard.
+This general process is depicted below:
+
+.. image:: Images/BaseplateAssembly.png
+    :align: center
+    :alt: General process to place posts on baseplate
+
+We used various different Polaris post sizes in our assembly based on what element was being mounted on them.
+Also worth noting is that three elements are designed to be placed on 0.5" posts and as such require 0.5" post holders at
+their designated locations: the L1 focus iris, the rectangular aperture after L2, and the ND filter after the 45 degree mirror.
+The overal breakdown of which size posts went with each hole location is listed below:
+
+.. image:: Images/PostHeightBreakdown.png
+    :align: center
+    :alt: Schematic of which holes use which post heights
+
+To either mount the baseplate onto an optical table or onto separate posts, the process is similar in that
+just requires screwing 1/4"-20 screws into either an optical breadboard or onto separate posts at the four corner holes.
+
+.. image:: Images/BaseplateAssembly_Corners.png
+    :align: center
+    :alt: General process to place posts on baseplate corners
+
+Physical Assembly - Visualization of Axes Mapping
+______________________________
+
+
+In our system we essentially have 5 different translation stages at work: the standard x,y, and z axes, an additional
+stage along the z axis to control the focus of the detection path (f), and and axis associated with the piezo positioned
+such that its normal is 60.5 degrees away from the y-axis.
+
+.. image:: Images/PhysicalAxesMaps.png
+    :align: center
+    :alt: Layout of how the axis of the system are mapped
+
+Physical Assembly - How to Mount a Lens in a Polaris Holder
+______________________________
+
+
+Physical Assembly - Installing the Piezo Angle Mount
+______________________________
+
+###############################
 Hardware
 ###############################
 
@@ -80,68 +143,3 @@ for Navigate looks like the following for setting up our piezo:
 .. image:: Images/Piezo_Config.png
     :align: center
     :alt: How to find the Test Panels panel
-
-
-###############################
-Physical Assembly
-###############################
-
-Note on Difference in Simulated and Physical Coordinate Definitions
-______________________________
-
-It should be noted briefly that when discussing our physical microscope systems using Navigate software, the definitions
-for the coordinate axes is different than that of our simulations. This is due to a difference in standardized
-definitions for the axes in our previous systems and how Zemax defines these same axes. This difference is depicted in
-the picture below:
-
-.. image:: Images/CoordinateSchemeChange.png
-    :align: center
-    :alt: Difference in coordinate axes for simulation and physical setup
-
-Baseplate Assembly Process
-______________________________
-
-
-Our baseplate design was made with ease of assembly in mind. The basic process involves aligning Polaris posts with
-dowell pins and screwing them using 1/4"-20 Screws in at the predetermined hole locations on the breadboard.
-This general process is depicted below:
-
-.. image:: Images/BaseplateAssembly.png
-    :align: center
-    :alt: General process to place posts on baseplate
-
-We used various different Polaris post sizes in our assembly based on what element was being mounted on them.
-Also worth noting is that three elements are designed to be placed on 0.5" posts and as such require 0.5" post holders at
-their designated locations: the L1 focus iris, the rectangular aperture after L2, and the ND filter after the 45 degree mirror.
-The overal breakdown of which size posts went with each hole location is listed below:
-
-.. image:: Images/PostHeightBreakdown.png
-    :align: center
-    :alt: Schematic of which holes use which post heights
-
-To either mount the baseplate onto an optical table or onto separate posts, the process is similar in that
-just requires screwing 1/4"-20 screws into either an optical breadboard or onto separate posts at the four corner holes.
-
-.. image:: Images/BaseplateAssembly_Corners.png
-    :align: center
-    :alt: General process to place posts on baseplate corners
-
-Physical Assembly - Visualization of Axes Mapping
-______________________________
-
-
-In our system we essentially have 5 different translation stages at work: the standard x,y, and z axes, an additional
-stage along the z axis to control the focus of the detection path (f), and and axis associated with the piezo positioned
-such that its normal is 60.5 degrees away from the y-axis.
-
-.. image:: Images/PhysicalAxesMaps.png
-    :align: center
-    :alt: Layout of how the axis of the system are mapped
-
-Physical Assembly - How to Mount a Lens in a Polaris Holder
-______________________________
-
-
-Physical Assembly - Installing the Piezo Angle Mount
-______________________________
-

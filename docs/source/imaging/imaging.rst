@@ -64,7 +64,7 @@ focused.
     :alt: Before and after of adjusting in Z-projections after adjusting the correction collar
 
 ###############################
-Image Post-Processing
+Image Stack Processing
 ###############################
 
 Deskewing
@@ -93,19 +93,44 @@ values for the deskew angle until the bead PSFs are correctly aligned along the 
 Rescaling
 ______________________________
 
-
 With a properly deskewed image set, the next step is to work to rescale the image set dimensions to properly
 represent the physical pixel sizes in every dimension. The first step to doing this involves going to the
 properties tab of the image stack (Image-> Properties) and adjusting each dimension such that the x and y values
 correspond to the xy pixel size based on the system magnification and camera sensor size, and the z value
-corresponding to the z step size. While using our angled piezo configuration, the z step size :math:`\delta _z`
-doesn't directly correspond to the step size chosen for the piezo via navigate. Depicted graphically below, the
-actual z step size is related to both the angle for the piezo and the piezo step size :math:`\delta _p` .
+corresponding to the z step size as an effective z pixel size. While using our angled piezo configuration, the z step
+size :math:`\delta_z` doesn't directly correspond to the step size chosen for the piezo via navigate. Depicted
+graphically below, the actual z step size is related to both the angle for the piezo and the piezo step size
+:math:`\delta _p` .
 
 .. image:: Images/CalculatingZstep.png
     :align: center
     :alt: Depiction of how :math:`\delta _z` is derived
 
 An example of what these values can be is shown below, where for our camera and system magnification our xy pixel
-size is the same at 130 nm, while we used a piezo step size of 200 nm. Using the relationship shown above to find
-:math:`\delta _z`, we find our actual z-step size is roughly 98.5 nm.
+size is the same at 130 nm, while we used a piezo step size of 200 nm in Navigate. Using the relationship shown above
+to find :math:`\delta _z`, we find our actual z-step size is roughly 98.5 nm. Then we can adjust the image stack
+properties panel as follows:
+
+.. image:: Images/PropertiesPanel.png
+    :align: center
+    :alt: Properties Panel for our system
+
+With the properties panel adjusted, the next step is to open the rescaling panel in ImageJ (Image-> Scale). In this
+panel, the relative ratios of each of the pixel sizes to each other needs to be established. As an example for our
+system, our x and y pixel sizes are the same at 130 nm and our z-step size :math:`\delta _z` is 98.5 nm. The ratio
+between these values is roughly 0.757, so our rescaling panel looks like the following:
+
+.. image:: Images/RescalePanel.png
+    :align: center
+    :alt: Rescaling Panel for our system
+
+After selecting OK, ImageJ will then rescale the dimensions of the image stack relative to the values entered in the
+rescaling panel. In our case, there would be no adjustments to x or y, but z would be rescaled from it's original
+value.
+
+.. image:: Images/HighlightofRescale.png
+    :align: center
+    :alt: Difference in z-stack size after rescaling
+
+Reslicing
+______________________________
