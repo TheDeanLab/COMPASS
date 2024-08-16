@@ -1,7 +1,7 @@
 .. _process-home:
 
 ###############################
-Imaging with the System
+Imaging Process
 ###############################
 
 Visualization of Axes Mapping
@@ -63,7 +63,11 @@ focused.
     :align: center
     :alt: Before and after of adjusting in Z-projections after adjusting the correction collar
 
-Processing Images - Deskewing
+###############################
+Image Post-Processing
+###############################
+
+Deskewing
 ______________________________
 
 
@@ -86,7 +90,7 @@ deskewed over. In our case, our deskew angle is equivalent to 90-60.5 degrees, w
 difference between the normal of our angle mount and the y-axis. If this value is unknown, one can use different
 values for the deskew angle until the bead PSFs are correctly aligned along the z-axis and not angled.
 
-Processing Images - Rescaling
+Rescaling
 ______________________________
 
 
