@@ -32,10 +32,20 @@ just requires screwing 1/4"-20 screws into either an optical breadboard or onto 
     :align: center
     :alt: General process to place posts on baseplate corners
 
-Mounting a Lens in a Polaris Holder
+Mounting Lenses
 ______________________________
 
+Mounting lenses into a Polaris lens mount and onto an associated post is a fairly straightforward process. The
+general flow is shown in the image below, where first the flatter face of the desired lens should be placed such that
+it is touching the metal boundary on the lens mount itself. Then the lens should be fixed into place by screwing the
+lock screw on the top of the lens mount. With the lens secured in the mount, then two dowel pins should be placed in
+the appropriate holes on the Polaris post, and then the lens mount should be placed such that the two holes on the
+lens mount align with the pins on the Polaris post. Then the lens mount should be anchored into place by screwing it
+into the Polaris post.
 
+.. image:: Images/LensMounting.png
+    :align: center
+    :alt: General process for mounting a lens into a Polaris holder and onto a post
 
 
 The Piezo Angle Mount
@@ -48,7 +58,8 @@ mount is broken down in the figure below, where there are four translation stage
 an ASI translation stage, nine Piezo mounting holes (LINK TO PIEZO UNIT?) that correspond to the mounting scheme of
 our piezo unit, as well as four through-holes and a window for ease of access for the mounting process. We provide
 the CAD files for this mount HERE (LINK TO DOWNLOAD FOR MOUNT), and have had success in using both 3D printed and
-aluminum machined versions of the unit.
+aluminum machined versions of the unit. It's recommended to first mount the angle mount onto the translation stage
+unit before mounting the piezo on the angle mount to ensure access to all the through-holes.
 
 .. image:: Images/AnglemountAnatomy.png
     :align: center
@@ -56,10 +67,11 @@ aluminum machined versions of the unit.
 
 The installation of our custom angled piezo mount is designed to be directly compatible with ASI translation stages.
 ASI translation stages feature M6 hole pairs that are spaced along the length of the translation stage at intervals
-dependent on the specific stage one is using. The mounting process involves aligning these 4 holes with 4 of the M6 holes on the translation stage and
-screwing them in. For ease of screwing in the base, there are four holes on the angled face of the mount shown in B
-that a screwdriver is able to pass directly through to screw as shown in C. An alternative method of mounting is
-shown in D, where the window on the back of the angle mount is able to be screwed through as well.
+dependent on the specific stage one is using. The mounting process involves aligning these 4 holes with 4 of the M6
+holes on the translation stage and screwing them in. For ease of screwing in the base, there are four through holes on
+the angled face of the mount shown in B that a screwdriver is able to pass directly through to screw as shown in C. An
+alternative method of mounting is shown in D, where the window on the back of the angle mount is able to be screwed
+through as well.
 
 .. image:: Images/Anglemount.png
     :align: center
