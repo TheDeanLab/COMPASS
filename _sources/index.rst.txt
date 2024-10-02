@@ -63,6 +63,8 @@ evaluated in their entirety through time.
    :caption: Physical Assembly and Hardware
    :maxdepth: 5
 
+   physical_assembly/room_preparation
+   physical_assembly/table
    physical_assembly/physical_assembly
 
 .. toctree::
