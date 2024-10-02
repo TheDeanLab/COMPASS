@@ -4,9 +4,6 @@
 Optical Table
 ###############################
 
-
-Optical Table
--------------------
 The optical table is the most important part of the imaging room. We recommend a large
 table, as it is better to have too much table than not enough. Ideally, the room is
 large enough that the table is not completely against the wall, so that you have access
