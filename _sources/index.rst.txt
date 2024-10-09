@@ -50,18 +50,18 @@ evaluated in their entirety through time.
 
 .. toctree::
    :caption: Design Principles
-   :maxdepth: 5
+   :maxdepth: 1
 
    design_principles/required_software
    design_principles/design_process
 
 .. toctree::
    :caption: Development
-   :maxdepth: 2
+   :maxdepth: 1
 
 .. toctree::
    :caption: Hardware Considerations
-   :maxdepth: 2
+   :maxdepth: 1
 
    hardware/room_preparation
    hardware/table
@@ -70,19 +70,19 @@ evaluated in their entirety through time.
 
 .. toctree::
    :caption: Physical Assembly
-   :maxdepth: 2
+   :maxdepth: 1
 
    physical_assembly/physical_assembly
 
 .. toctree::
    :caption: Imaging with the System
-   :maxdepth: 5
+   :maxdepth: 1
 
    imaging/imaging
 
 .. toctree::
    :caption: System Characterization
-   :maxdepth: 5
+   :maxdepth: 1
 
    system_characterization/system_characterization
 
