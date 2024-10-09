@@ -60,11 +60,18 @@ evaluated in their entirety through time.
    :maxdepth: 2
 
 .. toctree::
-   :caption: Physical Assembly and Hardware
-   :maxdepth: 5
+   :caption: Hardware Considerations
+   :maxdepth: 2
 
-   physical_assembly/room_preparation
-   physical_assembly/table
+   hardware/room_preparation
+   hardware/table
+   hardware/computer
+   hardware/lasers
+
+.. toctree::
+   :caption: Physical Assembly
+   :maxdepth: 2
+
    physical_assembly/physical_assembly
 
 .. toctree::
