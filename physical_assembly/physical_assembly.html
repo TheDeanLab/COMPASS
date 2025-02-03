@@ -56,7 +56,7 @@
 <p class="caption" role="heading"><span class="caption-text">Design Principles</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../design_principles/required_software.html">Required Software and Packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../design_principles/design_process.html">General Design Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../design_principles/design_process.html">Compass V1 General Design Process</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Hardware Considerations</span></p>
 <ul>
@@ -76,7 +76,10 @@
 <li class="toctree-l1"><a class="reference internal" href="#hardware">Hardware</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#note-on-difference-in-simulated-and-physical-coordinate-definitions">Note on Difference in Simulated and Physical Coordinate Definitions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#visualization-of-axes-mapping">Visualization of Axes Mapping</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#piezo-setup-troubleshooting">Piezo Setup &amp; Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#piezo-setup-troubleshooting">Piezo Setup &amp; Troubleshooting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#assembling-the-magnetic-sample-mount">Assembling the Magnetic Sample Mount</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="#parts-list">Parts List</a></li>
@@ -269,11 +272,19 @@ the piezo is set in <a class="reference external" href="https://asiimaging.com/d
 This involves setting the correct axis and voltage-to-distance mapping for the piezo. As an example our configuration file
 for Navigate looks like the following for setting up our piezo:</p>
 <img alt="How to find the Test Panels panel" class="align-center" src="../_images/Piezo_Config.png" />
+<section id="assembling-the-magnetic-sample-mount">
+<h3>Assembling the Magnetic Sample Mount<a class="headerlink" href="#assembling-the-magnetic-sample-mount" title="Permalink to this heading"></a></h3>
+<p>As a safeguard for the risk of the sample crashing into either the illumination or detection objective during sample
+positioning or imaging, we opted to incorporate a magnetic mount for our sample holder. We use a Thorlabs KBT1X1T and
+KBB1X1 as our magnetic mount pair, and then mount our sample holder onto the KBT1X1T using a custom adapter (PROVIDE
+LINK TO ADAPTER).</p>
+<img alt="Basic assembly of magnetic sample holder mount" class="align-center" src="../_images/MagneticMountSampleHolder.png" />
+</section>
 </section>
 </section>
 <section id="parts-list">
 <h1>Parts List<a class="headerlink" href="#parts-list" title="Permalink to this heading"></a></h1>
-<p>Provide a breakdown of general components/provide additional links to 3D designed parts here?</p>
+<p>A breakdown spreadsheet of all components used in this build is viewable under the COMPASS V1 Sample Scanning tab <a class="reference external" href="https://365utsouthwestern-my.sharepoint.com/:x:/g/personal/john_haug_utsouthwestern_edu/EanyUn-KA9JFlo4WwGfxktcBnvZMAhbmhdd7LOCfLSL5bQ?e=NZO83I">here</a>:</p>
 </section>
 
 
