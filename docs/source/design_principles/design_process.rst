@@ -1,7 +1,7 @@
 .. _process-home:
 
 ###############################
-General Design Process
+Compass V1 General Design Process
 ###############################
 
 Initial Lens Selection

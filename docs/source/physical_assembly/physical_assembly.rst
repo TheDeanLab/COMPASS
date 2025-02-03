@@ -182,9 +182,22 @@ for Navigate looks like the following for setting up our piezo:
     :align: center
     :alt: How to find the Test Panels panel
 
+Assembling the Magnetic Sample Mount
+----------------------------------
+
+As a safeguard for the risk of the sample crashing into either the illumination or detection objective during sample
+positioning or imaging, we opted to incorporate a magnetic mount for our sample holder. We use a Thorlabs KBT1X1T and
+KBB1X1 as our magnetic mount pair, and then mount our sample holder onto the KBT1X1T using a custom adapter (PROVIDE
+LINK TO ADAPTER).
+
+.. image:: Images/MagneticMountSampleHolder.png
+    :align: center
+    :alt: Basic assembly of magnetic sample holder mount
 
 ###############################
 Parts List
 ###############################
 
-Provide a breakdown of general components/provide additional links to 3D designed parts here?
+A breakdown spreadsheet of all components used in this build is viewable under the COMPASS V1 Sample Scanning tab `here
+<https://365utsouthwestern-my
+.sharepoint.com/:x:/g/personal/john_haug_utsouthwestern_edu/EanyUn-KA9JFlo4WwGfxktcBnvZMAhbmhdd7LOCfLSL5bQ?e=NZO83I>`_:

@@ -15,7 +15,7 @@ ______________________________
 Bead PSF Analysis
 ______________________________
 
-.. image:: Images/BeadAnalysis.png
+.. image:: Images/BeadProcessingUpdated.png
     :align: center
     :alt: Analysis of the PSF of 100 nm beads in each direction
 
