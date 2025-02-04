@@ -4,6 +4,23 @@
 Imaging Process
 ###############################
 
+Imaging Configurations
+______________________________
+
+
+Our sample chamber features three ports that provide two distinct imaging configurations shown below: the first is a
+traditional light-sheet imaging scheme, where illumination and detection objectives are placed orthogonally to each
+other, and the second is one where the illumination and detection objective are placed in line with eachother. The
+first configuration should be thought of as the default imaging setup for the microscope, and the second allows one to
+observe and characterize the produced light sheet itself. The port not in use should be sealed, which we do using a
+silicon or rubber seal that's able to be fixed onto the exterior of the port using screws. In addition, it should be
+noted that our sample chamber design utilizes two sequential layers of O-rings in each of the ports to both secure
+the objectives and prevent any leaking.
+
+.. image:: Images/S_SampleChamber.png
+    :align: center
+    :alt: Two imaging configurations for the sample chamber design
+
 Visualization of Axes Mapping
 ______________________________
 
@@ -96,7 +113,7 @@ ______________________________
 Reslicing in ImageJ is a process that allows one to be able to reconstruct different planes of a 3D image set. In
 other words, it allows one to view the XY, XZ, and YZ projections of the same image set. In our system, our default
 viewing plane is the XY plane, and so we reslice to observe the XZ and YZ planes. The reslicing process within ImageJ
-is done after deskewing and rescaling, and involves opening up the Reslicing panel (Image-> Stacks-> Reslice).
+is done after deskewing, and involves opening up the Reslicing panel (Image-> Stacks-> Reslice).
 Within this panel, one just needs to select the direction of the reslice (typically just top or left). For our
 system, top slicing provides us with the YZ plane view where one can observe the angled orientation of our sample
 setup after projection (Image-> Stacks-> Z Project). This is shown below for the same 100 nm bead samples used in the
@@ -119,3 +136,15 @@ The same process can then be done to obtain the XZ plane view of our sample by r
 .. image:: Images/ResliceLeftProjection.png
     :align: center
     :alt: The XZ projection of our bead images after reslicing.
+
+Deconvolution
+______________________________
+
+Deconvolution is an iterative post-processing technique that aims to enhance the resolution of a given image.
+Typically, in order to properly utilize deconvolution techniques one needs not only to have an image that they want
+to enhance, but also have an image of the corresponding point-spread-function (PSF) of the system used to take the
+image. We generate this PSF through taking an image stack of an isolated 100 nm fluorescent bead. For deconvolution
+we utilize `PetaKit5D <https://github.com/abcucberkeley/PetaKit5D>`_, which is a MATLAB-based, open-source imaging
+processing code base. It should be noted that deconvolution techniques, while powerful, are also highly dependent on a
+variety of sensitive input parameters, and finding an effective combination of these parameters can often be a long
+and arduous process.
