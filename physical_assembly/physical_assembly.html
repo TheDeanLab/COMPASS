@@ -71,15 +71,15 @@
 <li class="toctree-l2"><a class="reference internal" href="#baseplate-assembly-process">Baseplate Assembly Process</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#mounting-lenses">Mounting Lenses</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#the-piezo-angle-mount">The Piezo Angle Mount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sample-holder-design">Sample Holder Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#assembling-the-magnetic-sample-mount">Assembling the Magnetic Sample Mount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wiring-diagram">Wiring Diagram</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="#hardware">Hardware</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#note-on-difference-in-simulated-and-physical-coordinate-definitions">Note on Difference in Simulated and Physical Coordinate Definitions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#visualization-of-axes-mapping">Visualization of Axes Mapping</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#piezo-setup-troubleshooting">Piezo Setup &amp; Troubleshooting</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#assembling-the-magnetic-sample-mount">Assembling the Magnetic Sample Mount</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#piezo-setup-troubleshooting">Piezo Setup &amp; Troubleshooting</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="#parts-list">Parts List</a></li>
@@ -166,6 +166,25 @@ the angled face of the mount shown in B that a screwdriver is able to pass direc
 alternative method of mounting is shown in D, where the window on the back of the angle mount is able to be screwed
 through as well.</p>
 <img alt="General process for mounting our piezo angle mount onto an ASI translation stage" class="align-center" src="../_images/Anglemount.png" />
+</section>
+<section id="sample-holder-design">
+<h2>Sample Holder Design<a class="headerlink" href="#sample-holder-design" title="Permalink to this heading"></a></h2>
+<p>Our sample holder design is built for using fixed cells on a 5 mm coverslip, and is shown below. The design features a
+clamp-like method of securing the 5 mm coverslip in place, where the coverslip rests in an inset region and the clamp
+is screwed in via an M1.6 screw in the back of the holder. All associated files for this design and
+other custom parts can be found HERE (INSERT LINK TO DOWNLOADS PAGE).</p>
+<img alt="5 mm coverslip sample holder design" class="align-center" src="../_images/S_SampleHolderAssembly.png" />
+</section>
+<section id="assembling-the-magnetic-sample-mount">
+<h2>Assembling the Magnetic Sample Mount<a class="headerlink" href="#assembling-the-magnetic-sample-mount" title="Permalink to this heading"></a></h2>
+<p>As a safeguard for the risk of the sample crashing into either the illumination or detection objective during sample
+positioning or imaging, we opted to incorporate a magnetic mount for our sample holder. We use a Thorlabs KBT1X1T and
+KBB1X1 as our magnetic mount pair, and then mount our sample holder onto the KBT1X1T using a custom adapter (PROVIDE
+LINK TO ADAPTER).</p>
+<img alt="Basic assembly of magnetic sample holder mount" class="align-center" src="../_images/MagneticMountSampleHolder.png" />
+</section>
+<section id="wiring-diagram">
+<h2>Wiring Diagram<a class="headerlink" href="#wiring-diagram" title="Permalink to this heading"></a></h2>
 </section>
 </section>
 <section id="hardware">
@@ -272,14 +291,6 @@ the piezo is set in <a class="reference external" href="https://asiimaging.com/d
 This involves setting the correct axis and voltage-to-distance mapping for the piezo. As an example our configuration file
 for Navigate looks like the following for setting up our piezo:</p>
 <img alt="How to find the Test Panels panel" class="align-center" src="../_images/Piezo_Config.png" />
-<section id="assembling-the-magnetic-sample-mount">
-<h3>Assembling the Magnetic Sample Mount<a class="headerlink" href="#assembling-the-magnetic-sample-mount" title="Permalink to this heading"></a></h3>
-<p>As a safeguard for the risk of the sample crashing into either the illumination or detection objective during sample
-positioning or imaging, we opted to incorporate a magnetic mount for our sample holder. We use a Thorlabs KBT1X1T and
-KBB1X1 as our magnetic mount pair, and then mount our sample holder onto the KBT1X1T using a custom adapter (PROVIDE
-LINK TO ADAPTER).</p>
-<img alt="Basic assembly of magnetic sample holder mount" class="align-center" src="../_images/MagneticMountSampleHolder.png" />
-</section>
 </section>
 </section>
 <section id="parts-list">

@@ -77,6 +77,35 @@ through as well.
     :align: center
     :alt: General process for mounting our piezo angle mount onto an ASI translation stage
 
+Sample Holder Design
+______________________________
+
+
+Our sample holder design is built for using fixed cells on a 5 mm coverslip, and is shown below. The design features a
+clamp-like method of securing the 5 mm coverslip in place, where the coverslip rests in an inset region and the clamp
+is screwed in via an M1.6 screw in the back of the holder. All associated files for this design and
+other custom parts can be found HERE (INSERT LINK TO DOWNLOADS PAGE).
+
+.. image:: Images/S_SampleHolderAssembly.png
+    :align: center
+    :alt: 5 mm coverslip sample holder design
+
+Assembling the Magnetic Sample Mount
+______________________________
+
+
+As a safeguard for the risk of the sample crashing into either the illumination or detection objective during sample
+positioning or imaging, we opted to incorporate a magnetic mount for our sample holder. We use a Thorlabs KBT1X1T and
+KBB1X1 as our magnetic mount pair, and then mount our sample holder onto the KBT1X1T using a custom adapter (PROVIDE
+LINK TO ADAPTER).
+
+.. image:: Images/MagneticMountSampleHolder.png
+    :align: center
+    :alt: Basic assembly of magnetic sample holder mount
+
+Wiring Diagram
+______________________________
+
 
 ###############################
 Hardware
@@ -182,17 +211,10 @@ for Navigate looks like the following for setting up our piezo:
     :align: center
     :alt: How to find the Test Panels panel
 
-Assembling the Magnetic Sample Mount
-----------------------------------
 
-As a safeguard for the risk of the sample crashing into either the illumination or detection objective during sample
-positioning or imaging, we opted to incorporate a magnetic mount for our sample holder. We use a Thorlabs KBT1X1T and
-KBB1X1 as our magnetic mount pair, and then mount our sample holder onto the KBT1X1T using a custom adapter (PROVIDE
-LINK TO ADAPTER).
 
-.. image:: Images/MagneticMountSampleHolder.png
-    :align: center
-    :alt: Basic assembly of magnetic sample holder mount
+
+
 
 ###############################
 Parts List
