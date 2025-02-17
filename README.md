@@ -1,15 +1,16 @@
 <h1 align="center">
-<img src="https://github.com/TheDeanLab/compass/blob/develop/docs/source/general/compass.png?raw=true" />
-
 COMPASS
-<h2 align="center">
+
+<img 
+	src="https://github.com/TheDeanLab/COMPASS/blob/main/docs/source/general/compass.png?raw=true"
+  	alt="COMPASS"
+  	width="250"
+/>
+
+<h3 align="center">
 	Cost-Effective, Open-Source, Light-Sheet Microscopy Solutions for for Sub-Cellular Imaging.
-</h2>
+</h3>
 </h1>
-
-[![GitHub issues](https://img.shields.io/github/issues/TheDeanLab/COMPASS.svg)](https://github.com/TheDeanLab/COMPASS/issues)
-
-## Overview
 
 **COMPASS** aims to democratize high-resolution light-sheet fluorescence microscopy. By combining **modular optomechanics**, **cutting-edge lens simulations**, and **intelligent software**, **COMPASS** enables the rapid assembly of light-sheet fluorescence microscopes that deliver ~235 nm lateral and ~465 nm axial resolution in a user-friendly package.
 
