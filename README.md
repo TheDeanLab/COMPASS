@@ -54,7 +54,7 @@ The overarching goal is to provide a **modular, cost-effective 3D light-sheet mi
 
 ## Getting Started
 
-- **Review the Documentation**
+- **Review the [Documentation](https://thedeanlab.github.io/COMPASS/)**
 - **Procure Hardware**
 - **Download and Install** [navigate](https://github.com/TheDeanLab/navigate)
 - **Assemble Hardware**

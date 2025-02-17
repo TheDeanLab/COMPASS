@@ -1,8 +1,8 @@
 
-.. _navigate-hardware-home:
+.. _compass-home:
 
 #####################
-**navigate-hardware**
+**COMPASS**
 #####################
 
 Biologists are increasingly transitioning
@@ -34,8 +34,8 @@ evaluated in their entirety through time.
     mechanical and optical systems. Despite these precautions, the complexity and nature of
     hardware can lead to unpredictable outcomes. Therefore, the Dean Lab and UT
     Southwestern expressly disclaim any responsibility for any damages, losses, or
-    injuries that may arise from or be related to the use of **navigate-hardware**.
-    Users should be aware of these risks and agree to utilize **navigate-hardware** at their own risk.
+    injuries that may arise from or be related to the use of **COMPASS**.
+    Users should be aware of these risks and agree to utilize **COMPASS** at their own risk.
 
 
 .. toctree::
@@ -91,7 +91,7 @@ evaluated in their entirety through time.
 
 **Authors**
 ============
-**Navigate-hardware** includes key contributions from numerous individuals, both past and present,
+**COMPASS** includes key contributions from numerous individuals, both past and present,
 in `The Dean Lab <https://www.dean-lab.org>`_.
 
 **Funding**

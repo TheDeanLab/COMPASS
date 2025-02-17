@@ -15,7 +15,7 @@ graphically below, the actual z step size is related to both the angle for the p
     :alt: Depiction of how :math:`\delta _z` is derived
 
 An example of what these values can be is shown below, where for our camera and system magnification our xy pixel
-size is the same at 130 nm, while we used a piezo step size of 200 nm in Navigate. Using the relationship shown above
+size is the same at 130 nm, while we used a piezo step size of 200 nm in navigate. Using the relationship shown above
 to find :math:`\delta _z`, we find our actual z-step size is roughly 98.5 nm. Then we can adjust the image stack
 properties panel as follows:
 
