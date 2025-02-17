@@ -275,7 +275,7 @@ With the baseplate designed, our final assembly for our illumination path looks 
 Note on Difference in Simulated and Physical Coordinate Definitions
 ______________________________
 
-It should be noted briefly that when discussing our physical microscope systems using Navigate software, the definitions
+It should be noted briefly that when discussing our physical microscope systems using navigate software, the definitions
 for the coordinate axes is different than that of our simulations. This is due to a difference in standardized
 definitions for the axes in our previous systems and how Zemax defines these same axes. This difference is depicted in
 the picture below:

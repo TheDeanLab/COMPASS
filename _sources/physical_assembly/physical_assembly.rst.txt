@@ -115,7 +115,7 @@ Hardware
 Note on Difference in Simulated and Physical Coordinate Definitions
 ______________________________
 
-It should be noted briefly that when discussing our physical microscope systems using Navigate software, the definitions
+It should be noted briefly that when discussing our physical microscope systems using navigate software, the definitions
 for the coordinate axes is different than that of our simulations. This is due to a difference in standardized
 definitions for the axes in our previous systems and how Zemax defines these same axes. This difference is depicted in
 the picture below:
@@ -204,9 +204,9 @@ the piezo is set in `External Input mode, and not Controller Input mode <https:/
     2. Use the "PM Q = 1" command to set the piezo into External Input mode:
         - now the output of "PM Q?" is "Q = 1"
 
-Another important step is to ensure that the configuration file associated with Navigate is appropriately set up for your piezo.
+Another important step is to ensure that the configuration file associated with navigate is appropriately set up for your piezo.
 This involves setting the correct axis and voltage-to-distance mapping for the piezo. As an example our configuration file
-for Navigate looks like the following for setting up our piezo:
+for navigate looks like the following for setting up our piezo:
 
 .. image:: Images/Piezo_Config.png
     :align: center

@@ -53,7 +53,7 @@ as z in our imaging scheme). In order to visualize these effects and adjust the 
 to mitigate them, we employ a process of taking a z-stack of fluorescent beads suspended in agarose
 and using ImageJ to quickly process those images.
 
-    1. Take a z-stack within Navigate of your sample
+    1. Take a z-stack within navigate of your sample
     2. Open up the z-stack within ImageJ
     3. Reslice the z-stack (Image -> Stacks -> Reslice)
     4. Do a maximum intensity project of the resliced stack (Image -> Stacks -> Z-Projection)
@@ -61,7 +61,7 @@ and using ImageJ to quickly process those images.
     6. If spherical aberration is still present, make slight adjustments to the objective
        correction collar and repeat Steps 1-5.
 
-As a note, observing the camera live-feed via Navigate's "Continuous Scan" mode while adjusting the correction collar
+As a note, observing the camera live-feed via navigate's "Continuous Scan" mode while adjusting the correction collar
 can help to get in the general vicinity of the correct placement of the correction collar. An example of how change in
 the correction collar affect live images are shown below for fluorescent beads. Aiming to get to get the beads near the
 expected light sheet position to be as in-focus as possible is a general guide for what direction to move the collar;
