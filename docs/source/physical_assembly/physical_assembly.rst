@@ -97,7 +97,8 @@ ______________________________
 As a safeguard for the risk of the sample crashing into either the illumination or detection objective during sample
 positioning or imaging, we opted to incorporate a magnetic mount for our sample holder. We use a Thorlabs KBT1X1T and
 KBB1X1 as our magnetic mount pair, and then mount our sample holder onto the KBT1X1T using a custom adapter (PROVIDE
-LINK TO ADAPTER).
+LINK TO ADAPTER). The KBB1X1 is affixed to the piezo using an M2.5 screw, and using a small leveling tool (shown below)
+during this step is helpful to ensure that the magnetic base is mounted as level as possible for the imaging process.
 
 .. image:: Images/MagneticMountSampleHolder.png
     :align: center
@@ -210,10 +211,6 @@ for Navigate looks like the following for setting up our piezo:
 .. image:: Images/Piezo_Config.png
     :align: center
     :alt: How to find the Test Panels panel
-
-
-
-
 
 
 ###############################
