@@ -19,8 +19,8 @@ import sys
 
 # -- Project information -----------------------------------------------------
 
-project = "navigate-hardware"
-copyright = "2024, Dean Lab, UT Southwestern Medical Center"
+project = "COMPASS"
+copyright = "2025, Dean Lab, UT Southwestern Medical Center"
 author = "Dean Lab, UT Southwestern Medical Center"
 
 # The full version, including alpha/beta/rc tags
@@ -120,7 +120,7 @@ latex_elements = {'preamble': r'''
                   'extraclassoptions': 'openany,oneside'}
 
 latex_documents = [
-  ('index', 'navigate-hardware.tex', 'navigate-hardware Documentation',
+  ('index', 'compass.tex', 'COMPASS Documentation',
    'Dean Lab, UT Southwestern Medical Center', 'manual', True),
 ]
 
