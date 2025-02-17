@@ -1,4 +1,6 @@
 <h1 align="center">
+<img src="https://github.com/TheDeanLab/compass/blob/develop/docs/source/general/compass.png?raw=true" />
+
 COMPASS
 <h2 align="center">
 	Cost-Effective, Open-Source, Light-Sheet Microscopy Solutions for for Sub-Cellular Imaging.
