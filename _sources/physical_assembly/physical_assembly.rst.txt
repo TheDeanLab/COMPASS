@@ -48,6 +48,34 @@ into the Polaris post.
     :alt: General process for mounting a lens into a Polaris holder and onto a post
 
 
+###############################
+Hardware
+###############################
+
+Note on Difference in Simulated and Physical Coordinate Definitions
+______________________________
+
+It should be noted briefly that when discussing our physical microscope systems using navigate software, the definitions
+for the coordinate axes is different than that of our simulations. This is due to a difference in standardized
+definitions for the axes in our previous systems and how Zemax defines these same axes. This difference is depicted in
+the picture below:
+
+.. image:: Images/CoordinateSchemeChange.png
+    :align: center
+    :alt: Difference in coordinate axes for simulation and physical setup
+
+Visualization of Axes Mapping
+______________________________
+
+In our system we essentially have 5 different translation stages at work: the standard x,y, and z axes, an additional
+stage along the z axis to control the focus of the detection path (f), and and axis associated with the piezo positioned
+such that its normal is 60.5 degrees away from the y-axis.
+
+.. image:: Images/PhysicalAxesMaps.png
+    :align: center
+    :alt: Layout of how the axis of the system are mapped
+
+
 The Piezo Angle Mount
 ______________________________
 
@@ -104,6 +132,19 @@ during this step is helpful to ensure that the magnetic base is mounted as level
     :align: center
     :alt: Basic assembly of magnetic sample holder mount
 
+Wiring Diagram
+______________________________
+
+
+Our complete microscope assembly features a variety of different optoelectrical and optomechanical elements. These
+elements are primary controlled via our NI DAQ (PXIe-6738) or our ASI Tiger Controller (TG16-BASIC), which are then
+controlled via navigate during the imaging process. The diagram below depicts how these elements are wired together,
+as well as an individual pinout designation table for the pin configurations we used on our DAQ. 
+
+.. image:: Images/Wiring3_Plustable.png
+    :align: center
+    :alt: Basic assembly of magnetic sample holder mount
+
 Initial Laser Collimation and Alignment
 ______________________________
 
@@ -121,36 +162,6 @@ With the beam collimated, the process of beam alignment involves adjusting the p
     :align: center
     :alt: Performing beam alignment across the baseplate
 
-Wiring Diagram
-______________________________
-
-
-###############################
-Hardware
-###############################
-
-Note on Difference in Simulated and Physical Coordinate Definitions
-______________________________
-
-It should be noted briefly that when discussing our physical microscope systems using navigate software, the definitions
-for the coordinate axes is different than that of our simulations. This is due to a difference in standardized
-definitions for the axes in our previous systems and how Zemax defines these same axes. This difference is depicted in
-the picture below:
-
-.. image:: Images/CoordinateSchemeChange.png
-    :align: center
-    :alt: Difference in coordinate axes for simulation and physical setup
-
-Visualization of Axes Mapping
-______________________________
-
-In our system we essentially have 5 different translation stages at work: the standard x,y, and z axes, an additional
-stage along the z axis to control the focus of the detection path (f), and and axis associated with the piezo positioned
-such that its normal is 60.5 degrees away from the y-axis.
-
-.. image:: Images/PhysicalAxesMaps.png
-    :align: center
-    :alt: Layout of how the axis of the system are mapped
 
 Piezo Setup & Troubleshooting
 ______________________________

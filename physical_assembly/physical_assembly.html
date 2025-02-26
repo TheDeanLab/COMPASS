@@ -70,16 +70,16 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Physical Assembly</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#baseplate-assembly-process">Baseplate Assembly Process</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#mounting-lenses">Mounting Lenses</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#the-piezo-angle-mount">The Piezo Angle Mount</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#sample-holder-design">Sample Holder Design</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#assembling-the-magnetic-sample-mount">Assembling the Magnetic Sample Mount</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#initial-laser-collimation-and-alignment">Initial Laser Collimation and Alignment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#wiring-diagram">Wiring Diagram</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="#hardware">Hardware</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#note-on-difference-in-simulated-and-physical-coordinate-definitions">Note on Difference in Simulated and Physical Coordinate Definitions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#visualization-of-axes-mapping">Visualization of Axes Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-piezo-angle-mount">The Piezo Angle Mount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sample-holder-design">Sample Holder Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#assembling-the-magnetic-sample-mount">Assembling the Magnetic Sample Mount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wiring-diagram">Wiring Diagram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#initial-laser-collimation-and-alignment">Initial Laser Collimation and Alignment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#piezo-setup-troubleshooting">Piezo Setup &amp; Troubleshooting</a></li>
 </ul>
 </li>
@@ -147,6 +147,24 @@ lens mount align with the pins on the Polaris post. Then the lens mount should b
 into the Polaris post.</p>
 <img alt="General process for mounting a lens into a Polaris holder and onto a post" class="align-center" src="../_images/LensMounting.png" />
 </section>
+</section>
+<section id="hardware">
+<h1>Hardware<a class="headerlink" href="#hardware" title="Permalink to this heading"></a></h1>
+<section id="note-on-difference-in-simulated-and-physical-coordinate-definitions">
+<h2>Note on Difference in Simulated and Physical Coordinate Definitions<a class="headerlink" href="#note-on-difference-in-simulated-and-physical-coordinate-definitions" title="Permalink to this heading"></a></h2>
+<p>It should be noted briefly that when discussing our physical microscope systems using navigate software, the definitions
+for the coordinate axes is different than that of our simulations. This is due to a difference in standardized
+definitions for the axes in our previous systems and how Zemax defines these same axes. This difference is depicted in
+the picture below:</p>
+<img alt="Difference in coordinate axes for simulation and physical setup" class="align-center" src="../_images/CoordinateSchemeChange1.png" />
+</section>
+<section id="visualization-of-axes-mapping">
+<h2>Visualization of Axes Mapping<a class="headerlink" href="#visualization-of-axes-mapping" title="Permalink to this heading"></a></h2>
+<p>In our system we essentially have 5 different translation stages at work: the standard x,y, and z axes, an additional
+stage along the z axis to control the focus of the detection path (f), and and axis associated with the piezo positioned
+such that its normal is 60.5 degrees away from the y-axis.</p>
+<img alt="Layout of how the axis of the system are mapped" class="align-center" src="../_images/PhysicalAxesMaps1.png" />
+</section>
 <section id="the-piezo-angle-mount">
 <h2>The Piezo Angle Mount<a class="headerlink" href="#the-piezo-angle-mount" title="Permalink to this heading"></a></h2>
 <p>We designed a custom angled mount for a piezo in order to be able to scan our sample easily between our two
@@ -185,6 +203,14 @@ LINK TO ADAPTER). The KBB1X1 is affixed to the piezo using an M2.5 screw, and us
 during this step is helpful to ensure that the magnetic base is mounted as level as possible for the imaging process.</p>
 <img alt="Basic assembly of magnetic sample holder mount" class="align-center" src="../_images/MagneticMountSampleHolder.png" />
 </section>
+<section id="wiring-diagram">
+<h2>Wiring Diagram<a class="headerlink" href="#wiring-diagram" title="Permalink to this heading"></a></h2>
+<p>Our complete microscope assembly features a variety of different optoelectrical and optomechanical elements. These
+elements are primary controlled via our NI DAQ (PXIe-6738) or our ASI Tiger Controller (TG16-BASIC), which are then
+controlled via navigate during the imaging process. The diagram below depicts how these elements are wired together,
+as well as an individual pinout designation table for the pin configurations we used on our DAQ.</p>
+<img alt="Basic assembly of magnetic sample holder mount" class="align-center" src="../_images/Wiring3_Plustable.png" />
+</section>
 <section id="initial-laser-collimation-and-alignment">
 <h2>Initial Laser Collimation and Alignment<a class="headerlink" href="#initial-laser-collimation-and-alignment" title="Permalink to this heading"></a></h2>
 <p>When first assembling the system, ensuring proper output collimation from the fiber laser source is critical. There are multiple checks that one can take for this step, but we utilize a combination of a shear-plate interferometer (<a class="reference external" href="https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=2970">https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=2970</a>) and two pinhole apertures placed at opposite ends along the length of the baseplate. Shear-plate interferometers are designed to split and interfere an input beam of collimated light, such that when the beam is collimated there are interference fringes aligned vertically with a reference line. The fiber laser collimator we used for this system is the Thorlabs CFC11A-A (<a class="reference external" href="https://www.thorlabs.com/thorproduct.cfm?partnumber=CFC11A-A">https://www.thorlabs.com/thorproduct.cfm?partnumber=CFC11A-A</a>), which features an adjustable barrel which controls the position of collimation optics within the element.</p>
@@ -192,27 +218,6 @@ during this step is helpful to ensure that the magnetic base is mounted as level
 <img alt="Shear Plate interferometer and collimator lens" class="align-center" src="../_images/LaserAlignment1.png" />
 <p>With the beam collimated, the process of beam alignment involves adjusting the position control knobs on the K1XY to have the beam pass through two pinhole apertures along the optical path. The height of the initial laser output is designed to be at 3.75” above the top surface of the baseplate, so selecting appropriate post heights for the apertures such that their centers rest at 3.75” is essential. In our case, we use Thorlabs ID12 pinhole apertures (<a class="reference external" href="https://www.thorlabs.com/thorproduct.cfm?partnumber=ID12">https://www.thorlabs.com/thorproduct.cfm?partnumber=ID12</a>), so using a post height of 3.25” will ensure that they are at the proper height for alignment. We designed a custom ID12 to Polaris adapter (Provide link) to ensure the aperture is at the proper height and properly aligned along the designated Polaris axis. When using this method, the ID12 to Polaris Adapters can just be directly mounted onto the holes designated for L1 and the Illumination Objective, depicted below, to cover the length of the baseplate. With the pinholes placed, the process becomes iterative by making small adjustments on the K1XY tip/tilt knobs and XY position screws until the beam passes through both pinholes.</p>
 <img alt="Performing beam alignment across the baseplate" class="align-center" src="../_images/LaserAlignment2.png" />
-</section>
-<section id="wiring-diagram">
-<h2>Wiring Diagram<a class="headerlink" href="#wiring-diagram" title="Permalink to this heading"></a></h2>
-</section>
-</section>
-<section id="hardware">
-<h1>Hardware<a class="headerlink" href="#hardware" title="Permalink to this heading"></a></h1>
-<section id="note-on-difference-in-simulated-and-physical-coordinate-definitions">
-<h2>Note on Difference in Simulated and Physical Coordinate Definitions<a class="headerlink" href="#note-on-difference-in-simulated-and-physical-coordinate-definitions" title="Permalink to this heading"></a></h2>
-<p>It should be noted briefly that when discussing our physical microscope systems using navigate software, the definitions
-for the coordinate axes is different than that of our simulations. This is due to a difference in standardized
-definitions for the axes in our previous systems and how Zemax defines these same axes. This difference is depicted in
-the picture below:</p>
-<img alt="Difference in coordinate axes for simulation and physical setup" class="align-center" src="../_images/CoordinateSchemeChange1.png" />
-</section>
-<section id="visualization-of-axes-mapping">
-<h2>Visualization of Axes Mapping<a class="headerlink" href="#visualization-of-axes-mapping" title="Permalink to this heading"></a></h2>
-<p>In our system we essentially have 5 different translation stages at work: the standard x,y, and z axes, an additional
-stage along the z axis to control the focus of the detection path (f), and and axis associated with the piezo positioned
-such that its normal is 60.5 degrees away from the y-axis.</p>
-<img alt="Layout of how the axis of the system are mapped" class="align-center" src="../_images/PhysicalAxesMaps1.png" />
 </section>
 <section id="piezo-setup-troubleshooting">
 <h2>Piezo Setup &amp; Troubleshooting<a class="headerlink" href="#piezo-setup-troubleshooting" title="Permalink to this heading"></a></h2>
