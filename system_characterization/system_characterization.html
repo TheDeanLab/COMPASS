@@ -78,8 +78,7 @@
 <p class="caption" role="heading"><span class="caption-text">System Characterization</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">System Characterization</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#beam-characterization">Beam Characterization</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#bead-psf-analysis">Bead PSF Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#beam-characterization-and-psf-analysis">Beam Characterization and PSF Analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#sample-biological-images">Sample Biological Images</a></li>
 </ul>
 </li>
@@ -111,16 +110,29 @@
              
   <section id="system-characterization">
 <span id="process-home"></span><h1>System Characterization<a class="headerlink" href="#system-characterization" title="Permalink to this heading"></a></h1>
-<section id="beam-characterization">
-<h2>Beam Characterization<a class="headerlink" href="#beam-characterization" title="Permalink to this heading"></a></h2>
-<img alt="Comparison of the expected light sheet beam from simulation to the experimentally imaged light sheet" class="align-center" src="../_images/BeamProperties.png" />
-</section>
-<section id="bead-psf-analysis">
-<h2>Bead PSF Analysis<a class="headerlink" href="#bead-psf-analysis" title="Permalink to this heading"></a></h2>
-<img alt="Analysis of the PSF of 100 nm beads in each direction" class="align-center" src="../_images/BeadProcessingUpdated.png" />
+<section id="beam-characterization-and-psf-analysis">
+<h2>Beam Characterization and PSF Analysis<a class="headerlink" href="#beam-characterization-and-psf-analysis" title="Permalink to this heading"></a></h2>
+<p>To characterize our constructed system, we first image the generated light-sheet using the sample chamber transmission configuration shown below, where the illumination objective is placed directly in front of the detection objective. The image of our light sheet is shown in (a) below, where the cross-sectional profile of the light-sheet is shown in (b) and reveals a z-FWHM of ~0.415 um.</p>
+<img alt="Analysis of the experimental lightsheet characteristics" class="align-center" src="../_images/SC_Beam_Characterization.png" />
+<p>To characterize the resolution of our system, we utilize 100 nm YG Fluorsecent Beads (ID: 17150-10) from Polysciences Inc. The beads are first affixed onto a 5 mm coverslip using the following protocol:</p>
+<ol class="arabic simple">
+<li><p>Assemble petri dish, coverslip, and (3-Aminopropyl)triethoxysilane (APTS)</p></li>
+<li><p>Put 5 mm coverslip in petri dish</p></li>
+<li><p>Apply ~100 ul of (3-Aminopropyl)triethoxysilane (APTS) on top of coverslip</p></li>
+<li><p>Allow APTS to incubate for ~10-30 minutes</p></li>
+<li><p>Wash coverslip lightly with DI water 3 times</p></li>
+</ol>
+<p>6. Put beads of desired dilution (typically 10^-3 or 10^-4 for a normal distribution, 10^-6 for a sparse
+distribution) onto coverslip and allow to incubate between 2-20 minutes. Longer incubation time allows for more beads to adhere to the coverslip
+7. Wash lightly afterwards with DI water</p>
+<p>After affixation, the beads are then imaged, the results of which are shown below. The PSF of an isolated bead is shown below in (a-c), where each image is a different orthogonal perspective of the bead’s intensity distribution, and provide us insight into the resolution of our system in each orthogonal direction. We then provide Gaussian-fitted distributions of the FWHM of the population of fluorescent beads across a given z-stack in (d), both before and after applying deconvolution procedures. Prior to deconvolution, the average FWHM values across the bead population were 328 in x, 330 nm in y, and 464 nm in z. After deconvolution with PetaKit5D, these values improved to 235.5 nm in x, 233.5 nm in your, and 350.4 in z.</p>
+<img alt="Analysis of the experimental PSF characteristics" class="align-center" src="../_images/SC_PSF_Characterization.png" />
 </section>
 <section id="sample-biological-images">
 <h2>Sample Biological Images<a class="headerlink" href="#sample-biological-images" title="Permalink to this heading"></a></h2>
+<p>As a demonstration of COMPASS’ biological imaging capabilities, we prepared and imaged mouse embryonic fibroflast (MEF) cells, where multiple subcellular structures were stained for 4 different channels corresponding to the excitation wavelengths of our laser source (405 nm, 488 nm, 561 nm, 638 nm). The staining protocol described in [cite Compass paper] was optimized for visualization of the nucleus (DAPI, 405 nm, blue channel), microtubules (488 nm, green channel), actin filements (561 nm, red channel), and the Golgi apparatus of the MEF cells (638 nm, magenta).</p>
+<p>A deconvolved maximum intensity projection of a distribution of MEF cells is shown below in (a), with a designated region of interest being displayed for each individual channel in (b). These results display fine nucleolar features within the nucleus, well-defined perinuclear Golgi stuctures, well-resolved stress fibers in the actin channel, and individually distinct microtubules, demonstrating COMPASS’ ability to capture high-resolution images of cytoskeletal structures. Additionally, the yz projection of the image stack in shown in (c).</p>
+<img alt="Analysis of MEF Cells" class="align-center" src="system_characterization/Images/Figure5_Cells_AnnotatedResized.png" />
 </section>
 </section>
 

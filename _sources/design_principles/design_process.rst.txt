@@ -221,7 +221,7 @@ effectively suspended in midair like below:
 
 For mounting our elements, we utilize the `Polaris <https://www.thorlabs.com/navigation.cfm?guide_id=2368>`_ line from
 Thorlabs, which are designed with long-term stability and alignment in mind. Each component is characterized in part by
-two dowell pin alignment holes to ensure subsequent mounted elements are aligned along a specific axis. In the baseplate
+two dowel pin alignment holes to ensure subsequent mounted elements are aligned along a specific axis. In the baseplate
 design, we are essentially deciding on the location for the mounting holes of the Polaris posts we're using, which is
 not the same as the locations of the elements themselves from Zemax.
 
