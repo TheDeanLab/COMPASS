@@ -37,7 +37,7 @@ As a demonstration of COMPASS' biological imaging capabilities, we prepared and 
 
 A deconvolved maximum intensity projection of a distribution of MEF cells is shown below in (a), with a designated region of interest being displayed for each individual channel in (b). These results display fine nucleolar features within the nucleus, well-defined perinuclear Golgi stuctures, well-resolved stress fibers in the actin channel, and individually distinct microtubules, demonstrating COMPASS' ability to capture high-resolution images of cytoskeletal structures. Additionally, the yz projection of the image stack in shown in (c).
 
-.. image:: Images/Figure5_Cells_AnnotatedResized.png
+.. image:: Images/Figure5_Cells_Resized.png
     :align: center
     :alt: Analysis of MEF Cells
 
