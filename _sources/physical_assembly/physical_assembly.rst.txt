@@ -139,7 +139,7 @@ ______________________________
 Our complete microscope assembly features a variety of different optoelectrical and optomechanical elements. These
 elements are primary controlled via our NI DAQ (PXIe-6738) or our ASI Tiger Controller (TG16-BASIC), which are then
 controlled via navigate during the imaging process. The diagram below depicts how these elements are wired together,
-as well as an individual pinout designation table for the pin configurations we used on our DAQ. 
+as well as an individual pinout designation table for the pin configurations we used on our DAQ.
 
 .. image:: Images/Wiring3_Plustable.png
     :align: center
@@ -148,15 +148,22 @@ as well as an individual pinout designation table for the pin configurations we 
 Initial Laser Collimation and Alignment
 ______________________________
 
-When first assembling the system, ensuring proper output collimation from the fiber laser source is critical. There are multiple checks that one can take for this step, but we utilize a combination of a shear-plate interferometer (https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=2970) and two pinhole apertures placed at opposite ends along the length of the baseplate. Shear-plate interferometers are designed to split and interfere an input beam of collimated light, such that when the beam is collimated there are interference fringes aligned vertically with a reference line. The fiber laser collimator we used for this system is the Thorlabs CFC11A-A (https://www.thorlabs.com/thorproduct.cfm?partnumber=CFC11A-A), which features an adjustable barrel which controls the position of collimation optics within the element.
+When first assembling the system, ensuring proper output collimation from the fiber laser source is critical. There
+are multiple checks that one can take for this step, but we utilize a combination of a shear-plate interferometer
+(https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=2970) and two pinhole apertures placed at opposite ends
+along the length of the baseplate. Shear-plate interferometers are designed to split and interfere an input beam of
+coherent light, such that when the beam is collimated there are interference fringes aligned vertically with a
+reference line. The fiber laser collimator we used for this system is the Thorlabs CFC11A-A (https://www.thorlabs.com/thorproduct.cfm?partnumber=CFC11A-A), which features an adjustable barrel which controls the position of collimation optics within the element.
 
-The basic assembly process involves first inserting and fixing the CFC11A-A into a Thorlabs AD15S2 adapter, which allows it to then be mounted into a Polaris K1XY mount. This assembly is then mounted onto the respective Polaris post at the start of the baseplate. The fiber laser source is then able to be directly mounted into the CFC11A-A, making sure that the protrusion on the fiber wire aligns with the open section of the CFC11A-A port. The basic process of ensuring collimation then involves turning on the laser source, and placing the shear-plate interferometer such that the input port aligns with the output of the laser unit. Then, by slowly adjusting the barrel of the CFC11A-A and observing the interference fringe orientations along the top display of the interferometer, one is able to adjust the beam until it is properly collimated.
+The basic assembly process involves first inserting and fixing the CFC11A-A into a Thorlabs AD15S2 adapter, which
+allows it to then be mounted into a Polaris K1XY mount. This assembly is then mounted onto the respective Polaris post at the start of the baseplate. The fiber laser source is then able to be directly mounted into the CFC11A-A, making sure that the protrusion on the fiber wire aligns with the open section of the CFC11A-A port. The basic process of ensuring collimation then involves turning on the laser source, and placing the shear-plate interferometer such that the input port aligns with the output of the laser unit. Then, by slowly adjusting the barrel of the CFC11A-A and observing the interference fringe orientations along the top display of the interferometer, one is able to adjust the beam until it is properly collimated.
 
 .. image:: Images/LaserAlignment1.png
     :align: center
     :alt: Shear Plate interferometer and collimator lens
 
-With the beam collimated, the process of beam alignment involves adjusting the position control knobs on the K1XY to have the beam pass through two pinhole apertures along the optical path. The height of the initial laser output is designed to be at 3.75" above the top surface of the baseplate, so selecting appropriate post heights for the apertures such that their centers rest at 3.75" is essential. In our case, we use Thorlabs ID12 pinhole apertures (https://www.thorlabs.com/thorproduct.cfm?partnumber=ID12), so using a post height of 3.25" will ensure that they are at the proper height for alignment. We designed a custom ID12 to Polaris adapter (Provide link) to ensure the aperture is at the proper height and properly aligned along the designated Polaris axis. When using this method, the ID12 to Polaris Adapters can just be directly mounted onto the holes designated for L1 and the Illumination Objective, depicted below, to cover the length of the baseplate. With the pinholes placed, the process becomes iterative by making small adjustments on the K1XY tip/tilt knobs and XY position screws until the beam passes through both pinholes.
+With the beam collimated, the process of beam alignment involves adjusting the position control knobs on the K1XY to
+have the beam pass through two pinhole apertures along the optical path. The height of the initial laser output is designed to be at 3.75" above the top surface of the baseplate, so selecting appropriate post heights for the apertures such that their centers rest at 3.75" is essential. In our case, we use Thorlabs ID12 pinhole apertures (https://www.thorlabs.com/thorproduct.cfm?partnumber=ID12), so using a post height of 3.25" will ensure that they are at the proper height for alignment. We designed a custom ID12 to Polaris adapter (Provide link) to ensure the aperture is at the proper height and properly aligned along the designated Polaris axis. When using this method, the ID12 to Polaris Adapters can just be directly mounted onto the holes designated for L1 and the Illumination Objective, depicted below, to cover the length of the baseplate. With the pinholes placed, the process becomes iterative by making small adjustments on the K1XY tip/tilt knobs and XY position screws until the beam passes through both pinholes.
 
 .. image:: Images/LaserAlignment2.png
     :align: center
