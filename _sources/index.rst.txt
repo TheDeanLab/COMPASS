@@ -5,27 +5,22 @@
 **COMPASS**
 #####################
 
-Biologists are increasingly transitioning
-towards more complex assays that require volumetric imaging with high spatiotemporal
-resolution. Whether it is a developing embryo, the formation of a cell-cell
-immunological synapse, breast cancer organoids migrating through a 3D collagen
-matrix, or cytoskeletal rearrangements in a polarized epithelial monolayer, these
-biological processes can only be understood when non-invasively and quantitatively
-evaluated in their entirety through time.
+Biologists are increasingly transitioning towards more complex assays that require volumetric imaging with high spatiotemporal resolution. Whether it is a developing embryo, the formation of an immunological synapse, cancer migrating through a 3D collagen matrix, these biological processes can only be understood when non-invasively and quantitatively evaluated in their entirety through time.
 
+To meet these growing demands, we aim to develop simplified optical systems that provide cutting-edge imaging performance while ensuring ease of assembly and accessibility. By leveraging precision-engineered, baseplate-mounted designs, we eliminate unnecessary degrees of freedom, making high-resolution light-sheet microscopy more robust, reproducible, and approachable for researchers across disciplines. Our goal is to create powerful yet modular imaging platforms that enable biologists to focus on discovery rather than instrument complexity, accelerating the adoption of advanced volumetric imaging techniques.
+
+-----------
 
 **Project Philosophy**
 =========================
 
-* Simple to assemble, high-performance, light-sheet microscopes.
-* Highly optimized operation with **navigate** software.
-* Simplified optomechanical design for ease of use and maintenance.
-* Streamlined optoelectronics and control for robust and reliable operation.
+- **High-performance, easy-to-assemble light-sheet microscopes** designed for broad accessibility.
+- **Seamless integration** with **navigate** software for optimized operation and intelligent imaging workflows.
+- **Precision-engineered optomechanical design** for ease of use, reproducibility, and low maintenance.
+- **Streamlined optoelectronics and control architecture** for robust, reliable, and modular system operation.
+- **Modular, adaptable platforms** that support future advancements in light-sheet microscopy.
 
-
-.. note::
-
-   This project is under active development.
+--------
 
 .. warning::
 
@@ -37,31 +32,29 @@ evaluated in their entirety through time.
     injuries that may arise from or be related to the use of **COMPASS**.
     Users should be aware of these risks and agree to utilize **COMPASS** at their own risk.
 
+--------
 
 .. toctree::
    :caption: Introduction
-   :maxdepth: 1
+   :maxdepth: 2
 
    introduction/background
    introduction/principles
-   introduction/nanospim
-   introduction/aslm
-   introduction/opm
 
 .. toctree::
    :caption: Design Principles
-   :maxdepth: 1
+   :maxdepth: 2
 
    design_principles/required_software
    design_principles/design_process
 
 .. toctree::
    :caption: Development
-   :maxdepth: 1
+   :maxdepth: 2
 
 .. toctree::
    :caption: Hardware Considerations
-   :maxdepth: 1
+   :maxdepth: 2
 
    hardware/room_preparation
    hardware/table
@@ -70,35 +63,38 @@ evaluated in their entirety through time.
 
 .. toctree::
    :caption: Physical Assembly
-   :maxdepth: 1
+   :maxdepth: 2
 
    physical_assembly/physical_assembly
 
 .. toctree::
    :caption: Imaging with the System
-   :maxdepth: 1
+   :maxdepth: 2
 
    imaging/imaging
 
 .. toctree::
    :caption: System Characterization
-   :maxdepth: 1
+   :maxdepth: 2
 
    system_characterization/system_characterization
 
    contributing/software_architecture
 
+.. toctree::
+   :caption: Future Development
+   :maxdepth: 1
+
+   future/aslm
+   future/opm
+
 
 **Authors**
 ============
-**COMPASS** includes key contributions from numerous individuals, both past and present,
-in `The Dean Lab <https://www.dean-lab.org>`_.
+**COMPASS** includes key contributions from numerous individuals, both past and present, in `The Dean Lab <https://www.dean-lab.org>`_.
 
 **Funding**
 ============
 **navigate** is supported by the
 `UT Southwestern and University of North Carolina Center for Cell Signaling
-<https://cellularsignaltransduction.org>`_, a Biomedical Technology Development and Dissemination (BTDD)
-Center funded by the NIH National Institute of General Medical Science (RM1GM145399), and
-the `Center for Metastatic Tumor Imaging <https://www.metastasis-imaging.org>`_ program, a
-Cellular Cancer Biology Imaging Research (CCBIR) program funded by the NIH National Cancer Institute (U54CA268072).
+<https://cellularsignaltransduction.org>`_, a Biomedical Technology Development and Dissemination (BTDD) Center funded by the NIH National Institute of General Medical Science (RM1GM145399), and the `Center for Metastatic Tumor Imaging <https://www.metastasis-imaging.org>`_ program, a Cellular Cancer Biology Imaging Research (CCBIR) program funded by the NIH National Cancer Institute (U54CA268072).

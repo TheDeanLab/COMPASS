@@ -78,7 +78,7 @@ Recommended Light Sources
 For all of these reasons, we recommend the use of optically pumped semiconductor
 lasers (OPSLs) for imaging. OPSLs are solid state lasers that use a diode to
 optically pump a semiconductor gain medium which can be tuned to adjust the emission
-wavelength of the laser. Importantly, OPSLs have a narrow linewidth (<10 pM), low M
+wavelength of the laser. Importantly, OPSLs have a narrow line width (<10 pM), low M
 :sup:`2` value, can modulate the laser on microsecond timescales, and achieve high
 and stable emission powers.
 

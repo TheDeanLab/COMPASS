@@ -35,6 +35,7 @@
           
           <a href="#" class="icon icon-home">
             COMPASS
+              <img src="_static/compass.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -48,9 +49,6 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="introduction/background.html">Why Light-Sheet Microscopy?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="introduction/principles.html">Light-Sheet Microscopy Optical Principles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="introduction/nanospim.html">NanoSPIM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="introduction/aslm.html">ASLM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="introduction/opm.html">OPM</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Design Principles</span></p>
 <ul>
@@ -78,6 +76,11 @@
 <p class="caption" role="heading"><span class="caption-text">System Characterization</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="system_characterization/system_characterization.html">System Characterization</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Future Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="future/aslm.html">ASLM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="future/opm.html">OPM</a></li>
 </ul>
 
         </div>
@@ -106,25 +109,19 @@
              
   <section id="compass">
 <span id="compass-home"></span><h1><strong>COMPASS</strong><a class="headerlink" href="#compass" title="Permalink to this heading"></a></h1>
-<p>Biologists are increasingly transitioning
-towards more complex assays that require volumetric imaging with high spatiotemporal
-resolution. Whether it is a developing embryo, the formation of a cell-cell
-immunological synapse, breast cancer organoids migrating through a 3D collagen
-matrix, or cytoskeletal rearrangements in a polarized epithelial monolayer, these
-biological processes can only be understood when non-invasively and quantitatively
-evaluated in their entirety through time.</p>
+<p>Biologists are increasingly transitioning towards more complex assays that require volumetric imaging with high spatiotemporal resolution. Whether it is a developing embryo, the formation of an immunological synapse, cancer migrating through a 3D collagen matrix, these biological processes can only be understood when non-invasively and quantitatively evaluated in their entirety through time.</p>
+<p>To meet these growing demands, we aim to develop simplified optical systems that provide cutting-edge imaging performance while ensuring ease of assembly and accessibility. By leveraging precision-engineered, baseplate-mounted designs, we eliminate unnecessary degrees of freedom, making high-resolution light-sheet microscopy more robust, reproducible, and approachable for researchers across disciplines. Our goal is to create powerful yet modular imaging platforms that enable biologists to focus on discovery rather than instrument complexity, accelerating the adoption of advanced volumetric imaging techniques.</p>
+<hr class="docutils" />
 <section id="project-philosophy">
 <h2><strong>Project Philosophy</strong><a class="headerlink" href="#project-philosophy" title="Permalink to this heading"></a></h2>
 <ul class="simple">
-<li><p>Simple to assemble, high-performance, light-sheet microscopes.</p></li>
-<li><p>Highly optimized operation with <strong>navigate</strong> software.</p></li>
-<li><p>Simplified optomechanical design for ease of use and maintenance.</p></li>
-<li><p>Streamlined optoelectronics and control for robust and reliable operation.</p></li>
+<li><p><strong>High-performance, easy-to-assemble light-sheet microscopes</strong> designed for broad accessibility.</p></li>
+<li><p><strong>Seamless integration</strong> with <strong>navigate</strong> software for optimized operation and intelligent imaging workflows.</p></li>
+<li><p><strong>Precision-engineered optomechanical design</strong> for ease of use, reproducibility, and low maintenance.</p></li>
+<li><p><strong>Streamlined optoelectronics and control architecture</strong> for robust, reliable, and modular system operation.</p></li>
+<li><p><strong>Modular, adaptable platforms</strong> that support future advancements in light-sheet microscopy.</p></li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This project is under active development.</p>
-</div>
+<hr class="docutils" />
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Please be advised that while the Dean Lab has implemented several safeguards,
@@ -135,21 +132,35 @@ Southwestern expressly disclaim any responsibility for any damages, losses, or
 injuries that may arise from or be related to the use of <strong>COMPASS</strong>.
 Users should be aware of these risks and agree to utilize <strong>COMPASS</strong> at their own risk.</p>
 </div>
+<hr class="docutils" />
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="introduction/background.html">Why Light-Sheet Microscopy?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction/background.html">Why Light-Sheet Microscopy?</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction/background.html#the-importance-of-volumetric-imaging">The Importance of Volumetric Imaging.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction/background.html#challenges-with-3d-imaging">Challenges with 3D Imaging.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction/background.html#why-build-a-microscope">Why build a microscope?</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="introduction/principles.html">Light-Sheet Microscopy Optical Principles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="introduction/nanospim.html">NanoSPIM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="introduction/aslm.html">ASLM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="introduction/opm.html">OPM</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Design Principles</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="design_principles/required_software.html">Required Software and Packages</a></li>
-<li class="toctree-l1"><a class="reference internal" href="design_principles/design_process.html">Compass V1 General Design Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design_principles/required_software.html">Required Software and Packages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="design_principles/required_software.html#simulations">Simulations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="design_principles/design_process.html">Compass V1 General Design Process</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="design_principles/design_process.html#initial-lens-selection">Initial Lens Selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design_principles/design_process.html#zemax-simulation-setup-process">Zemax Simulation Setup Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design_principles/design_process.html#zemax-simulation-analysis">Zemax Simulation Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design_principles/design_process.html#zemax-tolerancing-analysis">Zemax Tolerancing Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design_principles/design_process.html#baseplate-design">Baseplate Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="design_principles/design_process.html#note-on-difference-in-simulated-and-physical-coordinate-definitions">Note on Difference in Simulated and Physical Coordinate Definitions</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
@@ -157,46 +168,109 @@ Users should be aware of these risks and agree to utilize <strong>COMPASS</stron
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Hardware Considerations</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="hardware/room_preparation.html">Preparation of the Imaging Room</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hardware/table.html">Optical Table</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hardware/computer.html">Computer Specifications</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hardware/lasers.html">Light Sources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hardware/room_preparation.html">Preparation of the Imaging Room</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hardware/room_preparation.html#power-outlets">Power Outlets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/room_preparation.html#temperature-control">Temperature Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/room_preparation.html#painting-the-walls">Painting the Walls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/room_preparation.html#network-connections">Network Connections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/room_preparation.html#curtains">Curtains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/room_preparation.html#house-air">House Air</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/room_preparation.html#floor-flatness">Floor Flatness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/room_preparation.html#external-sources-of-vibration">External Sources of Vibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/room_preparation.html#water-damage">Water Damage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hardware/table.html">Optical Table</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hardware/table.html#table-height">Table Height</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/table.html#table-thickness">Table Thickness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/table.html#table-accessories">Table Accessories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/table.html#hole-pattern">Hole Pattern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/table.html#casters">Casters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/table.html#vibration-damping">Vibration Damping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/table.html#table-installation">Table Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/table.html#recommended-table">Recommended Table</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hardware/computer.html">Computer Specifications</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hardware/computer.html#standard-build">Standard Build</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hardware/lasers.html">Light Sources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hardware/lasers.html#linewidth">Linewidth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/lasers.html#m-2-value">M <sup>2</sup> Value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/lasers.html#modulation">Modulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/lasers.html#vibrations">Vibrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hardware/lasers.html#power">Power</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Physical Assembly</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="physical_assembly/physical_assembly.html">Physical Assembly</a></li>
-<li class="toctree-l1"><a class="reference internal" href="physical_assembly/physical_assembly.html#hardware">Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="physical_assembly/physical_assembly.html">Physical Assembly</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="physical_assembly/physical_assembly.html#baseplate-assembly-process">Baseplate Assembly Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="physical_assembly/physical_assembly.html#mounting-lenses">Mounting Lenses</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="physical_assembly/physical_assembly.html#hardware">Hardware</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="physical_assembly/physical_assembly.html#note-on-difference-in-simulated-and-physical-coordinate-definitions">Note on Difference in Simulated and Physical Coordinate Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="physical_assembly/physical_assembly.html#visualization-of-axes-mapping">Visualization of Axes Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="physical_assembly/physical_assembly.html#the-piezo-angle-mount">The Piezo Angle Mount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="physical_assembly/physical_assembly.html#sample-holder-design">Sample Holder Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="physical_assembly/physical_assembly.html#assembling-the-magnetic-sample-mount">Assembling the Magnetic Sample Mount</a></li>
+<li class="toctree-l2"><a class="reference internal" href="physical_assembly/physical_assembly.html#wiring-diagram">Wiring Diagram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="physical_assembly/physical_assembly.html#initial-laser-collimation-and-alignment">Initial Laser Collimation and Alignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="physical_assembly/physical_assembly.html#piezo-setup-troubleshooting">Piezo Setup &amp; Troubleshooting</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="physical_assembly/physical_assembly.html#parts-list">Parts List</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Imaging with the System</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="imaging/imaging.html">Imaging Process</a></li>
-<li class="toctree-l1"><a class="reference internal" href="imaging/imaging.html#image-stack-processing">Image Stack Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="imaging/imaging.html">Imaging Process</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="imaging/imaging.html#imaging-configurations">Imaging Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="imaging/imaging.html#visualization-of-axes-mapping">Visualization of Axes Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="imaging/imaging.html#finding-the-focus">Finding the Focus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="imaging/imaging.html#minimizing-spherical-aberrations">Minimizing Spherical Aberrations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="imaging/imaging.html#image-stack-processing">Image Stack Processing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="imaging/imaging.html#deskewing">Deskewing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="imaging/imaging.html#reslicing">Reslicing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="imaging/imaging.html#deconvolution">Deconvolution</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">System Characterization</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="system_characterization/system_characterization.html">System Characterization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="system_characterization/system_characterization.html">System Characterization</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="system_characterization/system_characterization.html#beam-characterization-and-psf-analysis">Beam Characterization and PSF Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="system_characterization/system_characterization.html#sample-biological-images">Sample Biological Images</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Future Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="future/aslm.html">ASLM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="future/opm.html">OPM</a></li>
 </ul>
 </div>
 </section>
 <section id="authors">
 <h2><strong>Authors</strong><a class="headerlink" href="#authors" title="Permalink to this heading"></a></h2>
-<p><strong>COMPASS</strong> includes key contributions from numerous individuals, both past and present,
-in <a class="reference external" href="https://www.dean-lab.org">The Dean Lab</a>.</p>
+<p><strong>COMPASS</strong> includes key contributions from numerous individuals, both past and present, in <a class="reference external" href="https://www.dean-lab.org">The Dean Lab</a>.</p>
 </section>
 <section id="funding">
 <h2><strong>Funding</strong><a class="headerlink" href="#funding" title="Permalink to this heading"></a></h2>
 <p><strong>navigate</strong> is supported by the
-<a class="reference external" href="https://cellularsignaltransduction.org">UT Southwestern and University of North Carolina Center for Cell Signaling</a>, a Biomedical Technology Development and Dissemination (BTDD)
-Center funded by the NIH National Institute of General Medical Science (RM1GM145399), and
-the <a class="reference external" href="https://www.metastasis-imaging.org">Center for Metastatic Tumor Imaging</a> program, a
-Cellular Cancer Biology Imaging Research (CCBIR) program funded by the NIH National Cancer Institute (U54CA268072).</p>
+<a class="reference external" href="https://cellularsignaltransduction.org">UT Southwestern and University of North Carolina Center for Cell Signaling</a>, a Biomedical Technology Development and Dissemination (BTDD) Center funded by the NIH National Institute of General Medical Science (RM1GM145399), and the <a class="reference external" href="https://www.metastasis-imaging.org">Center for Metastatic Tumor Imaging</a> program, a Cellular Cancer Biology Imaging Research (CCBIR) program funded by the NIH National Cancer Institute (U54CA268072).</p>
 </section>
 </section>
 
