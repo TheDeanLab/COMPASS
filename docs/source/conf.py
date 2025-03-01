@@ -105,7 +105,7 @@ html_show_sphinx = False
 # so a file named "default.css" will overwrite the builtin "default.css".
 # html_static_path = ["_static"]
 
-# html_logo = "../../src/navigate/view/icon/mic.png"
+html_logo = "general/compass.png"
 
 pygments_style = "sphinx"
 
