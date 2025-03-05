@@ -15,9 +15,9 @@ To characterize our constructed system, we first image the generated light-sheet
 
 To characterize the resolution of our system, we utilize 100 nm YG Fluorsecent Beads (ID: 17150-10) from Polysciences Inc. The beads are first affixed onto a 5 mm coverslip using the following protocol:
 
-    1. Assemble petri dish, coverslip, and (3-Aminopropyl)triethoxysilane (APTS)
+    1. Assemble petri dish, coverslip, and 5mM concentration (3-Aminopropyl)triethoxysilane (APTS)
     2. Put 5 mm coverslip in petri dish
-    3. Apply ~100 `\mu l` of (3-Aminopropyl)triethoxysilane (APTS) on top of coverslip
+    3. Apply ~100 microliters of (3-Aminopropyl)triethoxysilane (APTS) on top of coverslip
     4. Allow APTS to incubate for ~10-30 minutes
     5. Wash coverslip lightly with DI water 3 times
     6. Put beads of desired dilution (typically 10^-3 or 10^-4 for a normal distribution, 10^-6 for a sparse
@@ -34,11 +34,17 @@ After affixation, the beads are then imaged, the results of which are shown belo
 Sample Biological Images
 ______________________________
 
-As a demonstration of COMPASS' biological imaging capabilities, we prepared and imaged mouse embryonic fibroflast (MEF) cells, where multiple subcellular structures were stained for 4 different channels corresponding to the excitation wavelengths of our laser source (405 nm, 488 nm, 561 nm, 638 nm). The staining protocol described in [cite Compass paper] was optimized for visualization of the nucleus (DAPI, 405 nm, blue channel), microtubules (488 nm, green channel), actin filements (561 nm, red channel), and the Golgi apparatus of the MEF cells (638 nm, magenta).
+As a demonstration of COMPASS' biological imaging capabilities, we prepared and imaged mouse embryonic fibroflast
+(MEF) cells, where multiple subcellular structures were stained for 4 different channels corresponding to the
+excitation wavelengths of our laser source (405 nm, 488 nm, 561 nm, 638 nm). The staining protocol described in [cite
+Compass paper] was optimized for visualization of the nucleus (DAPI, 405 nm, cyan channel), microtubules (488 nm,
+gray channel), actin filements (561 nm, gold channel), and the Golgi apparatus of the MEF cells (638 nm, magenta).
 
-A deconvolved maximum intensity projection of a distribution of MEF cells is shown below in (a), with a designated region of interest being displayed for each individual channel in (b). These results display fine nucleolar features within the nucleus, well-defined perinuclear Golgi stuctures, well-resolved stress fibers in the actin channel, and individually distinct microtubules, demonstrating COMPASS' ability to capture high-resolution images of cytoskeletal structures. Additionally, the yz projection of the image stack in shown in (c).
+A deconvolved maximum intensity projection of a distribution of MEF cells is shown below in (a) and (f), with a
+ each individual channel displayed in (b-e) and (g-j). These results display
+fine nucleolar features within the nucleus, well-defined perinuclear Golgi stuctures, well-resolved stress fibers in the actin channel, and individually distinct microtubules, demonstrating COMPASS' ability to capture high-resolution images of cytoskeletal structures. Additionally, the yz projection of the image stack in shown in (c).
 
-.. image:: Images/Figure5_Cells_Resized.png
+.. image:: Images/Figure5_Cells_Resized_New_Nowavelengths.png
     :align: center
     :alt: Analysis of MEF Cells
 
