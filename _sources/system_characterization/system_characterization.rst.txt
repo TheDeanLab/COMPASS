@@ -40,9 +40,9 @@ excitation wavelengths of our laser source (405 nm, 488 nm, 561 nm, 638 nm). The
 Compass paper] was optimized for visualization of the nucleus (DAPI, 405 nm, cyan channel), microtubules (488 nm,
 gray channel), actin filements (561 nm, gold channel), and the Golgi apparatus of the MEF cells (638 nm, magenta).
 
-A deconvolved maximum intensity projection of a distribution of MEF cells is shown below in (a) and (f), with a
- each individual channel displayed in (b-e) and (g-j). These results display
-fine nucleolar features within the nucleus, well-defined perinuclear Golgi stuctures, well-resolved stress fibers in the actin channel, and individually distinct microtubules, demonstrating COMPASS' ability to capture high-resolution images of cytoskeletal structures. Additionally, the yz projection of the image stack in shown in (c).
+A deconvolved maximum intensity projection of a distribution of MEF cells is shown below in (a) and (f), with each
+individual channel displayed in (b-e) and (g-j). These results display fine nucleolar features within the
+nucleus, well-defined perinuclear Golgi stuctures, well-resolved stress fibers in the actin channel, and individually distinct microtubules, demonstrating COMPASS' ability to capture high-resolution images of cytoskeletal structures. Additionally, the yz projection of the image stack in shown in (c).
 
 .. image:: Images/Figure5_Cells_Resized_New_Nowavelengths.png
     :align: center
