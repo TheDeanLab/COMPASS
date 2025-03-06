@@ -92,6 +92,22 @@ corresponding element should first be fixed onto their respective Polaris adapte
 addition, take measures to mount the 45 degree mirror (9) fully prior to mounting the resonant galvo to ensure that
 the galvo is not accidentally hit during installation of the 45 degree mirror.
 
+To construct the 45 degree mirror assembly, first mount the Polaris K1S4 onto the Polaris-MA45 45 degree mounting
+adapter, and then place a 1" diameter mirror into the K1S4 and secure it using the K1S4 mounting screw.
+
+To construct the illumination objective assembly, first mount the Polaris 1XY onto its respective 1.5" post. The
+threading of the 1XY (SM1) does not match that of our illumination objective used (M25x0.75), so an SM1A12 adapter
+must first be installed onto either the 1XY or the illumination objective. Then, the objective can be mounted onto
+the 1XY.
+
+4. Final Alignment Adjustments
+______________________________
+
+Once all the optics have been properly mounted, the final step for ensuring a working illumination path is to center
+the beam after the 45 degree mirror onto the center of back lens surface of the illumination objective. The primary
+method of doing this is through adjusting the xy tip/tilt knobs on the K1S4 Polaris mount that houses the 45 degree
+mirror.
+
 ###############################
 Hardware
 ###############################
