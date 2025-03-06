@@ -91,7 +91,7 @@ ImageJ. To give a visual reference of what these individual images in a stack ca
 provide the following images taken of a mouse embryonic fibroflast sample at a single z-position in a stack for 4
 different imaging channels (gold = actin, gray = tubulin, cyan = nuclei, and magenta = Golgi apparatus).
 
-.. image:: Images/DeskewedNotDeconvolvedSingleSliceMontage.png
+.. image:: Images/DeskewedNotDeconvolvedSingleSliceMontage2.png
     :align: center
     :alt: Example individual images for MEF cells
 
