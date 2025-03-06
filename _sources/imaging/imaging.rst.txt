@@ -46,7 +46,7 @@ minimizing the effects of spherical aberrations can begin. Spherical aberrations
 introduced into optical systems due to the surface curvature of different lens elements. This
 type of aberration typically presents itself visually as a sort of stretching or bending of the focus
 of light in the system. Certain microscope objectives, such as the Nikon 25x/1.1 NA that we employ in this setup,
-have a built-in collar that can be adjusted to minimize spherical aberration (PICTURE).
+have a built-in collar that can be adjusted to minimize spherical aberration.
 
 In our system, we expect the effects of spherical aberrations to be along the axis of our detection path (defined
 as z in our imaging scheme). In order to visualize these effects and adjust the correction collar of our objective
@@ -79,6 +79,21 @@ focused.
 .. image:: Images/SphericalExample.png
     :align: center
     :alt: Before and after of adjusting in Z-projections after adjusting the correction collar
+
+Sample Image Examples
+______________________________
+
+When imaging samples, it is important to note the way in which the individual images comprising our z-stack might
+look as it might differ from what one might traditionally be accustomed to. In our imaging scheme, we essentially
+have a thin column of light spanning the vertical direction on our readout image. This results in each image in the
+z-stack being a thin snapshot of the whole sample, which can then be viewed through max intensity projections in
+ImageJ. To give a visual reference of what these individual images in a stack can look like for a biological sample, we
+provide the following images taken of a mouse embryonic fibroflast sample at a single z-position in a stack for 4
+different imaging channels (gold = actin, gray = tubulin, cyan = nuclei, and magenta = Golgi apparatus).
+
+.. image:: Images/Deskewed_NotDeconvolved_SingleSlice_Montage.png
+    :align: center
+    :alt: Example individual images for MEF cells
 
 ###############################
 Image Stack Processing
