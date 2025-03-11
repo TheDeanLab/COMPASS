@@ -141,11 +141,12 @@ such that its normal is 60.5 degrees away from the y-axis.
 The Piezo Angle Mount
 ______________________________
 
-We designed a custom angled mount for a piezo in order to be able to scan our sample easily between our two
+We designed a custom angled mount for our `Piezoconcept HS1 piezo <https://piezoconcept-store.squarespace
+.com/1-axis/p/hs1>`_ in order to be able to scan our sample easily between our two
 objectives by translating a single motorized unit (in this case the piezo), instead of having to calculate and
 program the movement of two translation stages in tandem for both the y and z directions. The anatomy of our angled
 mount is broken down in the figure below, where there are four translation stage mounting holes to attach the unit to
-an ASI translation stage, nine Piezo mounting holes (LINK TO PIEZO UNIT?) that correspond to the mounting scheme of
+an ASI translation stage, nine Piezo mounting holes that correspond to the mounting scheme of
 our piezo unit, as well as four through-holes and a window for ease of access for the mounting process. We provide
 the CAD files for this mount `here <https://github
 .com/TheDeanLab/COMPASS/tree/main/downloads/shared/cad>`_, and have had success in using both 3D printed and
@@ -292,6 +293,7 @@ for navigate looks like the following for setting up our piezo:
 Parts List
 ###############################
 
-A breakdown spreadsheet of all components used in this build is viewable under the COMPASS V1 Sample Scanning tab `here
+A breakdown spreadsheet of all components used in this build is viewable under the COMPASS Base tab
+`here
 <https://365utsouthwestern-my
 .sharepoint.com/:x:/g/personal/john_haug_utsouthwestern_edu/EanyUn-KA9JFlo4WwGfxktcBnvZMAhbmhdd7LOCfLSL5bQ?e=NZO83I>`_:
