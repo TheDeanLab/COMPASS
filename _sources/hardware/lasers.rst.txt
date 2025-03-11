@@ -1,8 +1,8 @@
 .. _lasers-home:
 
-###############################
-Light Sources
-###############################
+#############
+Laser Sources
+#############
 
 When designing a microscope for imaging, the choice of light source is critical. In
 general, an ideal imaging system will provide fast spectral switching, high light

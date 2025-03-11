@@ -40,45 +40,11 @@ To meet these growing demands, we aim to develop simplified optical systems that
 
    introduction/introduction
    design_principles/required_software
+   hardware/index.rst
    design_principles/design_process
-
-.. toctree::
-   :caption: Development
-   :maxdepth: 2
-
-.. toctree::
-   :caption: Hardware Considerations
-   :maxdepth: 2
-
-   hardware/room_preparation
-   hardware/table
-   hardware/computer
-   hardware/lasers
-
-.. toctree::
-   :caption: Physical Assembly
-   :maxdepth: 2
-
    physical_assembly/physical_assembly
-
-.. toctree::
-   :caption: Imaging with the System
-   :maxdepth: 2
-
-   imaging/imaging
-
-.. toctree::
-   :caption: System Characterization
-   :maxdepth: 2
-
    system_characterization/system_characterization
-
-   contributing/software_architecture
-
-.. toctree::
-   :caption: Future Development
-   :maxdepth: 1
-
+   imaging/imaging
    future/aslm
    future/opm
 

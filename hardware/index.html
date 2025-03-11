@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Computer Specifications &mdash; COMPASS  documentation</title>
+  <title>Room and Hardware Considerations &mdash; COMPASS  documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
 
@@ -22,8 +22,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Laser Sources" href="lasers.html" />
-    <link rel="prev" title="Optical Table" href="table.html" /> 
+    <link rel="next" title="Preparation of the Imaging Room" href="room_preparation.html" />
+    <link rel="prev" title="Required Software" href="../design_principles/required_software.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -50,13 +50,10 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../introduction/introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../design_principles/required_software.html">Required Software</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Room and Hardware Considerations</a><ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Room and Hardware Considerations</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="room_preparation.html">Preparation of the Imaging Room</a></li>
 <li class="toctree-l2"><a class="reference internal" href="table.html">Optical Table</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Computer Specifications</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#standard-build">Standard Build</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="computer.html">Computer Specifications</a></li>
 <li class="toctree-l2"><a class="reference internal" href="lasers.html">Laser Sources</a></li>
 </ul>
 </li>
@@ -86,10 +83,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="index.html">Room and Hardware Considerations</a></li>
-      <li class="breadcrumb-item active">Computer Specifications</li>
+      <li class="breadcrumb-item active">Room and Hardware Considerations</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/hardware/computer.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/hardware/index.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -97,71 +93,61 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="computer-specifications">
-<span id="computer-home"></span><h1>Computer Specifications<a class="headerlink" href="#computer-specifications" title="Permalink to this heading"></a></h1>
-<p>Modern scientific cameras are capable of capturing images at very high frame rates.
-For example, the Orca-Lightning from Hamamatsu, when imaging a region of interest of
-4608x128, can image at 2203 frames per second, totalling 1.3 terapixel per second. It
-is important to have a computer that can handle this data rate.</p>
-<p>For many applications, we recommend Colfax International’s SXP9000 workstation, which
-includes several convenient features, including:</p>
-<ul class="simple">
-<li><p>A large number of high-speed peripheral slots. While originally designed to host
-GPU cards, these slots can be used for other high-speed peripherals, such as frame
-grabbers.</p></li>
-<li><p>A high-speed NVMe SSD, which can achieve upwards of 20 GB/s under ideal
-conditions.</p></li>
-<li><p>10GbE LAN - 10G Ethernet or faster, if supported by your institution, is highly
-recommended for transferring data to and from the computer. This computer provides
-this high-speed connection without necessitating an additional network card, freeing
-up precious space in the computer.</p></li>
-<li><p>USB-C ports that can be used for image display, keyboard, and mouse. Again, by
-eliminating the need for a graphics card, available space is available to other
-peripheral devices.</p></li>
-<li><p>Redundant power supplies - in the event of a power supply failure, the computer will
-continue to operate. Moreover, they will be able to drive some of the more power-hungry
-components, such as frame grabbers.</p></li>
-<li><p>Aggressive cooling - the computer is designed to handle the heat generated by the
-high-speed components.</p></li>
+  <section id="room-and-hardware-considerations">
+<span id="hardware-home"></span><h1>Room and Hardware Considerations<a class="headerlink" href="#room-and-hardware-considerations" title="Permalink to this heading"></a></h1>
+<p>Installing a <strong>COMPASS</strong> system requires careful planning to ensure optimal performance and long-term stability.
+Proper preparation includes considerations for <strong>room setup, optical table selection, acquisition computer
+specifications, laser identification, and environmental controls</strong>. Each of these factors plays a significant role
+in instrument performance. Consequently, before beginning the installation process, we recommend evaluating the
+information, some of which is provided simply as educational resources.</p>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Preparing for a COMPASS</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="room_preparation.html">Preparation of the Imaging Room</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="room_preparation.html#power-outlets">Power Outlets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="room_preparation.html#temperature-control">Temperature Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="room_preparation.html#painting-the-walls">Painting the Walls</a></li>
+<li class="toctree-l2"><a class="reference internal" href="room_preparation.html#network-connections">Network Connections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="room_preparation.html#curtains">Curtains</a></li>
+<li class="toctree-l2"><a class="reference internal" href="room_preparation.html#house-air">House Air</a></li>
+<li class="toctree-l2"><a class="reference internal" href="room_preparation.html#floor-flatness">Floor Flatness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="room_preparation.html#external-sources-of-vibration">External Sources of Vibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="room_preparation.html#water-damage">Water Damage</a></li>
 </ul>
-<section id="standard-build">
-<h2>Standard Build<a class="headerlink" href="#standard-build" title="Permalink to this heading"></a></h2>
-<p>A general build for a imaging computer is as follows:</p>
-<ul class="simple">
-<li><p>Windows 10 Pro. This is the most common operating system for scientific imaging
-applications.</p></li>
-<li><p>2x Intel Xeon Silver CPUs Total of 16 Cores/32 Threads &#64; 3.2GHz. Higher speeds,
-and a greater number of cores is advantageous but expensive.</p></li>
-<li><p>128 GB of 3200 MHz DDR4 RAM. This is more than sufficient for most applications.</p></li>
-<li><p>800 GB M.2 NVMe SSD. Used to host and run the operating system.</p></li>
-<li><p>20 TB 7200 RPM SATA HDD. Used as a ‘cold storage’ for long-term data storage.</p></li>
-<li><p>NVIDIA T1000 Video Card. This is a low-end video card that can be used to drive
-displays and perform some basic image processing. The priority for this computer
-is driving the microscope and acquiring data, so a high-end video card is not necessary.</p></li>
-<li><p>Intel X710-T2L 10GbE Card. If the motherboard does not provide 10GbE, this card can
-be used to provide high-speed network connectivity.</p></li>
-<li><p>7.68 TB NVMe SSD. Used as the primary data drive.</p></li>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="table.html">Optical Table</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="table.html#table-height">Table Height</a></li>
+<li class="toctree-l2"><a class="reference internal" href="table.html#table-thickness">Table Thickness</a></li>
+<li class="toctree-l2"><a class="reference internal" href="table.html#table-accessories">Table Accessories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="table.html#hole-pattern">Hole Pattern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="table.html#casters">Casters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="table.html#vibration-damping">Vibration Damping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="table.html#table-installation">Table Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="table.html#recommended-table">Recommended Table</a></li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Recently, Hamamatsu released a Linux driver for their cameras. Linux
-provides several advantages to Windows-based operating systems, including read
-and write operations with lower overhead. This is especially important for next-generation
-file formats, such as N5, OME-Zarr, and Zarr, all of which break large
-images up into smaller ‘chunks’ that can be read and written independently. To
-learn more, we recommend reading
-<a class="reference external" href="https://pubmed.ncbi.nlm.nih.gov/34845388/">Moore et al. 2021</a>, and
-<a class="reference external" href="https://pubmed.ncbi.nlm.nih.gov/37428210/">Moore et al. 2023</a>.</p>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="computer.html">Computer Specifications</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="computer.html#standard-build">Standard Build</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="lasers.html">Laser Sources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="lasers.html#linewidth">Linewidth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lasers.html#m-2-value">M <sup>2</sup> Value</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lasers.html#modulation">Modulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lasers.html#vibrations">Vibrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lasers.html#power">Power</a></li>
+</ul>
+</li>
+</ul>
 </div>
-</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="table.html" class="btn btn-neutral float-left" title="Optical Table" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="lasers.html" class="btn btn-neutral float-right" title="Laser Sources" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../design_principles/required_software.html" class="btn btn-neutral float-left" title="Required Software" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="room_preparation.html" class="btn btn-neutral float-right" title="Preparation of the Imaging Room" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

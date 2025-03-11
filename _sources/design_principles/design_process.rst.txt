@@ -1,7 +1,7 @@
 .. _design-home:
 
 #################################
-Compass V1 General Design Process
+Compass V1 Design Process
 #################################
 
 Initial Lens Selection
@@ -11,9 +11,41 @@ Prior to starting optical simulations in Zemax, it's convenient to start with st
 calculations to determine which lenses to use in the optical train to achieve the desired field of view (FoV) for your
 detection path. In our case, our detection path consisted of a 400 mm tube lens and a Nikon 25x/1.1 numerical aperture (NA) immersion detection objective.
 
-.. image:: Images/DetectionPath.png
-    :align: center
-    :alt: Detection Path of our System
+.. figure:: Images/DetectionPath.png
+   :alt: Schematic of a standard, widefield detection path.
+   :align: center
+   :width: 100px
+
+   **Figure 1:** A simple schematic for a widefield detection path. Here, a detection objective captures light, which is then focused onto the active sensor of a CMOS camera using a tube lens.
+
+.. sidebar:: **Calculating the Focal Length of an Objective**
+   :class: sidebar-note
+
+   The focal length (:math:`f`) of a microscope objective can be determined using the **nominal focal length** of
+   the manufacturer's standard tube lens and the **objective’s magnification**:
+
+   .. math::
+
+      f = \frac{f_{\text{tube lens}}}{M}
+
+   where:
+
+   - :math:`f_{\text{tube lens}}` is the standard focal length of the tube lens.
+   - :math:`M` is the nominal magnification of the objective.
+
+   Standard tube lens focal lengths vary by manufacturer:
+
+   - **Nikon / Zeiss**: 200 mm
+   - **Olympus**: 180 mm
+
+   **Example Calculation**
+   For a **Nikon 25× NA 1.1 objective**, the focal length is calculated as:
+
+   .. math::
+
+      f = \frac{200 \text{ mm}}{25} = 8 \text{ mm}
+
+
 
 To determine the target FoV, start with determining the final magnification (M) of the system using the ratio of the focal
 lengths of the tube lens (*f*:subscript:`TL`) and the detection objective (*f*:subscript:`DO`):

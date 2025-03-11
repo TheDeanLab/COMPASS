@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Compass V1 General Design Process &mdash; COMPASS  documentation</title>
+  <title>Compass V1 Design Process &mdash; COMPASS  documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
 
@@ -23,8 +23,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Preparation of the Imaging Room" href="../hardware/room_preparation.html" />
-    <link rel="prev" title="Required Software" href="required_software.html" /> 
+    <link rel="next" title="Physical Assembly" href="../physical_assembly/physical_assembly.html" />
+    <link rel="prev" title="Laser Sources" href="../hardware/lasers.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -51,7 +51,8 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../introduction/introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="required_software.html">Required Software</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Compass V1 General Design Process</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/index.html">Room and Hardware Considerations</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Compass V1 Design Process</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#initial-lens-selection">Initial Lens Selection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#zemax-simulation-setup-process">Zemax Simulation Setup Process</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#zemax-simulation-analysis">Zemax Simulation Analysis</a></li>
@@ -60,32 +61,13 @@
 <li class="toctree-l2"><a class="reference internal" href="#note-on-difference-in-simulated-and-physical-coordinate-definitions">Note on Difference in Simulated and Physical Coordinate Definitions</a></li>
 </ul>
 </li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Hardware Considerations</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../hardware/room_preparation.html">Preparation of the Imaging Room</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../hardware/table.html">Optical Table</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../hardware/computer.html">Computer Specifications</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../hardware/lasers.html">Light Sources</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Physical Assembly</span></p>
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="../physical_assembly/physical_assembly.html">Physical Assembly</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../physical_assembly/physical_assembly.html#illumination-path-assembly">Illumination Path Assembly</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../physical_assembly/physical_assembly.html#hardware">Hardware</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../physical_assembly/physical_assembly.html#parts-list">Parts List</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Imaging with the System</span></p>
-<ul>
+<li class="toctree-l1"><a class="reference internal" href="../system_characterization/system_characterization.html">System Characterization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../imaging/imaging.html">Imaging Process</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../imaging/imaging.html#image-stack-processing">Image Stack Processing</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">System Characterization</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../system_characterization/system_characterization.html">System Characterization</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Future Development</span></p>
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="../future/aslm.html">ASLM</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../future/opm.html">OPM</a></li>
 </ul>
@@ -104,7 +86,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Compass V1 General Design Process</li>
+      <li class="breadcrumb-item active">Compass V1 Design Process</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/design_principles/design_process.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -114,14 +96,40 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="compass-v1-general-design-process">
-<span id="design-home"></span><h1>Compass V1 General Design Process<a class="headerlink" href="#compass-v1-general-design-process" title="Permalink to this heading"></a></h1>
+  <section id="compass-v1-design-process">
+<span id="design-home"></span><h1>Compass V1 Design Process<a class="headerlink" href="#compass-v1-design-process" title="Permalink to this heading"></a></h1>
 <section id="initial-lens-selection">
 <h2>Initial Lens Selection<a class="headerlink" href="#initial-lens-selection" title="Permalink to this heading"></a></h2>
 <p>Prior to starting optical simulations in Zemax, it’s convenient to start with straightforward
 calculations to determine which lenses to use in the optical train to achieve the desired field of view (FoV) for your
 detection path. In our case, our detection path consisted of a 400 mm tube lens and a Nikon 25x/1.1 numerical aperture (NA) immersion detection objective.</p>
-<img alt="Detection Path of our System" class="align-center" src="../_images/DetectionPath.png" />
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../_images/DetectionPath.png"><img alt="Schematic of a standard, widefield detection path." src="../_images/DetectionPath.png" style="width: 100px;" /></a>
+<figcaption>
+<p><span class="caption-text"><strong>Figure 1:</strong> A simple schematic for a widefield detection path. Here, a detection objective captures light, which is then focused onto the active sensor of a CMOS camera using a tube lens.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<aside class="sidebar-note sidebar">
+<p class="sidebar-title"><strong>Calculating the Focal Length of an Objective</strong></p>
+<p>The focal length (<span class="math notranslate nohighlight">\(f\)</span>) of a microscope objective can be determined using the <strong>nominal focal length</strong> of
+the manufacturer’s standard tube lens and the <strong>objective’s magnification</strong>:</p>
+<div class="math notranslate nohighlight">
+\[f = \frac{f_{\text{tube lens}}}{M}\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(f_{\text{tube lens}}\)</span> is the standard focal length of the tube lens.</p></li>
+<li><p><span class="math notranslate nohighlight">\(M\)</span> is the nominal magnification of the objective.</p></li>
+</ul>
+<p>Standard tube lens focal lengths vary by manufacturer:</p>
+<ul class="simple">
+<li><p><strong>Nikon / Zeiss</strong>: 200 mm</p></li>
+<li><p><strong>Olympus</strong>: 180 mm</p></li>
+</ul>
+<p><strong>Example Calculation</strong>
+For a <strong>Nikon 25× NA 1.1 objective</strong>, the focal length is calculated as:</p>
+<div class="math notranslate nohighlight">
+\[f = \frac{200 \text{ mm}}{25} = 8 \text{ mm}\]</div>
+</aside>
 <p>To determine the target FoV, start with determining the final magnification (M) of the system using the ratio of the focal
 lengths of the tube lens (<em>f</em><sub>TL</sub>) and the detection objective (<em>f</em><sub>DO</sub>):</p>
 <p>M = <em>f</em><sub>TL</sub>/<em>f</em><sub>DO</sub></p>
@@ -329,8 +337,8 @@ the picture below:</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="required_software.html" class="btn btn-neutral float-left" title="Required Software" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../hardware/room_preparation.html" class="btn btn-neutral float-right" title="Preparation of the Imaging Room" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../hardware/lasers.html" class="btn btn-neutral float-left" title="Laser Sources" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../physical_assembly/physical_assembly.html" class="btn btn-neutral float-right" title="Physical Assembly" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
