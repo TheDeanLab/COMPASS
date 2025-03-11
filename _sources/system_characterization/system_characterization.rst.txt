@@ -1,4 +1,4 @@
-.. _process-home:
+.. _characterization-home:
 
 ###############################
 System Characterization

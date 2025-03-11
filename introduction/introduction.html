@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Introduction &mdash; COMPASS  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Required Software and Packages" href="../design_principles/required_software.html" />
+    <link rel="prev" title="COMPASS" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            COMPASS
+              <img src="../_static/compass.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#why-is-volumetric-imaging-important">Why is Volumetric Imaging Important?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-importance-of-parallelization">The Importance of Parallelization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#challenges-with-3d-imaging">Challenges with 3D Imaging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-build-a-microscope">Why Build a Microscope?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../design_principles/required_software.html">Required Software and Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../design_principles/design_process.html">Compass V1 General Design Process</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Hardware Considerations</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/room_preparation.html">Preparation of the Imaging Room</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/table.html">Optical Table</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/computer.html">Computer Specifications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/lasers.html">Light Sources</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Physical Assembly</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../physical_assembly/physical_assembly.html">Physical Assembly</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_assembly/physical_assembly.html#illumination-path-assembly">Illumination Path Assembly</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_assembly/physical_assembly.html#hardware">Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_assembly/physical_assembly.html#parts-list">Parts List</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Imaging with the System</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../imaging/imaging.html">Imaging Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../imaging/imaging.html#image-stack-processing">Image Stack Processing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">System Characterization</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../system_characterization/system_characterization.html">System Characterization</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Future Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../future/aslm.html">ASLM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../future/opm.html">OPM</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">COMPASS</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Introduction</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/introduction/introduction.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h1>
+<section id="why-is-volumetric-imaging-important">
+<span id="volumetric-imaging"></span><h2>Why is Volumetric Imaging Important?<a class="headerlink" href="#why-is-volumetric-imaging-important" title="Permalink to this heading"></a></h2>
+<p>Biological processes occur in a fundamentally three-dimensional (3D) space, and the spatial organization of
+molecular structures is critical to cellular function. Traditional two-dimensional (2D) imaging provides only
+a limited cross-section of these dynamic events, often obscuring key interactions and leading to incomplete
+or misleading interpretations.</p>
+<p>For instance, during mitosis, chromosomes undergo intricate rotations within the entire cellular volume,
+and microtubules dynamically polymerize and depolymerize as they engage and separate daughter
+chromosomes at their kinetochores. In 2D imaging, these structures inevitably drift in and out of the focal
+plane, making it challenging to track such dynamic processes over time. Similarly, in complex tissue
+environments, organelle positioning, cell-cell interactions, and subcellular signaling pathways are all
+inherently shaped by their 3D spatial context.</p>
+<p>By capturing the full volume of a specimen, volumetric imaging enables a more accurate representation of
+cellular architecture and dynamic molecular events. This is particularly critical for understanding
+developmental biology, disease progression, and cellular interactions within their native environments.
+Emerging technologies such as light-sheet microscopy, expansion microscopy, and advanced computational
+imaging now allow researchers to visualize biological systems at unprecedented resolutions, bridging the
+gap between molecular detail and tissue-scale organization.</p>
+</section>
+<section id="the-importance-of-parallelization">
+<span id="why-light-sheet"></span><h2>The Importance of Parallelization<a class="headerlink" href="#the-importance-of-parallelization" title="Permalink to this heading"></a></h2>
+<p>Historically, 3D imaging has been performed using spinning disk and laser scanning
+confocal microscopes (LSCM). However, these microscopes waste significant excitation
+energy on out-of-focus regions, leading to unnecessary photodamage while requiring
+compensatory increases in laser power due to their low illumination duty cycle. This problem
+is further exacerbated by their sequential, point-by-point image acquisition, which limits
+speed and increases photobleaching.</p>
+<aside class="sidebar-note sidebar">
+<p class="sidebar-title"><strong>Illumination Confinement</strong></p>
+<p><strong>Illumination confinement</strong> refers to the restriction of excitation light to within the <strong>depth of focus</strong> of the
+detection objective, ensuring that only light contributing to image formation is used. This is a key advantage of
+<strong>light-sheet fluorescence microscopy (LSFM)</strong>, where the illumination plane is matched to the detection plane,
+minimizing out-of-focus excitation and reducing phototoxicity.</p>
+</aside>
+<p>In contrast, depending on their design, light-sheet fluorescence microscopes (LSFM)
+restrict illumination primarily to the focal plane of interest, minimizing phototoxicity while
+maximizing imaging efficiency. Additionally, by leveraging highly sensitive scientific cameras
+(e.g., <strong>4×10:sup:`6`</strong> pixels), LSFM enables massively parallelized image acquisition—recording
+entire planes in a single exposure rather than scanning point-by-point.</p>
+<p>For instance, a typical laser scanning confocal microscope requires <strong>~4.16s</strong> to acquire
+a <strong>2048 × 2048</strong> voxel image, given a voxel dwell time of <strong>1µs</strong>. In contrast, an LSFM can
+image the same region in just <strong>~5ms</strong>, an <strong>832-fold</strong> increase in speed, all while maintaining a
+<strong>5,000-fold longer</strong> per-voxel dwell time. This extended dwell time enables improved signal
+accumulation, lower laser power requirements, and a significantly improved signal-to-noise
+ratio (SNR). As a result, LSFM is uniquely suited for long-term volumetric imaging at high
+spatiotemporal resolution while reducing photodamage.</p>
+<aside class="sidebar-note sidebar">
+<p class="sidebar-title"><strong>Spatial Duty Cycle</strong></p>
+<p>The <strong>spatial duty cycle of illumination</strong> refers to the fraction of a sample that is actively contributing to
+image formation at any given moment during an imaging process. In <strong>laser scanning confocal microscopy (LSCM)</strong>,
+only a single point is illuminated at a time, resulting in a <strong>low duty cycle</strong> and requiring compensatory increases in laser
+power to maintain signal. In contrast, <strong>light-sheet fluorescence microscopy (LSFM)</strong> illuminates and images an entire plane at once,
+yielding a <strong>duty cycle</strong> that approaches 100%, enabling drastically reduced laser powers that reduce phototoxicity, .</p>
+</aside>
+</section>
+<section id="challenges-with-3d-imaging">
+<span id="challenges"></span><h2>Challenges with 3D Imaging<a class="headerlink" href="#challenges-with-3d-imaging" title="Permalink to this heading"></a></h2>
+<p>To extract meaningful biological insight from volumetric imaging, microscopes must achieve
+sufficient <strong>spatiotemporal resolution</strong> while preserving molecular specificity and compatibility with advanced
+analytical techniques. This requires integration with biosensors, opto- and chemogenetic tools, and
+computer vision analyses that translate <strong>high-dimensional 5D datasets</strong> (x, y, z, <span class="math notranslate nohighlight">\(\lambda\)</span>, t) into
+quantitative biological readouts. Several key challenges must be addressed to ensure the accuracy and
+reliability of 3D imaging:</p>
+<ul class="simple">
+<li><p><strong>Nyquist Sampling in Space and Time:</strong>
+To faithfully capture dynamic processes, the event of interest must be <strong>Nyquist sampled</strong> in both
+spatial and temporal dimensions. For example, the GTPase cycle times of Rho, Rac, and Cdc42 can be
+as short as 5s, necessitating volumetric acquisitions at <strong>≤2.5s per volume</strong> with a spatial resolution
+of <strong>&lt;500nm</strong>. Furthermore, resolution should ideally be <strong>isotropic or nearly isotropic</strong> to prevent
+morphology-dependent intensity artifacts—particularly for signaling events at the plasma membrane.</p></li>
+<li><p><strong>Multicolor Excitation and Detection:</strong>
+To enable multiplexed cellular readouts, the microscope must support <strong>simultaneous multicolor imaging</strong>
+with achromatic performance across excitation and detection wavelengths. Microscope designs that
+rely on spatial light modulators (SLMs) for excitation often struggle to achieve this, as the diffraction
+efficiency of SLMs varies with wavelength.</p></li>
+<li><p><strong>Detection Sensitivity and Phototoxicity:</strong>
+Imaging performance must be <strong>photon-efficient</strong> to minimize the need for high ectopic expression of
+signaling-active proteins and to mitigate <strong>photobleaching and phototoxicity</strong>—a challenge that
+is amplified when acquiring <strong>10–100 slices per volume</strong>. Maximizing quantum efficiency and minimizing
+out-of-focus excitation are crucial for maintaining live-cell viability.</p></li>
+<li><p><strong>Field of View Constraints:</strong>
+When imaging dynamic processes in <strong>extracellular matrix environments</strong> (where cells can migrate in
+any direction) or within a <strong>developing embryo</strong>, the microscope must provide a sufficiently <strong>large field
+of view (FOV)</strong>—ideally <strong>&gt;100 × 100 × 100 µm</strong>. Many leading <strong>light-sheet fluorescence microscopes
+(LSFMs)</strong> are optimized for small fields of view (e.g., 25µm), which limits their applicability to studies
+of large-scale tissue dynamics.</p></li>
+<li><p><strong>Avoidance of Computational Post-Processing Biases:</strong>
+To ensure compatibility with <strong>quantitative downstream analyses</strong>, reliance on iterative <strong>deconvolution</strong>
+or structured illumination routines should be minimized. These techniques can introduce statistical
+artifacts that distort numerical analyses, particularly when measuring intensity distributions, localization
+precision, or dynamic molecular interactions.</p></li>
+</ul>
+<aside class="sidebar-note sidebar">
+<p class="sidebar-title"><strong>Nyquist Sampling</strong></p>
+<p><strong>Nyquist sampling</strong> is a fundamental principle in signal processing that dictates the minimum sampling
+frequency required to accurately reconstruct a signal without aliasing. According to the <strong>Nyquist-Shannon
+sampling theorem</strong>, a continuous signal must be sampled at least <strong>twice the highest frequency component</strong>
+present in the signal to ensure faithful reconstruction.</p>
+<p>In microscopy, Nyquist sampling applies to both <strong>spatial and temporal domains</strong>:</p>
+<ul class="simple">
+<li><p><strong>Spatial Nyquist Sampling:</strong> To accurately resolve features of size <span class="math notranslate nohighlight">\(d\)</span>, the sampling interval
+(pixel or voxel spacing) should be no greater than <strong>:math:`d/2`</strong>. This ensures that high-frequency
+structural details are captured without loss of information.</p></li>
+<li><p><strong>Temporal Nyquist Sampling:</strong> To track dynamic processes occurring at a characteristic frequency
+<span class="math notranslate nohighlight">\(f_c\)</span>, images must be acquired at <strong>≥ 2f_c</strong> (i.e., with a time interval <strong>≤ 1/(2f_c)</strong>) to prevent
+aliasing in time-lapse imaging.</p></li>
+</ul>
+<p>Failure to meet the Nyquist criterion results in <strong>aliasing</strong>, where high-frequency components are misrepresented
+as lower-frequency artifacts, distorting biological measurements.</p>
+</aside>
+<p>Meeting these criteria is essential for <strong>accurate, high-throughput volumetric imaging</strong> that captures
+cellular dynamics with sufficient fidelity to support rigorous biological interpretation.</p>
+</section>
+<section id="why-build-a-microscope">
+<span id="why-build"></span><h2>Why Build a Microscope?<a class="headerlink" href="#why-build-a-microscope" title="Permalink to this heading"></a></h2>
+<p>The technology required to achieve <strong>multiplexed volumetric imaging</strong> with advanced probes and computer vision
+analyses already exists. However, the commercialization process imposes significant constraints on innovation.
+Microscope manufacturers prioritize <strong>aesthetically attractive, highly engineered, and serviceable optical
+systems</strong> that ensure a large return on investment. As a result, they tend to be <strong>extremely conservative</strong> in
+adopting emerging technologies.</p>
+<p>Most commercially available microscopes take <strong>over seven years</strong> to develop, by which time they are often
+already obsolete due to rapid scientific advancements. A notable exception is the <strong>Lattice Light-Sheet Microscope
+(LLSM)</strong>, which was sublicensed by Zeiss to 3i shortly after its seminal publication. However, even in this case,
+it took another <strong>six years</strong> for Zeiss to release a consumer-friendly model—at a prohibitive cost of <strong>~$1M USD</strong>.</p>
+<p>Beyond commercialization delays, <strong>patent restrictions</strong> further stifle innovation. The <strong>highly fragmented and
+entangled intellectual property (IP) landscape</strong> makes it difficult for new start-ups to enter the market. For
+example, despite their own <strong>limited role in developing oblique plane microscopy (OPM)</strong>, Leica has exclusively
+licensed a patent for <strong>off-axis tertiary imaging systems</strong>, effectively blocking broader commercialization of OPM.</p>
+<p>As a result, reliance on commercial microscope development not only <strong>delays technology adoption</strong> but can
+actively <strong>impede the dissemination of transformative imaging methods</strong>. This reality makes in-house development
+of custom microscopy platforms essential for pushing the frontiers of biological imaging forward.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="COMPASS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../design_principles/required_software.html" class="btn btn-neutral float-right" title="Required Software and Packages" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Dean Lab, UT Southwestern Medical Center.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,4 +1,4 @@
-.. _process-home:
+.. _imaging-home:
 
 ###############################
 Imaging Process
@@ -22,7 +22,7 @@ the objectives and prevent any leaking.
     :alt: Two imaging configurations for the sample chamber design
 
 Visualization of Axes Mapping
-______________________________
+_____________________________
 
 
 In our system we essentially have 5 different translation stages at work: the standard x,y, and z axes, an additional
@@ -34,11 +34,11 @@ such that its normal is 60.5 degrees away from the y-axis.
     :alt: Layout of how the axis of the system are mapped
 
 Finding the Focus
-______________________________
+_________________
 
 
 Minimizing Spherical Aberrations
-______________________________
+________________________________
 
 
 Once the system has been assembled to the point of being able to take image stacks, the process of
