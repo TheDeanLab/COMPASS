@@ -39,19 +39,28 @@ To meet these growing demands, we aim to develop simplified optical systems that
    :maxdepth: 2
 
    introduction/introduction
+   introduction/background
    design_principles/required_software
    hardware/index.rst
    design_principles/design_process
    physical_assembly/physical_assembly
    system_characterization/system_characterization
    imaging/imaging
-   future/aslm
-   future/opm
+   future/index
+
 
 
 **Authors**
 ============
-**COMPASS** includes key contributions from numerous individuals, both past and present, in `The Dean Lab <https://www.dean-lab.org>`_.
+Dr. John Haug performed all simulations, design, testing, and validation of COMPASS. Seweryn Gałecki provided
+cells for testing imaging performance and assisted in their visualization. Dr. Kevin Dean oversaw and provided feedback on all research operations. This project also benefited from valuable feedback from the **Dean, Fiolka, and Danuser labs** at **UTSW**.
+
+**Acknowledgements**
+============
+The authors extend their gratitude to **Calvin Jones** and **Dr. Sophia Theodossiou** (Boise State University) for
+their assistance in designing and printing the custom sample chamber, as well as **Melissa Glidewell** for her
+initial evaluation of optical tolerances.
+
 
 **Funding**
 ============

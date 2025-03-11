@@ -1,8 +1,8 @@
 .. _design-home:
 
-#################################
-Compass V1 Design Process
-#################################
+##############
+Design Process
+##############
 
 Initial Lens Selection
 ______________________________
