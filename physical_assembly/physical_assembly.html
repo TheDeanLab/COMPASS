@@ -163,7 +163,7 @@ allows it to then be mounted into a 2.5” Polaris K1XY mount. This assembly is 
 post at the start of the baseplate. The fiber laser source is then able to be directly mounted into the CFC11A-A, making sure that the protrusion on the fiber wire aligns with the open section of the CFC11A-A port. The basic process of ensuring collimation then involves turning on the laser source, and placing the shear-plate interferometer such that the input port aligns with the output of the laser unit. Then, by slowly adjusting the barrel of the CFC11A-A and observing the interference fringe orientations along the top display of the interferometer, one is able to adjust the beam until it is properly collimated.</p>
 <img alt="Shear Plate interferometer and collimator lens" class="align-center" src="../_images/LaserAlignment1.png" />
 <p>With the beam collimated, the process of beam alignment involves adjusting the position control knobs on the K1XY to
-have the beam pass through two pinhole apertures along the optical path. The height of the initial laser output is designed to be at 3.75” above the top surface of the baseplate, so selecting appropriate post heights for the apertures such that their centers rest at 3.75” is essential. In our case, we use Thorlabs ID12 pinhole apertures (<a class="reference external" href="https://www.thorlabs.com/thorproduct.cfm?partnumber=ID12">https://www.thorlabs.com/thorproduct.cfm?partnumber=ID12</a>), so using a post height of 3.25” will ensure that they are at the proper height for alignment. We designed a <a class="reference external" href="https://github.com/TheDeanLab/COMPASS/tree/main/downloads/shared/cad">custom ID12 to Polaris adapter</a> to ensure the aperture is at the proper height and properly
+have the beam pass through two pinhole apertures along the optical path. The height of the initial laser output is designed to be at 3.75” above the top surface of the baseplate, so selecting appropriate post heights for the apertures such that their centers rest at 3.75” is essential. In our case, we use Thorlabs ID12 pinhole apertures (<a class="reference external" href="https://www.thorlabs.com/thorproduct.cfm?partnumber=ID12">https://www.thorlabs.com/thorproduct.cfm?partnumber=ID12</a>), so using a post height of 3.25” will ensure that they are at the proper height for alignment. We designed a <a class="reference external" href="https://github.com/TheDeanLab/COMPASS/tree/main/downloads/common/cad">custom ID12 to Polaris adapter</a> to ensure the aperture is at the proper height and properly
 aligned along the designated Polaris axis. When using this method, the ID12 to Polaris Adapters can just be directly mounted onto the holes designated for L1 and the Illumination Objective, depicted below, to cover the length of the baseplate. With the pinholes placed, the process becomes iterative by making small adjustments on the K1XY tip/tilt knobs and XY position screws until the beam passes through both pinholes.</p>
 <img alt="Performing beam alignment across the baseplate" class="align-center" src="../_images/LaserAlignment2.png" />
 </section>
@@ -228,7 +228,7 @@ program the movement of two translation stages in tandem for both the y and z di
 mount is broken down in the figure below, where there are four translation stage mounting holes to attach the unit to
 an ASI translation stage, nine Piezo mounting holes that correspond to the mounting scheme of
 our piezo unit, as well as four through-holes and a window for ease of access for the mounting process. We provide
-the CAD files for this mount <a class="reference external" href="https://github.com/TheDeanLab/COMPASS/tree/main/downloads/shared/cad">here</a>, and have had success in using both 3D printed and
+the CAD files for this mount <a class="reference external" href="https://github.com/TheDeanLab/COMPASS/tree/main/downloads/common/cad">here</a>, and have had success in using both 3D printed and
 aluminum machined versions of the unit. It’s recommended to first mount the angle mount onto the translation stage
 unit before mounting the piezo on the angle mount to ensure access to all the through-holes.</p>
 <img alt="Breakdown of our custom angle piezo angle mount" class="align-center" src="../_images/AnglemountAnatomy.png" />
@@ -246,14 +246,14 @@ through as well.</p>
 <p>Our sample holder design is built for using fixed cells on a 5 mm coverslip, and is shown below. The design features a
 clamp-like method of securing the 5 mm coverslip in place, where the coverslip rests in an inset region and the clamp
 is screwed in via an M1.6 screw in the back of the holder. All associated files for this design and
-other custom parts can be found <a class="reference external" href="https://github.com/TheDeanLab/COMPASS/tree/main/downloads/shared/cad">here</a>.</p>
+other custom parts can be found <a class="reference external" href="https://github.com/TheDeanLab/COMPASS/tree/main/downloads/common/cad">here</a>.</p>
 <img alt="5 mm coverslip sample holder design" class="align-center" src="../_images/S_SampleHolderAssembly.png" />
 </section>
 <section id="assembling-the-magnetic-sample-mount">
 <h2>Assembling the Magnetic Sample Mount<a class="headerlink" href="#assembling-the-magnetic-sample-mount" title="Permalink to this heading"></a></h2>
 <p>As a safeguard for the risk of the sample crashing into either the illumination or detection objective during sample
 positioning or imaging, we opted to incorporate a magnetic mount for our sample holder. We use a Thorlabs KBT1X1T and
-KBB1X1 as our magnetic mount pair, and then mount our sample holder onto the KBT1X1T using a  <a class="reference external" href="https://github.com/TheDeanLab/COMPASS/tree/main/downloads/shared/cad">custom adapter</a>. The KBB1X1 is affixed to the piezo using an M2.5 screw, and using a small leveling tool (shown below)
+KBB1X1 as our magnetic mount pair, and then mount our sample holder onto the KBT1X1T using a  <a class="reference external" href="https://github.com/TheDeanLab/COMPASS/tree/main/downloads/common/cad">custom adapter</a>. The KBB1X1 is affixed to the piezo using an M2.5 screw, and using a small leveling tool (shown below)
 during this step is helpful to ensure that the magnetic base is mounted as level as possible for the imaging process.</p>
 <img alt="Basic assembly of magnetic sample holder mount" class="align-center" src="../_images/MagneticMountSampleHolder.png" />
 </section>
