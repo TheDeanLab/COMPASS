@@ -48,9 +48,10 @@
               <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="introduction/introduction.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="design_principles/required_software.html">Required Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction/background.html">Overview of Subcellular Light-Sheet Microscope Technologies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design_principles/required_software.html">Software</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hardware/index.html">Room and Hardware Considerations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="design_principles/design_process.html">Compass V1 Design Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="design_principles/design_process.html">Design Process</a></li>
 <li class="toctree-l1"><a class="reference internal" href="physical_assembly/physical_assembly.html">Physical Assembly</a></li>
 <li class="toctree-l1"><a class="reference internal" href="physical_assembly/physical_assembly.html#illumination-path-assembly">Illumination Path Assembly</a></li>
 <li class="toctree-l1"><a class="reference internal" href="physical_assembly/physical_assembly.html#hardware">Hardware</a></li>
@@ -58,8 +59,7 @@
 <li class="toctree-l1"><a class="reference internal" href="system_characterization/system_characterization.html">System Characterization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="imaging/imaging.html">Imaging Process</a></li>
 <li class="toctree-l1"><a class="reference internal" href="imaging/imaging.html#image-stack-processing">Image Stack Processing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="future/aslm.html">ASLM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="future/opm.html">OPM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="future/index.html">Future Releases</a></li>
 </ul>
 
         </div>
@@ -122,7 +122,14 @@ Users should be aware of these risks and agree to utilize <strong>COMPASS</stron
 <li class="toctree-l2"><a class="reference internal" href="introduction/introduction.html#why-build-a-microscope">Why Build a Microscope?</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="design_principles/required_software.html">Required Software</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction/background.html">Overview of Subcellular Light-Sheet Microscope Technologies</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction/background.html#lattice-light-sheet-microscopy-llsm">Lattice Light-Sheet Microscopy (LLSM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction/background.html#field-synthesis">Field Synthesis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction/background.html#axially-swept-light-sheet-microscopy-aslm">Axially Swept Light-Sheet Microscopy (ASLM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction/background.html#oblique-plane-microscopy-opm">Oblique Plane Microscopy (OPM)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="design_principles/required_software.html">Software</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="design_principles/required_software.html#optical-simulations">Optical Simulations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="design_principles/required_software.html#computer-aided-design">Computer-Aided Design</a></li>
 <li class="toctree-l2"><a class="reference internal" href="design_principles/required_software.html#microscope-control-software-navigate">Microscope Control Software: navigate</a></li>
@@ -136,7 +143,7 @@ Users should be aware of these risks and agree to utilize <strong>COMPASS</stron
 <li class="toctree-l2"><a class="reference internal" href="hardware/lasers.html">Laser Sources</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="design_principles/design_process.html">Compass V1 Design Process</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="design_principles/design_process.html">Design Process</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="design_principles/design_process.html#initial-lens-selection">Initial Lens Selection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="design_principles/design_process.html#zemax-simulation-setup-process">Zemax Simulation Setup Process</a></li>
 <li class="toctree-l2"><a class="reference internal" href="design_principles/design_process.html#zemax-simulation-analysis">Zemax Simulation Analysis</a></li>
@@ -186,17 +193,20 @@ Users should be aware of these risks and agree to utilize <strong>COMPASS</stron
 <li class="toctree-l2"><a class="reference internal" href="imaging/imaging.html#deconvolution">Deconvolution</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="future/aslm.html">ASLM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="future/opm.html">OPM</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="future/opm.html#background">Background</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="future/index.html">Future Releases</a></li>
 </ul>
 </div>
 </section>
 <section id="authors">
 <h2><strong>Authors</strong><a class="headerlink" href="#authors" title="Permalink to this heading"></a></h2>
-<p><strong>COMPASS</strong> includes key contributions from numerous individuals, both past and present, in <a class="reference external" href="https://www.dean-lab.org">The Dean Lab</a>.</p>
+<p>Dr. John Haug performed all simulations, design, testing, and validation of COMPASS. Seweryn Gałecki provided
+cells for testing imaging performance and assisted in their visualization. Dr. Kevin Dean oversaw and provided feedback on all research operations. This project also benefited from valuable feedback from the <strong>Dean, Fiolka, and Danuser labs</strong> at <strong>UTSW</strong>.</p>
+</section>
+<section id="acknowledgements">
+<h2><strong>Acknowledgements</strong><a class="headerlink" href="#acknowledgements" title="Permalink to this heading"></a></h2>
+<p>The authors extend their gratitude to <strong>Calvin Jones</strong> and <strong>Dr. Sophia Theodossiou</strong> (Boise State University) for
+their assistance in designing and printing the custom sample chamber, as well as <strong>Melissa Glidewell</strong> for her
+initial evaluation of optical tolerances.</p>
 </section>
 <section id="funding">
 <h2><strong>Funding</strong><a class="headerlink" href="#funding" title="Permalink to this heading"></a></h2>

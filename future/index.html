@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ASLM &mdash; COMPASS  documentation</title>
+  <title>Future Releases &mdash; COMPASS  documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
 
@@ -22,7 +22,6 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="OPM" href="opm.html" />
     <link rel="prev" title="Imaging Process" href="../imaging/imaging.html" /> 
 </head>
 
@@ -49,9 +48,10 @@
               <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../introduction/introduction.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../design_principles/required_software.html">Required Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/background.html">Overview of Subcellular Light-Sheet Microscope Technologies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../design_principles/required_software.html">Software</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hardware/index.html">Room and Hardware Considerations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../design_principles/design_process.html">Compass V1 Design Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../design_principles/design_process.html">Design Process</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../physical_assembly/physical_assembly.html">Physical Assembly</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../physical_assembly/physical_assembly.html#illumination-path-assembly">Illumination Path Assembly</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../physical_assembly/physical_assembly.html#hardware">Hardware</a></li>
@@ -59,8 +59,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../system_characterization/system_characterization.html">System Characterization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../imaging/imaging.html">Imaging Process</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../imaging/imaging.html#image-stack-processing">Image Stack Processing</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">ASLM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="opm.html">OPM</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Future Releases</a></li>
 </ul>
 
         </div>
@@ -77,9 +76,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">ASLM</li>
+      <li class="breadcrumb-item active">Future Releases</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/future/aslm.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/future/index.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -87,36 +86,19 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="aslm">
-<span id="background-home"></span><h1>ASLM<a class="headerlink" href="#aslm" title="Permalink to this heading"></a></h1>
-<p>Two light-sheet microscopy techniques successfully decouple the trade-off between
-axial resolution and field of view: multiview deconvolution and ASLM. In the former,
-the sample is imaged from multiple directions (via sample rotation or by reversing
-the illumination and detection paths) and the complementary views computationally
-fused to create a high-resolution, large field of view image. However, this increases
-the illumination burden on the specimen, increases the data overhead, and requires
-deconvolution which is incompatible with biosensor-based imaging. In contrast, ASLM,
-a technology invented by Dean and Fiolka in 2015, uses aberration-free remote focusing
-to sweep a tightly focused Gaussian beam through the sample in its propagation
-direction synchronously with the rolling shutter of a CMOS camera. Here, the axial
-position of the illumination beam is deterministically controlled by translating the
-position of a piezo or voice coil mounted mirror that is optically conjugate to the
-specimen at the focal plane of a remote focusing objective. More recently, to
-accelerate the image acquisition rate of ASLM to 200 frames per second, we developed
-a novel method that converted a lateral galvanometer sweep into an aberration-free
-scan of the illumination beam. Importantly, ASLM does not require any computational
-post-processing, and delivers a large field of view (100 x 100 x 100µm) and the
-highest axial resolution (~400 nm) in LSFM in the absence of deconvolution or
-super-resolution techniques (e.g., structured illumination, stimulated emission, or
-localization). Because ASLM has isotropic resolution, it is routinely combined with
-advanced computer vision software, and has already provided tremendous insight into
-diverse biological phenomena. For example, when combined with the software package
-u-shape3D, ASLM was able to evaluate how Kras and PIP2 influence cell morphology and
-motion in 3D collagen environments. Importantly, because it uses refractive rather
-than diffractive optics, ASLM is entirely compatible with multiplexed excitation and
-detection of multiple biosensors and/or optogenetic probes. As such, ASLM is ideally
-suited to evaluate the molecular mechanisms underlying cell-cell interactions and
-metastatic dissemination in 3D extracellular matrix environments.</p>
+  <section id="future-releases">
+<span id="future-home"></span><h1>Future Releases<a class="headerlink" href="#future-releases" title="Permalink to this heading"></a></h1>
+<p>The development of <strong>COMPASS</strong> is an ongoing effort, with future iterations aimed at increasing both <strong>complexity and capability</strong> to support volumetric imaging across a diverse range of specimens and experimental contexts. Each implementation will be <strong>versioned</strong> and accompanied by comprehensive documentation, ensuring that researchers can <strong>replicate and modify</strong> the system at a fraction of the cost of commercial alternatives. To foster <strong>open development and community-driven innovation</strong>, we encourage users to <strong>request features and provide feedback</strong> publicly via our GitHub repository:
+[COMPASS GitHub Issues](<a class="reference external" href="https://github.com/TheDeanLab/COMPASS/issues">https://github.com/TheDeanLab/COMPASS/issues</a>).</p>
+<p>The projected design roadmap includes:</p>
+<ul class="simple">
+<li><p><strong>Sample-scanning light-sheet microscope</strong> for imaging cells on glass coverslips.</p></li>
+<li><p><strong>Sample-scanning Axially Swept Light-Sheet Microscope (ASLM).</strong></p></li>
+<li><p><strong>Laser-scanning Axially Swept Light-Sheet Microscope.</strong></p></li>
+<li><p><strong>Sample-scanning Oblique Plane Microscope (OPM).</strong></p></li>
+<li><p><strong>Laser-scanning Oblique Plane Microscope.</strong></p></li>
+</ul>
+<p>Beyond these core designs, we aim to develop <strong>modular additions</strong> that extend COMPASS’s functionality, including <strong>optogenetic stimulation</strong> for targeted cellular activation and <strong>multiplexed imaging</strong> for simultaneous readouts of multiple probes. Through this iterative approach, COMPASS will continue evolving as a <strong>highly adaptable, cost-effective, and open-source platform</strong> for cutting-edge volumetric imaging.</p>
 </section>
 
 
@@ -124,7 +106,6 @@ metastatic dissemination in 3D extracellular matrix environments.</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../imaging/imaging.html" class="btn btn-neutral float-left" title="Imaging Process" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="opm.html" class="btn btn-neutral float-right" title="OPM" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

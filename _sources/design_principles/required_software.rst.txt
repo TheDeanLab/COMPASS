@@ -1,10 +1,11 @@
 
 .. _software-home:
 
-#################
-Required Software
-#################
+########
+Software
+########
 
+The **software for optical simulations and computer-aided design (CAD)** is optional and only required for users who wish to **modify or customize COMPASS**. However, **navigate is mandatory** for microscope operation unless an alternative **open-source acquisition platform** is used. For **COMPASS v1**, which operates in a **sample-scanning geometry**, **shearing** is necessary to properly align data spatially; while various software options exist, we provide **Python-based scripts** for this task. Lastly, **deconvolution is optional**, depending on the user’s specific imaging and analysis needs.
 
 .. _optical-simulation-software:
 

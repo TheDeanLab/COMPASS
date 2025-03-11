@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Overview of Subcellular Light-Sheet Microscope Technologies &mdash; COMPASS  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Software" href="../design_principles/required_software.html" />
+    <link rel="prev" title="Introduction" href="introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            COMPASS
+              <img src="../_static/compass.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Overview of Subcellular Light-Sheet Microscope Technologies</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#lattice-light-sheet-microscopy-llsm">Lattice Light-Sheet Microscopy (LLSM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#field-synthesis">Field Synthesis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#axially-swept-light-sheet-microscopy-aslm">Axially Swept Light-Sheet Microscopy (ASLM)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#oblique-plane-microscopy-opm">Oblique Plane Microscopy (OPM)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../design_principles/required_software.html">Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../hardware/index.html">Room and Hardware Considerations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../design_principles/design_process.html">Design Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_assembly/physical_assembly.html">Physical Assembly</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_assembly/physical_assembly.html#illumination-path-assembly">Illumination Path Assembly</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_assembly/physical_assembly.html#hardware">Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physical_assembly/physical_assembly.html#parts-list">Parts List</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../system_characterization/system_characterization.html">System Characterization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../imaging/imaging.html">Imaging Process</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../imaging/imaging.html#image-stack-processing">Image Stack Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../future/index.html">Future Releases</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">COMPASS</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Overview of Subcellular Light-Sheet Microscope Technologies</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/introduction/background.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="overview-of-subcellular-light-sheet-microscope-technologies">
+<h1>Overview of Subcellular Light-Sheet Microscope Technologies<a class="headerlink" href="#overview-of-subcellular-light-sheet-microscope-technologies" title="Permalink to this heading"></a></h1>
+<p>Light-sheet fluorescence microscopy (LSFM) has undergone significant advancements, leading to the development of specialized approaches tailored for <strong>subcellular-resolution imaging</strong>. These methods balance <strong>resolution, field of view, optical sectioning, and phototoxicity</strong> to accommodate different biological applications. Below, we provide an overview of existing high-resolution light-sheet microscope technologies, their strengths, and their limitations.</p>
+<hr class="docutils" />
+<section id="lattice-light-sheet-microscopy-llsm">
+<h2>Lattice Light-Sheet Microscopy (LLSM)<a class="headerlink" href="#lattice-light-sheet-microscopy-llsm" title="Permalink to this heading"></a></h2>
+<p>Lattice Light-Sheet Microscopy (LLSM) employs a <strong>superposition of propagation-invariant beams</strong> to generate a structured light-sheet that theoretically maintains a <strong>narrow beam waist</strong> over extended distances. However, in practice, these beams introduce <strong>sidelobes</strong> that increase with beam length, contributing to <strong>out-of-focus blur</strong> and degrading image contrast and resolution. As a result, LLSM is most effective for <strong>small fields of view (~25µm)</strong>, making it ideal for imaging <strong>adherent cells and epithelial monolayers</strong>.</p>
+<p>A key limitation of LLSM is its reliance on a <strong>spatial light modulator (SLM)</strong> to sculpt its illumination beams. While this enables fine control over the excitation profile, it also introduces significant drawbacks:
+- <strong>Limited Multicolor Excitation</strong> – The SLM prevents simultaneous multicolor excitation, making LLSM suboptimal for <strong>multiplexed biosensor imaging</strong>.
+- <strong>Reduced Light Throughput</strong> – The optical train has an efficiency of only <strong>~2.4%</strong>, requiring higher-power and more expensive laser sources.
+- <strong>Increased Complexity</strong> – The integration of an SLM significantly increases the complexity and cost of the system, limiting accessibility.</p>
+</section>
+<hr class="docutils" />
+<section id="field-synthesis">
+<h2>Field Synthesis<a class="headerlink" href="#field-synthesis" title="Permalink to this heading"></a></h2>
+<p>To address the limitations of Lattice Light-Sheet Microscopy (LLSM), the Fiolka lab developed
+<strong>Field Synthesis</strong>, a mathematical framework that reconstructs <strong>time-averaged (dithered) lattice light-sheets</strong>
+using <strong>diffractive optics</strong>. Unlike LLSM, which requires a <strong>spatial light modulator (SLM)</strong> to project complex
+amplitude and phase patterns onto the illumination objective, <strong>Field Synthesis achieves the same illumination
+effect with greater light throughput and full compatibility with simultaneous multicolor excitation</strong>.</p>
+<p>Instead of directly sculpting the beam at the objective’s pupil, Field Synthesis employs a <strong>focused line scan
+over a binary pupil mask using a galvanometer during a single camera exposure</strong>. This approach requires only:</p>
+<ul class="simple">
+<li><p><strong>A galvanometer for beam scanning</strong></p></li>
+<li><p><strong>A binary phase mask to shape the illumination</strong></p></li>
+<li><p><strong>A 4f telescope for beam relay</strong></p></li>
+</ul>
+<p>Because of this design, <strong>Field Synthesis provides resolution and photobleaching characteristics statistically
+indistinguishable from LLSM</strong> while offering <strong>2× higher acquisition speeds</strong> in simultaneous multicolor imaging.
+For example, in a <strong>sample-scanning configuration</strong>, Field Synthesis was used to capture high-resolution,
+simultaneous imaging of <strong>PI3K activity and dynamic filopodia and bleb formation</strong> in <strong>MV3 melanoma cells</strong>.
+The increased imaging speed significantly reduced <strong>motion blur</strong>, which is particularly beneficial for visualizing
+rapid morphological transitions such as <strong>filopodial buckling</strong>.</p>
+</section>
+<hr class="docutils" />
+<section id="axially-swept-light-sheet-microscopy-aslm">
+<h2>Axially Swept Light-Sheet Microscopy (ASLM)<a class="headerlink" href="#axially-swept-light-sheet-microscopy-aslm" title="Permalink to this heading"></a></h2>
+<p>Axially Swept Light-Sheet Microscopy (ASLM) overcomes many of the optical constraints of traditional light-sheet imaging by implementing a <strong>rapidly scanned Gaussian beam</strong> to create an extended, ultra-thin light-sheet. Unlike LLSM, ASLM minimizes <strong>sidelobe artifacts</strong>, resulting in superior <strong>optical sectioning and contrast</strong> across a larger field of view. Key advantages of ASLM include:
+- <strong>Diffraction-Limited Isotropic Resolution</strong> – Achieves <strong>300–400 nm</strong> axial resolution while maintaining high lateral resolution.
+- <strong>Improved Optical Sectioning</strong> – Reduces out-of-focus excitation, enhancing signal-to-noise ratios.
+- <strong>Compatibility with Multicolor Imaging</strong> – Unlike LLSM, ASLM does not require an SLM, allowing for <strong>simultaneous multicolor excitation</strong>, essential for biosensor applications.</p>
+<p>However, ASLM is inherently <strong>slower than conventional light-sheet methods</strong>, as the sweeping mechanism imposes limits on acquisition speed. Additionally, its implementation requires precise <strong>synchronization between beam scanning and camera acquisition</strong>, adding some complexity to its control systems.</p>
+</section>
+<hr class="docutils" />
+<section id="oblique-plane-microscopy-opm">
+<h2>Oblique Plane Microscopy (OPM)<a class="headerlink" href="#oblique-plane-microscopy-opm" title="Permalink to this heading"></a></h2>
+<p>The orthogonal illumination and detection geometry used in most <strong>light-sheet fluorescence microscopes (LSFMs)</strong>
+comes with several <strong>underappreciated limitations</strong>. This configuration is <strong>incompatible</strong> with many standard
+laboratory imaging setups, including <strong>hardware-based autofocus systems</strong> that mitigate thermal and mechanical drift,
+<strong>standard imaging dishes</strong>, <strong>multi-well plates</strong>, and <strong>microfluidic devices</strong> designed for establishing <strong>chemotactic
+gradients</strong> or delivering <strong>controlled shear stress</strong> in parallel plate flow chambers.</p>
+<p>Additionally, LSFMs often require <strong>large imaging chambers</strong> (e.g., <strong>~8.5 mL</strong> for <strong>LLSM</strong>), leading to <strong>high reagent
+consumption</strong>, which can be cost-prohibitive for experiments involving <strong>chemogenetic or pharmacological perturbations</strong>.
+The use of <strong>high numerical aperture (NA) water-dipping objectives</strong> further <strong>compromises sterility</strong>, making
+long-term imaging of slow biological processes, such as <strong>sarcomerogenesis over ~24 hours</strong>, particularly challenging.</p>
+<p>Although ultra-thin <strong>fluorocarbon foil-based cuvettes</strong> have been explored as a solution, even slight <strong>refractive
+index mismatches</strong> introduce <strong>spherical aberrations</strong>, degrading image resolution and sensitivity. These factors
+highlight the need for alternative light-sheet implementations that maintain <strong>high optical performance while
+accommodating diverse experimental conditions</strong>.</p>
+<p>Oblique Plane Microscopy (OPM) represents a <strong>single-objective light-sheet imaging approach</strong> that overcomes these challenges. Here, owing to its unique non-coaxial design, an obliquely launched illumination beam is used to achieve volumetric imaging without requiring an orthogonally positioned objective. This method has gained popularity for <strong>live-cell imaging</strong> due to its advantages:
+- <strong>Simplified Geometry</strong> – Requires only a single high-NA objective, making it more compact and easier to integrate into existing microscope setups.
+- <strong>High-Speed Volumetric Imaging</strong> – Can acquire full 3D volumes at video rate.
+- <strong>Compatible with Conventional Sample Mounting</strong> – Unlike traditional LSFM, OPM does not require complex sample positioning or embedding techniques.</p>
+<p>Despite its advantages, OPM suffers from <strong>anisotropic resolution</strong> and often requires <strong>computational post-processing</strong> (e.g., shearing correction) to reconstruct datasets accurately. Additionally, due to the oblique illumination geometry, axial resolution may degrade deeper into the sample.</p>
+<hr class="docutils" />
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><strong>Microscope Type</strong></p></td>
+<td><p><strong>Strengths</strong></p></td>
+<td><p><strong>Limitations</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>LLSM</strong></p></td>
+<td><ul class="simple">
+<li><p>High-resolution for small samples</p></li>
+<li><p>Excellent optical sectioning</p></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li><p>Limited field of view (~25µm)</p></li>
+<li><p>Incompatible with multicolor excitation</p></li>
+<li><p>Low light throughput (~2.4%)</p></li>
+<li><p>Requires high-power lasers</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>Field Synthesis</strong></p></td>
+<td><ul class="simple">
+<li><p>Statistically indistinguishable from LLSM</p></li>
+<li><p>Higher light throughput</p></li>
+<li><p>Compatible with simultaneous multicolor imaging</p></li>
+<li><p>Faster acquisition (~2× speed vs. LLSM)</p></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li><p>Requires scanning with a galvanometer</p></li>
+<li><p>Less widely implemented than LLSM</p></li>
+<li><p>Slightly lower spatial control than LLSM</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p><strong>ASLM</strong></p></td>
+<td><ul class="simple">
+<li><p>High contrast and improved optical sectioning</p></li>
+<li><p>Isotropic resolution (~300–400 nm)</p></li>
+<li><p>Compatible with multicolor imaging</p></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li><p>Lower acquisition speed due to beam sweeping</p></li>
+<li><p>Requires precise synchronization</p></li>
+<li><p>Complex scanning mechanics</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>OPM</strong></p></td>
+<td><ul class="simple">
+<li><p>Single-objective system (simplified geometry)</p></li>
+<li><p>High-speed volumetric imaging</p></li>
+<li><p>Compatible with conventional sample mounting</p></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li><p>Anisotropic resolution</p></li>
+<li><p>Requires computational post-processing</p></li>
+<li><p>Axial resolution degrades with depth</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="introduction.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../design_principles/required_software.html" class="btn btn-neutral float-right" title="Software" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Dean Lab, UT Southwestern Medical Center.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
