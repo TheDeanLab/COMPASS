@@ -35,16 +35,10 @@ To meet these growing demands, we aim to develop simplified optical systems that
 --------
 
 .. toctree::
-   :caption: Introduction
+   :caption: Table of Contents
    :maxdepth: 2
 
-   introduction/background
-   introduction/principles
-
-.. toctree::
-   :caption: Design Principles
-   :maxdepth: 2
-
+   introduction/introduction
    design_principles/required_software
    design_principles/design_process
 

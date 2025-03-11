@@ -1,4 +1,4 @@
-.. _process-home:
+.. _assembly-home:
 
 ###############################
 Physical Assembly
