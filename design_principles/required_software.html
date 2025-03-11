@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Required Software and Packages &mdash; COMPASS  documentation</title>
+  <title>Required Software &mdash; COMPASS  documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
 
@@ -49,8 +49,21 @@
               <p class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../introduction/introduction.html">Introduction</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Required Software and Packages</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#simulations">Simulations</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Required Software</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#optical-simulations">Optical Simulations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#computer-aided-design">Computer-Aided Design</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setting-up-a-new-project-in-autodesk-inventor">Setting Up a New Project in Autodesk Inventor</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#microscope-control-software-navigate">Microscope Control Software: navigate</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#features-of-navigate">Features of navigate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installation-and-access">Installation and Access</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#post-processing">Post-Processing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#deconvolution">Deconvolution</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="design_process.html">Compass V1 General Design Process</a></li>
@@ -98,7 +111,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Required Software and Packages</li>
+      <li class="breadcrumb-item active">Required Software</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/design_principles/required_software.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -108,15 +121,94 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="required-software-and-packages">
-<span id="software-home"></span><h1>Required Software and Packages<a class="headerlink" href="#required-software-and-packages" title="Permalink to this heading"></a></h1>
-<section id="simulations">
-<h2>Simulations<a class="headerlink" href="#simulations" title="Permalink to this heading"></a></h2>
-<p>While there is a variety of software available for simulating optical systems, Ansys
-Zemax Opticstudio is our software of choice.</p>
-<p>For the design of custom parts and the baseplate, we used Autodesk Inventor. Academic licenses for Autodesk products
-are available free of charge on their <a class="reference external" href="https://www.autodesk.com/education/edu-software/overview?sorting=featured&amp;filters=individual">website</a> .</p>
-<p>Other 3D modeling software like Autodesk AutoCAD, Autodesk Fusion 360, and Solidworks are all reasonable alternatives for aspects of 3D design.</p>
+  <section id="required-software">
+<span id="software-home"></span><h1>Required Software<a class="headerlink" href="#required-software" title="Permalink to this heading"></a></h1>
+<section id="optical-simulations">
+<span id="optical-simulation-software"></span><h2>Optical Simulations<a class="headerlink" href="#optical-simulations" title="Permalink to this heading"></a></h2>
+<p>Performing accurate optical simulations is essential for designing and validating the illumination pathway of
+<strong>COMPASS</strong>. To facilitate this process, we used <strong>Zemax OpticStudio (Ansys)</strong> to model the full illumination
+system, optimizing the placement of each optical element to achieve the desired focusing and collimation properties.</p>
+<p>To replicate or modify these simulations, a <strong>Zemax OpticStudio (Ansys)</strong> professional or academic license is needed.
+This enables optical modeling, ray tracing, and tolerance analysis. The <strong>Zemax simulation files</strong> used to design the
+COMPASS illumination system are included in the project’s GitHub repository. These files allow users to inspect and
+modify the optical layout, test different lens configurations, and refine performance metrics as needed.</p>
+</section>
+<section id="computer-aided-design">
+<span id="d-design"></span><h2>Computer-Aided Design<a class="headerlink" href="#computer-aided-design" title="Permalink to this heading"></a></h2>
+<p>For the design of custom parts and the baseplate, we used <strong>Autodesk Inventor</strong>. Academic licenses for Autodesk
+products are available free of charge on their <a class="reference external" href="https://www.autodesk.com/education/edu-software/overview?sorting=featured&amp;filters=individual">website</a>.</p>
+<p>To ensure <strong>Autodesk Inventor</strong> correctly locates and manages the CAD files, it is necessary to set up a <strong>new project</strong>
+and define the workspace. We recommend following these steps:</p>
+<section id="setting-up-a-new-project-in-autodesk-inventor">
+<h3>Setting Up a New Project in Autodesk Inventor<a class="headerlink" href="#setting-up-a-new-project-in-autodesk-inventor" title="Permalink to this heading"></a></h3>
+<ol class="arabic">
+<li><p><strong>Launch Autodesk Inventor</strong></p></li>
+<li><p>Navigate to <strong>File → Manage → Projects</strong></p>
+<a class="reference internal image-reference" href="design_principles/images/cad_1.png"><img alt="design_principles/images/cad_1.png" class="align-center" src="design_principles/images/cad_1.png" style="width: 60%;" /></a>
+</li>
+<li><p>When the <strong>Projects</strong> window appears, select <strong>New</strong></p>
+<a class="reference internal image-reference" href="design_principles/images/cad_2.png"><img alt="design_principles/images/cad_2.png" class="align-center" src="design_principles/images/cad_2.png" style="width: 60%;" /></a>
+</li>
+<li><p>Choose <strong>New Single User Project</strong></p>
+<a class="reference internal image-reference" href="design_principles/images/cad_3.png"><img alt="design_principles/images/cad_3.png" class="align-center" src="design_principles/images/cad_3.png" style="width: 50%;" /></a>
+</li>
+<li><p><strong>Specify a Project Name</strong> and set the <strong>root directory of the cloned COMPASS GitHub repository</strong> as the <strong>Project (Workspace) Folder</strong></p>
+<a class="reference internal image-reference" href="design_principles/images/cad_4.png"><img alt="design_principles/images/cad_4.png" class="align-center" src="design_principles/images/cad_4.png" style="width: 60%;" /></a>
+</li>
+</ol>
+<p>By configuring Autodesk Inventor in this way, all CAD files associated with <strong>COMPASS</strong> will be properly linked,
+ensuring seamless loading of all components and assemblies.</p>
+</section>
+</section>
+<section id="microscope-control-software-navigate">
+<span id="microscope-control-software"></span><h2>Microscope Control Software: navigate<a class="headerlink" href="#microscope-control-software-navigate" title="Permalink to this heading"></a></h2>
+<p>To control and operate <strong>COMPASS</strong>, we use <strong>navigate</strong>, a Python-based software package designed to provide
+flexible and intelligent microscope control. <strong>navigate</strong> enables users to interact with the system through
+a variety of advanced modalities, including <strong>smart acquisition routines</strong> that dynamically adjust microscope
+performance based on the biological specimen.</p>
+<section id="features-of-navigate">
+<h3>Features of navigate<a class="headerlink" href="#features-of-navigate" title="Permalink to this heading"></a></h3>
+<p><strong>navigate</strong> provides key functionalities that enhance the efficiency and adaptability of the COMPASS system:</p>
+<ul class="simple">
+<li><p><strong>Automated Smart Acquisition</strong> – Dynamically optimizes imaging parameters in real time, adapting to specimen
+properties to improve image quality.</p></li>
+<li><p><strong>Hardware Abstraction Layer</strong> – Enables seamless control of multiple hardware components, allowing users
+to configure, modify, and expand the microscope’s functionality.</p></li>
+<li><p><strong>High-Throughput Data Acquisition</strong> – Facilitates volumetric imaging with high-speed acquisition routines,
+ensuring efficient data collection without compromising spatial or temporal resolution.</p></li>
+</ul>
+</section>
+<section id="installation-and-access">
+<h3>Installation and Access<a class="headerlink" href="#installation-and-access" title="Permalink to this heading"></a></h3>
+<p><strong>navigate</strong> is <strong>open-source</strong> and publicly available on GitHub. Installation instructions, along with
+comprehensive documentation, can be found here:
+<a class="reference external" href="https://thedeanlab.github.io/navigate/software_installation.html">navigate Installation Guide</a></p>
+</section>
+</section>
+<section id="post-processing">
+<h2>Post-Processing<a class="headerlink" href="#post-processing" title="Permalink to this heading"></a></h2>
+<p>After image acquisition, post-processing is often necessary to extract meaningful biological information.
+The <strong>navigate</strong> software package includes libraries for performing <strong>basic image post-processing tasks</strong>,
+such as <strong>shearing correction</strong>, which can be applied directly to acquired datasets. We provide Python-based scripts in the
+<cite>post_processing</cite> folder of this repository as an example.</p>
+<section id="deconvolution">
+<h3>Deconvolution<a class="headerlink" href="#deconvolution" title="Permalink to this heading"></a></h3>
+<p>For more advanced processing, such as <strong>deconvolution</strong>, we recommend using <strong>PetaKit5D</strong>. This software
+package is optimized for handling large-scale volumetric datasets and provides state-of-the-art deconvolution
+algorithms to enhance image quality and resolution <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>. <strong>PetaKit5D</strong> must be installed separately and can be found
+here: <a class="reference external" href="https://github.com/abcucberkeley/PetaKit5D">PetaKit5D GitHub Repository</a></p>
+<p class="rubric">Citations</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id2" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Ruan X, Mueller M, Liu G, Görlitz F, Fu TM, Milkie DE, Lillvis JL, Kuhn A, Gan Chong J, Hong JL,
+Herr CYA, Hercule W, Nienhaus M, Killilea AN, Betzig E, Upadhyayula S. <em>Image processing tools for
+petabyte-scale light sheet microscopy data.</em> <strong>Nat Methods.</strong> 2024 Dec;21(12):2342-2352.
+doi: <a class="reference external" href="https://doi.org/10.1038/s41592-024-02475-4">10.1038/s41592-024-02475-4</a>.
+PMID: <a class="reference external" href="https://pubmed.ncbi.nlm.nih.gov/39420143/">39420143</a>, PMCID: PMC11621031.</p>
+</aside>
+</aside>
+</section>
 </section>
 </section>
 
