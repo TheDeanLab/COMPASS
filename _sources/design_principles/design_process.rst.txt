@@ -209,9 +209,10 @@ that the resulting light sheet looks much closer to the nominal case than before
     :align: center
     :alt: Results of tolerancing analysis when the offset corresponded to +-0.002"
 
-The results of our tolerancing analysis, as well as the associated lens files fo our best and wort case instances for
+
+The results of our tolerancing analysis, as well as the associated lens files for our best and wort case instances for
 both fine and coarse tolerancing are available at the associated `github repository <https://github
-.com/TheDeanLab/COMPASS/tree/main/downloads/base/zemax>`_..
+.com/TheDeanLab/COMPASS/tree/main/downloads/base/zemax>`_.
 
 Baseplate Design
 ______________________________
@@ -239,7 +240,8 @@ While we are able to use most of our element mounts from the Polaris line, for t
 capable of rotating the lens, which at this time is not something available from Thorlabs. In our case we designed an
 additional mounting element that allows the use of a basic Thorlabs
 `RSP1 rotation mount <https://www.thorlabs.com/thorproduct.cfm?partnumber=RSP1>`_, but still ensures alignment with the
-other Polaris elements. The CAD file for this mount is available for download here (INSERT DOWNLOAD LINK FOR ELEMENT?)
+other Polaris elements. The CAD file for this mount is available for download `here <https://github
+.com/TheDeanLab/COMPASS/tree/main/downloads/base/cad>`_.
 
 .. image:: Images/RotationMount.png
     :align: center
