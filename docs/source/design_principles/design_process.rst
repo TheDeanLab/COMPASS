@@ -35,7 +35,6 @@ There are a few sets of criteria that help guide our potential lens selection:
     * At the focus of our cylindrical lens, we want the beam spot size to stay under the size of our resonant galvo (12 mm diameter)
     * We need the focal distance between the cylindrical lens and the galvo mirror system to be greater than ~55 mm due to
       mechanical considerations of the mirror mount used
-    * We want to overfill our objective, (Reasoning behind overfilling objective) , resulting in a thinner light sheet width
 
 With these criteria in mind, we can calculate a theoretic estimate of what our beam size is after each of our lenses. We
 do this by considering every pair of lenses (i.e. Lens 1 & 2, Lens 2 & 3, ...) as a sort of 4F magnification system,
@@ -139,6 +138,9 @@ Through Focus Spot analysis allows us to essentially see the evolution of the li
 where we can then estimate a sort of range where we expect the width of the light sheet to be thin enough for our
 imaging purposes, where the maximum usable light sheet width is the FWHM at the focus multiplied by :math:`\sqrt{2}`.
 
+The full optimized Zemax lillumination path can be downloaded in the associated `github repository <https://github
+.com/TheDeanLab/COMPASS/tree/main/downloads/base/zemax>`_.
+
 Zemax Tolerancing Analysis
 ______________________________
 
@@ -207,6 +209,10 @@ that the resulting light sheet looks much closer to the nominal case than before
     :align: center
     :alt: Results of tolerancing analysis when the offset corresponded to +-0.002"
 
+The results of our tolerancing analysis, as well as the associated lens files fo our best and wort case instances for
+both fine and coarse tolerancing are available at the associated `github repository <https://github
+.com/TheDeanLab/COMPASS/tree/main/downloads/base/zemax>`_..
+
 Baseplate Design
 ______________________________
 
@@ -271,6 +277,9 @@ With the baseplate designed, our final assembly for our illumination path looks 
 .. image:: Images/BaseplateAssembly_Top.png
     :align: center
     :alt: Baseplate Assembly Top
+
+The CAD files for our baseplate design are available in the following `github repository <https://github
+.com/TheDeanLab/COMPASS/tree/main/downloads/base/cad>`_.
 
 Note on Difference in Simulated and Physical Coordinate Definitions
 ______________________________
