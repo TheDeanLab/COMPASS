@@ -139,7 +139,6 @@ There are a few sets of criteria that help guide our potential lens selection:</
 <li><p>At the focus of our cylindrical lens, we want the beam spot size to stay under the size of our resonant galvo (12 mm diameter)</p></li>
 <li><p>We need the focal distance between the cylindrical lens and the galvo mirror system to be greater than ~55 mm due to
 mechanical considerations of the mirror mount used</p></li>
-<li><p>We want to overfill our objective, (Reasoning behind overfilling objective) , resulting in a thinner light sheet width</p></li>
 </ul>
 </div></blockquote>
 <p>With these criteria in mind, we can calculate a theoretic estimate of what our beam size is after each of our lenses. We
@@ -221,6 +220,7 @@ being quite similar at ~0.37 <span class="math notranslate nohighlight">\(\mu m\
 <p>Through Focus Spot analysis allows us to essentially see the evolution of the light sheet through the point of focus,
 where we can then estimate a sort of range where we expect the width of the light sheet to be thin enough for our
 imaging purposes, where the maximum usable light sheet width is the FWHM at the focus multiplied by <span class="math notranslate nohighlight">\(\sqrt{2}\)</span>.</p>
+<p>The full optimized Zemax lillumination path can be downloaded in the associated <a class="reference external" href="https://github.com/TheDeanLab/COMPASS/tree/main/downloads/base/zemax">github repository</a>.</p>
 </section>
 <section id="zemax-tolerancing-analysis">
 <h2>Zemax Tolerancing Analysis<a class="headerlink" href="#zemax-tolerancing-analysis" title="Permalink to this heading"></a></h2>
@@ -270,6 +270,8 @@ that affects the system most adversely is the galvo mirror element. The deviatio
 element are about a tenth of that of the larger machining tolerance case. Visually, in the worst case example, one can see
 that the resulting light sheet looks much closer to the nominal case than before as well.</p>
 <img alt="Results of tolerancing analysis when the offset corresponded to +-0.002&quot;" class="align-center" src="../_images/Tolerance_Fine.png" />
+<p>The results of our tolerancing analysis, as well as the associated lens files fo our best and wort case instances for
+both fine and coarse tolerancing are available at the associated <a class="reference external" href="https://github.com/TheDeanLab/COMPASS/tree/main/downloads/base/zemax">github repository</a>..</p>
 </section>
 <section id="baseplate-design">
 <h2>Baseplate Design<a class="headerlink" href="#baseplate-design" title="Permalink to this heading"></a></h2>
@@ -311,6 +313,7 @@ assembly at a desired height.</p>
 <p>With the baseplate designed, our final assembly for our illumination path looks as follows:</p>
 <img alt="Baseplate Assembly Iso" class="align-center" src="../_images/BaseplateAssembly_Iso.png" />
 <img alt="Baseplate Assembly Top" class="align-center" src="../_images/BaseplateAssembly_Top.png" />
+<p>The CAD files for our baseplate design are available in the following <a class="reference external" href="https://github.com/TheDeanLab/COMPASS/tree/main/downloads/base/cad">github repository</a>.</p>
 </section>
 <section id="note-on-difference-in-simulated-and-physical-coordinate-definitions">
 <h2>Note on Difference in Simulated and Physical Coordinate Definitions<a class="headerlink" href="#note-on-difference-in-simulated-and-physical-coordinate-definitions" title="Permalink to this heading"></a></h2>

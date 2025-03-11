@@ -71,7 +71,6 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Imaging Process</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#imaging-configurations">Imaging Configurations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#visualization-of-axes-mapping">Visualization of Axes Mapping</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#finding-the-focus">Finding the Focus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#minimizing-spherical-aberrations">Minimizing Spherical Aberrations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#sample-image-examples">Sample Image Examples</a></li>
 </ul>
@@ -138,9 +137,6 @@ stage along the z axis to control the focus of the detection path (f), and and a
 such that its normal is 60.5 degrees away from the y-axis.</p>
 <img alt="Layout of how the axis of the system are mapped" class="align-center" src="../_images/PhysicalAxesMaps.png" />
 </section>
-<section id="finding-the-focus">
-<h2>Finding the Focus<a class="headerlink" href="#finding-the-focus" title="Permalink to this heading"></a></h2>
-</section>
 <section id="minimizing-spherical-aberrations">
 <h2>Minimizing Spherical Aberrations<a class="headerlink" href="#minimizing-spherical-aberrations" title="Permalink to this heading"></a></h2>
 <p>Once the system has been assembled to the point of being able to take image stacks, the process of
@@ -200,8 +196,8 @@ stacked in a straight line but oriented along an angle, which is not the most ac
 On the deskewed image on the right, one can see that the beads are now properly angled correspond to our piezo angle
 mount, and that the PSFs of the beads is now correctly aligned along the z axis.</p>
 <img alt="Difference between an image set of 100 nm bead before deskewing (left) and after (right)" class="align-center" src="../_images/BeadDeskewExample.png" />
-<p>To do this deskew processing, we utilize custom-built python code via Jupyter notebooks (HAVE LINK TO NOTEBOOK
-DOWNLOAD?). The user needs to provide the correct file path to the .tif image stack collected via navigate, as well
+<p>To do this deskew processing, we utilize custom-built python code via Jupyter notebooks <a class="reference external" href="https://github.com/TheDeanLab/COMPASS/tree/main/downloads/shared/python">available here</a>. The user needs to provide the correct file path to the
+.tif image stack collected via navigate, as well
 as the parameters of the imaging system like z-step size, xy pixel size, and the angle that the images should be
 deskewed over. In our case, our deskew angle is equivalent to 90-60.5 degrees, where 60.5 degrees corresponds to the
 difference between the normal of our angle mount and the y-axis. If this value is unknown, one can use different
