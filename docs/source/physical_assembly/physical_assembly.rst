@@ -191,13 +191,13 @@ In order to fix our detection objective onto the tube lens, we must first prepar
 The tube lens assembly is now ready to be fixed onto the translation stage assembly:
     1. Place the tube lens assembly such that the tube lens lies within the curved region of the tube lens adapter
     2. While there isn't an exact science to the relative placement of the tube within the adapter, try to position
-    it such that more of the tube is extended out on the side where the objective will be mounted (our setup is shown
-    below for reference).
+       it such that more of the tube is extended out on the side where the objective will be mounted (our setup is shown
+       below for reference).
     3. Place the second half of the tube lens adapter such that the curved side fits onto the lube lens and position
-    it such that the holes of both halves of the adapter align with each other.
+       it such that the holes of both halves of the adapter align with each other.
     4. Using your choice of either M6 or 1/4"-20 screws and associated washers/nuts, place the screws with a washer
-    placed on them first into the aligned holes of the adapter. We used 4 of the adapter holes on each side, but more can
-    be used for extra security if desired.
+       placed on them first into the aligned holes of the adapter. We used 4 of the adapter holes on each side, but
+       more can be used for extra security if desired.
     5. Screw a washer onto each of the screws until they're secured against the bottom lip of the adapter.
 
 .. figure:: Images/tubelens2.png
@@ -219,7 +219,7 @@ adjustments will be made afterwards:
        recommend using `Thorlabs 1" Spacers <https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=851>`_ in place
        of washers here)
 
-.. figure:: Images/tubelens2.png
+.. figure:: Images/spacers.png
     :align: center
     :alt: Example of our setup for securing the translation stage to breadboard adapter onto our detection path
     baseplate
