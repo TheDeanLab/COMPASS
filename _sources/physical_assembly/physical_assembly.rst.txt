@@ -142,10 +142,10 @@ The assembly of the detection path begins with the translation stage and it's as
 (available here in two variants, based on whether or not one is using the 0.5" thick detection path baseplate):
     1. Turn the translation stage upside-down
     2. Place the breadboard adapter upside-down on top of the inverted translation stage (such that the raised
-    platform of the adapter is touching the bottom side of the translation stage)
+       platform of the adapter is touching the bottom side of the translation stage)
     3. Align the recesses on the bottom of the adapter with the holes on the bottom of the translation stage
     4. Fix the adapter onto the translation stage by screwing M6 screws into the recesses aligned with the
-    translation stage holes.
+       translation stage holes.
 
 .. figure:: Images/TSBBAdapter.png
     :align: center
@@ -156,7 +156,7 @@ The assembly of the detection path begins with the translation stage and it's as
 The next step is flipping the translation stage assembly right side up again, and then fixing the first of two halves
 of the tube lens adapter onto the top of the translation stage:
     1. Place the tube lens adapter half onto the top of the translation stage such that the block with two sets of
-    five recessed holes is touching the top of the translation stage.
+       five recessed holes is touching the top of the translation stage.
     2. Align the Recess holes on the adapter with the holes on the top of the translation stage.
     3. Fix the adapter onto the translation stage by screwing M6 screws into the aligned recess holes
 
@@ -168,7 +168,7 @@ of the tube lens adapter onto the top of the translation stage:
 
 Next, we'll focus on assembling the tube lens and filter wheel:
     1. Take the MIM to Filter wheel adapter and fix it onto the front port of the filter wheel using the associated
-    screw ports
+       screw ports
     2. With the adapter fixed, now screw the 400 mm tube lens into the adapter.
 
 .. figure:: Images/FW.png
@@ -210,14 +210,14 @@ The detection path assembly can now be fixed into place onto either the detectio
 table, keep in mind this process is meant to essentially place the unit in the ballpark of where it should be, finer
 adjustments will be made afterwards:
     1. Using the mounting holes on the translation stage assembly, place the assembly such that the edge of the
-    translation stage adapter facing the illumination path is roughly 9-10" away from the location of the illumination
-    objective.
+       translation stage adapter facing the illumination path is roughly 9-10" away from the location of the
+       illumination objective.
     2. Using the adjacent edge of the translation stage adapter (the one that should be perpendicular to the
-    orientation of the illumination path), try to align the side of the adapter with the mounting hole of the
-    illumination objective.
+       orientation of the illumination path), try to align the side of the adapter with the mounting hole of the
+       illumination objective.
     3. Screw the translation stage adapter into either the optical table to the detection path baseplate (we
-    recommend using `Thorlabs 1" Spacers <https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=851>`_ in place
-    of washers here)
+       recommend using `Thorlabs 1" Spacers <https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=851>`_ in place
+       of washers here)
 
 .. figure:: Images/tubelens2.png
     :align: center
@@ -231,9 +231,9 @@ With the assembly fixed in place, the camera can then be screwed into the filter
     1. Align the front thread of the camera with the back port of the filter wheel
     2. Screw the camera into the filter wheel until there is resistance
     3. Slowly adjust the camera tilt until the top surface is leveled (we use a bubble leveling tool for this, shown
-    below)
+       below)
 
-.. figure:: Images/camerarotation.png
+.. figure:: Images/Camerarotation.png
     :align: center
     :alt: Mounting of the camera
 
