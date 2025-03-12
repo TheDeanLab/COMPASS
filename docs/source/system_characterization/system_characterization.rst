@@ -5,7 +5,7 @@ System Characterization
 ###############################
 
 Beam Characterization and PSF Analysis
-______________________________
+________________________________________
 
 To characterize our constructed system, we first image the generated light-sheet using the sample chamber transmission configuration shown below, where the illumination objective is placed directly in front of the detection objective. The image of our light sheet is shown in (a) below, where the cross-sectional profile of the light-sheet is shown in (b) and reveals a z-FWHM of ~0.415 um.
 

@@ -8,11 +8,14 @@ Baseplate Assembly Process
 ______________________________
 
 Our baseplate design was made with ease of assembly in mind. The basic process involves aligning Polaris posts with
-dowell pins and screwing them using 1/4"-20 Screws in at the predetermined hole locations on the breadboard.
+dowel pins and screwing them using 1/4"-20 Screws in at the predetermined hole locations on the breadboard.
 This general process is depicted below:
 
-.. image:: Images/BaseplateAssembly.png
+.. figure:: Images/BaseplateAssembly.png
     :align: center
+    :alt: General process for baseplate assembly
+
+    **Figure 1:** General process for baseplate assembly
 
 To either mount the baseplate onto an optical table or onto separate posts, the process is similar in that
 just requires screwing 1/4"-20 screws into either an optical breadboard or onto separate posts at the four corner holes.
@@ -41,7 +44,7 @@ Illumination Path Assembly
 ###############################
 
 1. Initial Laser Collimation and Alignment
-______________________________
+__________________________________________
 
 When first assembling the system, ensuring proper output collimation from the fiber laser source is critical. There
 are multiple checks that one can take for this step, but we utilize a combination of a shear-plate interferometer
@@ -114,8 +117,8 @@ mirror.
 Hardware
 ###############################
 
-Note on Difference in Simulated and Physical Coordinate Definitions
-______________________________
+Differences in Simulated and Physical Coordinate Definitions
+____________________________________________________________
 
 It should be noted briefly that when discussing our physical microscope systems using navigate software, the definitions
 for the coordinate axes is different than that of our simulations. This is due to a difference in standardized
@@ -184,7 +187,7 @@ other custom parts can be found `here <https://github
     :alt: 5 mm coverslip sample holder design
 
 Assembling the Magnetic Sample Mount
-______________________________
+____________________________________
 
 
 As a safeguard for the risk of the sample crashing into either the illumination or detection objective during sample
@@ -269,12 +272,14 @@ With that verified, now confirm that the voltage output from the PCI Board is wo
 
 With the voltage output of the PCI board verified, plug the PCI Board voltage cable output back into the EXT IN slot and
 verify that the position output of the Piezo reads similarly on the oscilloscope:
+
     1. Plug a BNC Cable into the SENSOR OUT connection on the tiger controller panel.
     2. Plug the other end of that cable into the oscilloscope.
     3. Verify that a sinewave output is seen on the oscilloscope.
 
 If the PCI Board voltage is working as intended but the piezo position output doesn't seem to work, try ensuring that
 the piezo is set in `External Input mode, and not Controller Input mode <https://asiimaging.com/docs/commands/pm>`_:
+
     1. Use the "PM Q?" (Our piezo corresponds to Q) command:
         - the output was "Q = 0" originally, telling us that it's in Controller Input mode
     2. Use the "PM Q = 1" command to set the piezo into External Input mode:

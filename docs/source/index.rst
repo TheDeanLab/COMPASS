@@ -56,8 +56,8 @@ Dr. John Haug performed all simulations, design, testing, and validation of COMP
 cells for testing imaging performance and assisted in their visualization. Dr. Kevin Dean oversaw and provided feedback on all research operations. This project also benefited from valuable feedback from the **Dean, Fiolka, and Danuser labs** at **UTSW**.
 
 **Acknowledgements**
-============
-The authors extend their gratitude to **Calvin Jones** and **Dr. Sophia Theodossiou** (Boise State University) for
+====================
+The authors extend their gratitude to Calvin Jones and `Dr. Sophia Theodossiou <https://www.boisestate.edu/coen-mbe/directory/sophia-theodossiou/>`_ (Boise State University) for
 their assistance in designing and printing the custom sample chamber, as well as **Melissa Glidewell** for her
 initial evaluation of optical tolerances.
 
