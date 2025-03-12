@@ -52,6 +52,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Overview of Subcellular Light-Sheet Microscope Technologies</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#lattice-light-sheet-microscopy-llsm">Lattice Light-Sheet Microscopy (LLSM)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#field-synthesis">Field Synthesis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dual-inverted-selective-plane-illumination-microscopy-dispim">Dual Inverted Selective Plane Illumination Microscopy (diSPIM)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#axially-swept-light-sheet-microscopy-aslm">Axially Swept Light-Sheet Microscopy (ASLM)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#oblique-plane-microscopy-opm">Oblique Plane Microscopy (OPM)</a></li>
 </ul>
@@ -125,6 +126,10 @@ The increased imaging speed significantly reduced <strong>motion blur</strong>, 
 rapid morphological transitions such as <strong>filopodial buckling</strong>.</p>
 </section>
 <hr class="docutils" />
+<section id="dual-inverted-selective-plane-illumination-microscopy-dispim">
+<h2>Dual Inverted Selective Plane Illumination Microscopy (diSPIM)<a class="headerlink" href="#dual-inverted-selective-plane-illumination-microscopy-dispim" title="Permalink to this heading"></a></h2>
+<p><strong>Dual Inverted Selective Plane Illumination Microscopy (diSPIM)</strong> is a commercially available light-sheet system that utilizes <strong>two opposing objectives</strong> to achieve isotropic resolution through sequential orthogonal illumination and detection. Unlike conventional LSFM, where a single objective delivers the light-sheet and another detects fluorescence, diSPIM alternates between two objectives, each serving both roles in successive acquisitions. This configuration enables <strong>volumetric imaging with improved axial resolution</strong>, as images from both orientations can be fused computationally to reconstruct a high-fidelity 3D volume. While diSPIM is <strong>well-suited for live-cell imaging</strong>, its reliance on sequential acquisition leads to <strong>lower temporal resolution</strong> compared to single-objective LSFM approaches. Additionally, alignment complexity and computational post-processing requirements can introduce challenges, particularly for rapid dynamic events. Despite these limitations, diSPIM remains a <strong>flexible and widely adopted platform</strong>, particularly in studies requiring high-resolution imaging of small organisms, embryos, and adherent cells.</p>
+</section>
 <section id="axially-swept-light-sheet-microscopy-aslm">
 <h2>Axially Swept Light-Sheet Microscopy (ASLM)<a class="headerlink" href="#axially-swept-light-sheet-microscopy-aslm" title="Permalink to this heading"></a></h2>
 <p>Axially Swept Light-Sheet Microscopy (ASLM) overcomes many of the optical constraints of traditional light-sheet imaging by implementing a <strong>rapidly scanned Gaussian beam</strong> to create an extended, ultra-thin light-sheet. Unlike LLSM, ASLM minimizes <strong>sidelobe artifacts</strong>, resulting in superior <strong>optical sectioning and contrast</strong> across a larger field of view. Key advantages of ASLM include:
@@ -190,7 +195,22 @@ accommodating diverse experimental conditions</strong>.</p>
 </ul>
 </td>
 </tr>
-<tr class="row-even"><td><p><strong>ASLM</strong></p></td>
+<tr class="row-even"><td><p><strong>diSPIM</strong></p></td>
+<td><ul class="simple">
+<li><p>Dual-objective design improves axial resolution</p></li>
+<li><p>Enables isotropic volumetric imaging via fusion</p></li>
+<li><p>Well-suited for live-cell and embryo imaging</p></li>
+<li><p>Commercially available and widely adopted</p></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li><p>Multiple volumes must be acquired</p></li>
+<li><p>Requires post-processing for image fusion</p></li>
+<li><p>Greater alignment complexity</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>ASLM</strong></p></td>
 <td><ul class="simple">
 <li><p>High contrast and improved optical sectioning</p></li>
 <li><p>Isotropic resolution (~300–400 nm)</p></li>
@@ -204,7 +224,7 @@ accommodating diverse experimental conditions</strong>.</p>
 </ul>
 </td>
 </tr>
-<tr class="row-odd"><td><p><strong>OPM</strong></p></td>
+<tr class="row-even"><td><p><strong>OPM</strong></p></td>
 <td><ul class="simple">
 <li><p>Single-objective system (simplified geometry)</p></li>
 <li><p>High-speed volumetric imaging</p></li>
