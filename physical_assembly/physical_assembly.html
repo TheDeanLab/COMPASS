@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Physical Assembly &mdash; COMPASS  documentation</title>
+  <title>Microscope Assembly &mdash; COMPASS  documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
 
@@ -53,29 +53,35 @@
 <li class="toctree-l1"><a class="reference internal" href="../design_principles/required_software.html">Software</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../hardware/index.html">Room and Hardware Considerations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../design_principles/design_process.html">Design Process</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Physical Assembly</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#baseplate-assembly-process">Baseplate Assembly Process</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#mounting-lenses">Mounting Lenses</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Microscope Assembly</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#illumination-path">Illumination Path</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#mounting-lenses">Mounting Lenses</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#initial-laser-collimation-and-alignment">Initial Laser Collimation and Alignment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mounting-of-optic-posts">Mounting of Optic Posts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mounting-of-optics">Mounting of Optics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#final-alignment-adjustments">Final Alignment Adjustments</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="#illumination-path-assembly">Illumination Path Assembly</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#initial-laser-collimation-and-alignment">1. Initial Laser Collimation and Alignment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#mounting-of-optic-posts">2. Mounting of Optic Posts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#mounting-of-optics">3. Mounting of Optics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#final-alignment-adjustments">4. Final Alignment Adjustments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#detection-path">Detection Path</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#detection-path-assembly">Detection Path Assembly</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#detection-path-positioning">Detection Path Positioning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#correction-collar-optimization">Correction Collar Optimization</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="#hardware">Hardware</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#differences-in-simulated-and-physical-coordinate-definitions">Differences in Simulated and Physical Coordinate Definitions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#visualization-of-axes-mapping">Visualization of Axes Mapping</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#the-piezo-angle-mount">The Piezo Angle Mount</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#sample-holder-design">Sample Holder Design</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#assembling-the-magnetic-sample-mount">Assembling the Magnetic Sample Mount</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#wiring-diagram">Wiring Diagram</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#piezo-setup-troubleshooting">Piezo Setup &amp; Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#optomechanics">Optomechanics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#visualization-of-axes-mapping">Visualization of Axes Mapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-piezo-angle-mount">The Piezo Angle Mount</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sample-holder-design">Sample Holder Design</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#assembling-the-magnetic-sample-mount">Assembling the Magnetic Sample Mount</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="#parts-list">Parts List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#optoelectronics">Optoelectronics</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#wiring-diagram">Wiring Diagram</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#piezo-setup-troubleshooting">Piezo Setup &amp; Troubleshooting</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../system_characterization/system_characterization.html">System Characterization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../imaging/imaging.html">Imaging Process</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../imaging/imaging.html#image-stack-processing">Image Stack Processing</a></li>
@@ -96,7 +102,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Physical Assembly</li>
+      <li class="breadcrumb-item active">Microscope Assembly</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/physical_assembly/physical_assembly.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -106,10 +112,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="physical-assembly">
-<span id="assembly-home"></span><h1>Physical Assembly<a class="headerlink" href="#physical-assembly" title="Permalink to this heading"></a></h1>
-<section id="baseplate-assembly-process">
-<h2>Baseplate Assembly Process<a class="headerlink" href="#baseplate-assembly-process" title="Permalink to this heading"></a></h2>
+  <section id="microscope-assembly">
+<span id="assembly-home"></span><h1>Microscope Assembly<a class="headerlink" href="#microscope-assembly" title="Permalink to this heading"></a></h1>
+<p>A breakdown spreadsheet of all components used in this build is viewable under the COMPASS Base tab
+<a class="reference external" href="https://365utsouthwestern-my.sharepoint.com/:x:/g/personal/john_haug_utsouthwestern_edu/EanyUn-KA9JFlo4WwGfxktcBnvZMAhbmhdd7LOCfLSL5bQ?e=NZO83I">here</a>:</p>
+<section id="illumination-path">
+<h2>Illumination Path<a class="headerlink" href="#illumination-path" title="Permalink to this heading"></a></h2>
 <p>Our baseplate design was made with ease of assembly in mind. The basic process involves aligning Polaris posts with
 dowel pins and screwing them using 1/4”-20 Screws in at the predetermined hole locations on the breadboard.
 This general process is depicted below:</p>
@@ -121,41 +129,48 @@ This general process is depicted below:</p>
 </figure>
 <p>To either mount the baseplate onto an optical table or onto separate posts, the process is similar in that
 just requires screwing 1/4”-20 screws into either an optical breadboard or onto separate posts at the four corner holes.</p>
-<img alt="General process to place posts on baseplate corners" class="align-center" src="../_images/BaseplateAssembly_Corners.png" />
-</section>
+<figure class="align-center" id="id4">
+<img alt="General process to place posts on baseplate corners" src="../_images/BaseplateAssembly_Corners.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Figure 2:</strong> General process to place posts on baseplate corners</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <section id="mounting-lenses">
-<h2>Mounting Lenses<a class="headerlink" href="#mounting-lenses" title="Permalink to this heading"></a></h2>
+<h3>Mounting Lenses<a class="headerlink" href="#mounting-lenses" title="Permalink to this heading"></a></h3>
 <p>Mounting lenses into a Polaris lens mount and onto an associated post is a fairly straightforward process. The
 general flow is shown in the image below, where first the flatter face of the desired lens should be placed such that
 it is touching the metal boundary on the lens mount itself. Then the lens should be fixed into place by screwing the
 lock screw on the top of the lens mount. With the lens secured in the mount, then two dowel pins should be placed in
 the appropriate holes on the Polaris post, and then the lens mount should be placed such that the two holes on the
 lens mount align with the pins on the Polaris post. Then the lens mount should be anchored into place by screwing it
-into the Polaris post.</p>
-<img alt="General process for mounting a lens into a Polaris holder and onto a post" class="align-center" src="../_images/LensMounting.png" />
+into the Polaris post. Additional information can be found at <a class="reference external" href="https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=10056">Thorlabs</a>.</p>
+<figure class="align-center" id="id5">
+<img alt="General process for mounting a lens into a Polaris holder and onto a post" src="../_images/LensMounting.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Figure 3:</strong> General process for mounting a lens into a Polaris holder and onto a post</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 </section>
-</section>
-<section id="illumination-path-assembly">
-<h1>Illumination Path Assembly<a class="headerlink" href="#illumination-path-assembly" title="Permalink to this heading"></a></h1>
 <section id="initial-laser-collimation-and-alignment">
-<h2>1. Initial Laser Collimation and Alignment<a class="headerlink" href="#initial-laser-collimation-and-alignment" title="Permalink to this heading"></a></h2>
-<p>When first assembling the system, ensuring proper output collimation from the fiber laser source is critical. There
-are multiple checks that one can take for this step, but we utilize a combination of a shear-plate interferometer
-(<a class="reference external" href="https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=2970">https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=2970</a>) and two pinhole apertures placed at opposite ends
-along the length of the baseplate. Shear-plate interferometers are designed to split and interfere an input beam of
-coherent light, such that when the beam is collimated there are interference fringes aligned vertically with a
-reference line. The fiber laser collimator we used for this system is the Thorlabs CFC11A-A (<a class="reference external" href="https://www.thorlabs.com/thorproduct.cfm?partnumber=CFC11A-A">https://www.thorlabs.com/thorproduct.cfm?partnumber=CFC11A-A</a>), which features an adjustable barrel which controls the position of collimation optics within the element.</p>
-<p>The basic assembly process involves first inserting and fixing the CFC11A-A into a Thorlabs AD15S2 adapter, which
-allows it to then be mounted into a 2.5” Polaris K1XY mount. This assembly is then mounted onto the respective Polaris
-post at the start of the baseplate. The fiber laser source is then able to be directly mounted into the CFC11A-A, making sure that the protrusion on the fiber wire aligns with the open section of the CFC11A-A port. The basic process of ensuring collimation then involves turning on the laser source, and placing the shear-plate interferometer such that the input port aligns with the output of the laser unit. Then, by slowly adjusting the barrel of the CFC11A-A and observing the interference fringe orientations along the top display of the interferometer, one is able to adjust the beam until it is properly collimated.</p>
-<img alt="Shear Plate interferometer and collimator lens" class="align-center" src="../_images/LaserAlignment1.png" />
-<p>With the beam collimated, the process of beam alignment involves adjusting the position control knobs on the K1XY to
-have the beam pass through two pinhole apertures along the optical path. The height of the initial laser output is designed to be at 3.75” above the top surface of the baseplate, so selecting appropriate post heights for the apertures such that their centers rest at 3.75” is essential. In our case, we use Thorlabs ID12 pinhole apertures (<a class="reference external" href="https://www.thorlabs.com/thorproduct.cfm?partnumber=ID12">https://www.thorlabs.com/thorproduct.cfm?partnumber=ID12</a>), so using a post height of 3.25” will ensure that they are at the proper height for alignment. We designed a <a class="reference external" href="https://github.com/TheDeanLab/COMPASS/tree/main/downloads/common/cad">custom ID12 to Polaris adapter</a> to ensure the aperture is at the proper height and properly
-aligned along the designated Polaris axis. When using this method, the ID12 to Polaris Adapters can just be directly mounted onto the holes designated for L1 and the Illumination Objective, depicted below, to cover the length of the baseplate. With the pinholes placed, the process becomes iterative by making small adjustments on the K1XY tip/tilt knobs and XY position screws until the beam passes through both pinholes.</p>
-<img alt="Performing beam alignment across the baseplate" class="align-center" src="../_images/LaserAlignment2.png" />
+<h3>Initial Laser Collimation and Alignment<a class="headerlink" href="#initial-laser-collimation-and-alignment" title="Permalink to this heading"></a></h3>
+<p>When first assembling the system, ensuring proper output collimation from the fiber laser source is critical. There are multiple checks that one can take for this step, but we utilize a combination of a shear-plate interferometer (<a class="reference external" href="https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=2970">https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=2970</a>) and two pinhole apertures placed at opposite ends along the length of the baseplate. Shear-plate interferometers are designed to split and interfere an input beam of coherent light, such that when the beam is collimated there are interference fringes aligned vertically with a reference line. The fiber laser collimator we used for this system is the Thorlabs CFC11A-A (<a class="reference external" href="https://www.thorlabs.com/thorproduct.cfm?partnumber=CFC11A-A">https://www.thorlabs.com/thorproduct.cfm?partnumber=CFC11A-A</a>), which features an adjustable barrel which controls the position of collimation optics within the element.</p>
+<p>The basic assembly process involves first inserting and fixing the CFC11A-A into a Thorlabs AD15S2 adapter, which allows it to then be mounted into a 2.5” Polaris K1XY mount. This assembly is then mounted onto the respective Polaris post at the start of the baseplate. The fiber laser source is then able to be directly mounted into the CFC11A-A, making sure that the protrusion on the fiber wire aligns with the open section of the CFC11A-A port. The basic process of ensuring collimation then involves turning on the laser source, and placing the shear-plate interferometer such that the input port aligns with the output of the laser unit. Then, by slowly adjusting the barrel of the CFC11A-A and observing the interference fringe orientations along the top display of the interferometer, one is able to adjust the beam until it is properly collimated.</p>
+<figure class="align-center" id="id6">
+<img alt="Shear Plate interferometer and collimator lens" src="../_images/LaserAlignment1.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Figure 4:</strong> Shear Plate interferometer and collimator lens</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>With the beam collimated, the process of beam alignment involves adjusting the position control knobs on the K1XY to have the beam pass through two pinhole apertures along the optical path. The height of the initial laser output is designed to be at 3.75” above the top surface of the baseplate, so selecting appropriate post heights for the apertures such that their centers rest at 3.75” is essential. In our case, we use Thorlabs ID12 pinhole apertures (<a class="reference external" href="https://www.thorlabs.com/thorproduct.cfm?partnumber=ID12">https://www.thorlabs.com/thorproduct.cfm?partnumber=ID12</a>), so using a post height of 3.25” will ensure that they are at the proper height for alignment. We designed a <a class="reference external" href="https://github.com/TheDeanLab/COMPASS/tree/main/downloads/common/cad">custom ID12 to Polaris adapter</a> to ensure the aperture is at the proper height and properly aligned along the designated Polaris axis. When using this method, the ID12 to Polaris Adapters can just be directly mounted onto the holes designated for L1 and the Illumination Objective, depicted below, to cover the length of the baseplate. With the pinholes placed, the process becomes iterative by making small adjustments on the K1XY tip/tilt knobs and XY position screws until the beam passes through both pinholes.</p>
+<figure class="align-center" id="id7">
+<img alt="Performing beam alignment across the baseplate" src="../_images/LaserAlignment2.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Figure 5:</strong> Performing beam alignment across the baseplate</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 </section>
 <section id="mounting-of-optic-posts">
-<h2>2. Mounting of Optic Posts<a class="headerlink" href="#mounting-of-optic-posts" title="Permalink to this heading"></a></h2>
+<h3>Mounting of Optic Posts<a class="headerlink" href="#mounting-of-optic-posts" title="Permalink to this heading"></a></h3>
 <p>After ensuring basic collimation and alignment of the laser system, the next step is mounting the appropriate polaris
 post size for each optical element in the system. The overall breakdown of which size posts went with each hole
 location is listed below. Where holes (3),(4), and (10) are placements for optional elements in the system. (3) is
@@ -166,146 +181,183 @@ that the laser being used for the system isn’t directly controlled via a compu
 light is not photobleaching a sample unless imaging is taking place. (10) is dedicated space for a neutral density
 (ND) filter, in the event that the power of the laser used needs additional reduction not directly addressable
 through the laser controls itself.</p>
-<img alt="Schematic of which holes use which post heights" class="align-center" src="../_images/PostHeightBreakdown_Updated.png" />
+<figure class="align-center" id="id8">
+<img alt="Schematic of which holes use which post heights" src="../_images/PostHeightBreakdown_Updated.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Figure 6:</strong> Schematic of which holes use which post heights</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 </section>
 <section id="mounting-of-optics">
-<h2>3. Mounting of Optics<a class="headerlink" href="#mounting-of-optics" title="Permalink to this heading"></a></h2>
-<p>With the posts in place, the next step involves mounting the optics elements themselves onto the posts. When mounting
-elements (6), the VA100 rectangular aperture, and (7), the RSP1 rotation mount, it should be noted that the
-corresponding element should first be fixed onto their respective Polaris adapter and then onto the Polaris posts. In
-addition, take measures to mount the 45 degree mirror (9) fully prior to mounting the resonant galvo to ensure that
-the galvo is not accidentally hit during installation of the 45 degree mirror.</p>
-<p>To construct the 45 degree mirror assembly, first mount the Polaris K1S4 onto the Polaris-MA45 45 degree mounting
-adapter, and then place a 1” diameter mirror into the K1S4 and secure it using the K1S4 mounting screw.</p>
-<p>To construct the illumination objective assembly, first mount the Polaris 1XY onto its respective 1.5” post. The
-threading of the 1XY (SM1) does not match that of our illumination objective used (M25x0.75), so an SM1A12 adapter
-must first be installed onto either the 1XY or the illumination objective. Then, the objective can be mounted onto
+<h3>Mounting of Optics<a class="headerlink" href="#mounting-of-optics" title="Permalink to this heading"></a></h3>
+<p>With the posts in place, the next step involves mounting the optics elements themselves onto the posts. When mounting elements (6), the VA100 rectangular aperture, and (7), the RSP1 rotation mount, it should be noted that the corresponding element should first be fixed onto their respective Polaris adapter and then onto the Polaris posts. In addition, take measures to mount the 45 degree mirror (9) fully prior to mounting the resonant galvo to ensure that the galvo is not accidentally hit during installation of the 45 degree mirror.</p>
+<p>To construct the 45 degree mirror assembly, first mount the Polaris K1S4 onto the Polaris-MA45 45 degree mounting adapter, and then place a 1” diameter mirror into the K1S4 and secure it using the K1S4 mounting screw.</p>
+<p>To construct the illumination objective assembly, first mount the Polaris 1XY onto its respective 1.5” post. The threading of the 1XY (SM1) does not match that of our illumination objective used (M25x0.75), so an SM1A12 adapter must first be installed onto either the 1XY or the illumination objective. Then, the objective can be mounted onto
 the 1XY.</p>
 </section>
 <section id="final-alignment-adjustments">
-<h2>4. Final Alignment Adjustments<a class="headerlink" href="#final-alignment-adjustments" title="Permalink to this heading"></a></h2>
+<h3>Final Alignment Adjustments<a class="headerlink" href="#final-alignment-adjustments" title="Permalink to this heading"></a></h3>
 <p>Once all the optics have been properly mounted, the final step for ensuring a working illumination path is to center
 the beam after the 45 degree mirror onto the center of back lens surface of the illumination objective. The primary
 method of doing this is through adjusting the xy tip/tilt knobs on the K1S4 Polaris mount that houses the 45 degree
 mirror.</p>
 </section>
 </section>
-<section id="hardware">
-<h1>Hardware<a class="headerlink" href="#hardware" title="Permalink to this heading"></a></h1>
-<section id="differences-in-simulated-and-physical-coordinate-definitions">
-<h2>Differences in Simulated and Physical Coordinate Definitions<a class="headerlink" href="#differences-in-simulated-and-physical-coordinate-definitions" title="Permalink to this heading"></a></h2>
-<p>It should be noted briefly that when discussing our physical microscope systems using navigate software, the definitions
-for the coordinate axes is different than that of our simulations. This is due to a difference in standardized
-definitions for the axes in our previous systems and how Zemax defines these same axes. This difference is depicted in
-the picture below:</p>
-<img alt="Difference in coordinate axes for simulation and physical setup" class="align-center" src="../_images/CoordinateSchemeChange1.png" />
+<section id="detection-path">
+<h2>Detection Path<a class="headerlink" href="#detection-path" title="Permalink to this heading"></a></h2>
+<p>&#64;JOHN, do we have anything on the assembly of the detection path, and the positioning of it relative to the illumination path? I assume it will have to go here, and we will need to adjust the figure numbers throughout the text that follows.</p>
+<section id="detection-path-assembly">
+<h3>Detection Path Assembly<a class="headerlink" href="#detection-path-assembly" title="Permalink to this heading"></a></h3>
+<p>Put stuff together…</p>
 </section>
+<section id="detection-path-positioning">
+<h3>Detection Path Positioning<a class="headerlink" href="#detection-path-positioning" title="Permalink to this heading"></a></h3>
+<p>Put stuff in place…</p>
+</section>
+<section id="correction-collar-optimization">
+<h3>Correction Collar Optimization<a class="headerlink" href="#correction-collar-optimization" title="Permalink to this heading"></a></h3>
+<p>Twist stuff here…</p>
+</section>
+</section>
+<section id="optomechanics">
+<h2>Optomechanics<a class="headerlink" href="#optomechanics" title="Permalink to this heading"></a></h2>
 <section id="visualization-of-axes-mapping">
-<h2>Visualization of Axes Mapping<a class="headerlink" href="#visualization-of-axes-mapping" title="Permalink to this heading"></a></h2>
-<p>In our system we essentially have 5 different translation stages at work: the standard x,y, and z axes, an additional
-stage along the z axis to control the focus of the detection path (f), and and axis associated with the piezo positioned
-such that its normal is 60.5 degrees away from the y-axis.</p>
-<img alt="Layout of how the axis of the system are mapped" class="align-center" src="../_images/PhysicalAxesMaps1.png" />
+<h3>Visualization of Axes Mapping<a class="headerlink" href="#visualization-of-axes-mapping" title="Permalink to this heading"></a></h3>
+<p>In our system we have 5 different translation stages at work: the standard x,y, and z axes, an additional stage along the z axis to control the focus of the detection path (f), and and axis associated with the piezo positioned such that its normal is 60.5 degrees away from the y-axis.</p>
+<figure class="align-center" id="id9">
+<a class="reference internal image-reference" href="../_images/PhysicalAxesMaps1.png"><img alt="Layout of how the axis of the system are mapped" src="../_images/PhysicalAxesMaps1.png" style="width: 220px;" /></a>
+<figcaption>
+<p><span class="caption-text"><strong>Figure 7:</strong> Layout of how the axis of the system are mapped</span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Coordinate System Differences</strong></p>
+<p>The coordinate axes used in <strong>optical simulations</strong> differ from those in the <strong>physical microscope system</strong>
+controlled by <strong>navigate</strong>. This discrepancy arises from <strong>standardized axis conventions</strong> in Zemax versus
+those historically used in our previous systems. Users should be mindful of this distinction when interpreting
+simulation results versus real-world microscope operation. The differences are illustrated below:</p>
+<img alt="Difference in coordinate axes for simulation and physical setup" class="align-center" src="../_images/CoordinateSchemeChange1.png" />
+</div>
 </section>
 <section id="the-piezo-angle-mount">
-<h2>The Piezo Angle Mount<a class="headerlink" href="#the-piezo-angle-mount" title="Permalink to this heading"></a></h2>
-<p>We designed a custom angled mount for our <a class="reference external" href="https://piezoconcept-store.squarespace.com/1-axis/p/hs1">Piezoconcept HS1 piezo</a> in order to be able to scan our sample easily between our two
-objectives by translating a single motorized unit (in this case the piezo), instead of having to calculate and
-program the movement of two translation stages in tandem for both the y and z directions. The anatomy of our angled
-mount is broken down in the figure below, where there are four translation stage mounting holes to attach the unit to
-an ASI translation stage, nine Piezo mounting holes that correspond to the mounting scheme of
-our piezo unit, as well as four through-holes and a window for ease of access for the mounting process. We provide
-the CAD files for this mount <a class="reference external" href="https://github.com/TheDeanLab/COMPASS/tree/main/downloads/common/cad">here</a>, and have had success in using both 3D printed and
-aluminum machined versions of the unit. It’s recommended to first mount the angle mount onto the translation stage
-unit before mounting the piezo on the angle mount to ensure access to all the through-holes.</p>
-<img alt="Breakdown of our custom angle piezo angle mount" class="align-center" src="../_images/AnglemountAnatomy.png" />
-<p>The installation of our custom angled piezo mount is designed to be directly compatible with ASI translation stages.
-ASI translation stages feature M6 hole pairs that are spaced along the length of the translation stage at intervals
-dependent on the specific stage one is using. The mounting process involves aligning these 4 holes with 4 of the M6
-holes on the translation stage and screwing them in. For ease of screwing in the base, there are four through holes on
-the angled face of the mount shown in B that a screwdriver is able to pass directly through to screw as shown in C. An
-alternative method of mounting is shown in D, where the window on the back of the angle mount is able to be screwed
-through as well.</p>
-<img alt="General process for mounting our piezo angle mount onto an ASI translation stage" class="align-center" src="../_images/Anglemount.png" />
+<h3>The Piezo Angle Mount<a class="headerlink" href="#the-piezo-angle-mount" title="Permalink to this heading"></a></h3>
+<p>We designed a custom angled mount for our <a class="reference external" href="https://piezoconcept-store.squarespace.com/1-axis/p/hs1">Piezoconcept HS1 piezo</a> in order to be able to scan our sample easily between our two objectives by translating a single motorized unit (in this case the piezo), instead of having to calculate and program the movement of two translation stages in tandem for both the y and z directions. The anatomy of our angled mount is broken down in the figure below, where there are four translation stage mounting holes to attach the unit to an ASI translation stage, nine Piezo mounting holes that correspond to the mounting scheme of our piezo unit, as well as four through-holes and a window for ease of access for the mounting process. We provide the CAD files for this mount <a class="reference external" href="https://github.com/TheDeanLab/COMPASS/tree/main/downloads/common/cad">here</a>, and have had success in using both 3D printed and aluminum machined versions of the unit. It’s recommended to first mount the angle mount onto the translation stage unit before mounting the piezo on the angle mount to ensure access to all the through-holes.</p>
+<figure class="align-center" id="id10">
+<img alt="Breakdown of our custom angle piezo angle mount" src="../_images/AnglemountAnatomy.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Figure 8:</strong> Breakdown of our custom angle piezo angle mount.</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>The installation of our custom angled piezo mount is designed to be directly compatible with ASI translation stages. ASI translation stages feature M6 hole pairs that are spaced along the length of the translation stage at intervals dependent on the specific stage one is using. The mounting process involves aligning these 4 holes with 4 of the M6 holes on the translation stage and screwing them in. For ease of screwing in the base, there are four through holes on the angled face of the mount shown in B that a screwdriver is able to pass directly through to screw as shown in C. An alternative method of mounting is shown in D, where the window on the back of the angle mount is able to be screwed through as well.</p>
+<figure class="align-center" id="id11">
+<img alt="General process for mounting our piezo angle mount onto an ASI translation stage" src="../_images/Anglemount.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Figure 9:</strong> General process for mounting our piezo angle mount onto an ASI translation stage</span><a class="headerlink" href="#id11" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 </section>
 <section id="sample-holder-design">
-<h2>Sample Holder Design<a class="headerlink" href="#sample-holder-design" title="Permalink to this heading"></a></h2>
-<p>Our sample holder design is built for using fixed cells on a 5 mm coverslip, and is shown below. The design features a
-clamp-like method of securing the 5 mm coverslip in place, where the coverslip rests in an inset region and the clamp
-is screwed in via an M1.6 screw in the back of the holder. All associated files for this design and
-other custom parts can be found <a class="reference external" href="https://github.com/TheDeanLab/COMPASS/tree/main/downloads/common/cad">here</a>.</p>
-<img alt="5 mm coverslip sample holder design" class="align-center" src="../_images/S_SampleHolderAssembly.png" />
+<h3>Sample Holder Design<a class="headerlink" href="#sample-holder-design" title="Permalink to this heading"></a></h3>
+<p>Our sample holder design is built for imaging cells on a <a class="reference external" href="https://www.fishersci.com/shop/products/5mm-cover-slip-german-glass/50949439">5 mm coverslip</a>, and is shown below. The design features a clamp-like method of securing the 5 mm coverslip in place, where the coverslip rests in an inset region and the clamp is screwed in via an M1.6 screw in the back of the holder. All associated files for this design and other custom parts can be found <a class="reference external" href="https://github.com/TheDeanLab/COMPASS/tree/main/downloads/common/cad">here</a>.</p>
+<figure class="align-center" id="id12">
+<img alt="5 mm coverslip sample holder design" src="../_images/S_SampleHolderAssembly.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Figure 10:</strong> 5 mm coverslip sample holder design.</span><a class="headerlink" href="#id12" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 </section>
 <section id="assembling-the-magnetic-sample-mount">
-<h2>Assembling the Magnetic Sample Mount<a class="headerlink" href="#assembling-the-magnetic-sample-mount" title="Permalink to this heading"></a></h2>
-<p>As a safeguard for the risk of the sample crashing into either the illumination or detection objective during sample
-positioning or imaging, we opted to incorporate a magnetic mount for our sample holder. We use a Thorlabs KBT1X1T and
-KBB1X1 as our magnetic mount pair, and then mount our sample holder onto the KBT1X1T using a  <a class="reference external" href="https://github.com/TheDeanLab/COMPASS/tree/main/downloads/common/cad">custom adapter</a>. The KBB1X1 is affixed to the piezo using an M2.5 screw, and using a small leveling tool (shown below)
-during this step is helpful to ensure that the magnetic base is mounted as level as possible for the imaging process.</p>
-<img alt="Basic assembly of magnetic sample holder mount" class="align-center" src="../_images/MagneticMountSampleHolder.png" />
+<h3>Assembling the Magnetic Sample Mount<a class="headerlink" href="#assembling-the-magnetic-sample-mount" title="Permalink to this heading"></a></h3>
+<p>As a safeguard for the risk of the sample crashing into either the illumination or detection objective during sample positioning or imaging, we opted to incorporate a magnetic mount for our sample holder. We use a Thorlabs KBT1X1T and KBB1X1 as our magnetic mount pair, and then mount our sample holder onto the KBT1X1T using a  <a class="reference external" href="https://github.com/TheDeanLab/COMPASS/tree/main/downloads/common/cad">custom adapter</a>. The KBB1X1 is affixed to the piezo using an M2.5 screw, and using a small leveling tool (shown below) during this step is helpful to ensure that the magnetic base is mounted as level as possible for the imaging process.</p>
+<figure class="align-center" id="id13">
+<img alt="Basic assembly of magnetic sample holder mount" src="../_images/MagneticMountSampleHolder.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Figure 11:</strong> Basic assembly of magnetic sample holder mount</span><a class="headerlink" href="#id13" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 </section>
+</section>
+<section id="optoelectronics">
+<h2>Optoelectronics<a class="headerlink" href="#optoelectronics" title="Permalink to this heading"></a></h2>
 <section id="wiring-diagram">
-<h2>Wiring Diagram<a class="headerlink" href="#wiring-diagram" title="Permalink to this heading"></a></h2>
+<h3>Wiring Diagram<a class="headerlink" href="#wiring-diagram" title="Permalink to this heading"></a></h3>
 <p>Our complete microscope assembly features a variety of different optoelectrical and optomechanical elements. These
 elements are primary controlled via our NI DAQ (PXIe-6738) or our ASI Tiger Controller (TG16-BASIC), which are then
 controlled via navigate during the imaging process. The diagram below depicts how these elements are wired together,
 as well as an individual pinout designation table for the pin configurations we used on our DAQ.</p>
-<img alt="Basic assembly of magnetic sample holder mount" class="align-center" src="../_images/Wiring3_Plustable.png" />
+<figure class="align-center" id="id14">
+<img alt="Wiring diagram for the Tiger Controller, DAQ, and associated elements." src="../_images/Wiring3_Plustable.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Figure 12:</strong> Wiring diagram for the Tiger Controller, DAQ, and associated elements.</span><a class="headerlink" href="#id14" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 </section>
 <section id="piezo-setup-troubleshooting">
-<h2>Piezo Setup &amp; Troubleshooting<a class="headerlink" href="#piezo-setup-troubleshooting" title="Permalink to this heading"></a></h2>
+<h3>Piezo Setup &amp; Troubleshooting<a class="headerlink" href="#piezo-setup-troubleshooting" title="Permalink to this heading"></a></h3>
 <p>On the PCI Board, connect the positive and negative wires  to the corresponding analog output (AO) you want, in our case
 we used AO 0, so we connected the positive wire to pin 10 and the ground to pin 11, then plug the BNC cable connected to
 those wires into the EXT IN input on the Tiger controller panel corresponding to the piezo.</p>
-<img alt="How to find the Device Pinout panel" class="align-center" src="../_images/DevicePinouts.png" />
-<p>Plug the piezo cable into the PIEZO input on the Tiger controller panel corresponding to the piezo.</p>
-<p>Verify the range of the piezo in the tiger controller software with the command “5 cca x?”</p>
-<blockquote>
-<div><dl>
-<dt>At first, ours output the following:</dt><dd><div class="line-block">
-<div class="line">:A  Q:P1</div>
-<div class="line">23 P 1 100um RANGE</div>
-<div class="line">24 P 2 200um RANGE</div>
-<div class="line">35 P S 150um RANGE</div>
-<div class="line">36 P 3 300um RANGE</div>
-<div class="line">37 P 5 500um RANGE</div>
-<div class="line">34 P f 50um RANGE</div>
-<div class="line">25 P 4 350um RANGE:N-4</div>
+<figure class="align-center" id="id15">
+<img alt="How to find the Device Pinout panel" src="../_images/DevicePinouts.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Figure 13:</strong> How to find the Device Pinout panel in NI MAXX.</span><a class="headerlink" href="#id15" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Plug the piezo cable into the PIEZO input on the Tiger controller panel corresponding to the piezo, and verify the range of the piezo in the Tiger Controller software:</p>
+<div class="literal-block-wrapper docutils container" id="id16">
+<div class="code-block-caption"><span class="caption-text">Verifying Piezo Range in Tiger Controller Software</span><a class="headerlink" href="#id16" title="Permalink to this code"></a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span># Verify the range of the piezo in the Tiger controller software
+5 cca x?
+
+# Example output:
+:A  Q:P1
+23 P 1 100um RANGE
+24 P 2 200um RANGE
+35 P S 150um RANGE
+36 P 3 300um RANGE
+37 P 5 500um RANGE
+34 P f 50um RANGE
+25 P 4 350um RANGE:N-4
+</pre></div>
 </div>
-</dd>
-</dl>
-</div></blockquote>
+</div>
 <p>This tells us that our Piezo (Panel 5/Q) corresponded to P1 or a 100 um range, but ASI requires the piezo needed to be
-set to  a 50 um range to be able to be intitialized instead. To change this, we used the command “5 cca x = 34” and
-power cycled the controller.</p>
-<blockquote>
-<div><dl>
-<dt>Then our output became:</dt><dd><div class="line-block">
-<div class="line">:A  Q:Pf</div>
-<div class="line">23 P 1 100um RANGE</div>
-<div class="line">24 P 2 200um RANGE</div>
-<div class="line">35 P S 150um RANGE</div>
-<div class="line">36 P 3 300um RANGE</div>
-<div class="line">37 P 5 500um RANGE</div>
-<div class="line">34 P f 50um RANGE</div>
-<div class="line">25 P 4 350um RANGE:N-4</div>
+set to  a 50 um range to be able to be initialized instead. To change this, we used the command <code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">cca</span> <span class="pre">x</span> <span class="pre">=</span> <span class="pre">34</span></code> and
+power cycled the controller. Once the controller was powered back on, we verified the range again with the <code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">cca</span> <span class="pre">x?</span></code></p>
+<div class="literal-block-wrapper docutils container" id="id17">
+<div class="code-block-caption"><span class="caption-text">Verifying Piezo Range in Tiger Controller Software</span><a class="headerlink" href="#id17" title="Permalink to this code"></a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span># Verify the range of the piezo in the Tiger controller software
+5 cca x?
+
+# Example output:
+:A  Q:Pf
+...
+</pre></div>
 </div>
-</dd>
-</dl>
-</div></blockquote>
-<p>Now we can see that the piezo is set to the correct range (Pf).
-With that verified, now confirm that the voltage output from the PCI Board is working:</p>
+</div>
+<p>Now we can see that the piezo is set to the correct range (Pf). With that verified, now confirm that the voltage output from the PCI Board is working:</p>
 <div class="line-block">
 <div class="line">1. Put the BNC cable input currently in EXT IN on the Tiger control panel into the input of the oscilloscope instead.</div>
 <div class="line">2. Go to the test panels for the PCI board in NI MAX.</div>
 </div>
-<img alt="How to find the Test Panels panel" class="align-center" src="../_images/TestPanels.png" />
+<figure class="align-center" id="id18">
+<img alt="How to find the Test Panels panel" src="../_images/TestPanels.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Figure 14:</strong> How to find the Test Panels panel in NI MAXX.</span><a class="headerlink" href="#id18" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <div class="line-block">
 <div class="line">3. Set the voltage mode to sinewave generation.</div>
 <div class="line">4. Set the voltage range to be between 0 to 10 V.</div>
 <div class="line">5. Set the frequency to a desired value (we ended up setting it pretty high at 10000 Hz for ease of viewing on the oscilloscope).</div>
 </div>
-<img alt="How to find the Test Panels panel" class="align-center" src="../_images/TestPanelConfiguration.png" />
+<figure class="align-center" id="id19">
+<img alt="How to find the Test Panels panel." src="../_images/TestPanelConfiguration.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Figure 15:</strong> How to generate analog output voltages with NI MAXX for testing purposes.</span><a class="headerlink" href="#id19" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <p>With the voltage output of the PCI board verified, plug the PCI Board voltage cable output back into the EXT IN slot and
 verify that the position output of the Piezo reads similarly on the oscilloscope:</p>
 <blockquote>
@@ -320,31 +372,30 @@ the piezo is set in <a class="reference external" href="https://asiimaging.com/d
 <blockquote>
 <div><ol class="arabic simple">
 <li><dl class="simple">
-<dt>Use the “PM Q?” (Our piezo corresponds to Q) command:</dt><dd><ul class="simple">
-<li><p>the output was “Q = 0” originally, telling us that it’s in Controller Input mode</p></li>
+<dt>Use the <code class="docutils literal notranslate"><span class="pre">PM</span> <span class="pre">Q?</span></code> (Our piezo corresponds to Q) command:</dt><dd><ul class="simple">
+<li><p>the output was <code class="docutils literal notranslate"><span class="pre">Q</span> <span class="pre">=</span> <span class="pre">0</span></code> originally, telling us that it’s in Controller Input mode</p></li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="simple">
-<dt>Use the “PM Q = 1” command to set the piezo into External Input mode:</dt><dd><ul class="simple">
-<li><p>now the output of “PM Q?” is “Q = 1”</p></li>
+<dt>Use the <code class="docutils literal notranslate"><span class="pre">PM</span> <span class="pre">Q</span> <span class="pre">=</span> <span class="pre">1</span></code> command to set the piezo into External Input mode:</dt><dd><ul class="simple">
+<li><p>now the output of <code class="docutils literal notranslate"><span class="pre">PM</span> <span class="pre">Q?</span></code> is <code class="docutils literal notranslate"><span class="pre">Q</span> <span class="pre">=</span> <span class="pre">1</span></code></p></li>
 </ul>
 </dd>
 </dl>
 </li>
 </ol>
 </div></blockquote>
-<p>Another important step is to ensure that the configuration file associated with navigate is appropriately set up for your piezo.
-This involves setting the correct axis and voltage-to-distance mapping for the piezo. As an example our configuration file
-for navigate looks like the following for setting up our piezo:</p>
-<img alt="How to find the Test Panels panel" class="align-center" src="../_images/Piezo_Config.png" />
+<p>Another important step is to ensure that the configuration file associated with navigate is appropriately set up for your piezo. This involves setting the correct axis and voltage-to-distance mapping for the piezo. As an example our configuration file for navigate looks like the following for setting up our piezo:</p>
+<figure class="align-center" id="id20">
+<img alt="Navigate configuration file for the piezo." src="../_images/Piezo_Config.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Figure 16:</strong> Navigate configuration file for the piezo.</span><a class="headerlink" href="#id20" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 </section>
 </section>
-<section id="parts-list">
-<h1>Parts List<a class="headerlink" href="#parts-list" title="Permalink to this heading"></a></h1>
-<p>A breakdown spreadsheet of all components used in this build is viewable under the COMPASS Base tab
-<a class="reference external" href="https://365utsouthwestern-my.sharepoint.com/:x:/g/personal/john_haug_utsouthwestern_edu/EanyUn-KA9JFlo4WwGfxktcBnvZMAhbmhdd7LOCfLSL5bQ?e=NZO83I">here</a>:</p>
 </section>
 
 
