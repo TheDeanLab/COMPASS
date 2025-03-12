@@ -20,6 +20,7 @@ A key limitation of LLSM is its reliance on a **spatial light modulator (SLM)** 
 
 -----------------------
 
+
 Field Synthesis
 ---------------
 
@@ -44,6 +45,11 @@ The increased imaging speed significantly reduced **motion blur**, which is part
 rapid morphological transitions such as **filopodial buckling**.
 
 -----------------------
+
+Dual Inverted Selective Plane Illumination Microscopy (diSPIM)
+---------------------------------------------------------------
+
+**Dual Inverted Selective Plane Illumination Microscopy (diSPIM)** is a commercially available light-sheet system that utilizes **two opposing objectives** to achieve isotropic resolution through sequential orthogonal illumination and detection. Unlike conventional LSFM, where a single objective delivers the light-sheet and another detects fluorescence, diSPIM alternates between two objectives, each serving both roles in successive acquisitions. This configuration enables **volumetric imaging with improved axial resolution**, as images from both orientations can be fused computationally to reconstruct a high-fidelity 3D volume. While diSPIM is **well-suited for live-cell imaging**, its reliance on sequential acquisition leads to **lower temporal resolution** compared to single-objective LSFM approaches. Additionally, alignment complexity and computational post-processing requirements can introduce challenges, particularly for rapid dynamic events. Despite these limitations, diSPIM remains a **flexible and widely adopted platform**, particularly in studies requiring high-resolution imaging of small organisms, embryos, and adherent cells.
 
 
 Axially Swept Light-Sheet Microscopy (ASLM)
@@ -99,6 +105,11 @@ Despite its advantages, OPM suffers from **anisotropic resolution** and often re
 |                              | - Higher light throughput                          | - Less widely implemented than LLSM              |
 |                              | - Compatible with simultaneous multicolor imaging  | - Slightly lower spatial control than LLSM       |
 |                              | - Faster acquisition (~2× speed vs. LLSM)          |                                                  |
++------------------------------+----------------------------------------------------+--------------------------------------------------+
+| **diSPIM**                   | - Dual-objective design improves axial resolution  | - Multiple volumes must be acquired              |
+|                              | - Enables isotropic volumetric imaging via fusion  | - Requires post-processing for image fusion      |
+|                              | - Well-suited for live-cell and embryo imaging     | - Greater alignment complexity                   |
+|                              | - Commercially available and widely adopted        |                                                  |
 +------------------------------+----------------------------------------------------+--------------------------------------------------+
 | **ASLM**                     | - High contrast and improved optical sectioning    | - Lower acquisition speed due to beam sweeping   |
 |                              | - Isotropic resolution (~300–400 nm)               | - Requires precise synchronization               |
