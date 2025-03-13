@@ -1,11 +1,11 @@
 .. _imaging-home:
 
-###############################
+###############
 Imaging Process
-###############################
+###############
 
 Imaging Configurations
-______________________________
+______________________
 
 
 Our sample chamber features three ports that provide two distinct imaging configurations shown below: the first is a
@@ -21,7 +21,7 @@ the objectives and prevent any leaking.
     :align: center
     :alt: Two imaging configurations for the sample chamber design
 
-
+    **Figure 1**
 
 
 Visualization of Axes Mapping
@@ -121,9 +121,6 @@ mount, and that the PSFs of the beads is now correctly aligned along the z axis.
 .. image:: Images/BeadDeskewExample.png
     :align: center
     :alt: Difference between an image set of 100 nm bead before deskewing (left) and after (right)
-    :width: 300px
-
-    **Figure 1:** Difference between an image set of 100 nm bead before deskewing (left) and after (right)
 
 
 To do this deskew processing, we utilize custom-built python code via Jupyter notebooks `available here <https://github
