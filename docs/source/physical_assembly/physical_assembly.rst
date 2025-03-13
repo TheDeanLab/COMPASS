@@ -257,7 +257,7 @@ Step 1: Ensuring the detection objective slides into the sample chamber port
 
 Once the detection objective properly translates into it's port, the tilt alignment can be further refined by slowly translating the detection objective forward towards the illumination objective, taking great care that they don't touch each other. If there is a significant tilt in the detection path compared to the illumination path, it should be fairly evident in the diagonal space between the objectives (ideally it should look roughly equal in width between the two objectives). As example of the relative position of our objectives when the detection objective is properly placed at the focus of the illumination objective is shown below to give a visual reference for users.
 
-Once the position of the detection objective is acceptable, further refinement of it's position can be done by first filling the chamber with water and then adding roughly ~100 microliters of f fluorescein into the chamber. Fluorescein  is useful as a visualization tool to be able to see the beam coming out of the illumination objective with the naked eye. With f fluorescein in the chamber, the position of the detection objective can be translated to align with the focus of the beam itself (shown below)
+Once the position of the detection objective is acceptable, further refinement of it's position can be done by first filling the chamber with water and then adding roughly ~100 microliters of f fluorescein into the chamber. Fluorescein  is useful as a visualization tool to be able to see the beam coming out of the illumination objective with the naked eye. With fluorescein in the chamber, the position of the detection objective can be translated to align with the focus of the beam itself (shown below)
 
 .. figure:: Images/objectivealignment.png
     :align: center
@@ -265,10 +265,9 @@ Once the position of the detection objective is acceptable, further refinement o
 
     **Figure 14:** Mounting of the camera
 
+With the detection objective roughly in the correct location, further refinement is done by turning on the camera and imaging the fluorescein light-sheet to find the focus by adjusting the focus translation stage in small increments (50 microns for large movements, 1-5 microns for small movements). The goals during this step are to ensure that the detection objective focus is at the focus of the illumination objective, to make sure the light-sheet focus is centered on the image FoV from the camera, and that the light-sheet is aligned vertically in the image FoV.
+
 Step 2: Focus refinement:
-
-With the detection objective roughly in the correct location, further refinement is done by turning on the camera and imaging the fluorescein light-sheet to find the focus by adjusting the focus translation stage in small increments (50 microns for large movements, 1-5 microns for small movements). The goals during this step are to ensure that the detection objective focus is at the focus of the illumination objective, to make sure the light-sheet focus is centered on the image FoV from the camera,  and that the light-sheet is aligned vertically in the image FoV.
-
 Finding the focus is often something that just comes with experience of using the system itself; however, here are some general methods to follow that can help get one's bearings:
     1. In general, as the detection objective approaches the light sheet focus, an envelope of light should start to appear (see below), ideally this envelope will be horizontal across the FoV. If it horizontal or has some tilt to it, adjusting the tip/tilt of the 45 degree mirror and the rotation of the cylindrical lens. In addition, ideally this envelope will be centered vertically in the FoV, which can be set by adjusting the y adjustment screw on the illumination objective mount.
     2. Towards the focus location, a dark vertical region with horizontal striations should appear. Once this region is visible, using small translation distances (~1 um or finer) to find the position that makes both the vertical region and horizontal striations look as sharp as possible should be done.
