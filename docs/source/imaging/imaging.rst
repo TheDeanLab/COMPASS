@@ -10,18 +10,19 @@ ______________________
 
 Our sample chamber features three ports that provide two distinct imaging configurations shown below: the first is a
 traditional light-sheet imaging scheme, where illumination and detection objectives are placed orthogonally to each
-other, and the second is one where the illumination and detection objective are placed in line with eachother. The
+other, and the second is one where the illumination and detection objective are placed in line with each other. The
 first configuration should be thought of as the default imaging setup for the microscope, and the second allows one to
 observe and characterize the produced light sheet itself. The port not in use should be sealed, which we do using a
 silicon or rubber seal that's able to be fixed onto the exterior of the port using screws. In addition, it should be
 noted that our sample chamber design utilizes two sequential layers of O-rings in each of the ports to both secure
 the objectives and prevent any leaking.
 
-.. image:: Images/S_SampleChamber.png
+.. figure:: Images/S_SampleChamber.png
     :align: center
     :alt: Two imaging configurations for the sample chamber design
+    :width: 300px
 
-    **Figure 1**
+    **Figure 1** Two imaging configurations for the sample chamber design
 
 
 Visualization of Axes Mapping
@@ -32,11 +33,12 @@ In our system we essentially have 5 different translation stages at work: the st
 stage along the z axis to control the focus of the detection path (f), and and axis associated with the piezo positioned
 such that its normal is 60.5 degrees away from the y-axis.
 
-.. image:: Images/PhysicalAxesMaps.png
+.. figure:: Images/PhysicalAxesMaps.png
     :align: center
     :alt: Layout of how the axis of the system are mapped
+    :width: 300px
 
-
+    **Figure 2** Layout of how the axis of the system are mapped
 
 Minimizing Spherical Aberrations
 ________________________________
@@ -68,7 +70,7 @@ the correction collar affect live images are shown below for fluorescent beads. 
 expected light sheet position to be as in-focus as possible is a general guide for what direction to move the collar;
 however, true correction needs to be done with the z-projection method mentioned above.
 
-.. image:: Images/ChangingCorrectionCollar.png
+.. figure:: Images/ChangingCorrectionCollar.png
     :align: center
     :alt: Correction collar effects
 
@@ -79,7 +81,7 @@ below. Here, one can see in the top panel that the bead features are essentially
 aberrations, while in the bottom panel with adjustments made to the correction collar the beads appear much cleaner and
 focused.
 
-.. image:: Images/SphericalExample.png
+.. figure:: Images/SphericalExample.png
     :align: center
     :alt: Before and after of adjusting in Z-projections after adjusting the correction collar
 
@@ -96,7 +98,7 @@ ImageJ. To give a visual reference of what these individual images in a stack ca
 provide the following images taken of a mouse embryonic fibroflast sample at a single z-position in a stack for 4
 different imaging channels (gold = actin, gray = tubulin, cyan = nuclei, and magenta = Golgi apparatus).
 
-.. image:: Images/DeskewedNotDeconvolvedSingleSliceMontage2.png
+.. figure:: Images/DeskewedNotDeconvolvedSingleSliceMontage2.png
     :align: center
     :alt: Example individual images for MEF cells
 
@@ -118,7 +120,7 @@ stacked in a straight line but oriented along an angle, which is not the most ac
 On the deskewed image on the right, one can see that the beads are now properly angled correspond to our piezo angle
 mount, and that the PSFs of the beads is now correctly aligned along the z axis.
 
-.. image:: Images/BeadDeskewExample.png
+.. figure:: Images/BeadDeskewExample.png
     :align: center
     :alt: Difference between an image set of 100 nm bead before deskewing (left) and after (right)
 
@@ -143,13 +145,13 @@ system, top slicing provides us with the YZ plane view where one can observe the
 setup after projection (Image-> Stacks-> Z Project). This is shown below for the same 100 nm bead samples used in the
 Deskewing and Rescaling portions of this page.
 
-.. image:: Images/ResliceTop.png
+.. figure:: Images/ResliceTop.png
     :align: center
     :alt: Reslicing Panel for top reslicing
 
 
 
-.. image:: Images/ResliceTopProjection.png
+.. figure:: Images/ResliceTopProjection.png
     :align: center
     :alt: The YZ projection of our bead images after reslicing.
 
@@ -157,13 +159,13 @@ Deskewing and Rescaling portions of this page.
 
 The same process can then be done to obtain the XZ plane view of our sample by reslicing left instead:
 
-.. image:: Images/ResliceLeft.png
+.. figure:: Images/ResliceLeft.png
     :align: center
     :alt: Reslicing Panel for left reslicing
 
 
 
-.. image:: Images/ResliceLeftProjection.png
+.. figure:: Images/ResliceLeftProjection.png
     :align: center
     :alt: The XZ projection of our bead images after reslicing.
 
