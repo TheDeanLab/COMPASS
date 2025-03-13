@@ -343,7 +343,40 @@ Tiger Control Panel software.</p>
 </section>
 <section id="detection-path-positioning">
 <h3>Detection Path Positioning<a class="headerlink" href="#detection-path-positioning" title="Permalink to this heading"></a></h3>
-<p>Put stuff in place…</p>
+<p>To position the detection path correctly, there’s two primary steps: Initially ensuring the detection objective slides into the correct port on the fixed sample chamber and then ensuring that the light sheet is centered in the FoV of the camera, typically done by putting  fluorescein into the water-filled chamber.</p>
+<dl class="simple">
+<dt>Step 1: Ensuring the detection objective slides into the sample chamber port</dt><dd><ol class="arabic simple">
+<li><p>It’s recommended to start with your detection path translation stage set far enough back such that there is anywhere from 0.5-1” or more of space between the front of the detection objective and the sample chamber.</p></li>
+<li><p>Within navigate or the Tiger Controller software, start to slowly move the objective forward (initially increments of 1000 um should be okay, but as the objective approaches the port the distance should be significantly lowered to 100 um or below to ensure the objective isn’t damaged).</p></li>
+<li><p>If the objective isn’t centered properly, the screws/nuts on the translation stage to breadboard adapter (see figure 12) can be loosened slightly and the detection path assembly can be carefully positioned horizontally, taking care that the unit isn’t tilted at an angle going into the objective port, and then re-tightened.</p></li>
+</ol>
+</dd>
+</dl>
+<p>Once the detection objective properly translates into it’s port, the tilt alignment can be further refined by slowly translating the detection objective forward towards the illumination objective, taking great care that they don’t touch each other. If there is a significant tilt in the detection path compared to the illumination path, it should be fairly evident in the diagonal space between the objectives (ideally it should look roughly equal in width between the two objectives). As example of the relative position of our objectives when the detection objective is properly placed at the focus of the illumination objective is shown below to give a visual reference for users.</p>
+<p>Once the position of the detection objective is acceptable, further refinement of it’s position can be done by first filling the chamber with water and then adding roughly ~100 microliters of f fluorescein into the chamber. Fluorescein  is useful as a visualization tool to be able to see the beam coming out of the illumination objective with the naked eye. With f fluorescein in the chamber, the position of the detection objective can be translated to align with the focus of the beam itself (shown below)</p>
+<figure class="align-center" id="id15">
+<img alt="Physical alignment of the detection objective" src="../_images/objectivealignment.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Figure 14:</strong> Mounting of the camera</span><a class="headerlink" href="#id15" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Step 2: Focus refinement:</p>
+<p>With the detection objective roughly in the correct location, further refinement is done by turning on the camera and imaging the fluorescein light-sheet to find the focus by adjusting the focus translation stage in small increments (50 microns for large movements, 1-5 microns for small movements). The goals during this step are to ensure that the detection objective focus is at the focus of the illumination objective, to make sure the light-sheet focus is centered on the image FoV from the camera,  and that the light-sheet is aligned vertically in the image FoV.</p>
+<dl class="simple">
+<dt>Finding the focus is often something that just comes with experience of using the system itself; however, here are some general methods to follow that can help get one’s bearings:</dt><dd><ol class="arabic simple">
+<li><p>In general, as the detection objective approaches the light sheet focus, an envelope of light should start to appear (see below), ideally this envelope will be horizontal across the FoV. If it horizontal or has some tilt to it, adjusting the tip/tilt of the 45 degree mirror and the rotation of the cylindrical lens. In addition, ideally this envelope will be centered vertically in the FoV, which can be set by adjusting the y adjustment screw on the illumination objective mount.</p></li>
+<li><p>Towards the focus location, a dark vertical region with horizontal striations should appear. Once this region is visible, using small translation distances (~1 um or finer) to find the position that makes both the vertical region and horizontal striations look as sharp as possible should be done.</p></li>
+<li><p>If the dark region isn’t centered on the image FoV, adjusting the x and y adjustment screws on the illumination objective mount and making slight horizontal translations on the detection path can help.</p></li>
+<li><p>In general doing these adjustments in small increments is helpful, as once adjustments to the various elements may require readjusting the focus translation stage position to keep track of the focus.</p></li>
+</ol>
+</dd>
+</dl>
+<figure class="align-center" id="id16">
+<img alt="Mounting of the camera" src="../_images/FocusFinding.png" />
+<figcaption>
+<p><span class="caption-text"><strong>Figure 15:</strong> Mounting of the camera</span><a class="headerlink" href="#id16" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 </section>
 </section>
 <section id="optomechanics">
@@ -351,10 +384,10 @@ Tiger Control Panel software.</p>
 <section id="visualization-of-axes-mapping">
 <h3>Visualization of Axes Mapping<a class="headerlink" href="#visualization-of-axes-mapping" title="Permalink to this heading"></a></h3>
 <p>In our system we have 5 different translation stages at work: the standard x,y, and z axes, an additional stage along the z axis to control the focus of the detection path (f), and and axis associated with the piezo positioned such that its normal is 60.5 degrees away from the y-axis.</p>
-<figure class="align-center" id="id15">
+<figure class="align-center" id="id17">
 <a class="reference internal image-reference" href="../_images/PhysicalAxesMaps1.png"><img alt="Layout of how the axis of the system are mapped" src="../_images/PhysicalAxesMaps1.png" style="width: 220px;" /></a>
 <figcaption>
-<p><span class="caption-text"><strong>Figure 7:</strong> Layout of how the axis of the system are mapped</span><a class="headerlink" href="#id15" title="Permalink to this image"></a></p>
+<p><span class="caption-text"><strong>Figure 16:</strong> Layout of how the axis of the system are mapped</span><a class="headerlink" href="#id17" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <div class="admonition note">
@@ -370,37 +403,37 @@ simulation results versus real-world microscope operation. The differences are i
 <section id="the-piezo-angle-mount">
 <h3>The Piezo Angle Mount<a class="headerlink" href="#the-piezo-angle-mount" title="Permalink to this heading"></a></h3>
 <p>We designed a custom angled mount for our <a class="reference external" href="https://piezoconcept-store.squarespace.com/1-axis/p/hs1">Piezoconcept HS1 piezo</a> in order to be able to scan our sample easily between our two objectives by translating a single motorized unit (in this case the piezo), instead of having to calculate and program the movement of two translation stages in tandem for both the y and z directions. The anatomy of our angled mount is broken down in the figure below, where there are four translation stage mounting holes to attach the unit to an ASI translation stage, nine Piezo mounting holes that correspond to the mounting scheme of our piezo unit, as well as four through-holes and a window for ease of access for the mounting process. We provide the CAD files for this mount <a class="reference external" href="https://github.com/TheDeanLab/COMPASS/tree/main/downloads/common/cad">here</a>, and have had success in using both 3D printed and aluminum machined versions of the unit. It’s recommended to first mount the angle mount onto the translation stage unit before mounting the piezo on the angle mount to ensure access to all the through-holes.</p>
-<figure class="align-center" id="id16">
+<figure class="align-center" id="id18">
 <img alt="Breakdown of our custom angle piezo angle mount" src="../_images/AnglemountAnatomy.png" />
 <figcaption>
-<p><span class="caption-text"><strong>Figure 8:</strong> Breakdown of our custom angle piezo angle mount.</span><a class="headerlink" href="#id16" title="Permalink to this image"></a></p>
+<p><span class="caption-text"><strong>Figure 17:</strong> Breakdown of our custom angle piezo angle mount.</span><a class="headerlink" href="#id18" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>The installation of our custom angled piezo mount is designed to be directly compatible with ASI translation stages. ASI translation stages feature M6 hole pairs that are spaced along the length of the translation stage at intervals dependent on the specific stage one is using. The mounting process involves aligning these 4 holes with 4 of the M6 holes on the translation stage and screwing them in. For ease of screwing in the base, there are four through holes on the angled face of the mount shown in B that a screwdriver is able to pass directly through to screw as shown in C. An alternative method of mounting is shown in D, where the window on the back of the angle mount is able to be screwed through as well.</p>
-<figure class="align-center" id="id17">
+<figure class="align-center" id="id19">
 <img alt="General process for mounting our piezo angle mount onto an ASI translation stage" src="../_images/Anglemount.png" />
 <figcaption>
-<p><span class="caption-text"><strong>Figure 9:</strong> General process for mounting our piezo angle mount onto an ASI translation stage</span><a class="headerlink" href="#id17" title="Permalink to this image"></a></p>
+<p><span class="caption-text"><strong>Figure 18:</strong> General process for mounting our piezo angle mount onto an ASI translation stage</span><a class="headerlink" href="#id19" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </section>
 <section id="sample-holder-design">
 <h3>Sample Holder Design<a class="headerlink" href="#sample-holder-design" title="Permalink to this heading"></a></h3>
 <p>Our sample holder design is built for imaging cells on a <a class="reference external" href="https://www.fishersci.com/shop/products/5mm-cover-slip-german-glass/50949439">5 mm coverslip</a>, and is shown below. The design features a clamp-like method of securing the 5 mm coverslip in place, where the coverslip rests in an inset region and the clamp is screwed in via an M1.6 screw in the back of the holder. All associated files for this design and other custom parts can be found <a class="reference external" href="https://github.com/TheDeanLab/COMPASS/tree/main/downloads/common/cad">here</a>.</p>
-<figure class="align-center" id="id18">
+<figure class="align-center" id="id20">
 <img alt="5 mm coverslip sample holder design" src="../_images/S_SampleHolderAssembly.png" />
 <figcaption>
-<p><span class="caption-text"><strong>Figure 10:</strong> 5 mm coverslip sample holder design.</span><a class="headerlink" href="#id18" title="Permalink to this image"></a></p>
+<p><span class="caption-text"><strong>Figure 19:</strong> 5 mm coverslip sample holder design.</span><a class="headerlink" href="#id20" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </section>
 <section id="assembling-the-magnetic-sample-mount">
 <h3>Assembling the Magnetic Sample Mount<a class="headerlink" href="#assembling-the-magnetic-sample-mount" title="Permalink to this heading"></a></h3>
 <p>As a safeguard for the risk of the sample crashing into either the illumination or detection objective during sample positioning or imaging, we opted to incorporate a magnetic mount for our sample holder. We use a Thorlabs KBT1X1T and KBB1X1 as our magnetic mount pair, and then mount our sample holder onto the KBT1X1T using a  <a class="reference external" href="https://github.com/TheDeanLab/COMPASS/tree/main/downloads/common/cad">custom adapter</a>. The KBB1X1 is affixed to the piezo using an M2.5 screw, and using a small leveling tool (shown below) during this step is helpful to ensure that the magnetic base is mounted as level as possible for the imaging process.</p>
-<figure class="align-center" id="id19">
+<figure class="align-center" id="id21">
 <img alt="Basic assembly of magnetic sample holder mount" src="../_images/MagneticMountSampleHolder.png" />
 <figcaption>
-<p><span class="caption-text"><strong>Figure 11:</strong> Basic assembly of magnetic sample holder mount</span><a class="headerlink" href="#id19" title="Permalink to this image"></a></p>
+<p><span class="caption-text"><strong>Figure 20:</strong> Basic assembly of magnetic sample holder mount</span><a class="headerlink" href="#id21" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </section>
@@ -413,10 +446,10 @@ simulation results versus real-world microscope operation. The differences are i
 elements are primary controlled via our NI DAQ (PXIe-6738) or our ASI Tiger Controller (TG16-BASIC), which are then
 controlled via navigate during the imaging process. The diagram below depicts how these elements are wired together,
 as well as an individual pinout designation table for the pin configurations we used on our DAQ.</p>
-<figure class="align-center" id="id20">
+<figure class="align-center" id="id22">
 <img alt="Wiring diagram for the Tiger Controller, DAQ, and associated elements." src="../_images/Wiring3_Plustable.png" />
 <figcaption>
-<p><span class="caption-text"><strong>Figure 12:</strong> Wiring diagram for the Tiger Controller, DAQ, and associated elements.</span><a class="headerlink" href="#id20" title="Permalink to this image"></a></p>
+<p><span class="caption-text"><strong>Figure 21:</strong> Wiring diagram for the Tiger Controller, DAQ, and associated elements.</span><a class="headerlink" href="#id22" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </section>
@@ -425,15 +458,15 @@ as well as an individual pinout designation table for the pin configurations we 
 <p>On the PCI Board, connect the positive and negative wires  to the corresponding analog output (AO) you want, in our case
 we used AO 0, so we connected the positive wire to pin 10 and the ground to pin 11, then plug the BNC cable connected to
 those wires into the EXT IN input on the Tiger controller panel corresponding to the piezo.</p>
-<figure class="align-center" id="id21">
+<figure class="align-center" id="id23">
 <img alt="How to find the Device Pinout panel" src="../_images/DevicePinouts.png" />
 <figcaption>
-<p><span class="caption-text"><strong>Figure 13:</strong> How to find the Device Pinout panel in NI MAXX.</span><a class="headerlink" href="#id21" title="Permalink to this image"></a></p>
+<p><span class="caption-text"><strong>Figure 22:</strong> How to find the Device Pinout panel in NI MAXX.</span><a class="headerlink" href="#id23" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>Plug the piezo cable into the PIEZO input on the Tiger controller panel corresponding to the piezo, and verify the range of the piezo in the Tiger Controller software:</p>
-<div class="literal-block-wrapper docutils container" id="id22">
-<div class="code-block-caption"><span class="caption-text">Verifying Piezo Range in Tiger Controller Software</span><a class="headerlink" href="#id22" title="Permalink to this code"></a></div>
+<div class="literal-block-wrapper docutils container" id="id24">
+<div class="code-block-caption"><span class="caption-text">Verifying Piezo Range in Tiger Controller Software</span><a class="headerlink" href="#id24" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span># Verify the range of the piezo in the Tiger controller software
 5 cca x?
 
@@ -452,8 +485,8 @@ those wires into the EXT IN input on the Tiger controller panel corresponding to
 <p>This tells us that our Piezo (Panel 5/Q) corresponded to P1 or a 100 um range, but ASI requires the piezo needed to be
 set to  a 50 um range to be able to be initialized instead. To change this, we used the command <code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">cca</span> <span class="pre">x</span> <span class="pre">=</span> <span class="pre">34</span></code> and
 power cycled the controller. Once the controller was powered back on, we verified the range again with the <code class="docutils literal notranslate"><span class="pre">5</span> <span class="pre">cca</span> <span class="pre">x?</span></code></p>
-<div class="literal-block-wrapper docutils container" id="id23">
-<div class="code-block-caption"><span class="caption-text">Verifying Piezo Range in Tiger Controller Software</span><a class="headerlink" href="#id23" title="Permalink to this code"></a></div>
+<div class="literal-block-wrapper docutils container" id="id25">
+<div class="code-block-caption"><span class="caption-text">Verifying Piezo Range in Tiger Controller Software</span><a class="headerlink" href="#id25" title="Permalink to this code"></a></div>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span># Verify the range of the piezo in the Tiger controller software
 5 cca x?
 
@@ -468,10 +501,10 @@ power cycled the controller. Once the controller was powered back on, we verifie
 <div class="line">1. Put the BNC cable input currently in EXT IN on the Tiger control panel into the input of the oscilloscope instead.</div>
 <div class="line">2. Go to the test panels for the PCI board in NI MAX.</div>
 </div>
-<figure class="align-center" id="id24">
+<figure class="align-center" id="id26">
 <img alt="How to find the Test Panels panel" src="../_images/TestPanels.png" />
 <figcaption>
-<p><span class="caption-text"><strong>Figure 14:</strong> How to find the Test Panels panel in NI MAXX.</span><a class="headerlink" href="#id24" title="Permalink to this image"></a></p>
+<p><span class="caption-text"><strong>Figure 23:</strong> How to find the Test Panels panel in NI MAXX.</span><a class="headerlink" href="#id26" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <div class="line-block">
@@ -479,10 +512,10 @@ power cycled the controller. Once the controller was powered back on, we verifie
 <div class="line">4. Set the voltage range to be between 0 to 10 V.</div>
 <div class="line">5. Set the frequency to a desired value (we ended up setting it pretty high at 10000 Hz for ease of viewing on the oscilloscope).</div>
 </div>
-<figure class="align-center" id="id25">
+<figure class="align-center" id="id27">
 <img alt="How to find the Test Panels panel." src="../_images/TestPanelConfiguration.png" />
 <figcaption>
-<p><span class="caption-text"><strong>Figure 15:</strong> How to generate analog output voltages with NI MAXX for testing purposes.</span><a class="headerlink" href="#id25" title="Permalink to this image"></a></p>
+<p><span class="caption-text"><strong>Figure 24:</strong> How to generate analog output voltages with NI MAXX for testing purposes.</span><a class="headerlink" href="#id27" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>With the voltage output of the PCI board verified, plug the PCI Board voltage cable output back into the EXT IN slot and
@@ -515,10 +548,10 @@ the piezo is set in <a class="reference external" href="https://asiimaging.com/d
 </ol>
 </div></blockquote>
 <p>Another important step is to ensure that the configuration file associated with navigate is appropriately set up for your piezo. This involves setting the correct axis and voltage-to-distance mapping for the piezo. As an example our configuration file for navigate looks like the following for setting up our piezo:</p>
-<figure class="align-center" id="id26">
+<figure class="align-center" id="id28">
 <img alt="Navigate configuration file for the piezo." src="../_images/Piezo_Config.png" />
 <figcaption>
-<p><span class="caption-text"><strong>Figure 16:</strong> Navigate configuration file for the piezo.</span><a class="headerlink" href="#id26" title="Permalink to this image"></a></p>
+<p><span class="caption-text"><strong>Figure 25:</strong> Navigate configuration file for the piezo.</span><a class="headerlink" href="#id28" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </section>

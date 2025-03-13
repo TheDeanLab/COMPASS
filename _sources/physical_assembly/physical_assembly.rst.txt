@@ -248,7 +248,39 @@ Tiger Control Panel software.
 Detection Path Positioning
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Put stuff in place...
+To position the detection path correctly, there's two primary steps: Initially ensuring the detection objective slides into the correct port on the fixed sample chamber and then ensuring that the light sheet is centered in the FoV of the camera, typically done by putting  fluorescein into the water-filled chamber.
+
+Step 1: Ensuring the detection objective slides into the sample chamber port
+    1. It's recommended to start with your detection path translation stage set far enough back such that there is anywhere from 0.5-1" or more of space between the front of the detection objective and the sample chamber.
+    2. Within navigate or the Tiger Controller software, start to slowly move the objective forward (initially increments of 1000 um should be okay, but as the objective approaches the port the distance should be significantly lowered to 100 um or below to ensure the objective isn't damaged).
+    3. If the objective isn't centered properly, the screws/nuts on the translation stage to breadboard adapter (see figure 12) can be loosened slightly and the detection path assembly can be carefully positioned horizontally, taking care that the unit isn't tilted at an angle going into the objective port, and then re-tightened.
+
+Once the detection objective properly translates into it's port, the tilt alignment can be further refined by slowly translating the detection objective forward towards the illumination objective, taking great care that they don't touch each other. If there is a significant tilt in the detection path compared to the illumination path, it should be fairly evident in the diagonal space between the objectives (ideally it should look roughly equal in width between the two objectives). As example of the relative position of our objectives when the detection objective is properly placed at the focus of the illumination objective is shown below to give a visual reference for users.
+
+Once the position of the detection objective is acceptable, further refinement of it's position can be done by first filling the chamber with water and then adding roughly ~100 microliters of f fluorescein into the chamber. Fluorescein  is useful as a visualization tool to be able to see the beam coming out of the illumination objective with the naked eye. With f fluorescein in the chamber, the position of the detection objective can be translated to align with the focus of the beam itself (shown below)
+
+.. figure:: Images/objectivealignment.png
+    :align: center
+    :alt: Physical alignment of the detection objective
+
+    **Figure 14:** Mounting of the camera
+
+Step 2: Focus refinement:
+
+With the detection objective roughly in the correct location, further refinement is done by turning on the camera and imaging the fluorescein light-sheet to find the focus by adjusting the focus translation stage in small increments (50 microns for large movements, 1-5 microns for small movements). The goals during this step are to ensure that the detection objective focus is at the focus of the illumination objective, to make sure the light-sheet focus is centered on the image FoV from the camera,  and that the light-sheet is aligned vertically in the image FoV.
+
+Finding the focus is often something that just comes with experience of using the system itself; however, here are some general methods to follow that can help get one's bearings:
+    1. In general, as the detection objective approaches the light sheet focus, an envelope of light should start to appear (see below), ideally this envelope will be horizontal across the FoV. If it horizontal or has some tilt to it, adjusting the tip/tilt of the 45 degree mirror and the rotation of the cylindrical lens. In addition, ideally this envelope will be centered vertically in the FoV, which can be set by adjusting the y adjustment screw on the illumination objective mount.
+    2. Towards the focus location, a dark vertical region with horizontal striations should appear. Once this region is visible, using small translation distances (~1 um or finer) to find the position that makes both the vertical region and horizontal striations look as sharp as possible should be done.
+    3. If the dark region isn't centered on the image FoV, adjusting the x and y adjustment screws on the illumination objective mount and making slight horizontal translations on the detection path can help.
+    4. In general doing these adjustments in small increments is helpful, as once adjustments to the various elements may require readjusting the focus translation stage position to keep track of the focus.
+
+.. figure:: Images/FocusFinding.png
+    :align: center
+    :alt: Mounting of the camera
+
+    **Figure 15:** Mounting of the camera
+
 
 Optomechanics
 ______________________________
@@ -264,7 +296,7 @@ In our system we have 5 different translation stages at work: the standard x,y, 
     :alt: Layout of how the axis of the system are mapped
     :width: 220px
 
-    **Figure 7:** Layout of how the axis of the system are mapped
+    **Figure 16:** Layout of how the axis of the system are mapped
 
 .. note:: **Coordinate System Differences**
 
@@ -291,7 +323,7 @@ We designed a custom angled mount for our `Piezoconcept HS1 piezo <https://piezo
     :align: center
     :alt: Breakdown of our custom angle piezo angle mount
 
-    **Figure 8:** Breakdown of our custom angle piezo angle mount.
+    **Figure 17:** Breakdown of our custom angle piezo angle mount.
 
 The installation of our custom angled piezo mount is designed to be directly compatible with ASI translation stages. ASI translation stages feature M6 hole pairs that are spaced along the length of the translation stage at intervals dependent on the specific stage one is using. The mounting process involves aligning these 4 holes with 4 of the M6 holes on the translation stage and screwing them in. For ease of screwing in the base, there are four through holes on the angled face of the mount shown in B that a screwdriver is able to pass directly through to screw as shown in C. An alternative method of mounting is shown in D, where the window on the back of the angle mount is able to be screwed through as well.
 
@@ -299,7 +331,7 @@ The installation of our custom angled piezo mount is designed to be directly com
     :align: center
     :alt: General process for mounting our piezo angle mount onto an ASI translation stage
 
-    **Figure 9:** General process for mounting our piezo angle mount onto an ASI translation stage
+    **Figure 18:** General process for mounting our piezo angle mount onto an ASI translation stage
 
 
 Sample Holder Design
@@ -311,7 +343,7 @@ Our sample holder design is built for imaging cells on a `5 mm coverslip <https:
     :align: center
     :alt: 5 mm coverslip sample holder design
 
-    **Figure 10:** 5 mm coverslip sample holder design.
+    **Figure 19:** 5 mm coverslip sample holder design.
 
 
 Assembling the Magnetic Sample Mount
@@ -324,7 +356,7 @@ As a safeguard for the risk of the sample crashing into either the illumination 
     :align: center
     :alt: Basic assembly of magnetic sample holder mount
 
-    **Figure 11:** Basic assembly of magnetic sample holder mount
+    **Figure 20:** Basic assembly of magnetic sample holder mount
 
 
 Optoelectronics
@@ -344,7 +376,7 @@ as well as an individual pinout designation table for the pin configurations we 
     :align: center
     :alt: Wiring diagram for the Tiger Controller, DAQ, and associated elements.
 
-    **Figure 12:** Wiring diagram for the Tiger Controller, DAQ, and associated elements.
+    **Figure 21:** Wiring diagram for the Tiger Controller, DAQ, and associated elements.
 
 
 Piezo Setup & Troubleshooting
@@ -359,7 +391,7 @@ those wires into the EXT IN input on the Tiger controller panel corresponding to
     :align: center
     :alt: How to find the Device Pinout panel
 
-    **Figure 13:** How to find the Device Pinout panel in NI MAXX.
+    **Figure 22:** How to find the Device Pinout panel in NI MAXX.
 
 Plug the piezo cable into the PIEZO input on the Tiger controller panel corresponding to the piezo, and verify the range of the piezo in the Tiger Controller software:
 
@@ -404,7 +436,7 @@ Now we can see that the piezo is set to the correct range (Pf). With that verifi
     :align: center
     :alt: How to find the Test Panels panel
 
-    **Figure 14:** How to find the Test Panels panel in NI MAXX.
+    **Figure 23:** How to find the Test Panels panel in NI MAXX.
 
 | 3. Set the voltage mode to sinewave generation.
 | 4. Set the voltage range to be between 0 to 10 V.
@@ -414,7 +446,7 @@ Now we can see that the piezo is set to the correct range (Pf). With that verifi
     :align: center
     :alt: How to find the Test Panels panel.
 
-    **Figure 15:** How to generate analog output voltages with NI MAXX for testing purposes.
+    **Figure 24:** How to generate analog output voltages with NI MAXX for testing purposes.
 
 With the voltage output of the PCI board verified, plug the PCI Board voltage cable output back into the EXT IN slot and
 verify that the position output of the Piezo reads similarly on the oscilloscope:
@@ -437,4 +469,4 @@ Another important step is to ensure that the configuration file associated with 
     :align: center
     :alt: Navigate configuration file for the piezo.
 
-    **Figure 16:** Navigate configuration file for the piezo.
+    **Figure 25:** Navigate configuration file for the piezo.
