@@ -263,23 +263,23 @@ Once the position of the detection objective is acceptable, further refinement o
     :align: center
     :alt: Physical alignment of the detection objective
 
-    **Figure 14:** Mounting of the camera
+    **Figure 14:** Physical alignment of the detection objective
 
-With the detection objective roughly in the correct location, further refinement is done by turning on the camera and imaging the fluorescein light-sheet to find the focus by adjusting the focus translation stage in small increments (50 microns for large movements, 1-5 microns for small movements). The goals during this step are to ensure that the detection objective focus is at the focus of the illumination objective, to make sure the light-sheet focus is centered on the image FoV from the camera, and that the light-sheet is aligned vertically in the image FoV.
 
 **Step 2: Focus refinement**
+    With the detection objective roughly in the correct location, further refinement is done by turning on the camera and imaging the fluorescein light-sheet to find the focus by adjusting the focus translation stage in small increments (50 microns for large movements, 1-5 microns for small movements). The goals during this step are to ensure that the detection objective focus is at the focus of the illumination objective, to make sure the light-sheet focus is centered on the image FoV from the camera, and that the light-sheet is aligned vertically in the image FoV.
 
-Finding the focus is often something that just comes with experience of using the system itself; however, here are some general methods to follow that can help get one's bearings:
-    1. In general, as the detection objective approaches the light sheet focus, an envelope of light should start to appear (see below), ideally this envelope will be horizontal across the FoV. If it horizontal or has some tilt to it, adjusting the tip/tilt of the 45 degree mirror and the rotation of the cylindrical lens. In addition, ideally this envelope will be centered vertically in the FoV, which can be set by adjusting the y adjustment screw on the illumination objective mount.
-    2. Towards the focus location, a dark vertical region with horizontal striations should appear. Once this region is visible, using small translation distances (~1 um or finer) to find the position that makes both the vertical region and horizontal striations look as sharp as possible should be done.
-    3. If the dark region isn't centered on the image FoV, adjusting the x and y adjustment screws on the illumination objective mount and making slight horizontal translations on the detection path can help.
-    4. In general doing these adjustments in small increments is helpful, as once adjustments to the various elements may require readjusting the focus translation stage position to keep track of the focus.
+    Finding the focus is often something that just comes with experience of using the system itself; however, here are some general methods to follow that can help get one's bearings:
+        1. In general, as the detection objective approaches the light sheet focus, an envelope of light should start to appear (see below), ideally this envelope will be horizontal across the FoV. If it horizontal or has some tilt to it, adjusting the tip/tilt of the 45 degree mirror and the rotation of the cylindrical lens. In addition, ideally this envelope will be centered vertically in the FoV, which can be set by adjusting the y adjustment screw on the illumination objective mount.
+        2. Towards the focus location, a dark vertical region with horizontal striations should appear. Once this region is visible, using small translation distances (~1 um or finer) to find the position that makes both the vertical region and horizontal striations look as sharp as possible should be done.
+        3. If the dark region isn't centered on the image FoV, adjusting the x and y adjustment screws on the illumination objective mount and making slight horizontal translations on the detection path can help.
+        4. In general doing these adjustments in small increments is helpful, as once adjustments to the various elements may require readjusting the focus translation stage position to keep track of the focus.
 
 .. figure:: Images/FocusFinding.png
     :align: center
-    :alt: Mounting of the camera
+    :alt: Breakdown of the light sheet focus within navigate
 
-    **Figure 15:** Mounting of the camera
+    **Figure 15:** Breakdown of the light sheet focus within navigate
 
 
 Optomechanics
