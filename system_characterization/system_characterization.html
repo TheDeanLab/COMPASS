@@ -99,25 +99,26 @@
 </figcaption>
 </figure>
 <p>To characterize the resolution of our system, we utilize 100 nm YG Fluorsecent Beads (ID: 17150-10) from Polysciences Inc. The beads are first affixed onto a 5 mm coverslip using the following protocol:</p>
-<div class="literal-block-wrapper docutils container" id="id2">
-<div class="code-block-caption"><span class="caption-text">Affixation protocol for 100 nm beads</span><a class="headerlink" href="#id2" title="Permalink to this code"></a></div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="mf">1.</span> <span class="n">Assemble</span> <span class="n">petri</span> <span class="n">dish</span><span class="p">,</span> <span class="n">coverslip</span><span class="p">,</span> <span class="ow">and</span> <span class="mi">5</span><span class="n">mM</span> <span class="n">concentration</span> <span class="p">(</span><span class="mi">3</span><span class="o">-</span><span class="n">Aminopropyl</span><span class="p">)</span><span class="n">triethoxysilane</span> <span class="p">(</span><span class="n">APTS</span><span class="p">)</span>
- <span class="mf">2.</span> <span class="n">Put</span> <span class="mi">5</span> <span class="n">mm</span> <span class="n">coverslip</span> <span class="ow">in</span> <span class="n">petri</span> <span class="n">dish</span>
- <span class="mf">3.</span> <span class="n">Apply</span> <span class="o">~</span><span class="mi">100</span> <span class="n">microliters</span> <span class="n">of</span> <span class="p">(</span><span class="mi">3</span><span class="o">-</span><span class="n">Aminopropyl</span><span class="p">)</span><span class="n">triethoxysilane</span> <span class="p">(</span><span class="n">APTS</span><span class="p">)</span> <span class="n">on</span> <span class="n">top</span> <span class="n">of</span> <span class="n">coverslip</span>
- <span class="mf">4.</span> <span class="n">Allow</span> <span class="n">APTS</span> <span class="n">to</span> <span class="n">incubate</span> <span class="k">for</span> <span class="o">~</span><span class="mi">10</span><span class="o">-</span><span class="mi">30</span> <span class="n">minutes</span>
- <span class="mf">5.</span> <span class="n">Wash</span> <span class="n">coverslip</span> <span class="n">lightly</span> <span class="k">with</span> <span class="n">DI</span> <span class="n">water</span> <span class="mi">3</span> <span class="n">times</span>
- <span class="mf">6.</span> <span class="n">Put</span> <span class="n">beads</span> <span class="n">of</span> <span class="n">desired</span> <span class="n">dilution</span> <span class="p">(</span><span class="n">typically</span> <span class="mi">10</span><span class="o">^-</span><span class="mi">3</span> <span class="ow">or</span> <span class="mi">10</span><span class="o">^-</span><span class="mi">4</span> <span class="k">for</span> <span class="n">a</span> <span class="n">normal</span> <span class="n">distribution</span><span class="p">,</span> <span class="mi">10</span><span class="o">^-</span><span class="mi">6</span> <span class="k">for</span> <span class="n">a</span> <span class="n">sparse</span>
-    <span class="n">distribution</span><span class="p">)</span> <span class="n">onto</span> <span class="n">coverslip</span> <span class="ow">and</span> <span class="n">allow</span> <span class="n">to</span> <span class="n">incubate</span> <span class="n">between</span> <span class="mi">2</span><span class="o">-</span><span class="mi">20</span> <span class="n">minutes</span><span class="o">.</span> <span class="n">Longer</span> <span class="n">incubation</span> <span class="n">time</span> <span class="n">allows</span> <span class="k">for</span> <span class="n">more</span>
-    <span class="n">beads</span> <span class="n">to</span> <span class="n">adhere</span> <span class="n">to</span> <span class="n">the</span> <span class="n">coverslip</span>
- <span class="mf">7.</span> <span class="n">Wash</span> <span class="n">lightly</span> <span class="n">afterwards</span> <span class="k">with</span> <span class="n">DI</span> <span class="n">water</span>
-</pre></div>
-</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Affixation protocol for 100 nm beads</strong></p>
+<ol class="arabic simple">
+<li><p>Assemble petri dish, coverslip, and 5mM concentration (3-Aminopropyl)triethoxysilane (APTS)</p></li>
+<li><p>Put 5 mm coverslip in petri dish</p></li>
+<li><p>Apply ~100 microliters of (3-Aminopropyl)triethoxysilane (APTS) on top of coverslip</p></li>
+<li><p>Allow APTS to incubate for ~10-30 minutes</p></li>
+<li><p>Wash coverslip lightly with DI water 3 times</p></li>
+<li><p>Put beads of desired dilution (typically 10^-3 or 10^-4 for a normal distribution, 10^-6 for a sparse
+distribution) onto coverslip and allow to incubate between 2-20 minutes. Longer incubation time allows for more
+beads to adhere to the coverslip</p></li>
+<li><p>Wash lightly afterwards with DI water</p></li>
+</ol>
 </div>
 <p>After affixation, the beads are then imaged, the results of which are shown below. The PSF of an isolated bead is shown below in (a-c), where each image is a different orthogonal perspective of the bead’s intensity distribution, and provide us insight into the resolution of our system in each orthogonal direction. We then provide Gaussian-fitted distributions of the FWHM of the population of fluorescent beads across a given z-stack in (d), both before and after applying deconvolution procedures. Prior to deconvolution, the average FWHM values across the bead population were 328 in x, 330 nm in y, and 464 nm in z. After deconvolution with PetaKit5D, these values improved to 235.5 nm in x, 233.5 nm in your, and 350.4 in z.</p>
-<figure class="align-center" id="id3">
+<figure class="align-center" id="id2">
 <img alt="Analysis of the experimental PSF characteristics" src="../_images/SC_PSF_Characterization.png" />
 <figcaption>
-<p><span class="caption-text"><strong>Figure 2:</strong> Analysis of the experimental PSF characteristics</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+<p><span class="caption-text"><strong>Figure 2:</strong> Analysis of the experimental PSF characteristics</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </section>
@@ -132,10 +133,10 @@ channel).</p>
 <p>A deconvolved maximum intensity projection of a distribution of MEF cells is shown below in (a) and (f), with each
 individual channel displayed in (b-e) and (g-j). These results display fine nucleolar features within the
 nucleus, well-defined perinuclear Golgi stuctures, well-resolved stress fibers in the actin channel, and individually distinct microtubules, demonstrating COMPASS’ ability to capture high-resolution images of cytoskeletal structures.</p>
-<figure class="align-center" id="id4">
+<figure class="align-center" id="id3">
 <img alt="Analysis of MEF Cells" src="../_images/Figure5_Cells_Resized_New_Nowavelengths.png" />
 <figcaption>
-<p><span class="caption-text"><strong>Figure 3:</strong> Analysis of MEF Cells</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+<p><span class="caption-text"><strong>Figure 3:</strong> Analysis of MEF Cells</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 </section>
