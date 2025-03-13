@@ -121,7 +121,9 @@ mount, and that the PSFs of the beads is now correctly aligned along the z axis.
 .. image:: Images/BeadDeskewExample.png
     :align: center
     :alt: Difference between an image set of 100 nm bead before deskewing (left) and after (right)
-    ** Figure 1:** Difference between an image set of 100 nm bead before deskewing (left) and after (right)
+    :width: 300px
+
+    **Figure 1:** Difference between an image set of 100 nm bead before deskewing (left) and after (right)
 
 
 To do this deskew processing, we utilize custom-built python code via Jupyter notebooks `available here <https://github
