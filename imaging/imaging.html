@@ -107,7 +107,6 @@ observe and characterize the produced light sheet itself. The port not in use sh
 silicon or rubber seal that’s able to be fixed onto the exterior of the port using screws. In addition, it should be
 noted that our sample chamber design utilizes two sequential layers of O-rings in each of the ports to both secure
 the objectives and prevent any leaking.</p>
-<img alt="Two imaging configurations for the sample chamber design" class="align-center" src="../_images/S_SampleChamber.png" />
 </section>
 <section id="visualization-of-axes-mapping">
 <h2>Visualization of Axes Mapping<a class="headerlink" href="#visualization-of-axes-mapping" title="Permalink to this heading"></a></h2>
@@ -174,6 +173,7 @@ below for 100 nm fluorescent beads. Here before deskewing for the same image pla
 stacked in a straight line but oriented along an angle, which is not the most accurate representation of our system.
 On the deskewed image on the right, one can see that the beads are now properly angled correspond to our piezo angle
 mount, and that the PSFs of the beads is now correctly aligned along the z axis.</p>
+<img alt="Difference between an image set of 100 nm bead before deskewing (left) and after (right)" class="align-center" src="../_images/BeadDeskewExample.png" />
 <p>To do this deskew processing, we utilize custom-built python code via Jupyter notebooks <a class="reference external" href="https://github.com/TheDeanLab/COMPASS/tree/main/downloads/shared/python">available here</a>. The user needs to provide the correct file path to the
 .tif image stack collected via navigate, as well
 as the parameters of the imaging system like z-step size, xy pixel size, and the angle that the images should be
