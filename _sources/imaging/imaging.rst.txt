@@ -1,11 +1,14 @@
 .. _imaging-home:
 
 ###############
-Imaging Process
+Imaging
 ###############
 
+Imaging Process
+_______________
+
 Imaging Configurations
-______________________
+^^^^^^^^^^^^^^^^^^^^^^
 
 
 Our sample chamber features three ports that provide two distinct imaging configurations shown below: the first is a
@@ -26,7 +29,7 @@ the objectives and prevent any leaking.
 
 
 Visualization of Axes Mapping
-_____________________________
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
 In our system we essentially have 5 different translation stages at work: the standard x,y, and z axes, an additional
@@ -41,8 +44,7 @@ such that its normal is 60.5 degrees away from the y-axis.
     **Figure 2** Layout of how the axis of the system are mapped
 
 Minimizing Spherical Aberrations
-________________________________
-
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Once the system has been assembled to the point of being able to take image stacks, the process of
 minimizing the effects of spherical aberrations can begin. Spherical aberrations are typically
@@ -88,7 +90,7 @@ focused.
     **Figure 4:** Before and after of adjusting in Z-projections after adjusting the correction collar
 
 Sample Image Examples
-______________________________
+^^^^^^^^^^^^^^^^^^^^^
 
 When imaging samples, it is important to note the way in which the individual images comprising our z-stack might
 look as it might differ from what one might traditionally be accustomed to. In our imaging scheme, we essentially
@@ -104,12 +106,12 @@ different imaging channels (gold = actin, gray = tubulin, cyan = nuclei, and mag
 
     **Figure 5:** Example individual images for MEF cells
 
-###############################
+
 Image Stack Processing
-###############################
+______________________
 
 Deskewing
-______________________________
+^^^^^^^^^
 
 
 With an image stack acquired, some post processing is still required in order to remove the effects of shearing in our
@@ -135,7 +137,7 @@ difference between the normal of our angle mount and the y-axis. If this value i
 values for the deskew angle until the bead PSFs are correctly aligned along the z-axis and not angled.
 
 Reslicing
-______________________________
+^^^^^^^^^
 
 Reslicing in ImageJ is a process that allows one to be able to reconstruct different planes of a 3D image set. In
 other words, it allows one to view the XY, XZ, and YZ projections of the same image set. In our system, our default
@@ -173,7 +175,7 @@ The same process can then be done to obtain the XZ plane view of our sample by r
     **Figure 10** The XZ projection of our bead images after reslicing.
 
 Deconvolution
-______________________________
+^^^^^^^^^^^^^
 
 Deconvolution is an iterative post-processing technique that aims to enhance the resolution of a given image.
 Typically, in order to properly utilize deconvolution techniques one needs not only to have an image that they want
