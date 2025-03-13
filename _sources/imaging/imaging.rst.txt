@@ -74,7 +74,7 @@ however, true correction needs to be done with the z-projection method mentioned
     :align: center
     :alt: Correction collar effects
 
-
+    **Figure 3:** Effects of adjusting the correction collar when imaging fluorescent beads
 
 As a quick example of what an image of a z-projection could look like before and after trying to correct for spherical aberration is shown
 below. Here, one can see in the top panel that the bead features are essentially smoothed out and fuzzy due to
@@ -85,7 +85,7 @@ focused.
     :align: center
     :alt: Before and after of adjusting in Z-projections after adjusting the correction collar
 
-
+    **Figure 4:** Before and after of adjusting in Z-projections after adjusting the correction collar
 
 Sample Image Examples
 ______________________________
@@ -102,7 +102,7 @@ different imaging channels (gold = actin, gray = tubulin, cyan = nuclei, and mag
     :align: center
     :alt: Example individual images for MEF cells
 
-
+    **Figure 5:** Example individual images for MEF cells
 
 ###############################
 Image Stack Processing
@@ -124,6 +124,7 @@ mount, and that the PSFs of the beads is now correctly aligned along the z axis.
     :align: center
     :alt: Difference between an image set of 100 nm bead before deskewing (left) and after (right)
 
+    **Figure 6:** Difference between an image set of 100 nm bead before deskewing (left) and after (right)
 
 To do this deskew processing, we utilize custom-built python code via Jupyter notebooks `available here <https://github
 .com/TheDeanLab/COMPASS/tree/main/downloads/shared/python>`_. The user needs to provide the correct file path to the
@@ -149,13 +150,13 @@ Deskewing and Rescaling portions of this page.
     :align: center
     :alt: Reslicing Panel for top reslicing
 
-
+    **Figure 7:** Reslicing Panel for top reslicing
 
 .. figure:: Images/ResliceTopProjection.png
     :align: center
     :alt: The YZ projection of our bead images after reslicing.
 
-
+    **Figure 8:** The YZ projection of our bead images after reslicing.
 
 The same process can then be done to obtain the XZ plane view of our sample by reslicing left instead:
 
@@ -163,13 +164,13 @@ The same process can then be done to obtain the XZ plane view of our sample by r
     :align: center
     :alt: Reslicing Panel for left reslicing
 
-
+    **Figure 9:** Reslicing Panel for left reslicing
 
 .. figure:: Images/ResliceLeftProjection.png
     :align: center
     :alt: The XZ projection of our bead images after reslicing.
 
-
+    **Figure 10** The XZ projection of our bead images after reslicing.
 
 Deconvolution
 ______________________________
@@ -180,5 +181,5 @@ to enhance, but also have an image of the corresponding point-spread-function (P
 image. We generate this PSF through taking an image stack of an isolated 100 nm fluorescent bead. For deconvolution
 we utilize `PetaKit5D <https://github.com/abcucberkeley/PetaKit5D>`_, which is a MATLAB-based, open-source imaging
 processing code base. It should be noted that deconvolution techniques, while powerful, are also highly dependent on a
-variety of sensitive input parameters, and finding an effective combination of these parameters can often be a long
-and arduous process.
+variety of sensitive input parameters, and finding an effective combination of these parameters can often be a
+difficult process.
