@@ -17,8 +17,7 @@ To characterize our constructed system, we first image the generated light-sheet
 
 To characterize the resolution of our system, we utilize 100 nm YG Fluorsecent Beads (ID: 17150-10) from Polysciences Inc. The beads are first affixed onto a 5 mm coverslip using the following protocol:
 
-.. code-block::
-   :caption: Affixation protocol for 100 nm beads
+.. note:: **Affixation protocol for 100 nm beads**
 
     1. Assemble petri dish, coverslip, and 5mM concentration (3-Aminopropyl)triethoxysilane (APTS)
     2. Put 5 mm coverslip in petri dish
