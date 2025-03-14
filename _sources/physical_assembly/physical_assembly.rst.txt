@@ -217,7 +217,8 @@ adjustments will be made afterwards:
        illumination objective.
     3. Screw the translation stage adapter into either the optical table to the detection path baseplate (we
        recommend using `Thorlabs 1" Spacers <https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=851>`_ in place
-       of washers here)
+       of washers here).
+
 
 .. figure:: Images/spacers.png
     :align: center
@@ -225,7 +226,7 @@ adjustments will be made afterwards:
     baseplate
 
     **Figure 12:** Example of our setup for securing the translation stage to breadboard adapter onto our detection path
-    baseplate
+                   baseplate
 
 With the assembly fixed in place, the camera can then be screwed into the filter wheel:
     1. Align the front thread of the camera with the back port of the filter wheel
@@ -278,6 +279,7 @@ Once the position of the detection objective is acceptable, further refinement o
 .. figure:: Images/FocusFinding.png
     :align: center
     :alt: Breakdown of the light sheet focus within navigate
+    :width: 400px
 
     **Figure 15:** Breakdown of the light sheet focus within navigate
 
