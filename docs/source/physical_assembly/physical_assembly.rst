@@ -223,10 +223,9 @@ adjustments will be made afterwards:
 .. figure:: Images/spacers.png
     :align: center
     :alt: Example of our setup for securing the translation stage to breadboard adapter onto our detection path
-    baseplate
+          baseplate
 
-    **Figure 12:** Example of our setup for securing the translation stage to breadboard adapter onto our detection path
-                   baseplate
+    **Figure 12:** Setup for securing the translation stage to breadboard adapter onto our detection path baseplate
 
 With the assembly fixed in place, the camera can then be screwed into the filter wheel:
     1. Align the front thread of the camera with the back port of the filter wheel
