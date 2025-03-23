@@ -39,25 +39,25 @@ Setting Up a New Project in Autodesk Inventor
 1. **Launch Autodesk Inventor**
 2. Navigate to **File → Manage → Projects**
 
-   .. image:: images/cad_1.png
+   .. image:: Images/cad_1.png
       :align: center
       :width: 60%
 
 3. When the **Projects** window appears, select **New**
 
-   .. image:: images/cad_2.png
+   .. image:: Images/cad_2.png
       :align: center
       :width: 60%
 
 4. Choose **New Single User Project**
 
-   .. image:: images/cad_3.png
+   .. image:: Images/cad_3.png
       :align: center
       :width: 50%
 
 5. **Specify a Project Name** and set the **root directory of the cloned COMPASS GitHub repository** as the **Project (Workspace) Folder**
 
-   .. image:: images/cad_4.png
+   .. image:: Images/cad_4.png
       :align: center
       :width: 60%
 
