@@ -172,8 +172,7 @@ being quite similar at ~0.37 :math:`\mu m`.
 
     **Figure 7:** A comparison of the Geometric Image Analysis and Huygen's PSF analysis for our optimized system. The FWHM of the light sheet is expected to be around 0.376 :math:`\mu m`.
 
-Through Focus Spot analysis allows us to essentially see the evolution of the light sheet through the point of focus, where we can then estimate a sort of range where we expect the width of the light sheet to be thin enough for our imaging purposes, where the maximum usable light sheet width is the FWHM at the focus multiplied by :math:`\sqrt{2}`. The optimized Zemax illumination path can be downloaded in the associated `github repository <https://github
-.com/TheDeanLab/COMPASS/tree/main/downloads/base/zemax>`_.
+Through Focus Spot analysis allows us to essentially see the evolution of the light sheet through the point of focus, where we can then estimate a sort of range where we expect the width of the light sheet to be thin enough for our imaging purposes, where the maximum usable light sheet width is the FWHM at the focus multiplied by :math:`\sqrt{2}`. The optimized illumination path simulation files are available in the `Zemax <https://github.com/TheDeanLab/COMPASS/tree/main/downloads/base/zemax>`_ folder of our repository.
 
 ----------------
 
@@ -246,7 +245,7 @@ For mounting our elements, we utilize the `Polaris <https://www.thorlabs.com/nav
     **Figure 13:** A schematic of the Polaris mounting system. The system is characterized by two dowel pin alignment holes to ensure subsequent mounted elements are aligned along a specific axis.
 
 While we are able to use most of our element mounts from the Polaris line, for the cylindrical lens L3 we needed a mount capable of rotating the lens, which at this time is not something available from Thorlabs. In our case we designed an additional mounting element that allows the use of a basic Thorlabs
-`RSP1 rotation mount <https://www.thorlabs.com/thorproduct.cfm?partnumber=RSP1>`_, but still ensures alignment with the other Polaris elements. The CAD file for this mount is available for download `here <https://github
+`RSP1 rotation mount <https://www.thorlabs.com/thorproduct.cfm?partnumber=RSP1>`_, but still ensures alignment with the other Polaris elements. The CAD file for this mount is available for download `in our CAD directory <https://github
 .com/TheDeanLab/COMPASS/tree/main/downloads/base/cad>`_.
 
 .. figure:: Images/RotationMount.png

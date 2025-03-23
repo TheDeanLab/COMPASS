@@ -128,9 +128,9 @@ mount, and that the PSFs of the beads is now correctly aligned along the z axis.
 
     **Figure 6:** Difference between an image set of 100 nm bead before deskewing (left) and after (right)
 
-To do this deskew processing, we utilize custom-built python code via Jupyter notebooks `available here <https://github
-.com/TheDeanLab/COMPASS/tree/main/downloads/shared/python>`_. The user needs to provide the correct file path to the
-.tif image stack collected via navigate, as well
+To do this deskew processing, we utilize custom-built python code via Jupyter notebooks `available here
+<https://github.com/TheDeanLab/COMPASS/blob/main/downloads/common/python/Deskewing_1Channel_Compass.ipynb>`_.
+The user needs to provide the correct file path to the .tif image stack collected via navigate, as well
 as the parameters of the imaging system like z-step size, xy pixel size, and the angle that the images should be
 deskewed over. In our case, our deskew angle is equivalent to 90-60.5 degrees, where 60.5 degrees corresponds to the
 difference between the normal of our angle mount and the y-axis. If this value is unknown, one can use different

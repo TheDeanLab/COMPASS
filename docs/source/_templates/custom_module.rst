@@ -59,8 +59,9 @@
    :toctree:
    :template: custom_module.rst
    :recursive:
-{% for item in modules %}
-   {{ item }}
-{%- endfor %}
-{% endif %}
-{% endblock %}
+
+    {% for item in modules %}
+       {{ item }}
+    {%- endfor %}
+    {% endif %}
+    {% endblock %}
