@@ -4,6 +4,8 @@
 Design Process
 ##############
 
+---------------
+
 Initial Lens Selection
 ______________________
 
@@ -51,7 +53,7 @@ To determine the target FoV, start with determining the final magnification (M) 
 
 .. math::
 
-   M = \frac{f_{\text{TL}}}{f_{\text{DO}}} \tag{1}
+   M = \frac{f_{\text{TL}}}{f_{\text{DO}}}
 
 
 
@@ -59,7 +61,7 @@ From there, determine the resulting FoV of the detection path by dividing the to
 
 .. math::
 
-   \text{FoV} \ (\mu m) = \left( \frac{W_{\text{Sensor}}}{M} \right) \times 1000  \tag{2}
+   \text{FoV} \ (\mu m) = \left( \frac{W_{\text{Sensor}}}{M} \right) \times 1000
 
 For our system, where *f*:subscript:`TL` = 400 mm, *f*:subscript:`DO` = 8 mm, and W :subscript:`Sensor` = 13 mm,
 this resulted in a FoV of ~266 :math:`\mu m`, meaning that we want to select lenses in our illumination path
@@ -92,7 +94,7 @@ our chosen system featured 4 lenses from Thorlabs:
 `L3 (Cylindrical) = 75 mm <https://www.thorlabs.com/thorproduct.cfm?partnumber=ACY254-075-A>`_, and
 `L4 = 250 mm <https://www.thorlabs.com/thorproduct.cfm?partnumber=AC254-250-A>`_.
 
-We can then take these lens choices and load them into Zemax Opticstudio to verify the characteristics of our system.
+We can then take these lens choices and load them into Zemax OpticStudio to verify the characteristics of our system.
 
 .. figure:: Images/MonolithV1p1_CylindricalLensSchematic_V2.png
     :align: center
@@ -113,7 +115,7 @@ and set up our simulation.
     :align: center
     :alt: Thorlabs Zemax Download
 
-    **Figure 4:** An example of a Zemax file download from Thorlabs. The file contains the optical properties of the lens, which can be imported into Zemax Opticstudio.
+    **Figure 4:** An example of a Zemax file download from Thorlabs. The file contains the optical properties of the lens, which can be imported into Zemax OpticStudio.
 
 Here, we use Zemax as a tool to find the optimal placement of all the lenses of our system based on whether or not the input beam should be focusing or collimated after each lens. As a general rule of thumb, one should build optical systems in Zemax in an element-by-element manner instead of adding all the optical elements and trying to then optimize aspects of it. Our general flow involves adding a lens to the system and then optimizing for either either a focused or collimated beam, and then adding in the next lens and doing the same process until all lenses are placed in the system. This is described in more detail below.
 

@@ -32,6 +32,10 @@ To meet these growing demands, we aim to develop simplified optical systems that
     injuries that may arise from or be related to the use of **COMPASS**.
     Users should be aware of these risks and agree to utilize **COMPASS** at their own risk.
 
+.. warning::
+
+    **Licensing Note:** These design materials are freely available to academic and non-profit users for research and educational purposes. Commercial or for-profit entities must obtain a license before use; please contact the `Office of Technology Development <https://www.utsouthwestern.edu/about-us/administrative-offices/technology-development/>`_ for more information.
+
 --------
 
 .. toctree::

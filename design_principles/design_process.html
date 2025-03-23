@@ -64,7 +64,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../physical_assembly/physical_assembly.html">Microscope Assembly</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../system_characterization/system_characterization.html">System Characterization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../imaging/imaging.html">Imaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../imaging/imaging.html">Imaging Process</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../future/index.html">Future Releases</a></li>
 </ul>
 
@@ -94,6 +94,7 @@
              
   <section id="design-process">
 <span id="design-home"></span><h1>Design Process<a class="headerlink" href="#design-process" title="Permalink to this heading"></a></h1>
+<hr class="docutils" />
 <section id="initial-lens-selection">
 <h2>Initial Lens Selection<a class="headerlink" href="#initial-lens-selection" title="Permalink to this heading"></a></h2>
 <p>Prior to starting optical simulations in Zemax, it’s convenient to start with straightforward
@@ -128,10 +129,10 @@ For a <strong>Nikon 25× NA 1.1 objective</strong>, the focal length is calculat
 </aside>
 <p>To determine the target FoV, start with determining the final magnification (M) of the system using the ratio of the focal lengths of the tube lens (<em>f</em><sub>TL</sub>) and the detection objective (<em>f</em><sub>DO</sub>, Equation 1.).</p>
 <div class="math notranslate nohighlight">
-\[M = \frac{f_{\text{TL}}}{f_{\text{DO}}} \tag{1}\]</div>
+\[M = \frac{f_{\text{TL}}}{f_{\text{DO}}}\]</div>
 <p>From there, determine the resulting FoV of the detection path by dividing the total camera sensor size (in mm) by the magnification, and then converting into microns (Equation 2).</p>
 <div class="math notranslate nohighlight">
-\[\text{FoV} \ (\mu m) = \left( \frac{W_{\text{Sensor}}}{M} \right) \times 1000  \tag{2}\]</div>
+\[\text{FoV} \ (\mu m) = \left( \frac{W_{\text{Sensor}}}{M} \right) \times 1000\]</div>
 <p>For our system, where <em>f</em><sub>TL</sub> = 400 mm, <em>f</em><sub>DO</sub> = 8 mm, and W <sub>Sensor</sub> = 13 mm,
 this resulted in a FoV of ~266 <span class="math notranslate nohighlight">\(\mu m\)</span>, meaning that we want to select lenses in our illumination path
 to produce a light sheet as close to 266 <span class="math notranslate nohighlight">\(\mu m\)</span> in length as we can achieve.</p>
@@ -160,7 +161,7 @@ our chosen system featured 4 lenses from Thorlabs:
 <a class="reference external" href="https://www.thorlabs.com/thorproduct.cfm?partnumber=AC254-080-A">L2 = 80 mm</a>,
 <a class="reference external" href="https://www.thorlabs.com/thorproduct.cfm?partnumber=ACY254-075-A">L3 (Cylindrical) = 75 mm</a>, and
 <a class="reference external" href="https://www.thorlabs.com/thorproduct.cfm?partnumber=AC254-250-A">L4 = 250 mm</a>.</p>
-<p>We can then take these lens choices and load them into Zemax Opticstudio to verify the characteristics of our system.</p>
+<p>We can then take these lens choices and load them into Zemax OpticStudio to verify the characteristics of our system.</p>
 <figure class="align-center" id="id3">
 <img alt="Top and bottom views of an optical path." src="../_images/MonolithV1p1_CylindricalLensSchematic_V2.png" />
 <figcaption>
@@ -176,7 +177,7 @@ and set up our simulation.</p>
 <figure class="align-center" id="id4">
 <img alt="Thorlabs Zemax Download" src="../_images/ThorlabsExample.png" />
 <figcaption>
-<p><span class="caption-text"><strong>Figure 4:</strong> An example of a Zemax file download from Thorlabs. The file contains the optical properties of the lens, which can be imported into Zemax Opticstudio.</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+<p><span class="caption-text"><strong>Figure 4:</strong> An example of a Zemax file download from Thorlabs. The file contains the optical properties of the lens, which can be imported into Zemax OpticStudio.</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
 <p>Here, we use Zemax as a tool to find the optimal placement of all the lenses of our system based on whether or not the input beam should be focusing or collimated after each lens. As a general rule of thumb, one should build optical systems in Zemax in an element-by-element manner instead of adding all the optical elements and trying to then optimize aspects of it. Our general flow involves adding a lens to the system and then optimizing for either either a focused or collimated beam, and then adding in the next lens and doing the same process until all lenses are placed in the system. This is described in more detail below.</p>

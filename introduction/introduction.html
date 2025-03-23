@@ -62,7 +62,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../design_principles/design_process.html">Design Process</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../physical_assembly/physical_assembly.html">Microscope Assembly</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../system_characterization/system_characterization.html">System Characterization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../imaging/imaging.html">Imaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../imaging/imaging.html">Imaging Process</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../future/index.html">Future Releases</a></li>
 </ul>
 
@@ -110,11 +110,12 @@ developmental biology, disease progression, and cellular interactions within the
 Emerging technologies such as light-sheet microscopy, expansion microscopy, and advanced computational
 imaging now allow researchers to visualize biological systems at unprecedented resolutions, bridging the
 gap between molecular detail and tissue-scale organization.</p>
+<hr class="docutils" />
 </section>
 <section id="the-importance-of-parallelization">
 <span id="why-light-sheet"></span><h2>The Importance of Parallelization<a class="headerlink" href="#the-importance-of-parallelization" title="Permalink to this heading"></a></h2>
 <p>Historically, 3D imaging has been performed using spinning disk and laser scanning
-confocal microscopes (LSCM). However, these microscopes waste significant excitation
+confocal microscopes. However, these microscopes waste significant excitation
 energy on out-of-focus regions, leading to unnecessary photodamage while requiring
 compensatory increases in laser power due to their low illumination duty cycle. This problem
 is further exacerbated by their sequential, point-by-point image acquisition, which limits
@@ -129,7 +130,7 @@ minimizing out-of-focus excitation and reducing phototoxicity.</p>
 <p>In contrast, depending on their design, light-sheet fluorescence microscopes (LSFM)
 restrict illumination primarily to the focal plane of interest, minimizing phototoxicity while
 maximizing imaging efficiency. Additionally, by leveraging highly sensitive scientific cameras
-(e.g., <strong>4×10:sup:`6`</strong> pixels), LSFM enables massively parallelized image acquisition—recording
+(e.g., 4×10<sup>6</sup> pixels), LSFM enables massively parallelized image acquisition—recording
 entire planes in a single exposure rather than scanning point-by-point.</p>
 <p>For instance, a typical laser scanning confocal microscope requires <strong>~4.16s</strong> to acquire
 a <strong>2048 × 2048</strong> voxel image, given a voxel dwell time of <strong>1µs</strong>. In contrast, an LSFM can
@@ -141,11 +142,12 @@ spatiotemporal resolution while reducing photodamage.</p>
 <aside class="sidebar-note sidebar">
 <p class="sidebar-title"><strong>Spatial Duty Cycle</strong></p>
 <p>The <strong>spatial duty cycle of illumination</strong> refers to the fraction of a sample that is actively contributing to
-image formation at any given moment during an imaging process. In <strong>laser scanning confocal microscopy (LSCM)</strong>,
+image formation at any given moment during an imaging process. In <strong>laser scanning confocal microscopy</strong>,
 only a single point is illuminated at a time, resulting in a <strong>low duty cycle</strong> and requiring compensatory increases in laser
 power to maintain signal. In contrast, <strong>light-sheet fluorescence microscopy (LSFM)</strong> illuminates and images an entire plane at once,
 yielding a <strong>duty cycle</strong> that approaches 100%, enabling drastically reduced laser powers that reduce phototoxicity, .</p>
 </aside>
+<hr class="docutils" />
 </section>
 <section id="challenges-with-3d-imaging">
 <span id="challenges"></span><h2>Challenges with 3D Imaging<a class="headerlink" href="#challenges-with-3d-imaging" title="Permalink to this heading"></a></h2>
@@ -159,7 +161,7 @@ reliability of 3D imaging:</p>
 <li><p><strong>Nyquist Sampling in Space and Time:</strong>
 To faithfully capture dynamic processes, the event of interest must be <strong>Nyquist sampled</strong> in both
 spatial and temporal dimensions. For example, the GTPase cycle times of Rho, Rac, and Cdc42 can be
-as short as 5s, necessitating volumetric acquisitions at <strong>≤2.5s per volume</strong> with a spatial resolution
+as short as 5s, necessitating volumetric acquisitions at <span class="math notranslate nohighlight">\(\leq\)</span> 2.5s per volume with a spatial resolution
 of <strong>&lt;500nm</strong>. Furthermore, resolution should ideally be <strong>isotropic or nearly isotropic</strong> to prevent
 morphology-dependent intensity artifacts—particularly for signaling events at the plasma membrane.</p></li>
 <li><p><strong>Multicolor Excitation and Detection:</strong>
@@ -193,10 +195,10 @@ present in the signal to ensure faithful reconstruction.</p>
 <p>In microscopy, Nyquist sampling applies to both <strong>spatial and temporal domains</strong>:</p>
 <ul class="simple">
 <li><p><strong>Spatial Nyquist Sampling:</strong> To accurately resolve features of size <span class="math notranslate nohighlight">\(d\)</span>, the sampling interval
-(pixel or voxel spacing) should be no greater than <strong>:math:`d/2`</strong>. This ensures that high-frequency
+(pixel or voxel spacing) should be no greater than <span class="math notranslate nohighlight">\(d/2\)</span>. This ensures that high-frequency
 structural details are captured without loss of information.</p></li>
 <li><p><strong>Temporal Nyquist Sampling:</strong> To track dynamic processes occurring at a characteristic frequency
-<span class="math notranslate nohighlight">\(f_c\)</span>, images must be acquired at <strong>≥ 2f_c</strong> (i.e., with a time interval <strong>≤ 1/(2f_c)</strong>) to prevent
+<span class="math notranslate nohighlight">\(f_c\)</span>, images must be acquired at a frequency of <span class="math notranslate nohighlight">\(\geq 2 \times f_c\)</span> to prevent
 aliasing in time-lapse imaging.</p></li>
 </ul>
 <p>Failure to meet the Nyquist criterion results in <strong>aliasing</strong>, where high-frequency components are misrepresented
@@ -204,6 +206,7 @@ as lower-frequency artifacts, distorting biological measurements.</p>
 </aside>
 <p>Meeting these criteria is essential for <strong>accurate, high-throughput volumetric imaging</strong> that captures
 cellular dynamics with sufficient fidelity to support rigorous biological interpretation.</p>
+<hr class="docutils" />
 </section>
 <section id="why-build-a-microscope">
 <span id="why-build"></span><h2>Why Build a Microscope?<a class="headerlink" href="#why-build-a-microscope" title="Permalink to this heading"></a></h2>

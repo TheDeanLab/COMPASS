@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Imaging &mdash; COMPASS  documentation</title>
+  <title>Imaging Process &mdash; COMPASS  documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
 
@@ -55,20 +55,17 @@
 <li class="toctree-l1"><a class="reference internal" href="../design_principles/design_process.html">Design Process</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../physical_assembly/physical_assembly.html">Microscope Assembly</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../system_characterization/system_characterization.html">System Characterization</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Imaging</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#imaging-process">Imaging Process</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#imaging-configurations">Imaging Configurations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#visualization-of-axes-mapping">Visualization of Axes Mapping</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#minimizing-spherical-aberrations">Minimizing Spherical Aberrations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#sample-image-examples">Sample Image Examples</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Imaging Process</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#imaging-configurations">Imaging Configurations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#visualization-of-axes-mapping">Visualization of Axes Mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#minimizing-spherical-aberrations">Minimizing Spherical Aberrations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sample-image-examples">Sample Image Examples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#image-stack-processing">Image Stack Processing</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#image-stack-processing">Image Stack Processing</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#deskewing">Deskewing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#reslicing">Reslicing</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#deconvolution">Deconvolution</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#deskewing">Deskewing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reslicing">Reslicing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deconvolution">Deconvolution</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../future/index.html">Future Releases</a></li>
@@ -88,7 +85,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Imaging</li>
+      <li class="breadcrumb-item active">Imaging Process</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/imaging/imaging.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -98,15 +95,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="imaging">
-<span id="imaging-home"></span><h1>Imaging<a class="headerlink" href="#imaging" title="Permalink to this heading"></a></h1>
-<section id="imaging-process">
-<h2>Imaging Process<a class="headerlink" href="#imaging-process" title="Permalink to this heading"></a></h2>
+  <section id="imaging-process">
+<span id="imaging-home"></span><h1>Imaging Process<a class="headerlink" href="#imaging-process" title="Permalink to this heading"></a></h1>
 <section id="imaging-configurations">
-<h3>Imaging Configurations<a class="headerlink" href="#imaging-configurations" title="Permalink to this heading"></a></h3>
+<h2>Imaging Configurations<a class="headerlink" href="#imaging-configurations" title="Permalink to this heading"></a></h2>
 <p>Our sample chamber features three ports that provide two distinct imaging configurations shown below: the first is a
 traditional light-sheet imaging scheme, where illumination and detection objectives are placed orthogonally to each
-other, and the second is one where the illumination and detection objective are placed in line with each other. The
+other, and the second is one where the illumination and detection objective are placed coaxially with each other. The
 first configuration should be thought of as the default imaging setup for the microscope, and the second allows one to
 observe and characterize the produced light sheet itself. The port not in use should be sealed, which we do using a
 silicon or rubber seal that’s able to be fixed onto the exterior of the port using screws. In addition, it should be
@@ -119,8 +114,9 @@ the objectives and prevent any leaking.</p>
 </figcaption>
 </figure>
 </section>
+<hr class="docutils" />
 <section id="visualization-of-axes-mapping">
-<h3>Visualization of Axes Mapping<a class="headerlink" href="#visualization-of-axes-mapping" title="Permalink to this heading"></a></h3>
+<h2>Visualization of Axes Mapping<a class="headerlink" href="#visualization-of-axes-mapping" title="Permalink to this heading"></a></h2>
 <p>In our system we essentially have 5 different translation stages at work: the standard x,y, and z axes, an additional
 stage along the z axis to control the focus of the detection path (f), and and axis associated with the piezo positioned
 such that its normal is 60.5 degrees away from the y-axis.</p>
@@ -131,8 +127,9 @@ such that its normal is 60.5 degrees away from the y-axis.</p>
 </figcaption>
 </figure>
 </section>
+<hr class="docutils" />
 <section id="minimizing-spherical-aberrations">
-<h3>Minimizing Spherical Aberrations<a class="headerlink" href="#minimizing-spherical-aberrations" title="Permalink to this heading"></a></h3>
+<h2>Minimizing Spherical Aberrations<a class="headerlink" href="#minimizing-spherical-aberrations" title="Permalink to this heading"></a></h2>
 <p>Once the system has been assembled to the point of being able to take image stacks, the process of
 minimizing the effects of spherical aberrations can begin. Spherical aberrations are typically
 introduced into optical systems due to the surface curvature of different lens elements. This
@@ -151,7 +148,7 @@ and using ImageJ to quickly process those images.</p>
 <li><p>Do a maximum intensity project of the resliced stack (Image -&gt; Stacks -&gt; Z-Projection)</p></li>
 <li><p>Take note if spherical aberration is present in the projected image.</p></li>
 <li><p>If spherical aberration is still present, make slight adjustments to the objective
-correction collar and repeat Steps 1-5.</p></li>
+correction collar and repeat Steps 1-5. Each time you adjust the correction collar, you will likely need to update the focus of the microscope.</p></li>
 </ol>
 </div></blockquote>
 <p>As a note, observing the camera live-feed via navigate’s “Continuous Scan” mode while adjusting the correction collar
@@ -165,9 +162,7 @@ however, true correction needs to be done with the z-projection method mentioned
 <p><span class="caption-text"><strong>Figure 3:</strong> Effects of adjusting the correction collar when imaging fluorescent beads</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-<p>As a quick example of what an image of a z-projection could look like before and after trying to correct for spherical aberration is shown
-below. Here, one can see in the top panel that the bead features are essentially smoothed out and fuzzy due to
-aberrations, while in the bottom panel with adjustments made to the correction collar the beads appear much cleaner and
+<p>As a quick example of what an image of a z-projection could look like before and after trying to correct for spherical aberration is shown below. Here, one can see in the top panel that the bead features are essentially smoothed out and fuzzy due to aberrations, while in the bottom panel with adjustments made to the correction collar the beads appear much cleaner and
 focused.</p>
 <figure class="align-center" id="id4">
 <img alt="Before and after of adjusting in Z-projections after adjusting the correction collar" src="../_images/SphericalExample.png" />
@@ -176,14 +171,15 @@ focused.</p>
 </figcaption>
 </figure>
 </section>
+<hr class="docutils" />
 <section id="sample-image-examples">
-<h3>Sample Image Examples<a class="headerlink" href="#sample-image-examples" title="Permalink to this heading"></a></h3>
+<h2>Sample Image Examples<a class="headerlink" href="#sample-image-examples" title="Permalink to this heading"></a></h2>
 <p>When imaging samples, it is important to note the way in which the individual images comprising our z-stack might
 look as it might differ from what one might traditionally be accustomed to. In our imaging scheme, we essentially
-have a thin column of light spanning the vertical direction on our readout image. This results in each image in the
+have a thin column of light spanning the vertical direction on our image. This results in each image in the
 z-stack being a thin snapshot of the whole sample, which can then be viewed through max intensity projections in
 ImageJ. To give a visual reference of what these individual images in a stack can look like for a biological sample, we
-provide the following images taken of a mouse embryonic fibroflast sample at a single z-position in a stack for 4
+provide the following images taken of a mouse embryonic fibroblast sample at a single z-position in a stack for 4
 different imaging channels (gold = actin, gray = tubulin, cyan = nuclei, and magenta = Golgi apparatus).</p>
 <figure class="align-center" id="id5">
 <img alt="Example individual images for MEF cells" src="../_images/DeskewedNotDeconvolvedSingleSliceMontage2.png" />
@@ -191,19 +187,14 @@ different imaging channels (gold = actin, gray = tubulin, cyan = nuclei, and mag
 <p><span class="caption-text"><strong>Figure 5:</strong> Example individual images for MEF cells</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
 </figcaption>
 </figure>
-</section>
-</section>
+<hr class="docutils" />
 <section id="image-stack-processing">
-<h2>Image Stack Processing<a class="headerlink" href="#image-stack-processing" title="Permalink to this heading"></a></h2>
+<h3>Image Stack Processing<a class="headerlink" href="#image-stack-processing" title="Permalink to this heading"></a></h3>
+</section>
+</section>
 <section id="deskewing">
-<h3>Deskewing<a class="headerlink" href="#deskewing" title="Permalink to this heading"></a></h3>
-<p>With an image stack acquired, some post processing is still required in order to remove the effects of shearing in our
-images. The root of this shearing is due to the angled method in which our sample is mounted and similarly, the angled path that
-the sample moves as the piezo is scanned. A basic visual idea of how deskewing affects the resulting image is shown
-below for 100 nm fluorescent beads. Here before deskewing for the same image plane (yz), the beads appear to be
-stacked in a straight line but oriented along an angle, which is not the most accurate representation of our system.
-On the deskewed image on the right, one can see that the beads are now properly angled correspond to our piezo angle
-mount, and that the PSFs of the beads is now correctly aligned along the z axis.</p>
+<h2>Deskewing<a class="headerlink" href="#deskewing" title="Permalink to this heading"></a></h2>
+<p>With an image stack acquired, some post processing is still required in order to remove the effects of shearing in our images. The root of this shearing is due to the angled method in which our sample is mounted and similarly, the angled path that the sample moves as the piezo is scanned. A basic visual idea of how deskewing affects the resulting image is shown below for 100 nm fluorescent beads. Here before deskewing for the same image plane (yz), the beads appear to be stacked in a straight line but oriented along an angle, which is not the most accurate representation of our system. On the deskewed image on the right, one can see that the beads are now properly angled correspond to our piezo angle mount, and that the PSFs of the beads is now correctly aligned along the z axis.</p>
 <figure class="align-center" id="id6">
 <img alt="Difference between an image set of 100 nm bead before deskewing (left) and after (right)" src="../_images/BeadDeskewExample.png" />
 <figcaption>
@@ -211,22 +202,11 @@ mount, and that the PSFs of the beads is now correctly aligned along the z axis.
 </figcaption>
 </figure>
 <p>To do this deskew processing, we utilize custom-built python code via Jupyter notebooks <a class="reference external" href="https://github.com/TheDeanLab/COMPASS/blob/main/downloads/common/python/Deskewing_1Channel_Compass.ipynb">available here</a>.
-The user needs to provide the correct file path to the .tif image stack collected via navigate, as well
-as the parameters of the imaging system like z-step size, xy pixel size, and the angle that the images should be
-deskewed over. In our case, our deskew angle is equivalent to 90-60.5 degrees, where 60.5 degrees corresponds to the
-difference between the normal of our angle mount and the y-axis. If this value is unknown, one can use different
-values for the deskew angle until the bead PSFs are correctly aligned along the z-axis and not angled.</p>
+The user needs to provide the correct file path to the .tif image stack collected via navigate, as well as the parameters of the imaging system like z-step size, xy pixel size, and the angle that the images should be deskewed over. In our case, our deskew angle is equivalent to 90-60.5 degrees, where 60.5 degrees corresponds to the difference between the normal of our angle mount and the y-axis. If this value is unknown, one can use different values for the deskew angle until the bead PSFs are correctly aligned along the z-axis and not angled.</p>
 </section>
 <section id="reslicing">
-<h3>Reslicing<a class="headerlink" href="#reslicing" title="Permalink to this heading"></a></h3>
-<p>Reslicing in ImageJ is a process that allows one to be able to reconstruct different planes of a 3D image set. In
-other words, it allows one to view the XY, XZ, and YZ projections of the same image set. In our system, our default
-viewing plane is the XY plane, and so we reslice to observe the XZ and YZ planes. The reslicing process within ImageJ
-is done after deskewing, and involves opening up the Reslicing panel (Image-&gt; Stacks-&gt; Reslice).
-Within this panel, one just needs to select the direction of the reslice (typically just top or left). For our
-system, top slicing provides us with the YZ plane view where one can observe the angled orientation of our sample
-setup after projection (Image-&gt; Stacks-&gt; Z Project). This is shown below for the same 100 nm bead samples used in the
-Deskewing and Rescaling portions of this page.</p>
+<h2>Reslicing<a class="headerlink" href="#reslicing" title="Permalink to this heading"></a></h2>
+<p>Reslicing in ImageJ is a process that allows one to be able to reconstruct different planes of a 3D image set. In other words, it allows one to view the XY, XZ, and YZ projections of the same image set. In our system, our default viewing plane is the XY plane, and so we reslice to observe the XZ and YZ planes. The reslicing process within ImageJ is done after deskewing, and involves opening up the Reslicing panel (Image-&gt; Stacks-&gt; Reslice). Within this panel, one just needs to select the direction of the reslice (typically just top or left). For our system, top slicing provides us with the YZ plane view where one can observe the angled orientation of our sample setup after projection (Image-&gt; Stacks-&gt; Z Project). This is shown below for the same 100 nm bead samples used in the Deskewing and Rescaling portions of this page.</p>
 <figure class="align-center" id="id7">
 <img alt="Reslicing Panel for top reslicing" src="../_images/ResliceTop.png" />
 <figcaption>
@@ -254,16 +234,8 @@ Deskewing and Rescaling portions of this page.</p>
 </figure>
 </section>
 <section id="deconvolution">
-<h3>Deconvolution<a class="headerlink" href="#deconvolution" title="Permalink to this heading"></a></h3>
-<p>Deconvolution is an iterative post-processing technique that aims to enhance the resolution of a given image.
-Typically, in order to properly utilize deconvolution techniques one needs not only to have an image that they want
-to enhance, but also have an image of the corresponding point-spread-function (PSF) of the system used to take the
-image. We generate this PSF through taking an image stack of an isolated 100 nm fluorescent bead. For deconvolution
-we utilize <a class="reference external" href="https://github.com/abcucberkeley/PetaKit5D">PetaKit5D</a>, which is a MATLAB-based, open-source imaging
-processing code base. It should be noted that deconvolution techniques, while powerful, are also highly dependent on a
-variety of sensitive input parameters, and finding an effective combination of these parameters can often be a
-difficult process.</p>
-</section>
+<h2>Deconvolution<a class="headerlink" href="#deconvolution" title="Permalink to this heading"></a></h2>
+<p>Deconvolution is an iterative post-processing technique that aims to enhance the resolution of a given image. Typically, in order to properly utilize deconvolution techniques one needs not only to have an image that they want to enhance, but also have an image of the corresponding point-spread-function (PSF) of the system used to take the image. We generate this PSF through taking an image stack of an isolated 100 nm fluorescent bead. For deconvolution we utilize <a class="reference external" href="https://github.com/abcucberkeley/PetaKit5D">PetaKit5D</a>, which is open-source and MATLAB-based image processing code base. It should be noted that deconvolution techniques, while powerful, are also highly dependent on a variety of sensitive input parameters, and finding an effective combination of these parameters can often be a difficult process.</p>
 </section>
 </section>
 

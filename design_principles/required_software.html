@@ -71,7 +71,7 @@
 <li class="toctree-l1"><a class="reference internal" href="design_process.html">Design Process</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../physical_assembly/physical_assembly.html">Microscope Assembly</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../system_characterization/system_characterization.html">System Characterization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../imaging/imaging.html">Imaging</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../imaging/imaging.html">Imaging Process</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../future/index.html">Future Releases</a></li>
 </ul>
 
@@ -102,8 +102,9 @@
   <section id="software">
 <span id="software-home"></span><h1>Software<a class="headerlink" href="#software" title="Permalink to this heading"></a></h1>
 <p>The <strong>software for optical simulations and computer-aided design (CAD)</strong> is optional and only required for users who wish to <strong>modify or customize COMPASS</strong>. However, <strong>navigate is mandatory</strong> for microscope operation unless an alternative <strong>open-source acquisition platform</strong> is used. For <strong>COMPASS v1</strong>, which operates in a <strong>sample-scanning geometry</strong>, <strong>shearing</strong> is necessary to properly align data spatially; while various software options exist, we provide <strong>Python-based scripts</strong> for this task. Lastly, <strong>deconvolution is optional</strong>, depending on the user’s specific imaging and analysis needs.</p>
+<hr class="docutils" id="optical-simulation-software" />
 <section id="optical-simulations">
-<span id="optical-simulation-software"></span><h2>Optical Simulations<a class="headerlink" href="#optical-simulations" title="Permalink to this heading"></a></h2>
+<h2>Optical Simulations<a class="headerlink" href="#optical-simulations" title="Permalink to this heading"></a></h2>
 <p>Performing accurate optical simulations is essential for designing and validating the illumination pathway of
 <strong>COMPASS</strong>. To facilitate this process, we used <strong>Zemax OpticStudio (Ansys)</strong> to model the full illumination
 system, optimizing the placement of each optical element to achieve the desired focusing and collimation properties.</p>
@@ -111,6 +112,7 @@ system, optimizing the placement of each optical element to achieve the desired 
 This enables optical modeling, ray tracing, and tolerance analysis. The <strong>Zemax simulation files</strong> used to design the
 COMPASS illumination system are included in the project’s GitHub repository. These files allow users to inspect and
 modify the optical layout, test different lens configurations, and refine performance metrics as needed.</p>
+<hr class="docutils" />
 </section>
 <section id="computer-aided-design">
 <span id="d-design"></span><h2>Computer-Aided Design<a class="headerlink" href="#computer-aided-design" title="Permalink to this heading"></a></h2>
@@ -123,20 +125,21 @@ and define the workspace. We recommend following these steps:</p>
 <ol class="arabic">
 <li><p><strong>Launch Autodesk Inventor</strong></p></li>
 <li><p>Navigate to <strong>File → Manage → Projects</strong></p>
-<a class="reference internal image-reference" href="../_images/cad_1.png"><img alt="../_images/cad_1.png" class="align-center" src="../_images/cad_1.png" style="width: 60%;" /></a>
+<a class="reference internal image-reference" href="../_images/cad1.png"><img alt="../_images/cad1.png" class="align-center" src="../_images/cad1.png" style="width: 60%;" /></a>
 </li>
 <li><p>When the <strong>Projects</strong> window appears, select <strong>New</strong></p>
-<a class="reference internal image-reference" href="../_images/cad_2.png"><img alt="../_images/cad_2.png" class="align-center" src="../_images/cad_2.png" style="width: 60%;" /></a>
+<a class="reference internal image-reference" href="../_images/cad2.png"><img alt="../_images/cad2.png" class="align-center" src="../_images/cad2.png" style="width: 60%;" /></a>
 </li>
 <li><p>Choose <strong>New Single User Project</strong></p>
-<a class="reference internal image-reference" href="../_images/cad_3.png"><img alt="../_images/cad_3.png" class="align-center" src="../_images/cad_3.png" style="width: 50%;" /></a>
+<a class="reference internal image-reference" href="../_images/cad3.png"><img alt="../_images/cad3.png" class="align-center" src="../_images/cad3.png" style="width: 50%;" /></a>
 </li>
 <li><p><strong>Specify a Project Name</strong> and set the <strong>root directory of the cloned COMPASS GitHub repository</strong> as the <strong>Project (Workspace) Folder</strong></p>
-<a class="reference internal image-reference" href="../_images/cad_4.png"><img alt="../_images/cad_4.png" class="align-center" src="../_images/cad_4.png" style="width: 60%;" /></a>
+<a class="reference internal image-reference" href="../_images/cad4.png"><img alt="../_images/cad4.png" class="align-center" src="../_images/cad4.png" style="width: 60%;" /></a>
 </li>
 </ol>
 <p>By configuring Autodesk Inventor in this way, all CAD files associated with <strong>COMPASS</strong> will be properly linked,
 ensuring seamless loading of all components and assemblies.</p>
+<hr class="docutils" />
 </section>
 </section>
 <section id="microscope-control-software-navigate">
@@ -164,6 +167,7 @@ comprehensive documentation, can be found here:
 <a class="reference external" href="https://thedeanlab.github.io/navigate/software_installation.html">navigate Installation Guide</a></p>
 </section>
 </section>
+<hr class="docutils" />
 <section id="post-processing">
 <h2>Post-Processing<a class="headerlink" href="#post-processing" title="Permalink to this heading"></a></h2>
 <p>After image acquisition, post-processing is often necessary to extract meaningful biological information.
