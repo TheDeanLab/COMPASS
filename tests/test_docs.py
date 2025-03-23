@@ -6,6 +6,7 @@ import os
 
 class TestDocs(unittest.TestCase):
     def test_sphinx_linkcheck(self):
+        os.chdir(os.path.join(os.getcwd(), 'docs'))
         print("Current Directory:", os.getcwd())
         print("Files in Directory:", os.listdir("."))
         cmd = [
