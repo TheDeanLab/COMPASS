@@ -26,6 +26,7 @@ Emerging technologies such as light-sheet microscopy, expansion microscopy, and 
 imaging now allow researchers to visualize biological systems at unprecedented resolutions, bridging the
 gap between molecular detail and tissue-scale organization.
 
+---------------
 
 .. _why-light-sheet:
 
@@ -33,7 +34,7 @@ The Importance of Parallelization
 =================================
 
 Historically, 3D imaging has been performed using spinning disk and laser scanning
-confocal microscopes (LSCM). However, these microscopes waste significant excitation
+confocal microscopes. However, these microscopes waste significant excitation
 energy on out-of-focus regions, leading to unnecessary photodamage while requiring
 compensatory increases in laser power due to their low illumination duty cycle. This problem
 is further exacerbated by their sequential, point-by-point image acquisition, which limits
@@ -50,7 +51,7 @@ speed and increases photobleaching.
 In contrast, depending on their design, light-sheet fluorescence microscopes (LSFM)
 restrict illumination primarily to the focal plane of interest, minimizing phototoxicity while
 maximizing imaging efficiency. Additionally, by leveraging highly sensitive scientific cameras
-(e.g., **4×10\ :sup:`6`** pixels), LSFM enables massively parallelized image acquisition—recording
+(e.g., 4×10\ :sup:`6` pixels), LSFM enables massively parallelized image acquisition—recording
 entire planes in a single exposure rather than scanning point-by-point.
 
 For instance, a typical laser scanning confocal microscope requires **~4.16s** to acquire
@@ -65,10 +66,13 @@ spatiotemporal resolution while reducing photodamage.
    :class: sidebar-note
 
    The **spatial duty cycle of illumination** refers to the fraction of a sample that is actively contributing to
-   image formation at any given moment during an imaging process. In **laser scanning confocal microscopy (LSCM)**,
+   image formation at any given moment during an imaging process. In **laser scanning confocal microscopy**,
    only a single point is illuminated at a time, resulting in a **low duty cycle** and requiring compensatory increases in laser
    power to maintain signal. In contrast, **light-sheet fluorescence microscopy (LSFM)** illuminates and images an entire plane at once,
    yielding a **duty cycle** that approaches 100%, enabling drastically reduced laser powers that reduce phototoxicity, .
+
+
+---------------
 
 .. _challenges:
 
@@ -85,7 +89,7 @@ reliability of 3D imaging:
 -   **Nyquist Sampling in Space and Time:**
     To faithfully capture dynamic processes, the event of interest must be **Nyquist sampled** in both
     spatial and temporal dimensions. For example, the GTPase cycle times of Rho, Rac, and Cdc42 can be
-    as short as 5s, necessitating volumetric acquisitions at **≤2.5s per volume** with a spatial resolution
+    as short as 5s, necessitating volumetric acquisitions at :math:`\leq` 2.5s per volume with a spatial resolution
     of **<500nm**. Furthermore, resolution should ideally be **isotropic or nearly isotropic** to prevent
     morphology-dependent intensity artifacts—particularly for signaling events at the plasma membrane.
 
@@ -125,11 +129,11 @@ reliability of 3D imaging:
    In microscopy, Nyquist sampling applies to both **spatial and temporal domains**:
 
    - **Spatial Nyquist Sampling:** To accurately resolve features of size :math:`d`, the sampling interval
-     (pixel or voxel spacing) should be no greater than **:math:`d/2`**. This ensures that high-frequency
+     (pixel or voxel spacing) should be no greater than :math:`d/2`. This ensures that high-frequency
      structural details are captured without loss of information.
 
    - **Temporal Nyquist Sampling:** To track dynamic processes occurring at a characteristic frequency
-     :math:`f_c`, images must be acquired at **≥ 2f_c** (i.e., with a time interval **≤ 1/(2f_c)**) to prevent
+     :math:`f_c`, images must be acquired at a frequency of :math:`\geq 2 \times f_c` to prevent
      aliasing in time-lapse imaging.
 
    Failure to meet the Nyquist criterion results in **aliasing**, where high-frequency components are misrepresented
@@ -137,6 +141,9 @@ reliability of 3D imaging:
 
 Meeting these criteria is essential for **accurate, high-throughput volumetric imaging** that captures
 cellular dynamics with sufficient fidelity to support rigorous biological interpretation.
+
+
+---------------
 
 .. _why-build:
 

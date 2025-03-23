@@ -4,6 +4,8 @@
 Microscope Assembly
 ###################
 
+---------------
+
 Parts List and Cost
 ___________________
 
@@ -368,7 +370,7 @@ Mounting of Optic Posts
 
 After ensuring basic collimation and alignment of the laser system, the next step is mounting the appropriate polaris
 post size for each optical element in the system. The overall breakdown of which size posts went with each hole
-location is listed below. Where holes (3),(4), and (10) are placements for optional elements in the system. (3) is
+location is listed below. Where holes (3), (4), and (10) are placements for optional elements in the system. (3) is
 meant for the placement of an adjustable pinhole aperture, where the same ID12 to Polaris Adapter system used in
 the alignment step can be placed. Otherwise a 0.5" post holder can be placed here, and then the ID12 or ones pinhole
 aperture of choice can be mounted on a 0.5" post. (4) is dedicated placement for an electronic shutter in the event

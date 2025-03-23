@@ -15,7 +15,7 @@ To characterize our constructed system, we first image the generated light-sheet
 
     **Figure 1:** Analysis of the experimental lightsheet characteristics
 
-To characterize the resolution of our system, we utilize 100 nm YG Fluorsecent Beads (ID: 17150-10) from Polysciences Inc. The beads are first affixed onto a 5 mm coverslip using the following protocol:
+To characterize the resolution of our system, we utilize 100 nm YG Fluorescent Beads (ID: 17150-10) from Polysciences Inc. The beads are first affixed onto a 5 mm coverslip using the following protocol:
 
 .. note:: **Affixation protocol for 100 nm beads**
 
@@ -37,19 +37,21 @@ After affixation, the beads are then imaged, the results of which are shown belo
 
     **Figure 2:** Analysis of the experimental PSF characteristics
 
+---------------
+
 Sample Biological Images
 ______________________________
 
-As a demonstration of COMPASS' biological imaging capabilities, we prepared and imaged mouse embryonic fibroflast
+As a demonstration of COMPASS' biological imaging capabilities, we prepared and imaged mouse embryonic fibroblast
 (MEF) cells, where multiple subcellular structures were stained for 4 different channels corresponding to the
 excitation wavelengths of our laser source (405 nm, 488 nm, 561 nm, 638 nm). The staining protocol described in [cite
 Compass paper] was optimized for visualization of the nucleus (DAPI, 405 nm, cyan channel), microtubules (488 nm,
-gray channel), actin filements (561 nm, gold channel), and the Golgi apparatus of the MEF cells (638 nm, magenta
+gray channel), actin filaments (561 nm, gold channel), and the Golgi apparatus of the MEF cells (638 nm, magenta
 channel).
 
 A deconvolved maximum intensity projection of a distribution of MEF cells is shown below in (a) and (f), with each
 individual channel displayed in (b-e) and (g-j). These results display fine nucleolar features within the
-nucleus, well-defined perinuclear Golgi stuctures, well-resolved stress fibers in the actin channel, and individually distinct microtubules, demonstrating COMPASS' ability to capture high-resolution images of cytoskeletal structures.
+nucleus, well-defined perinuclear Golgi structures, well-resolved stress fibers in the actin channel, and individually distinct microtubules, demonstrating COMPASS' ability to capture high-resolution images of cytoskeletal structures.
 
 .. figure:: Images/Figure5_Cells_Resized_New_Nowavelengths.png
     :align: center

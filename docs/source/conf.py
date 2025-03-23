@@ -110,6 +110,7 @@ html_logo = "general/compass.png"
 pygments_style = "sphinx"
 
 # -- LaTeX output options ----------------------------------------------------
+# To compile the LaTeX files, run `make latexpdf` in the `docs` directory
 
 latex_elements = {'preamble': r'''
                   \usepackage[utf8]{inputenc}

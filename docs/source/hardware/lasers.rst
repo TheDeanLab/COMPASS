@@ -15,6 +15,8 @@ semiconductor lasers, diode pumped solid state lasers), supercontinuum lasers, a
 ultrafast lasers (including ti-sapphire lasers). A few key parameters to consider are
 discussed below.
 
+---------------
+
 Linewidth
 _________
 One key aspect of any light source is the linewidth of its emission. This is the
@@ -25,8 +27,10 @@ reduced background. LEDs typically have a linewidth of 20-50 nm, which is much b
 than the 0.1-1 nm linewidth of a laser. As such, we prefer lasers for our imaging
 systems.
 
-M :sup:`2` Value
-________________
+---------------
+
+Beam Divergence
+_______________
 The M :sup:`2` value of a beam is the degree at which it can be focused to a given beam
 divergence angle (e.g., numerical aperture). If you have a higher M :sup:`2` value of
 ~1.6, it will focused to a laser spot that is 1.6x larger than the diffraction limit.
@@ -36,6 +40,8 @@ such as those offered by MPB Communications, provide very low M :sup:`2` values.
 However, these systems require external mechanisms for controlling the power output,
 which is a major disadvantage. For lasers with high M :sup:`2` values, additional
 optics may be necessary to clean up the beam profile, such as a spatial filter.
+
+---------------
 
 Modulation
 __________
@@ -56,6 +62,8 @@ example, we have noted that AOMs can be sensitive to temperature changes, which 
 lead to drift in the power output. As such, we prefer lasers with built-in modulation
 capabilities.
 
+---------------
+
 Vibrations
 __________
 Many lasers require active cooling, and are often placed directly on the optic table,
@@ -63,6 +71,8 @@ which can lead to vibrations. These vibrations can be detrimental to imaging qua
 especially when imaging in soft contexts such as expanded tissues. Nonetheless, if
 insufficient cooling is provided, fluctuations in laser emission or instability can
 occur.
+
+---------------
 
 Power
 _____
@@ -72,6 +82,8 @@ sources such as supercontinuum lasers can provide high power (e.g., >3W), their 
 is spread across a large spectral range, reducing their spectral power density at any
 given wavelength to a few mW/nm. We typically recommend lasers with a power of 100 mW
 or greater for imaging.
+
+---------------
 
 Recommended Light Sources
 -------------------------

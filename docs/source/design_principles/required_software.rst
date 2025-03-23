@@ -9,6 +9,8 @@ The **software for optical simulations and computer-aided design (CAD)** is opti
 
 .. _optical-simulation-software:
 
+---------------
+
 Optical Simulations
 ====================
 
@@ -21,6 +23,7 @@ This enables optical modeling, ray tracing, and tolerance analysis. The **Zemax 
 COMPASS illumination system are included in the project’s GitHub repository. These files allow users to inspect and
 modify the optical layout, test different lens configurations, and refine performance metrics as needed.
 
+---------------
 
 .. _3d-design:
 
@@ -39,31 +42,32 @@ Setting Up a New Project in Autodesk Inventor
 1. **Launch Autodesk Inventor**
 2. Navigate to **File → Manage → Projects**
 
-   .. image:: Images/cad_1.png
+   .. image:: Images/cad1.png
       :align: center
       :width: 60%
 
 3. When the **Projects** window appears, select **New**
 
-   .. image:: Images/cad_2.png
+   .. image:: Images/cad2.png
       :align: center
       :width: 60%
 
 4. Choose **New Single User Project**
 
-   .. image:: Images/cad_3.png
+   .. image:: Images/cad3.png
       :align: center
       :width: 50%
 
 5. **Specify a Project Name** and set the **root directory of the cloned COMPASS GitHub repository** as the **Project (Workspace) Folder**
 
-   .. image:: Images/cad_4.png
+   .. image:: Images/cad4.png
       :align: center
       :width: 60%
 
 By configuring Autodesk Inventor in this way, all CAD files associated with **COMPASS** will be properly linked,
 ensuring seamless loading of all components and assemblies.
 
+---------------
 
 .. _microscope-control-software:
 
@@ -94,6 +98,7 @@ Installation and Access
 comprehensive documentation, can be found here:
 `navigate Installation Guide <https://thedeanlab.github.io/navigate/software_installation.html>`_
 
+---------------
 
 Post-Processing
 ===============
