@@ -9,7 +9,7 @@ Microscope Assembly
 Parts List and Cost
 ___________________
 
-A breakdown of all components used in COMPASS, and the approximate cost are included in the collapsable sections below:
+A breakdown of all components used in Altair, and the approximate cost are included in the collapsable sections below:
 
 .. collapse:: Illumination Path
 
@@ -355,7 +355,7 @@ The basic assembly process involves first inserting and fixing the CFC11A-A into
     **Figure 4:** Shear Plate interferometer and collimator lens
 
 With the beam collimated, the process of beam alignment involves adjusting the position control knobs on the K1XY to have the beam pass through two pinhole apertures along the optical path. The height of the initial laser output is designed to be at 3.75" above the top surface of the baseplate, so selecting appropriate post heights for the apertures such that their centers rest at 3.75" is essential. In our case, we use `Thorlabs ID12 <https://www.thorlabs.com/thorproduct.cfm?partnumber=ID12>`_ pinhole apertures, so using a post height of 3.25" will ensure that they are at the proper height for alignment. We designed a `custom ID12 to Polaris adapter <https://github
-.com/TheDeanLab/COMPASS/tree/main/downloads/common/cad>`_ to ensure the aperture is at the proper height and properly aligned along the designated Polaris axis. When using this method, the ID12 to Polaris Adapters can just be directly mounted onto the holes designated for L1 and the Illumination Objective, depicted below, to cover the length of the baseplate. With the pinholes placed, the process becomes iterative by making small adjustments on the K1XY tip/tilt knobs and XY position screws until the beam passes through both pinholes.
+.com/TheDeanLab/altair/tree/main/downloads/common/cad>`_ to ensure the aperture is at the proper height and properly aligned along the designated Polaris axis. When using this method, the ID12 to Polaris Adapters can just be directly mounted onto the holes designated for L1 and the Illumination Objective, depicted below, to cover the length of the baseplate. With the pinholes placed, the process becomes iterative by making small adjustments on the K1XY tip/tilt knobs and XY position screws until the beam passes through both pinholes.
 
 .. figure:: Images/LaserAlignment2.png
     :align: center
@@ -626,7 +626,7 @@ The Piezo Angle Mount
 
 We designed a custom angled mount for our `Piezoconcept HS1 piezo <https://piezoconcept-store.squarespace
 .com/1-axis/p/hs1>`_ in order to be able to scan our sample easily between our two objectives by translating a single motorized unit (in this case the piezo), instead of having to calculate and program the movement of two translation stages in tandem for both the y and z directions. The anatomy of our angled mount is broken down in the figure below, where there are four translation stage mounting holes to attach the unit to an ASI translation stage, nine Piezo mounting holes that correspond to the mounting scheme of our piezo unit, as well as four through-holes and a window for ease of access for the mounting process. We provide the CAD files for this mount `here <https://github
-.com/TheDeanLab/COMPASS/tree/main/downloads/common/cad>`_, and have had success in using both 3D printed and aluminum machined versions of the unit. It's recommended to first mount the angle mount onto the translation stage unit before mounting the piezo on the angle mount to ensure access to all the through-holes.
+.com/TheDeanLab/altair/tree/main/downloads/common/cad>`_, and have had success in using both 3D printed and aluminum machined versions of the unit. It's recommended to first mount the angle mount onto the translation stage unit before mounting the piezo on the angle mount to ensure access to all the through-holes.
 
 .. figure:: Images/AnglemountAnatomy.png
     :align: center
@@ -650,7 +650,7 @@ The installation of our custom angled piezo mount is designed to be directly com
 Sample Holder Design
 ^^^^^^^^^^^^^^^^^^^^
 
-Our sample holder design is built for imaging cells on a `5 mm coverslip <https://www.fishersci.com/shop/products/5mm-cover-slip-german-glass/50949439>`_, and is shown below. The design features a clamp-like method of securing the 5 mm coverslip in place, where the coverslip rests in an inset region and the clamp is screwed in via an M1.6 screw in the back of the holder. All associated files for this design and other custom parts can be found `here <https://github.com/TheDeanLab/COMPASS/tree/main/downloads/common/cad>`_.
+Our sample holder design is built for imaging cells on a `5 mm coverslip <https://www.fishersci.com/shop/products/5mm-cover-slip-german-glass/50949439>`_, and is shown below. The design features a clamp-like method of securing the 5 mm coverslip in place, where the coverslip rests in an inset region and the clamp is screwed in via an M1.6 screw in the back of the holder. All associated files for this design and other custom parts can be found `here <https://github.com/TheDeanLab/altair/tree/main/downloads/common/cad>`_.
 
 .. figure:: Images/S_SampleHolderAssembly.png
     :align: center
@@ -667,7 +667,7 @@ Assembling the Magnetic Sample Mount
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
-As a safeguard for the risk of the sample crashing into either the illumination or detection objective during sample positioning or imaging, we opted to incorporate a magnetic mount for our sample holder. We use a Thorlabs KBT1X1T and KBB1X1 as our magnetic mount pair, and then mount our sample holder onto the KBT1X1T using a  `custom adapter <https://github.com/TheDeanLab/COMPASS/tree/main/downloads/common/cad>`_. The KBB1X1 is affixed to the piezo using an M2.5 screw, and using a small leveling tool (shown below) during this step is helpful to ensure that the magnetic base is mounted as level as possible for the imaging process.
+As a safeguard for the risk of the sample crashing into either the illumination or detection objective during sample positioning or imaging, we opted to incorporate a magnetic mount for our sample holder. We use a Thorlabs KBT1X1T and KBB1X1 as our magnetic mount pair, and then mount our sample holder onto the KBT1X1T using a  `custom adapter <https://github.com/TheDeanLab/altair/tree/main/downloads/common/cad>`_. The KBB1X1 is affixed to the piezo using an M2.5 screw, and using a small leveling tool (shown below) during this step is helpful to ensure that the magnetic base is mounted as level as possible for the imaging process.
 
 .. figure:: Images/MagneticMountSampleHolder.png
     :align: center

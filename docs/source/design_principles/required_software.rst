@@ -5,7 +5,7 @@
 Software
 ########
 
-The **software for optical simulations and computer-aided design (CAD)** is optional and only required for users who wish to **modify or customize COMPASS**. However, **navigate is mandatory** for microscope operation unless an alternative **open-source acquisition platform** is used. For **COMPASS v1**, which operates in a **sample-scanning geometry**, **shearing** is necessary to properly align data spatially; while various software options exist, we provide **Python-based scripts** for this task. Lastly, **deconvolution is optional**, depending on the user’s specific imaging and analysis needs.
+The **software for optical simulations and computer-aided design (CAD)** is optional and only required for users who wish to **modify or customize Altair**. However, **navigate is mandatory** for microscope operation unless an alternative **open-source acquisition platform** is used. For **Altair-LSFM**, which operates in a **sample-scanning geometry**, **shearing** is necessary to properly align data spatially; while various software options exist, we provide **Python-based scripts** for this task. Lastly, **deconvolution is optional**, depending on the user’s specific imaging and analysis needs.
 
 .. _optical-simulation-software:
 
@@ -15,12 +15,12 @@ Optical Simulations
 ====================
 
 Performing accurate optical simulations is essential for designing and validating the illumination pathway of
-**COMPASS**. To facilitate this process, we used **Zemax OpticStudio (Ansys)** to model the full illumination
+**Altair**. To facilitate this process, we used **Zemax OpticStudio (Ansys)** to model the full illumination
 system, optimizing the placement of each optical element to achieve the desired focusing and collimation properties.
 
 To replicate or modify these simulations, a **Zemax OpticStudio (Ansys)** professional or academic license is needed.
 This enables optical modeling, ray tracing, and tolerance analysis. The **Zemax simulation files** used to design the
-COMPASS illumination system are included in the project’s GitHub repository. These files allow users to inspect and
+Altair illumination system are included in the project’s GitHub repository. These files allow users to inspect and
 modify the optical layout, test different lens configurations, and refine performance metrics as needed.
 
 ---------------
@@ -58,13 +58,13 @@ Setting Up a New Project in Autodesk Inventor
       :align: center
       :width: 50%
 
-5. **Specify a Project Name** and set the **root directory of the cloned COMPASS GitHub repository** as the **Project (Workspace) Folder**
+5. **Specify a Project Name** and set the **root directory of the cloned Altair GitHub repository** as the **Project (Workspace) Folder**
 
    .. image:: Images/cad4.png
       :align: center
       :width: 60%
 
-By configuring Autodesk Inventor in this way, all CAD files associated with **COMPASS** will be properly linked,
+By configuring Autodesk Inventor in this way, all CAD files associated with **Altair** will be properly linked,
 ensuring seamless loading of all components and assemblies.
 
 ---------------
@@ -74,7 +74,7 @@ ensuring seamless loading of all components and assemblies.
 Microscope Control Software: navigate
 =====================================
 
-To control and operate **COMPASS**, we use **navigate**, a Python-based software package designed to provide
+To control and operate **Altair**, we use **navigate**, a Python-based software package designed to provide
 flexible and intelligent microscope control. **navigate** enables users to interact with the system through
 a variety of advanced modalities, including **smart acquisition routines** that dynamically adjust microscope
 performance based on the biological specimen.
@@ -82,7 +82,7 @@ performance based on the biological specimen.
 Features of navigate
 --------------------
 
-**navigate** provides key functionalities that enhance the efficiency and adaptability of the COMPASS system:
+**navigate** provides key functionalities that enhance the efficiency and adaptability of the Altair system:
 
 - **Automated Smart Acquisition** – Dynamically optimizes imaging parameters in real time, adapting to specimen
   properties to improve image quality.

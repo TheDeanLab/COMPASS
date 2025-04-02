@@ -19,7 +19,7 @@ import sys
 
 # -- Project information -----------------------------------------------------
 
-project = "COMPASS"
+project = "altair"
 copyright = "2025, Dean Lab, UT Southwestern Medical Center"
 author = "Dean Lab, UT Southwestern Medical Center"
 
@@ -121,7 +121,7 @@ latex_elements = {'preamble': r'''
                   'extraclassoptions': 'openany,oneside'}
 
 latex_documents = [
-  ('index', 'compass.tex', 'COMPASS Documentation',
+  ('index', 'altair.tex', 'Altair Documentation',
    'Dean Lab, UT Southwestern Medical Center', 'manual', True),
 ]
 

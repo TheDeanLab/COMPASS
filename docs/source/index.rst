@@ -1,8 +1,8 @@
 
-.. _compass-home:
+.. _altair-home:
 
 #####################
-**COMPASS**
+**Altair**
 #####################
 
 Biologists are increasingly transitioning towards more complex assays that require volumetric imaging with high spatiotemporal resolution. Whether it is a developing embryo, the formation of an immunological synapse, cancer migrating through a 3D collagen matrix, these biological processes can only be understood when non-invasively and quantitatively evaluated in their entirety through time.
@@ -29,8 +29,8 @@ To meet these growing demands, we aim to develop simplified optical systems that
     mechanical and optical systems. Despite these precautions, the complexity and nature of
     hardware can lead to unpredictable outcomes. Therefore, the Dean Lab and UT
     Southwestern expressly disclaim any responsibility for any damages, losses, or
-    injuries that may arise from or be related to the use of **COMPASS**.
-    Users should be aware of these risks and agree to utilize **COMPASS** at their own risk.
+    injuries that may arise from or be related to the use of **Altair**.
+    Users should be aware of these risks and agree to utilize **Altair** at their own risk.
 
 .. warning::
 
@@ -56,7 +56,7 @@ To meet these growing demands, we aim to develop simplified optical systems that
 
 **Authors**
 ============
-Dr. John Haug performed all simulations, design, testing, and validation of COMPASS. Seweryn Gałecki provided
+Dr. John Haug performed all simulations, design, testing, and validation of Altair. Seweryn Gałecki provided
 cells for testing imaging performance and assisted in their visualization. Dr. Kevin Dean oversaw and provided feedback on all research operations. This project also benefited from valuable feedback from the **Dean, Fiolka, and Danuser labs** at **UTSW**.
 
 **Acknowledgements**
