@@ -1,9 +1,31 @@
+Metadata-Version: 2.2
+Name: altair
+Version: 0.0.1
+Summary: Cost-Effective, Open-Source, Light-Sheet Microscopy Solutions.
+Author: The Dean Lab, UT Southwestern Medical Center
+Project-URL: Source, https://github.com/TheDeanLab/altair
+Classifier: Intended Audience :: Developers
+Requires-Python: >=3.9.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: docs
+Requires-Dist: numpydoc; extra == "docs"
+Requires-Dist: nbconvert; extra == "docs"
+Requires-Dist: sphinx<6.0.0; extra == "docs"
+Requires-Dist: sphinx_rtd_theme; extra == "docs"
+Requires-Dist: sphinx-copybutton; extra == "docs"
+Requires-Dist: sphinx-issues; extra == "docs"
+Requires-Dist: sphinx-design; extra == "docs"
+Requires-Dist: pyyaml; extra == "docs"
+Requires-Dist: pydata_sphinx_theme==0.10.0rc2; extra == "docs"
+Requires-Dist: sphinx-toolbox; extra == "docs"
+
 <h1 align="center">
 altair
 
 <img 
-	src="https://github.com/TheDeanLab/altair/blob/main/docs/source/general/compass.png?raw=true"
-  	alt="altair"
+	src="https://github.com/TheDeanLab/COMPASS/blob/main/docs/source/general/compass.png?raw=true"
+  	alt="COMPASS"
   	width="250"
 />
 
@@ -12,11 +34,11 @@ altair
 </h3>
 </h1>
 
-**Altair** aims to democratize high-resolution light-sheet fluorescence microscopy. By combining **modular optomechanics**, **cutting-edge lens simulations**, and **intelligent software**, **Altair** enables the rapid assembly of light-sheet fluorescence microscopes that deliver ~235 nm lateral and ~465 nm axial resolution in a user-friendly package.
+**COMPASS** aims to democratize high-resolution light-sheet fluorescence microscopy. By combining **modular optomechanics**, **cutting-edge lens simulations**, and **intelligent software**, **COMPASS** enables the rapid assembly of light-sheet fluorescence microscopes that deliver ~235 nm lateral and ~465 nm axial resolution in a user-friendly package.
 
 ## Motivation
 
-Cellular behavior is orchestrated by diverse signaling mechanisms that often hinge on **molecular events precisely organized in space and time**. These events include rapid, localized protein interactions that drive processes such as cell division, migration, and differentiation. **Altair** addresses the need for **high-resolution live-cell imaging**, empowering researchers to:
+Cellular behavior is orchestrated by diverse signaling mechanisms that often hinge on **molecular events precisely organized in space and time**. These events include rapid, localized protein interactions that drive processes such as cell division, migration, and differentiation. **COMPASS** addresses the need for **high-resolution live-cell imaging**, empowering researchers to:
 
 - Visualize spatially regulated processes.
 - Collect quantitative 3D time-lapse data.
@@ -54,7 +76,7 @@ The overarching goal is to provide a **modular, cost-effective 3D light-sheet mi
 
 ## Getting Started
 
-- **Review the [Documentation](https://thedeanlab.github.io/altair/)**
+- **Review the [Documentation](https://thedeanlab.github.io/COMPASS/)**
 - **Procure Hardware**
 - **Download and Install** [navigate](https://github.com/TheDeanLab/navigate)
 - **Assemble Hardware**

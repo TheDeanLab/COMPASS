@@ -1,0 +1,9 @@
+LICENSE
+README.md
+VERSION
+pyproject.toml
+COMPASS.egg-info/PKG-INFO
+COMPASS.egg-info/SOURCES.txt
+COMPASS.egg-info/dependency_links.txt
+COMPASS.egg-info/requires.txt
+COMPASS.egg-info/top_level.txt

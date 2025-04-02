@@ -4,7 +4,7 @@
 *.idea/*
 *.DS_Store
 docs/build/*
-/COMPASS.egg-info
+/altair.egg-info
 /docs/_build/*
 *.doctree
 *.pyc
