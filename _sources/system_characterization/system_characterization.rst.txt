@@ -42,16 +42,16 @@ After affixation, the beads are then imaged, the results of which are shown belo
 Sample Biological Images
 ______________________________
 
-As a demonstration of COMPASS' biological imaging capabilities, we prepared and imaged mouse embryonic fibroblast
+As a demonstration of Altair's biological imaging capabilities, we prepared and imaged mouse embryonic fibroblast
 (MEF) cells, where multiple subcellular structures were stained for 4 different channels corresponding to the
 excitation wavelengths of our laser source (405 nm, 488 nm, 561 nm, 638 nm). The staining protocol described in [cite
-Compass paper] was optimized for visualization of the nucleus (DAPI, 405 nm, cyan channel), microtubules (488 nm,
+Altair paper] was optimized for visualization of the nucleus (DAPI, 405 nm, cyan channel), microtubules (488 nm,
 gray channel), actin filaments (561 nm, gold channel), and the Golgi apparatus of the MEF cells (638 nm, magenta
 channel).
 
 A deconvolved maximum intensity projection of a distribution of MEF cells is shown below in (a) and (f), with each
 individual channel displayed in (b-e) and (g-j). These results display fine nucleolar features within the
-nucleus, well-defined perinuclear Golgi structures, well-resolved stress fibers in the actin channel, and individually distinct microtubules, demonstrating COMPASS' ability to capture high-resolution images of cytoskeletal structures.
+nucleus, well-defined perinuclear Golgi structures, well-resolved stress fibers in the actin channel, and individually distinct microtubules, demonstrating Altair's ability to capture high-resolution images of cytoskeletal structures.
 
 .. figure:: Images/Figure5_Cells_Resized_New_Nowavelengths.png
     :align: center

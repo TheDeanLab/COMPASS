@@ -124,7 +124,7 @@ With an image stack acquired, some post processing is still required in order to
     **Figure 6:** Difference between an image set of 100 nm bead before deskewing (left) and after (right)
 
 To do this deskew processing, we utilize custom-built python code via Jupyter notebooks `available here
-<https://github.com/TheDeanLab/COMPASS/blob/main/downloads/common/python/Deskewing_1Channel_Compass.ipynb>`_.
+<https://github.com/TheDeanLab/altair/blob/main/downloads/common/python/Deskewing_1Channel_Compass.ipynb>`_.
 The user needs to provide the correct file path to the .tif image stack collected via navigate, as well as the parameters of the imaging system like z-step size, xy pixel size, and the angle that the images should be deskewed over. In our case, our deskew angle is equivalent to 90-60.5 degrees, where 60.5 degrees corresponds to the difference between the normal of our angle mount and the y-axis. If this value is unknown, one can use different values for the deskew angle until the bead PSFs are correctly aligned along the z-axis and not angled.
 
 Reslicing
