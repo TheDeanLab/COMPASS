@@ -9,7 +9,7 @@ ________________________________________
 
 To characterize our constructed system, we first image the generated light-sheet using the sample chamber transmission configuration shown below, where the illumination objective is placed directly in front of the detection objective. The image of our light sheet is shown in (a) below, where the cross-sectional profile of the light-sheet is shown in (b) and reveals a z-FWHM of ~0.415 um.
 
-.. figure:: Images/SC_Beam_Characterization.png
+.. figure:: Images/SC_Beam_Characterization_Scalebarfixed.png
     :align: center
     :alt: Analysis of the experimental lightsheet characteristics
 
@@ -44,8 +44,9 @@ ______________________________
 
 As a demonstration of Altair's biological imaging capabilities, we prepared and imaged mouse embryonic fibroblast
 (MEF) cells, where multiple subcellular structures were stained for 4 different channels corresponding to the
-excitation wavelengths of our laser source (405 nm, 488 nm, 561 nm, 638 nm). The staining protocol described in [cite
-Altair paper] was optimized for visualization of the nucleus (DAPI, 405 nm, cyan channel), microtubules (488 nm,
+excitation wavelengths of our laser source (405 nm, 488 nm, 561 nm, 638 nm). The staining protocol described in our
+`initial Altair-LSFM paper <https://www.biorxiv.org/content/10.1101/2025.04.08.647739v1>`_ was
+optimized for visualization of the nucleus (DAPI, 405 nm, cyan channel), microtubules (488 nm,
 gray channel), actin filaments (561 nm, gold channel), and the Golgi apparatus of the MEF cells (638 nm, magenta
 channel).
 
